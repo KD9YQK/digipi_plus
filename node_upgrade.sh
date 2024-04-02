@@ -4,6 +4,8 @@ echo "Upgrading AX25 packet node with Hunt the Wumpus and Go Fish"
 sudo apt install bsdgames
 mkdir ~/games
 cp home/games/*.* ~/games/
+chmod +x ~/games/gofish.sh
+chmod +x ~/games/wumpus.sh
 
 echo "Backing up /etc/ax25/uronode.conf as /etc/ax25/uronode.conf.bak"
 sudo cp /etc/ax25/uronode.conf /etc/ax25/uronode.conf.bak
