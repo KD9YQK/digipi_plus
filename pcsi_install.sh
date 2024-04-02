@@ -15,7 +15,7 @@ sudo cp ~/direwolf.tnc.conf ~/direwolf.pcsi.conf
 sudo cp services/pcsi.service /etc/systemd/system/
 sudo systemctl daemon-reload
 
-sudo apt install python3-opencv python3-tk python3-pil.imagetk
+sudo apt install python3-opencv python3-tk python3-pil.imagetk -y
 python3 -m pip install numpy imageio bitstring pylbfgs pyserial pillow
 cd ~
 git clone https://github.com/maqifrnswa/PCSI.git
