@@ -1,7 +1,7 @@
 
 echo "Upgrading AX25 packet node with Hunt the Wumpus and Go Fish"
 
-sudo apt install bsdgames
+sudo apt install bsdgames -y
 mkdir ~/games
 cp home/games/*.* ~/games/
 chmod +x ~/games/gofish.sh
