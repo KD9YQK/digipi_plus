@@ -12,7 +12,7 @@ sudo cp www/pcsi/index.php /var/www/html/pcsi/
 cp home/pcsi.sh ~/
 chmod +x ~/pcsi.sh
 sudo cp ~/direwolf.tnc.conf ~/direwolf.pcsi.conf
-sudo cp services/pcsi.service /etc/systemd/system/
+sudo cp services/*.service /etc/systemd/system/
 sudo systemctl daemon-reload
 
 sudo sed -i '/JS8Call/a \        "pcsiGUI"               f.exec "python3 /home/pi/PCSI/pcsiGUI.py &"' /home/pi/.emwmrc
