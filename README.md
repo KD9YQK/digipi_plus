@@ -20,7 +20,7 @@ bash node_upgrade.sh
 ```
 
 
-Add PCSI - Packet Compressed Sensing Imaging
+Add PCSI - Packet Compressed Sensing Imaging https://github.com/maqifrnswa/PCSI
 ```
 cd ~/digipi_upgrade
 bash pcsi_install.sh
