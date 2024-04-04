@@ -3,7 +3,7 @@
 echo "Backing up /var/www/html/index.php as /var/www/html/index.php.bak"
 sudo cp /var/www/html/index.php /var/www/html/index.php.bak
 
-python3 pcsi_setup.py
+python3 pcsi_helper.py
 sudo cp temp/*.php /var/www/html/
 sudo rm temp/*.php
 sudo mkdir /var/www/html/pcsi
