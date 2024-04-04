@@ -57,3 +57,15 @@ else
     echo "OK"
 fi
 
+echo "Checking for RTL-SDR iGate..." -n
+if [ ! -f plus.sdr_igate ]; then
+    echo "NOT FOUND"
+    echo "Installing RTL-SDR iGate"
+
+    touch plus.sdr_igate
+    echo "RTL-SDR iGate Installed"
+else
+    echo "OK"
+fi
+
+
