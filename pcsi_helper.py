@@ -16,7 +16,7 @@ with open("/var/www/html/plus_submit.php") as f_old, open("temp/plus_submit.php"
                         "    echo $output;\n"
                         "  }\n"
                         "}\n")
-            f_new.write(line)
+        f_new.write(line)
 
 
 with open("/var/www/html/plus_form.php") as f_old, open("temp/plus_form.php", "w") as f_new:
@@ -52,8 +52,8 @@ with open("/var/www/html/plus_form.php") as f_old, open("temp/plus_form.php", "w
 with open("/var/www/html/plus_links.php") as f_old, open("temp/plus_links.php", "w") as f_new:
     script_count = 0
     for line in f_old:
+        f_new.write(line)
         if "<!-- Row1 -->" in line:
-            f_new.write(line)
             f_new.write("  <td><a href='/pcsi' target='pcsi' title='Display pcsiGUI screen'><strong>pcsiGUI</strong></a></td>\n")
 
 
