@@ -3,29 +3,25 @@
 
 You can find the DigiPi image here https://digipi.org/
 
-**DON'T install until AFTER initial setup of DigiPi!!! This only works for DigiPi version 1.8-2**
 
-### Install
+## Features
+1. AX25 Packet Node Upgrade
+   - Hunt the Wumpus Game
+   - Go Fish Game
+2. [PCSI](https://github.com/maqifrnswa/PCSI) - Packet Compressed Sensing Imaging
+3. [OpenWebRX](https://www.openwebrx.de/) - web-based SDR receiver WIP
+4. [Grid Tracker](https://gridtracker.org/) - TODO
+5. RTL-SDR Support
+   - RTL-SDR udev drivers
+   - RTL-SDR APRS iGate TODO
+
+## Install
+**DON'T install until AFTER initial setup of DigiPi!!! This only works for DigiPi version 1.8-2**
 ```
 sudo remount
 cd ~
 git clone https://github.com/KD9YQK/digipi_plus.git
 cd digipi_plus
+bash install.sh
 ```
 
-
-### AX25 Packet Node addons
-1) Adds Hunt the Wumpus game
-2) Adds Go Fish game
-```
-cd ~/digipi_plus
-bash node_upgrade.sh
-```
-
-
-### Add PCSI - Packet Compressed Sensing Imaging
-```
-cd ~/digipi_plus
-bash pcsi_install.sh
-```
-More info about PCSI can be found here https://github.com/maqifrnswa/PCSI
