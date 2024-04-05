@@ -1,8 +1,5 @@
 !#/bin/bash
 
-echo "Backing up /var/www/html/index.php as /var/www/html/index.php.bak"
-sudo cp /var/www/html/index.php /var/www/html/index.php.bak
-
 python3 pcsi_helper.py
 sudo cp temp/*.php /var/www/html/
 sudo rm temp/*.php
@@ -11,7 +8,7 @@ sudo cp www/pcsi/index.php /var/www/html/pcsi/
 cp home/pcsi.sh ~/
 chmod +x ~/pcsi.sh
 sudo cp ~/direwolf.tnc.conf ~/direwolf.pcsi.conf
-sudo cp services/*.service /etc/systemd/system/
+sudo cp services/pcsi.service /etc/systemd/system/
 sudo systemctl daemon-reload
 
 sudo sed -i '/JS8Call/a \        "pcsiGUI"               f.exec "python3 /home/pi/PCSI/pcsiGUI.py &"' /home/pi/.emwmrc
