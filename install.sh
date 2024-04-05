@@ -14,7 +14,7 @@ if [ ! -f plus.base ]; then
     cp /etc/systemd/system/*.service backup/ -v
     echo "Copying Files"
     sudo cp www/*.php /var/www/html/ -v
-    cp emwmrc_plus ~/.emwmrc -v
+    cp home/emwmrc_plus ~/.emwmrc -v
     touch plus.base
     echo "DigiPi Plus Base Installed"
 else
