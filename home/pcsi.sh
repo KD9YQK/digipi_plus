@@ -69,11 +69,11 @@ nice -n 5 vncserver -depth 16                                   # runs in backgr
 
 
 export DISPLAY=:1   
-sudo killall flrig
 
 python3 ~/PCSI/pcsiGUI.py &
 
 sleep 8 
+sudo killall flrig
 
 sudo renice -n 0 `ps aux | grep pcsi | grep -v grep | awk '{print $2}'`
 sudo renice -n 5 `ps aux | grep Xtightvnc | grep -v grep | awk '{print $2}'`
