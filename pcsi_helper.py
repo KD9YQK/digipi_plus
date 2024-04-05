@@ -54,7 +54,7 @@ with open("/var/www/html/plus_links.php") as f_old, open("temp/plus_links.php", 
     for line in f_old:
         if "<!-- Row1 -->" in line:
             f_new.write(line)
-            f_new.write("  <td><a href='/pcsi' target='pcsi' title='Display pcsiGUI screen'><strong>pcsiGUI</strong></a></td>\n"
+            f_new.write("  <td><a href='/pcsi' target='pcsi' title='Display pcsiGUI screen'><strong>pcsiGUI</strong></a></td>\n")
 
 
 # Press the green button in the gutter to run the script.
