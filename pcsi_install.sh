@@ -11,7 +11,7 @@ sudo cp ~/direwolf.tnc.conf ~/direwolf.pcsi.conf
 sudo cp services/pcsi.service /etc/systemd/system/
 sudo systemctl daemon-reload
 
-sudo sed -i '/JS8Call/a \        "pcsiGUI"               f.exec "python3 /home/pi/PCSI/pcsiGUI.py &"' /home/pi/.emwmrc
+sudo sed -i '/DigiPi Plus/a \        "pcsiGUI"               f.exec "python3 /home/pi/PCSI/pcsiGUI.py &"' /home/pi/.emwmrc
 
 sudo apt install python3-opencv python3-tk python3-pil.imagetk -y
 python3 -m pip install numpy imageio bitstring pylbfgs pyserial pillow
