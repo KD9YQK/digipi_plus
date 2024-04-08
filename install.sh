@@ -49,6 +49,19 @@ else
     echo "OK"
 fi
 
+echo -n "Checking for OpenWebRX..."
+sleep 1
+if [ ! -f plus.openwebrx ]; then
+    echo "NOT FOUND"
+    echo "Installing OpenWebRX"
+    sleep 1
+    bash openwebrx_install.sh
+    touch plus.openwebrx
+    echo "OpenWebRX Installed"
+else
+    echo "OK"
+fi
+
 echo -n "Checking for RTL-SDR Drivers..."
 sleep 1
 if [ ! -f plus.rtl-sdr ]; then
@@ -77,5 +90,3 @@ if [ ! -f plus.sdr_igate ]; then
 else
     echo "OK"
 fi
-
-
