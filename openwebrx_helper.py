@@ -29,7 +29,7 @@ with open("/var/www/html/plus_form.php") as f_old, open("temp/plus_form.php", "w
         if "<?php" in line:
             f_new.write("#-- PCSI  -------------------------------------------------\n\n"
                         "echo '<tr>';\n"
-                        "$output = shell_exec('systemctl is-active pcsi');\n"
+                        "$output = shell_exec('systemctl is-active openwebrx');\n"
                         "#$output = str_replace('failed', 'inactive', $output);\n"
                         "$output = chop($output);\n"
                         "if ($output == 'active'){\n"
@@ -54,7 +54,8 @@ with open("/var/www/html/plus_links.php") as f_old, open("temp/plus_links.php", 
     for line in f_old:
         f_new.write(line)
         if "<!-- Row1 -->" in line:
-            f_new.write("  <td><a href='/pcsi' target='pcsi' title='Display pcsiGUI screen'><strong>OpenWebRX</strong></a></td>\n")
+            f_new.write("  <td width="100px"><script language="JavaScript">document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':8073' + '" target="pat" title="OpenWebRX">
+                        <strong>OpenWebRX</strong></a> ' );</script></td>")
 
 
 # Press the green button in the gutter to run the script.
