@@ -27,11 +27,15 @@ echo -n "Checking for AX25 Upgrade..."
 sleep 1
 if [ ! -f plus.node ]; then
     echo "NOT FOUND"
-    echo "Installing AX25 Node Upgrade"
-    sleep 1
-    bash node_upgrade.sh
-    touch plus.node
-    echo "AX25 Upgrade Installed"
+    read -p "Do you want to install? (y/n) " yn
+    case $yn in
+        [yY] ) echo "Installing AX25 Node Upgrade";
+             sleep 1;
+             bash node_upgrade.sh;
+             touch plus.node;
+             echo "AX25 Upgrade Installed";
+        * ) echo "Skipping";;
+    esac
 else
     echo "OK"
 fi
@@ -40,11 +44,15 @@ echo -n "Checking for PCSI..."
 sleep 1
 if [ ! -f plus.pcsi ]; then
     echo "NOT FOUND"
-    echo "Installing PCSI"
-    sleep 1
-    bash pcsi_install.sh
-    touch plus.pcsi
-    echo "PCSI Installed"
+    read -p "Do you want to install? (y/n) " yn
+    case $yn in
+        [yY] ) echo "Installing PCSI";
+            sleep 1;
+            bash pcsi_install.sh;
+            touch plus.pcsi;
+            echo "PCSI Installed";
+        * ) echo "Skipping";;
+    esac
 else
     echo "OK"
 fi
@@ -53,11 +61,15 @@ echo -n "Checking for OpenWebRX..."
 sleep 1
 if [ ! -f plus.openwebrx ]; then
     echo "NOT FOUND"
-    echo "Installing OpenWebRX"
-    sleep 1
-    bash openwebrx_install.sh
-    touch plus.openwebrx
-    echo "OpenWebRX Installed"
+    read -p "Do you want to install? (y/n) " yn
+    case $yn in
+        [yY] ) echo "Installing OpenWebRX";
+            sleep 1;
+            bash openwebrx_install.sh;
+            touch plus.openwebrx;
+            echo "OpenWebRX Installed";
+        * ) echo "Skipping";;
+    esac
 else
     echo "OK"
 fi
@@ -66,14 +78,18 @@ echo -n "Checking for RTL-SDR Drivers..."
 sleep 1
 if [ ! -f plus.rtl-sdr ]; then
     echo "NOT FOUND"
-    echo "Installing RTL-SDR Drivers"
-    sleep 1
-    sudo apt install rtl-sdr -y
-    echo "Installing udev rules"
-    sudo cp rtl-sdr/10-rtl-sdr.rules /etc/udev/rules.d/ -v
-    sudo udevadm control --reload-rules
-    touch plus.rtl-sdr
-    echo "RTL-SDR Driver Installed"
+    read -p "Do you want to install? (y/n) " yn
+    case $yn in
+        [yY] ) echo "Installing RTL-SDR Drivers";
+            sleep 1;
+            sudo apt install rtl-sdr -y;
+            echo "Installing udev rules";
+            sudo cp rtl-sdr/10-rtl-sdr.rules /etc/udev/rules.d/ -v;
+            sudo udevadm control --reload-rules;
+            touch plus.rtl-sdr;
+            echo "RTL-SDR Driver Installed";
+        * ) echo "Skipping";;
+    esac
 else
     echo "OK"
 fi
@@ -82,11 +98,14 @@ echo -n "Checking for RTL-SDR iGate..."
 sleep 1
 if [ ! -f plus.sdr_igate ]; then
     echo "NOT FOUND"
-    echo "Installing RTL-SDR iGate"
-    sleep 1
-
-    touch plus.sdr_igate
-    echo "RTL-SDR iGate Installed"
+    read -p "Do you want to install? (y/n) " yn
+    case $yn in
+        [yY] ) echo "Installing RTL-SDR iGate";
+            sleep 1;
+            touch plus.sdr_igate;
+            echo "RTL-SDR iGate Installed";
+        * ) echo "Skipping";;
+    esac
 else
     echo "OK"
 fi
