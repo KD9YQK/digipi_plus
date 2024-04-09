@@ -4,4 +4,4 @@ sudo apt-get update
 sudo apt-get install openwebrx
 sudo systemctl disable openwebrx
 sudo systemctl stop openwebrx
-python3 openwebrx_helpyer.py
+python3 openwebrx_helper.py
