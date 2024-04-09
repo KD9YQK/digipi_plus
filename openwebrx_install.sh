@@ -6,3 +6,4 @@ sudo apt-get install openwebrx -y
 sudo systemctl disable openwebrx
 sudo systemctl stop openwebrx
 python3 openwebrx_helper.py
+sudo mv temp/*.php /var/www/html/
