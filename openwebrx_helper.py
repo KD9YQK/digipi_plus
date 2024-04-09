@@ -54,7 +54,7 @@ with open("/var/www/html/plus_links.php") as f_old, open("temp/plus_links.php", 
     for line in f_old:
         f_new.write(line)
         if "<!-- Row1 -->" in line:
-            f_new.write("""  <td width="100px"><script language="JavaScript">document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':8073' + '" target="pat" title="OpenWebRX">
+            f_new.write("""  <td width="100px"><script language="JavaScript">document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':8073' + '" target="openwebrx" title="OpenWebRX">
                         <strong>OpenWebRX</strong></a> ' );</script></td>""")
 
 
