@@ -1,6 +1,20 @@
 from helper import add_EXECSTARTPRE
 
 
+with open("~/direwolf.tnc.conf") as f_old, open("~/direwolf.rtlsdr-igate.conf", "w") as f_new:
+    f_new.write("ADEVICE null null\n")
+    f_new.write("CHANNEL 0\n")
+    for line in f_old:
+        if "MYCALL" in line:
+            f_new.write(line)
+        elif "IGSERVER" in line:
+            f_new.write(line)
+        elif "IGLOGIN" in line:
+            f_new.write(line)
+        elif "sendto=IG" in line:
+            f_new.write(line)
+
+
 with open("/var/www/html/plus_submit.php") as f_old, open("temp/plus_submit.php", "w") as f_new:
     for line in f_old:
         if "?>" in line:
