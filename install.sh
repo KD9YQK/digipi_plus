@@ -64,6 +64,7 @@ if [ ! -f plus.gridtracker ]; then
     read -p "Do you want to install? (y/n) " yn
     case $yn in
         [yY] ) echo "Installing Grid Tracker"
+            mkdir ~/Documents
             sleep 1
             curl  https://debian.gridtracker.org/gridtracker_deb_install.sh | sudo bash
             sudo apt update
