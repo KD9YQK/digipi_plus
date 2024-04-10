@@ -8,9 +8,9 @@ You can find the DigiPi image here https://digipi.org/
 1. AX25 Packet Node Upgrade
    - Hunt the Wumpus Game
    - Go Fish Game
-2. [PCSI](https://github.com/maqifrnswa/PCSI) - Packet Compressed Sensing Imaging
-3. [OpenWebRX+](https://fms.komkon.org/OWRX/) - web-based SDR receiver WIP
-4. [Grid Tracker](https://gridtracker.org/) - TODO
+2. [PCSI](https://github.com/maqifrnswa/PCSI) - Packet Compressed Sensing Imaging over AX25
+3. [OpenWebRX+](https://fms.komkon.org/OWRX/) - web-based SDR receiver
+4. [Grid Tracker](https://gridtracker.org/) - GridTracker is a warehouse of amateur radio information presented in an easy to use interface, from live traffic decodes, logbooks, real-time spot reports, weather, current solar conditions and more!
 5. RTL-SDR Support
    - RTL-SDR udev drivers
    - RTL-SDR APRS iGate TODO
