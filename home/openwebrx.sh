@@ -5,6 +5,7 @@ trap ctrl_c TERM
 function ctrl_c() {
    echo "CTRL-C pressed, killing OpenWebRX"
    sudo killall openwebrx
+   rsync -avH /run/openwebrx/* /home/pi/config/openwebrx/
    exit 0
 }
 
