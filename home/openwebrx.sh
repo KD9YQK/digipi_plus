@@ -8,7 +8,9 @@ function ctrl_c() {
    exit 0
 }
 
-
+sudo mkdir /run/openwebrx
+sudo cp -a home/pi/config/openwebrx/* /run/openwebrx/
+sudo chown -R pi:pi /run/openwebrx
 openwebrx -c ~/openwebrx.conf &
 
 # remove "-o" flag to see list of stations
