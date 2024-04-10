@@ -3,6 +3,7 @@
 
 You can find the DigiPi image here https://digipi.org/
 
+You will need at least a 16gb SD Card that has been expanded to use the entire disk for a full install. You can learn how to expand the filesystem [here.](extend_filesystem.md)
 
 ## Features
 1. AX25 Packet Node Upgrade
