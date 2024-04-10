@@ -7,12 +7,12 @@ with open("/var/www/html/plus_submit.php") as f_old, open("temp/plus_submit.php"
             f_new.write("if (isset($_POST['openwebrx'])) {\n"
                         "  $submit = $_POST['openwebrx'];\n"
                         "  if ( $submit == 'on' ) {\n"
-                        "    $output = shell_exec('sudo systemctl start openwebrx');\n"
+                        "    $output = shell_exec('sudo systemctl start openwebrx-digipi');\n"
                         "    sleep(5);\n"
                         "    echo $output;\n"
                         "  }\n"
                         "  if ( $submit == 'off' ) {\n"
-                        "    $output = shell_exec('sudo systemctl stop openwebrx');\n"
+                        "    $output = shell_exec('sudo systemctl stop openwebrx-digipi');\n"
                         "    echo $output;\n"
                         "  }\n"
                         "}\n")
@@ -22,14 +22,14 @@ with open("/var/www/html/plus_submit.php") as f_old, open("temp/plus_submit.php"
 with open("/var/www/html/plus_form.php") as f_old, open("temp/plus_form.php", "w") as f_new:
     for line in f_old:
         if "?>" in line:
-            f_new.write("$output = shell_exec('sudo systemctl reset-failed openwebrx 2> /dev/null');\n")
+            f_new.write("$output = shell_exec('sudo systemctl reset-failed openwebrx-digipi 2> /dev/null');\n")
     
         f_new.write(line)
 
         if "<?php" in line:
             f_new.write("#-- OpenWebRX  -------------------------------------------------\n\n"
                         "echo '<tr>';\n"
-                        "$output = shell_exec('systemctl is-active openwebrx');\n"
+                        "$output = shell_exec('systemctl is-active openwebrx-digipi');\n"
                         "#$output = str_replace('failed', 'inactive', $output);\n"
                         "$output = chop($output);\n"
                         "if ($output == 'active'){\n"
