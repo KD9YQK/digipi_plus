@@ -26,3 +26,10 @@ cd digipi_plus
 bash install.sh
 ```
 
+## Note
+
+OpenWebRX requires the ability to write to the SD Card. I am still working on a viable solution for this...
+
+RTL-SDR may cause an error to occur on Raspberry Pi 4. To fix, the firmware will need to be upgraded. **This hasn't been completely tested. Do at your own risk!**
+
+`sudo rpi-update`
