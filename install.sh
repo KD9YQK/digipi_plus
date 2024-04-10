@@ -57,6 +57,28 @@ else
     echo "OK"
 fi
 
+:'
+echo -n "Checking for Grid Tracker..."
+sleep 1
+if [ ! -f plus.gridtracker ]; then
+    echo "NOT FOUND"
+    read -p "Do you want to install? (y/n) " yn
+    case $yn in
+        [yY] ) echo "Installing Grid Tracker"
+            sleep 1
+            curl  https://debian.gridtracker.org/gridtracker_deb_install.sh | sudo bash
+            sudo apt update
+            sudo apt install gridtracker -y
+            python3 gridtracker_helper.py
+            touch plus.gridtracker
+            echo "Grid Tracker Installed";;
+        * ) echo "Skipping";;
+    esac
+else
+    echo "OK"
+fi
+'
+
 echo -n "Checking for OpenWebRX..."
 sleep 1
 if [ ! -f plus.openwebrx ]; then
