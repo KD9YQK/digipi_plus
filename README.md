@@ -29,7 +29,7 @@ bash install.sh
 ## Known Issues
 
 1) OpenWebRX requires the ability to write to the SD Card. I am still working on a viable solution for this...
-2) RTL-SDR may cause an error to occur on Raspberry Pi 4 that looks like `rtlsdr_read_reg failed with -7` and `rtlsdr_write_reg failed with -7` To fix, the firmware will need to be upgraded. **This hasn't been completely tested. Do at your own risk!**
+2) RTL-SDR may cause an error to occur on Raspberry Pi 4 that looks like `rtlsdr_read_reg failed with -7` and `rtlsdr_write_reg failed with -7` To fix, the firmware will need to be upgraded. **This hasn't been completely tested. Do at your own risk!** According to Craig KM6LYW, this will break the functionality of the GPIO pins.
    ```
    sudo rpi-update
    ```
