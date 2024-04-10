@@ -114,7 +114,7 @@ if [ ! -f plus.rtl-sdr ]; then
 else
     echo "OK"
 fi
-:'
+
 echo -n "Checking for RTL-SDR iGate..."
 sleep 1
 if [ ! -f plus.sdr_igate ]; then
@@ -123,6 +123,11 @@ if [ ! -f plus.sdr_igate ]; then
     case $yn in
         [yY] ) echo "Installing RTL-SDR iGate"
             sleep 1
+            cp home/direwolf.rtlsdr.conf ~/ -v
+            python3 rtl-sdr.py
+            sudo mv temp/*.php /var/www/html/ -v
+            sudo cp services/rtlsdr-igate.service /etc/systemd/system/ -v
+            sudo systemctl daemon-reload
             touch plus.sdr_igate
             echo "RTL-SDR iGate Installed";;
         * ) echo "Skipping";;
@@ -130,4 +135,4 @@ if [ ! -f plus.sdr_igate ]; then
 else
     echo "OK"
 fi
-'
+
