@@ -93,7 +93,7 @@ if [ ! -f plus.rtl-sdr ]; then
 else
     echo "OK"
 fi
-
+:'
 echo -n "Checking for RTL-SDR iGate..."
 sleep 1
 if [ ! -f plus.sdr_igate ]; then
@@ -109,3 +109,4 @@ if [ ! -f plus.sdr_igate ]; then
 else
     echo "OK"
 fi
+'
