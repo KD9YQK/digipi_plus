@@ -3,7 +3,7 @@ Description=rtlsdr
 After=graphical.target
 
 [Service]
-ExecStartPre=+systemctl stop fldigi sstv wsjtx ardop tnc300b digipeater node winlinkrms js8call tnc pcsi openwebrx
+ExecStartPre=+systemctl stop fldigi sstv wsjtx ardop tnc300b digipeater node winlinkrms js8call tnc pcsi openwebrx-digipi
 Type=simple
 ExecStart=/home/pi/direwolf.rtlsdr.sh
 Restart=no
