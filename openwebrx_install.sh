@@ -13,6 +13,6 @@ mkdir ~/config/openwebrx
 cp /var/lib/openwebrx/* ~/config/openwebrx/ -v
 cp home/openwebrx.conf ~/ -v
 cp home/openwebrx.sh ~/ -v
-sudo cp openwebrx-digipi.service /etc/systemd/system/ -v
+sudo cp services/openwebrx-digipi.service /etc/systemd/system/ -v
 sudo systemctl daemon-reload
 
