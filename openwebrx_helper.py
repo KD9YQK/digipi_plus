@@ -60,4 +60,4 @@ with open("/var/www/html/plus_links.php") as f_old, open("temp/plus_links.php", 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
   pass
-    #add_EXECSTARTPRE('pcsi')
+    add_EXECSTARTPRE('rtlsdr-igate')
