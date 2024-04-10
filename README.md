@@ -33,3 +33,7 @@ bash install.sh
    ```
    sudo rpi-update
    ```
+This 'may' be a fix for the gpio. **UNTESTED**
+```
+sudo apt install rpi-lgpio
+```
