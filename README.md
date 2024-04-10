@@ -14,7 +14,7 @@ You will need at least a 16gb SD Card that has been expanded to use the entire d
 4. [Grid Tracker](https://gridtracker.org/) - GridTracker is a warehouse of amateur radio information presented in an easy to use interface, from live traffic decodes, logbooks, real-time spot reports, weather, current solar conditions and more!
 5. RTL-SDR Support
    - RTL-SDR udev drivers
-   - RTL-SDR APRS iGate TODO
+   - RTL-SDR APRS iGate
 
 ## Install
 **DON'T install until AFTER initial setup of DigiPi!!! This only works for DigiPi version 1.8-2**
