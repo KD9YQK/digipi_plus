@@ -124,7 +124,7 @@ if [ ! -f plus.sdr_igate ]; then
         [yY] ) echo "Installing RTL-SDR iGate"
             sleep 1
             cp home/direwolf.rtlsdr.sh ~/ -v
-            python3 rtl-sdr.py
+            python3 rtlsdr_helper.py
             sudo mv temp/*.php /var/www/html/ -v
             sudo cp services/rtlsdr-igate.service /etc/systemd/system/ -v
             sudo systemctl daemon-reload
