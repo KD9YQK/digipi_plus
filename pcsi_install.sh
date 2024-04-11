@@ -14,6 +14,6 @@ sudo systemctl daemon-reload
 sudo sed -i '/DigiPi Plus/a \        "pcsiGUI"               f.exec "python3 /home/pi/PCSI/pcsiGUI.py &"' /home/pi/.emwmrc
 
 sudo apt install python3-opencv python3-tk python3-pil.imagetk -y
-python3 -m pip install numpy imageio bitstring pylbfgs pyserial pillow
+sudo pip install numpy imageio bitstring pylbfgs pyserial pillow
 cd ~
 git clone https://github.com/maqifrnswa/PCSI.git
