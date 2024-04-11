@@ -31,7 +31,4 @@ RTL-SDR will cause an error to occur on Raspberry Pi 4 that looks like `rtlsdr_r
    ```
    sudo rpi-update
    ```
-This 'may' be a fix for the gpio. **UNTESTED** According to a post I found on the official RPI forums, one of the devs recently added this to the repos which should be a direct replacement. I currently don't use the GPIOs so I have no way to test.
-```
-sudo apt install python3-rpi-lgpio  --auto-remove --purge
-```
+** This does in fact break GPIO functionality. If your not using the Raspberry Pi GPIO for ANYTHING, then it is ok to do, but if you plan to use TFT screen, LEDs, PTT, etc then better not do.  
