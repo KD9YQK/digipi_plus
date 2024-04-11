@@ -34,7 +34,7 @@ You will now be prompted for the first sector for the new partition.
 ### Enter the start number from the earlier step!!! (the Linux partition)
 Next you will be prompted for the last sector you can just hit `enter` to accept the default which will utilize the remaining disk space.
 
-When asked to delete the existing ext4 filesystem, press `n`
+When asked to delete the existing ext4 signature, press `n`
 
 Type `w` to save the changes you have made.
 
