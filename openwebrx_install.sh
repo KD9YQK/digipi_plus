@@ -10,7 +10,7 @@ python3 openwebrx_helper.py
 sudo mv temp/*.php /var/www/html/
 
 mkdir ~/config/openwebrx
-cp /var/lib/openwebrx/* ~/config/openwebrx/ -v
+sudo cp /var/lib/openwebrx/* ~/config/openwebrx/ -v
 cp home/openwebrx.conf ~/ -v
 cp home/openwebrx.sh ~/ -v
 sudo cp services/openwebrx-digipi.service /etc/systemd/system/ -v
