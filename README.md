@@ -35,5 +35,5 @@ bash install.sh
    ```
 This 'may' be a fix for the gpio. **UNTESTED**
 ```
-sudo apt update && sudo apt install python3-rpi-lgpio  --auto-remove --purge
+sudo apt install python3-rpi-lgpio  --auto-remove --purge
 ```
