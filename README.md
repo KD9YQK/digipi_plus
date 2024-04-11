@@ -27,13 +27,11 @@ bash install.sh
 ```
 
 ## Known Issues
-
-1) OpenWebRX requires the ability to write to the SD Card. I am still working on a viable solution for this...
-2) RTL-SDR may cause an error to occur on Raspberry Pi 4 that looks like `rtlsdr_read_reg failed with -7` and `rtlsdr_write_reg failed with -7` To fix, the firmware will need to be upgraded. **This hasn't been completely tested. Do at your own risk!** According to Craig KM6LYW, this will break the functionality of the GPIO pins.
+RTL-SDR will cause an error to occur on Raspberry Pi 4 that looks like `rtlsdr_read_reg failed with -7` and `rtlsdr_write_reg failed with -7` when running Direwolf, or with OpenWebRX showing the device as inactive. There is an error in the firmware regarding the USB ports and communicating with the RTL-SDR. To fix, the firmware will need to be upgraded. **This hasn't been completely tested. Do at your own risk!** According to Craig KM6LYW, this will break the functionality of the GPIO pins.
    ```
    sudo rpi-update
    ```
-This 'may' be a fix for the gpio. **UNTESTED**
+This 'may' be a fix for the gpio. **UNTESTED** According to a post I found on the official RPI forums, one of the devs recently added this to the repos which should be a direct replacement. I currently don't use the GPIOs so I have no way to test.
 ```
 sudo apt install python3-rpi-lgpio  --auto-remove --purge
 ```
