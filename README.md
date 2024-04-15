@@ -81,7 +81,12 @@ nano kernel_gpio_fix.sh
    echo 12 > /sys/class/gpio/export
    echo 16 > /sys/class/gpio/export
    ```
-9) Place it in `rc.local` so it runs as boot
+   Make i execuable
+   ```
+   chmod +x kernel_gpio_fix.sh
+   ```
+   
+10) Place it in `rc.local` so it runs as boot
 ```
 sudo nano /etc/rc.local
 ```
