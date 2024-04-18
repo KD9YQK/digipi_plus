@@ -21,6 +21,8 @@ rtl_fm -f 144.390 - | direwolf -d i -p -q d -t 0 -D 1 -r 24000 -c /run/direwolf.
 
 sleep 1 # wait for direwolf to initialize gpio
 
+source <(head -n 25 localize.sh)
+
 # remove "-o" flag to see list of stations
 if [ $NEWLAT = 39.9999 ]; then  # location not yet set
    sudo /home/pi/direwatch.py -o --log "/run/direwolf.log" --title_text "DigiPi RTLSDR"  &
