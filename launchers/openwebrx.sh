@@ -12,7 +12,7 @@ function ctrl_c() {
 sudo mkdir /run/openwebrx
 sudo cp -a /home/pi/config/openwebrx/* /run/openwebrx/
 sudo chown -R pi:pi /run/openwebrx
-openwebrx -c ~/openwebrx.conf &
+openwebrx -c ~/digipi_plus/launchers/openwebrx.conf &
 
 sudo /home/pi/direwatch.py -o --log "/run/direwolf.log" --title_text "DigiPi OpenWebRX"  &
 

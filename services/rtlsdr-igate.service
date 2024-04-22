@@ -5,7 +5,7 @@ After=graphical.target
 [Service]
 ExecStartPre=+systemctl stop fldigi sstv wsjtx ardop tnc300b digipeater node winlinkrms js8call tnc pcsi openwebrx-digipi
 Type=simple
-ExecStart=/home/pi/direwolf.rtlsdr.sh
+ExecStart=/home/pi/digipi_plus/launchers/direwolf.rtlsdr.sh
 Restart=no
 WorkingDirectory=/home/pi/
 User=pi

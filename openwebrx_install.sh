@@ -11,9 +11,7 @@ sudo mv temp/*.php /var/www/html/
 
 mkdir ~/config/openwebrx
 sudo cp /var/lib/openwebrx/* ~/config/openwebrx/ -v
-cp home/openwebrx.conf ~/ -v
-cp home/openwebrx.sh ~/ -v
-chmod +x ~/openwebrx.sh
+chmod +x launchers/openwebrx.sh
 sudo cp services/openwebrx-digipi.service /etc/systemd/system/ -v
 sudo systemctl daemon-reload
 

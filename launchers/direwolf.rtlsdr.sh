@@ -14,7 +14,7 @@ function ctrl_c() {
 truncate --size 0 /run/direwolf.log
 
 # create a custom direwolf conf file, based on detected ptt method
-cp /home/pi/direwolf.rtlsdr.conf /tmp/direwolf.rtlsdr.conf
+cp /home/pi/digipi_plus/launchers/direwolf.rtlsdr.conf /tmp/direwolf.rtlsdr.conf
 sudo mv /tmp/direwolf.rtlsdr.conf /run/direwolf.rtlsdr.conf
 
 rtl_fm -f 144.390 - | direwolf -d i -p -q d -t 0 -D 1 -r 24000 -c /run/direwolf.rtlsdr.conf - | tee /home/pi/direwolf.log &

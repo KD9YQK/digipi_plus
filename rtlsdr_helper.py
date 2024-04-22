@@ -1,7 +1,7 @@
 from helper import add_EXECSTARTPRE
 
 
-with open("/home/pi/direwolf.tnc.conf") as f_old, open("/home/pi/direwolf.rtlsdr.conf", "w") as f_new:
+with open("/home/pi/direwolf.tnc.conf") as f_old, open("/home/pi/digipi_plus/launchers/direwolf.rtlsdr.conf", "w") as f_new:
     f_new.write("ADEVICE null null\n")
     f_new.write("CHANNEL 0\n")
     for line in f_old:

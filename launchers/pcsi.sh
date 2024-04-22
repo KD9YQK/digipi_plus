@@ -29,7 +29,7 @@ sudo service wsjtx stop
 truncate --size 0 /run/direwolf.log
 
 # create a custom direwolf conf file, based on detected ptt method
-cp /home/pi/direwolf.pcsi.conf /tmp/direwolf.pcsi.conf
+cp /home/pi/digipi_plus/launchers/direwolf.pcsi.conf /tmp/direwolf.pcsi.conf
 USBPRESENT=`grep "USB" /proc/asound/cards | wc -l`
 source <(head -n 25 localize.sh)
 if [ $NEWRIGNUMBER = DTR ]; then  
@@ -72,7 +72,7 @@ export DISPLAY=:1
 
 python3 ~/PCSI/pcsiGUI.py &
 
-sleep 8 
+sleep 4 
 sudo killall flrig
 
 sudo renice -n 0 `ps aux | grep pcsi | grep -v grep | awk '{print $2}'`

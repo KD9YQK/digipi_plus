@@ -5,7 +5,7 @@ After=graphical.target
 [Service]
 ExecStartPre=+systemctl stop fldigi sstv wsjtx ardop tnc300b digipeater node winlinkrms js8call tnc pcsi rtlsdr-igate
 Type=simple
-ExecStart=/home/pi/openwebrx.sh
+ExecStart=/home/pi/digipi_plus/launchers/openwebrx.sh
 Restart=no
 WorkingDirectory=/home/pi/
 User=pi
