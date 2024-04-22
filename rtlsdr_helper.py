@@ -15,7 +15,7 @@ with open("/home/pi/direwolf.tnc.conf") as f_old, open("/home/pi/direwolf.rtlsdr
             f_new.write(line)
 
 
-with open("/var/www/html/plus_submit.php") as f_old, open("temp/plus_submit.php", "w") as f_new:
+with open("/var/www/html/plus_services.php") as f_old, open("temp/plus_services.php", "w") as f_new:
     for line in f_old:
         if "?>" in line:
             f_new.write("if (isset($_POST['rtlsdr-igate'])) {\n"

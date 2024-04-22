@@ -1,7 +1,7 @@
 from helper import add_EXECSTARTPRE
 
 
-with open("/var/www/html/plus_submit.php") as f_old, open("temp/plus_submit.php", "w") as f_new:
+with open("/var/www/html/plus_services.php") as f_old, open("temp/plus_services.php", "w") as f_new:
     for line in f_old:
         if "?>" in line:
             f_new.write("if (isset($_POST['pcsi'])) {\n"
