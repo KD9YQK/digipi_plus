@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Upgrading AX25 packet node with Hunt the Wumpus and Go Fish"
+echo "Upgrading AX25 packet node"
 
 sudo apt install bsdgames -y
 chmod +x ~/digipi_plus/node/gofish.sh

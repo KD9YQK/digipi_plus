@@ -1,7 +1,7 @@
 #!/bin/bash
 
 python3 pcsi_helper.py
-sudo cp temp/*.php /var/www/html/
+sudo cp temp/*.php www/
 sudo rm temp/*.php
 sudo mkdir /var/www/html/pcsi
 sudo cp www/pcsi/index.php /var/www/html/pcsi/

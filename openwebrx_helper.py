@@ -2,7 +2,7 @@
 from helper import add_EXECSTARTPRE
 # /lib/systemd/system/openwebrx.service
 
-with open("/var/www/html/plus_services.php") as f_old, open("temp/plus_services.php", "w") as f_new:
+with open("www/plus_services.php") as f_old, open("temp/plus_services.php", "w") as f_new:
     for line in f_old:
         if "?>" in line:
             f_new.write("if (isset($_POST['openwebrx'])) {\n"
@@ -20,7 +20,7 @@ with open("/var/www/html/plus_services.php") as f_old, open("temp/plus_services.
         f_new.write(line)
 
 
-with open("/var/www/html/plus_form.php") as f_old, open("temp/plus_form.php", "w") as f_new:
+with open("www/plus_form.php") as f_old, open("temp/plus_form.php", "w") as f_new:
     for line in f_old:
         if "?>" in line:
             f_new.write("$output = shell_exec('sudo systemctl reset-failed openwebrx-digipi 2> /dev/null');\n")
@@ -50,7 +50,7 @@ with open("/var/www/html/plus_form.php") as f_old, open("temp/plus_form.php", "w
                         "echo '</td></tr>';\n")
 
 
-with open("/var/www/html/plus_links.php") as f_old, open("temp/plus_links.php", "w") as f_new:
+with open("www/plus_links.php") as f_old, open("temp/plus_links.php", "w") as f_new:
     script_count = 0
     for line in f_old:
         f_new.write(line)

@@ -1,16 +1,16 @@
 <?php include 'header.php' ?>
 
 <form action="index_plus.php" method="post">
-
-<div class="tab">
-  <button class="tablinks" type="button" id="defaultOpen" onclick="openMenu(event, 'Services')">Services</button>
-  <button class="tablinks" type="button" onclick="openMenu(event, 'Programs')">Programs</button>
-  <button class="tablinks" type="button" onclick="openMenu(event, 'Settings')">Settings</button>
-</div>
-
 <table>
 <tr>
     <td>
+        <div class="tab" style="text-align: center;">
+            <center>
+            <button class="tablinks" type="button" id="defaultOpen" onclick="openMenu(event, 'Services')">Services</button>
+            <button class="tablinks" type="button" onclick="openMenu(event, 'Programs')">Programs</button>
+            <button class="tablinks" type="button" onclick="openMenu(event, 'Settings')">Settings</button>
+            </center>
+        </div>
         <div id="Services" class="tabcontent">
             <?php include 'orig_services.php' ?>
             <?php include 'orig_form.php' ?>
@@ -28,7 +28,7 @@
         </div>
     </td>
     <td style="width:100%;">
-        <iframe src="index.php" name="iframe_a" style="height:90vh; width:100%;" title="Digipi Plus"></iframe>
+        <iframe src="syslog.php" name="iframe_a" style="height:90vh; width:100%;" title="Digipi Plus"></iframe>
     </td>
 </tr>
 </table>

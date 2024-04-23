@@ -12,15 +12,17 @@ if [ ! -f saves/plus.base ]; then
     echo "Installing DigiPi Plus Base"
     sleep 1
     echo "Backing up files"
-    mv /var/www/html/index.php backup/ -v
-    mv /var/www/html/styles/simple.css backup/ -v
+    sudo cp /var/www/html/index.php backup/ -v
+    sudo cp /var/www/html/styles/simple.css backup/ -v
+    sudo rm /var/www/html/styles/simple.css -v
+    sudo rm /var/www/html/index.php -v
     cp ~/.emwmrc backup/emwmrc -v
     cp /etc/systemd/system/*.service backup/ -v
     echo "Copying Files"
     cp home/emwmrc_plus ~/.emwmrc -v
     echo "Creating Simlinks"
-    sudo ln -sf www/*.php /var/www/html/ -v
-    sudo ln -sf www/*.css /var/www/html/styles -v
+    sudo ln -sf /home/pi/digipi_plus/www/*.php /var/www/html/ -v
+    sudo ln -sf /home/pi/digipi_plus/www/*.css /var/www/html/styles -v
     touch saves/plus.base
     echo "DigiPi Plus Base Installed"
 else
@@ -129,7 +131,7 @@ if [ ! -f saves/plus.sdr_igate ]; then
             sleep 1
             chmod +x launchers/direwolf.rtlsdr.sh
             python3 rtlsdr_helper.py
-            sudo mv temp/*.php /var/www/html/ -v
+            sudo mv temp/*.php www/ -v
             sudo cp services/rtlsdr-igate.service /etc/systemd/system/ -v
             sudo systemctl daemon-reload
             touch saves/plus.sdr_igate
