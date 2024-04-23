@@ -3,7 +3,7 @@
 <form action="index_plus.php" method="post">
 <table>
 <tr>
-    <td width=400>
+    <td style="width:400px;">
         <div class="tab" style="text-align: center;">
             <center>
             <button class="tablinks" type="button" id="defaultOpen" onclick="openMenu(event, 'Services')">Services</button>
