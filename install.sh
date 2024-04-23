@@ -1,3 +1,4 @@
+#!/bin/bash
 
 echo ""
 echo "DigiPi Plus Installer"
@@ -11,12 +12,15 @@ if [ ! -f saves/plus.base ]; then
     echo "Installing DigiPi Plus Base"
     sleep 1
     echo "Backing up files"
-    cp /var/www/html/index.php backup/ -v
+    mv /var/www/html/index.php backup/ -v
+    mv /var/www/html/styles/simple.css backup/ -v
     cp ~/.emwmrc backup/emwmrc -v
     cp /etc/systemd/system/*.service backup/ -v
     echo "Copying Files"
-    sudo cp www/*.php /var/www/html/ -v
     cp home/emwmrc_plus ~/.emwmrc -v
+    echo "Creating Simlinks"
+    sudo ln -sf www/*.php /var/www/html/ -v
+    sudo ln -sf www/*.css /var/www/html/styles -v
     touch saves/plus.base
     echo "DigiPi Plus Base Installed"
 else

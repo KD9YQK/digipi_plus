@@ -1,3 +1,4 @@
+#!/bin/python
 from helper import add_EXECSTARTPRE
 # /lib/systemd/system/openwebrx.service
 

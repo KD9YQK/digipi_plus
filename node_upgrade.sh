@@ -1,3 +1,4 @@
+#!/bin/bash
 
 echo "Upgrading AX25 packet node with Hunt the Wumpus and Go Fish"
 
