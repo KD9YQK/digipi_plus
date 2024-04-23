@@ -3,7 +3,7 @@
 <form action="index_plus.php" method="post">
 <table>
 <tr>
-    <td style="width:400px;">
+    <td style="width:20%;">
         <div class="tab" style="text-align: center;">
             <center>
             <button class="tablinks" type="button" id="defaultOpen" onclick="openMenu(event, 'Services')">Services</button>
@@ -27,7 +27,7 @@
             <?php include 'plus_settings.php' ?>
         </div>
     </td>
-    <td style="width:100%;">
+    <td style="width:80%;">
         <iframe src="syslog.php" name="iframe_a" style="height:90vh; width:100%;" title="Digipi Plus"></iframe>
     </td>
 </tr>
