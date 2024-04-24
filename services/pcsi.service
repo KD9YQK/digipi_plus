@@ -5,7 +5,7 @@ After=graphical.target
 [Service]
 ExecStartPre=+systemctl stop fldigi sstv wsjtx ardop tnc300b digipeater node winlinkrms js8call tnc
 Type=simple
-ExecStart=bash /home/pi/digipi_plus/launchers/pcsi.sh
+ExecStart=bash /home/pi/pcsi.sh
 Restart=no
 WorkingDirectory=/home/pi/
 User=pi

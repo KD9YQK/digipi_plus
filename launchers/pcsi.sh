@@ -24,14 +24,14 @@ sudo killall qsstv
 sudo killall pcsi 
 sudo service wsjtx stop
 
-
+cd ~
 # zero out old direwolf log file in case /run/ is full
 truncate --size 0 /run/direwolf.log
 
 # create a custom direwolf conf file, based on detected ptt method
 cp /home/pi/digipi_plus/launchers/direwolf.pcsi.conf /tmp/direwolf.pcsi.conf
 USBPRESENT=`grep "USB" /proc/asound/cards | wc -l`
-source <(head -n 25 localize.sh)
+source <(head -n 25 ~/localize.sh)
 if [ $NEWRIGNUMBER = DTR ]; then  
   sed -i "s/\#PTT \/dev\/DEVICEFILE DTR/PTT \/dev\/$NEWDEVICEFILE DTR/gi" /tmp/direwolf.pcsi.conf 
 elif [ $NEWRIGNUMBER = RTS ]; then  
