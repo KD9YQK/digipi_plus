@@ -1,3 +1,27 @@
+<table>
+<tr>
+  <td>
+    <a href="/wifi.php" title="Setup Wifi connection"><strong>Wifi</strong></a>
+  </td>
+  <td>
+    <a href=/shell.php target="shell" title="Command prompt"><strong>Shell</strong></a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <a href=/log.php title="Direwolf Log" target="log"><strong>PktLog</strong></a>
+  </td>
+  <td >
+    <a href=/syslog.php title="System log file" target="syslog"><strong>SysLog</strong></a>
+  </td>
+</tr>
+<tr>
+<td >
+    <a href=/index.php><strong>Refresh</strong></a>
+  </td>
+</tr>
+</table>
+
 <input type="submit" name="reboot" value="Reboot">
 &nbsp;
 <input type="submit" name="shutdown" value="Shutdown">   
