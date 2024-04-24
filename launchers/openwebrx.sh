@@ -14,7 +14,7 @@ sudo cp -a /home/pi/config/openwebrx/* /run/openwebrx/
 sudo chown -R pi:pi /run/openwebrx
 openwebrx -c ~/digipi_plus/launchers/openwebrx.conf &
 
-sudo /home/pi/direwatch.py -o --log "/run/direwolf.log" --title_text "DigiPi OpenWebRX"  &
+sudo /home/pi/direwatch.py -o --log "/run/direwolf.log" --title_text "OpenWebRX"  &
 
 
 sleep infinity

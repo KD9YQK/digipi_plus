@@ -50,9 +50,9 @@ sleep 1 # wait for direwolf to initialize gpio
 
 # remove "-o" flag to see list of stations
 if [ $NEWLAT = 39.9999 ]; then  # location not yet set
-   sudo /home/pi/direwatch.py -o --log "/run/direwolf.log" --title_text "DigiPi PCSI"  &
+   sudo /home/pi/direwatch.py -o --log "/run/direwolf.log" --title_text "PCSI"  &
 else
-   sudo /home/pi/direwatch.py -o --log "/run/direwolf.log" --title_text "DigiPi PCSI" --lat $NEWLAT --lon $NEWLON  &
+   sudo /home/pi/direwatch.py -o --log "/run/direwolf.log" --title_text "PCSI" --lat $NEWLAT --lon $NEWLON  &
 fi
 
 # wait for direwolf to open port 8001
@@ -66,8 +66,6 @@ nice -n 5 vncserver -depth 16                                   # runs in backgr
 /home/pi/digibanner.py -b PCSI -s http://digipi/pcsi              # momentary run
 /usr/share/novnc/utils/novnc_proxy --vnc localhost:5901 &
 
-
-
 export DISPLAY=:1   
 
 python3 ~/PCSI/pcsiGUI.py &
@@ -75,12 +73,8 @@ python3 ~/PCSI/pcsiGUI.py &
 sleep 8 
 sudo killall flrig
 
-sudo renice -n 0 `ps aux | grep pcsi | grep -v grep | awk '{print $2}'`
+sudo renice -n 0 `ps aux | grep pcsiGUI.py | grep -v grep | awk '{print $2}'`
 sudo renice -n 5 `ps aux | grep Xtightvnc | grep -v grep | awk '{print $2}'`
-
-#maximize app, full screen
-wmctrl -a psci -b add,maximized_vert,maximized_horz
-
 
 sleep infinity
 

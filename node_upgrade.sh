@@ -17,7 +17,7 @@ sudo cp /etc/ax25/uronode.motd /etc/ax25/uronode.motd.bak -v
 echo "Making changes to /etc/ax25/uronode.conf"
 sudo sed -i '/EMail/a \ExtCmd		WUmpus	3	nobody	/home/pi/digipi_plus/node/wumpus.sh wumpus.sh' /etc/ax25/uronode.conf
 sudo sed -i '/WUmpus/a \ExtCmd		GOfish	1	nobody	/home/pi/digipi_plus/node/gofish.sh gofish.sh' /etc/ax25/uronode.conf
-sudo sed -i '/EMail/a \ExtCmd		hamQSL	3	nobody	/home/pi/digipi_plus/node/hamqsl.py hamqsl.py' /etc/ax25/uronode.conf
+sudo sed -i '/EMail/a \ExtCmd		HAMQSL	3	nobody	/home/pi/digipi_plus/node/hamqsl.py hamqsl.py' /etc/ax25/uronode.conf
 sudo sed -i '/EMail/a \ExtCmd		SPACE	3	nobody	/home/pi/digipi_plus/node/space.py space.py' /etc/ax25/uronode.conf
 
 echo "Making changes to /etc/ax25/uronode.motd"
