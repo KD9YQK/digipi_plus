@@ -2,16 +2,14 @@
 <?php include 'header.php' ?>
 </td></tr></table>
 
-<form action="index_plus.php" method="post">
+<form action="index.php" method="post">
 <table>
 <tr>
     <td>
         <div class="tab" style="text-align: center; width:400px;">
-            <center>
             <button class="tablinks" type="button" id="defaultOpen" onclick="openMenu(event, 'Services')">Services</button>
             <button class="tablinks" type="button" onclick="openMenu(event, 'Programs')">Programs</button>
             <button class="tablinks" type="button" onclick="openMenu(event, 'Settings')">Settings</button>
-            </center>
         </div>
         <div id="Services" class="tabcontent">
             <?php include 'orig_services.php' ?>

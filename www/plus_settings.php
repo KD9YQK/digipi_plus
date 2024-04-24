@@ -6,17 +6,15 @@
   <td>
     <a href=/shell.php target="shell" title="Command prompt"><strong>Shell</strong></a>
   </td>
-</tr>
-<tr>
-  <td>
-    <a href=/log.php title="Direwolf Log" target="log"><strong>PktLog</strong></a>
-  </td>
   <td >
     <a href=/syslog.php title="System log file" target="syslog"><strong>SysLog</strong></a>
   </td>
 </tr>
 <tr>
-<td >
+  <td>
+    <a href=/log.php title="Direwolf Log" target="log"><strong>PktLog</strong></a>
+  </td>
+  <td>
     <a href=/index.php><strong>Refresh</strong></a>
   </td>
 </tr>
