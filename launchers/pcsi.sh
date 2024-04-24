@@ -72,7 +72,7 @@ export DISPLAY=:1
 
 python3 ~/PCSI/pcsiGUI.py &
 
-sleep 4 
+sleep 8 
 sudo killall flrig
 
 sudo renice -n 0 `ps aux | grep pcsi | grep -v grep | awk '{print $2}'`
