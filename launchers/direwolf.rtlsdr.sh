@@ -14,7 +14,7 @@ function ctrl_c() {
 truncate --size 0 /run/direwolf.log
 
 # create a custom direwolf conf file, based on detected ptt method
-cp /home/pi/direwolf.rtlsdr.conf /tmp/direwolf.rtlsdr.conf
+cp /home/pi/digipi_plus/launchers/direwolf.rtlsdr.conf /tmp/direwolf.rtlsdr.conf
 sudo mv /tmp/direwolf.rtlsdr.conf /run/direwolf.rtlsdr.conf
 
 rtl_fm -f 144.390 - | direwolf -d i -p -q d -t 0 -D 1 -r 24000 -c /run/direwolf.rtlsdr.conf - | tee /home/pi/direwolf.log &
@@ -27,7 +27,7 @@ source <(head -n 25 localize.sh)
 if [ $NEWLAT = 39.9999 ]; then  # location not yet set
    sudo /home/pi/direwatch.py -o --log "/run/direwolf.log" --title_text "DigiPi RTLSDR"  &
 else
-   sudo /home/pi/direwatch.py -o --log "/run/direwolf.log" --title_text "DigiPi RTLSDR" --lat $NEWLAT --lon $NEWLON  &
+   sudo /home/pi/direwatch.py -o --log "/run/direwolf.log" --title_text "RTL-SDR iGate" --lat $NEWLAT --lon $NEWLON  &
 fi
 
 # wait for direwolf to open port 8001

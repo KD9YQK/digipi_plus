@@ -1,19 +1,20 @@
-!#/bin/bash
+#!/bin/bash
 
 python3 pcsi_helper.py
-sudo cp temp/*.php /var/www/html/
-sudo rm temp/*.php
-sudo mkdir /var/www/html/pcsi
-sudo cp www/pcsi/index.php /var/www/html/pcsi/
-cp home/pcsi.sh ~/
-chmod +x ~/pcsi.sh
-sudo cp ~/direwolf.tnc.conf ~/direwolf.pcsi.conf
-sudo cp services/pcsi.service /etc/systemd/system/
+sudo cp temp/*.php www/ -v
+sudo rm temp/*.php -v
+sudo mkdir /var/www/html/pcsi -v
+sudo cp www/pcsi/index.php /var/www/html/pcsi/ -v
+chmod +x launchers/pcsi.sh
+sudo cp ~/direwolf.tnc.conf launchers/direwolf.pcsi.conf -v
+sudo cp services/pcsi.service /etc/systemd/system/ -v
+ln -sf /home/pi/digipi_plus/launchers/pcsi.sh /home/pi -v
 sudo systemctl daemon-reload
 
 sudo sed -i '/DigiPi Plus/a \        "pcsiGUI"               f.exec "python3 /home/pi/PCSI/pcsiGUI.py &"' /home/pi/.emwmrc
 
 sudo apt install python3-opencv python3-tk python3-pil.imagetk -y
-sudo pip install numpy imageio bitstring pylbfgs pyserial pillow
+sudo pip install numpy imageio pylbfgs pyserial pillow
+sudo pip install bitstring==4.1.4
 cd ~
 git clone https://github.com/maqifrnswa/PCSI.git

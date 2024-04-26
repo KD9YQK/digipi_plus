@@ -1,7 +1,9 @@
+#!/bin/bash
+
 from helper import add_EXECSTARTPRE
 
 
-with open("/home/pi/direwolf.tnc.conf") as f_old, open("/home/pi/direwolf.rtlsdr.conf", "w") as f_new:
+with open("/home/pi/direwolf.tnc.conf") as f_old, open("/home/pi/digipi_plus/launchers/direwolf.rtlsdr.conf", "w") as f_new:
     f_new.write("ADEVICE null null\n")
     f_new.write("CHANNEL 0\n")
     for line in f_old:
@@ -15,7 +17,7 @@ with open("/home/pi/direwolf.tnc.conf") as f_old, open("/home/pi/direwolf.rtlsdr
             f_new.write(line)
 
 
-with open("/var/www/html/plus_submit.php") as f_old, open("temp/plus_submit.php", "w") as f_new:
+with open("www/plus_services.php") as f_old, open("temp/plus_services.php", "w") as f_new:
     for line in f_old:
         if "?>" in line:
             f_new.write("if (isset($_POST['rtlsdr-igate'])) {\n"
@@ -33,7 +35,7 @@ with open("/var/www/html/plus_submit.php") as f_old, open("temp/plus_submit.php"
         f_new.write(line)
 
 
-with open("/var/www/html/plus_form.php") as f_old, open("temp/plus_form.php", "w") as f_new:
+with open("www/plus_form.php") as f_old, open("temp/plus_form.php", "w") as f_new:
     for line in f_old:
         if "?>" in line:
             f_new.write("$output = shell_exec('sudo systemctl reset-failed rtlsdr-igate 2> /dev/null');\n")
