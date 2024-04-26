@@ -23,6 +23,6 @@ sudo sed -i '/EMail/a \ExtCmd		SPACE	3	nobody	/home/pi/digipi_plus/node/space.py
 echo "Making changes to /etc/ax25/uronode.motd"
 sudo sed -i '/HITCH/a \  WUMP  - Play Hunt The Wumpus ' /etc/ax25/uronode.motd
 sudo sed -i '/WUMP/a \  GO	- Play Go Fish ' /etc/ax25/uronode.motd
-sudo sed -i '/HITCH/a \  QSL  - Get current band conditions ' /etc/ax25/uronode.motd
-sudo sed -i '/HITCH/a \  SPACE  - Get current space WX ' /etc/ax25/uronode.motd
+sudo sed -i '/WEB/a \  HAMQSL - Get current band conditions ' /etc/ax25/uronode.motd
+sudo sed -i '/WEB/a \  SPACE - Get current space WX ' /etc/ax25/uronode.motd
 echo "Upgrade Complete"
