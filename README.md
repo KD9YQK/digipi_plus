@@ -34,6 +34,9 @@ bash install.sh
 RTL-SDR will cause an error to occur on **Raspberry Pi 4** that looks like `rtlsdr_read_reg failed with -7` and `rtlsdr_write_reg failed with -7` when running Direwolf, or with OpenWebRX showing the device as inactive. There is an error in the firmware regarding the USB ports and communicating with the RTL-SDR. To fix, the firmware will need to be upgraded. For directions on how to fix, click [here.](kernel6.6_fix.md)
 
 ## Changelog
+- ??/??/2024 - v1.2 Release
+  1. Added JS8Spotter
+  2. ???
 - 04/23/2024 - v1.1 Release - Not compatable with previous version.
   1. Added Space WX and Ham QSL to AX25 Node
   2. Added new Homepage which organizes the menus, and adds the syslog in the blank free space
