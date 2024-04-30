@@ -84,6 +84,29 @@ else
     echo "OK"
 fi
 
+echo -n "Checking for JS8Spotter..."
+sleep 1
+if [ ! -f saves/plus.js8spotter ]; then
+    echo "NOT FOUND"
+    read -p "Do you want to install? (y/n) " yn
+    case $yn in
+        [yY] ) echo "Installing JS8Spotter"
+            mkdir ~/Documents
+            sleep 1
+            wget https://kf7mix.com/files/js8spotter/js8spotter-110b_src.zip
+            mkdir js8spotter
+            unzip js8spotter-110b_src.zip
+            mv -R js8spotter-110b_src/ js8spotter/
+            rm js8spotter-110b_src
+            sudo sed -i '/DigiPi Plus/a \        "JS8Spotter"               f.exec "/home/pi/digipi_plus/js8spotter/JS8Spotter &"' /home/pi/.emwmrc
+            touch saves/plus.js8spotter
+            echo "JS8Spotter Installed";;
+        * ) echo "Skipping";;
+    esac
+else
+    echo "OK"
+fi
+
 echo -n "Checking for OpenWebRX..."
 sleep 1
 if [ ! -f saves/plus.openwebrx ]; then
