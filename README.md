@@ -17,6 +17,8 @@ You will need at least a 16gb SD Card that has been expanded to use the entire d
 5. RTL-SDR Support
    - RTL-SDR udev drivers
    - RTL-SDR APRS iGate
+6. [JS8Spotter](https://kf7mix.com/js8spotter.html) - JS8Spotter can help users sort and track band activity, send APRS messages more easily, view stations on an offline map, send custom automated responses, and even implement simple forms.
+
 
 ## Install
 **DON'T install until AFTER initial setup of DigiPi!!! This only works for DigiPi version 1.8-2**
