@@ -302,6 +302,31 @@ DigiPi Plus Tabs
     to {opacity: 1;}
 }
 
+#mySidenav a
+{
+	position: absolute;
+	right: -80px;
+	transition: 0.3s;
+	padding: 5px;
+	width: 100px;
+	text-decoration: none;
+	font-size: 20px;
+	color: white;
+	border-radius: 5px 0 0 5px;
+	text-align: right;
+	background-color: #555;
+}
+  
+#mySidenav a:hover { right: 0; }
+  
+#syslog { top: 20px; }
+  
+#pktlog { top: 60px; }
+  
+#shell { top: 100px; }
+  
+#vnc { top: 140px; }
+
 
 /* -----------------------
 Wide styles

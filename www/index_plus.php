@@ -33,6 +33,15 @@
 </tr>
 </table>
 
+<div id="mySidenav" class="sidenav">
+    <a href="syslog.php" target='iframe_a' id="syslog">SysLog</a>
+    <a href="log.php" target='iframe_a' id="pktlog">PktLog</a>
+    <a href="shell.php" target='iframe_a' id="shell">Shell</a>
+    <script>
+        document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':6080/vnc.html?port=6080&password=test11&autoconnect=true" target="iframe_a" id="vnc">VNC</a>' )
+    </script>
+</div>
+
 <script>
 function openMenu(evt, tabName) {
     var i, tabcontent, tablinks;
@@ -52,7 +61,7 @@ function openMenu(evt, tabName) {
 document.getElementById("defaultOpen").click();
 </script>
 
-<br/><br/><hr>
+<br/>
 <small>1.8-2 KM6LYW ©2024</small>
 
 <br/><br/>

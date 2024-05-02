@@ -37,7 +37,8 @@ RTL-SDR will cause an error to occur on **Raspberry Pi 4** that looks like `rtls
 ## Changelog
 - ??/??/2024 - v1.2 Release
   1. Added JS8Spotter
-  2. ???
+  2. Added Xastir
+  3. Added Logs, Shell, and VNC to Homepage
 - 04/23/2024 - v1.1 Release - Not compatable with previous version.
   1. Added Space WX and Ham QSL to AX25 Node
   2. Added new Homepage which organizes the menus, and adds the syslog in the blank free space
