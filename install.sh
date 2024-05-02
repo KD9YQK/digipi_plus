@@ -91,14 +91,13 @@ if [ ! -f saves/plus.js8spotter ]; then
     read -p "Do you want to install? (y/n) " yn
     case $yn in
         [yY] ) echo "Installing JS8Spotter"
-            mkdir ~/Documents
             sleep 1
             wget https://kf7mix.com/files/js8spotter/js8spotter-110b_src.zip
             mkdir js8spotter
             unzip js8spotter-110b_src.zip
-            mv -R js8spotter-110b_src/ js8spotter/
-            rm js8spotter-110b_src
-            sudo sed -i '/DigiPi Plus/a \        "JS8Spotter"               f.exec "/home/pi/digipi_plus/js8spotter/JS8Spotter &"' /home/pi/.emwmrc
+            cp -r js8spotter-110b_src/* js8spotter/
+            rm -r js8spotter-110b_src
+            sudo sed -i '/DigiPi Plus/a \        "JS8Spotter"               f.exec "python3 /home/pi/digipi_plus/js8spotter/JS8Spotter.py &"' /home/pi/.emwmrc
             touch saves/plus.js8spotter
             echo "JS8Spotter Installed";;
         * ) echo "Skipping";;
@@ -135,23 +134,6 @@ if [ ! -f saves/plus.tqsl ]; then
             bash tqsl_install.sh
             touch saves/plus.tqsl
             echo "Trusted QSL Installed";;
-        * ) echo "Skipping";;
-    esac
-else
-    echo "OK"
-fi
-
-echo -n "Checking for CHIRP..."
-sleep 1
-if [ ! -f saves/plus.chirp ]; then
-    echo "NOT FOUND"
-    read -p "Do you want to install? (y/n) " yn
-    case $yn in
-        [yY] ) echo "Installing CHIRP"
-            sleep 1
-            bash chirp_install.sh
-            touch saves/plus.chirp
-            echo "CHIRP Installed";;
         * ) echo "Skipping";;
     esac
 else
