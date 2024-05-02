@@ -107,6 +107,57 @@ else
     echo "OK"
 fi
 
+echo -n "Checking for Xastir..."
+sleep 1
+if [ ! -f saves/plus.xastir ]; then
+    echo "NOT FOUND"
+    read -p "Do you want to install? (y/n) " yn
+    case $yn in
+        [yY] ) echo "Installing Xastir"
+            sleep 1
+            bash xastir_install.sh
+            touch saves/plus.xastir
+            echo "Xastir Installed";;
+        * ) echo "Skipping";;
+    esac
+else
+    echo "OK"
+fi
+
+echo -n "Checking for Trusted QSL..."
+sleep 1
+if [ ! -f saves/plus.tqsl ]; then
+    echo "NOT FOUND"
+    read -p "Do you want to install? (y/n) " yn
+    case $yn in
+        [yY] ) echo "Installing Trusted QSL"
+            sleep 1
+            bash tqsl_install.sh
+            touch saves/plus.tqsl
+            echo "Trusted QSL Installed";;
+        * ) echo "Skipping";;
+    esac
+else
+    echo "OK"
+fi
+
+echo -n "Checking for CHIRP..."
+sleep 1
+if [ ! -f saves/plus.chirp ]; then
+    echo "NOT FOUND"
+    read -p "Do you want to install? (y/n) " yn
+    case $yn in
+        [yY] ) echo "Installing CHIRP"
+            sleep 1
+            bash chirp_install.sh
+            touch saves/plus.chirp
+            echo "CHIRP Installed";;
+        * ) echo "Skipping";;
+    esac
+else
+    echo "OK"
+fi
+
 echo -n "Checking for OpenWebRX..."
 sleep 1
 if [ ! -f saves/plus.openwebrx ]; then
