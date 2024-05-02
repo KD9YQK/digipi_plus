@@ -15,4 +15,6 @@ sudo make install
 sudo chmod u+s /usr/local/bin/xastir
 sudo sed -i '/DigiPi Plus/a \        "Xastir"               f.exec "xastir &"' /home/pi/.emwmrc
 cd /home/pi/digipi_plus
-sudo rm -r Xastir
+echo "---------- Cleaning Up ----------"
+sudo rm -r Xastir -v 
+sudo apt-get remove xorg-dev libmotif-dev libcurl4-openssl-dev libpcre3-dev libproj-dev libdb5.3-dev libax25-dev libwebp-dev libshp-dev festival-dev libgeotiff-dev libwebp-dev libgraphicsmagick1-dev libpcre2-dev -y

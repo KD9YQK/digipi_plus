@@ -214,3 +214,6 @@ if [ ! -f saves/plus.sdr_igate ]; then
 else
     echo "OK"
 fi
+echo "---------- Final Cleanup ----------"
+sudo apt autoremove
+echo "---------- Install Complete ----------"
