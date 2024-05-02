@@ -327,22 +327,22 @@ DigiPi Plus Tabs
   
 #syslog
 {
-	top: 100px;
+	top: 120px;
 }
   
 #pktlog
 {
-	top: 140px;
+	top: 160px;
 }
   
 #shell
 {
-	top: 180px;
+	top: 200px;
 }
   
 #vnc
 {
-	top: 220px;
+	top: 240px;
 }
 
 

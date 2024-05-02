@@ -97,7 +97,7 @@ if [ ! -f saves/plus.js8spotter ]; then
             unzip js8spotter-110b_src.zip
             cp -r js8spotter-110b_src/* js8spotter/
             rm -r js8spotter-110b_src
-            sudo sed -i '/DigiPi Plus/a \        "JS8Spotter"               f.exec "python3 /home/pi/digipi_plus/js8spotter/JS8Spotter.py &"' /home/pi/.emwmrc
+            sudo sed -i '/DigiPi Plus/a \        "JS8Spotter"               f.exec "cd /home/pi/digipi_plus/js8spotter && python3 js8spotter.py &"' /home/pi/.emwmrc
             touch saves/plus.js8spotter
             echo "JS8Spotter Installed";;
         * ) echo "Skipping";;
