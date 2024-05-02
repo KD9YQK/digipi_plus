@@ -25,7 +25,7 @@ source <(head -n 25 localize.sh)
 
 # remove "-o" flag to see list of stations
 if [ $NEWLAT = 39.9999 ]; then  # location not yet set
-   sudo /home/pi/direwatch.py -o --log "/run/direwolf.log" --title_text "DigiPi RTLSDR"  &
+   sudo /home/pi/direwatch.py -o --log "/run/direwolf.log" --title_text "RTL-SDR iGate"  &
 else
    sudo /home/pi/direwatch.py -o --log "/run/direwolf.log" --title_text "RTL-SDR iGate" --lat $NEWLAT --lon $NEWLON  &
 fi
