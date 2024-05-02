@@ -8,6 +8,3 @@ sudo make install
 sudo cp /usr/local/lib/libtqsllib.so /usr/lib/libtqsllib.so -v
 sudo sed -i '/DigiPi Plus/a \        "Trusted QSL"               f.exec "tqsl &"' /home/pi/.emwmrc
 cd ..
-echo "---------- Cleaning Up ----------"
-sudo rm -r tqsl-2.7.3
-sudo apt remove libssl-dev libsqlite3-dev libcurl4-openssl-dev libwxgtk3.0-gtk3-dev -y

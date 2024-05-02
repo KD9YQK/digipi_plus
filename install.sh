@@ -114,6 +114,7 @@ if [ ! -f saves/plus.js8spotter ]; then
             unzip js8spotter-110b_src.zip
             cp -r js8spotter-110b_src/* js8spotter/
             rm -r js8spotter-110b_src
+            rm js8spotter-110b_src.zip
             sudo sed -i '/DigiPi Plus/a \        "JS8Spotter"               f.exec "cd /home/pi/digipi_plus/js8spotter && python3 js8spotter.py &"' /home/pi/.emwmrc
             touch saves/plus.js8spotter
             echo "JS8Spotter Installed";;
@@ -215,5 +216,7 @@ else
     echo "OK"
 fi
 echo "---------- Final Cleanup ----------"
+sleep 1
+sudo apt-get remove xorg-dev libmotif-dev libcurl4-openssl-dev libpcre3-dev libproj-dev libdb5.3-dev libax25-dev libwebp-dev libshp-dev festival-dev libgeotiff-dev libwebp-dev libgraphicsmagick1-dev libpcre2-dev libssl-dev libsqlite3-dev libwxgtk3.0-gtk3-dev -y
 sudo apt autoremove
 echo "---------- Install Complete ----------"
