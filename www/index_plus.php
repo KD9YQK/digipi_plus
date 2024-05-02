@@ -59,7 +59,6 @@ function openMenu(evt, tabName) {
 document.getElementById("defaultOpen").click();
 </script>
 
-<br/>
 <small>1.8-2 KM6LYW ©2024</small>
 
 <br/><br/>
