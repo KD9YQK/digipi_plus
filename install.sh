@@ -46,6 +46,23 @@ else
     echo "OK"
 fi
 
+echo -n "Checking for UHF Upgrade..."
+sleep 1
+if [ ! -f saves/plus.uhf ]; then
+    echo "NOT FOUND"
+    read -p "Do you want to install? (y/n) " yn
+    case $yn in
+        [yY] ) echo "Installing UHF TNC and Node"
+            sleep 1
+            bash uhf_upgrade.sh
+            touch saves/plus.uhf
+            echo "UHF Upgrade Installed";;
+        * ) echo "Skipping";;
+    esac
+else
+    echo "OK"
+fi
+
 echo -n "Checking for PCSI..."
 sleep 1
 if [ ! -f saves/plus.pcsi ]; then
