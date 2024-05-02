@@ -1,11 +1,9 @@
-<table style="margin-left: auto; margin-right: auto;"><tr><td>
-<?php include 'header.php' ?>
-</td></tr></table>
 
 <form action="index.php" method="post">
 <table>
 <tr>
     <td>
+        <?php include 'header.php' ?>
         <div class="tab" style="text-align: center; width:400px;">
             <button class="tablinks" type="button" id="defaultOpen" onclick="openMenu(event, 'Services')">Services</button>
             <button class="tablinks" type="button" onclick="openMenu(event, 'Programs')">Programs</button>
