@@ -45,13 +45,13 @@ fi
 if [ ! -f saves/plus.pcsi ]; then
     options+=(3 "PCSI" off)
 else
-    options+=(3 "PCSI" oon)
+    options+=(3 "PCSI" on)
 fi
 
 if [ ! -f saves/plus.gridtracker ]; then
     options+=(4 "Grid Tracker" off)
 else
-    options+=(4 "Grid Tracker" oon)
+    options+=(4 "Grid Tracker" on)
 fi
 
 if [ ! -f saves/plus.js8spotter ]; then
@@ -63,7 +63,7 @@ fi
 if [ ! -f saves/plus.gpredict ]; then
     options+=(6 "gPredict" off)
 else
-    options+=(6 "gPredict" oon)
+    options+=(6 "gPredict" on)
 fi
 
 if [ ! -f saves/plus.xastir ]; then
