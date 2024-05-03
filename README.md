@@ -9,8 +9,8 @@ You will need at least a 16gb SD Card that has been expanded to use the entire d
 1. AX25 Packet Node Upgrade
    - [Hunt the Wumpus](https://linuxcommandlibrary.com/man/wump) - BSD Game
    - [Go Fish](https://linuxcommandlibrary.com/man/go-fish) - BSD Game
-   - Space WX
-   - Ham QSL
+   - [Space WX](https://github.com/bradbrownjr/bpq-apps) - Space Weather Conditions
+   - [Ham QSL](https://github.com/bradbrownjr/bpq-apps) - A text version of the [hamqsl.com](https://hamqsl.com/) widgets.
 2. [PCSI](https://github.com/maqifrnswa/PCSI) - Packet Compressed Sensing Imaging over AX25
 3. [OpenWebRX+](https://fms.komkon.org/OWRX/) - web-based SDR receiver
 4. [Grid Tracker](https://gridtracker.org/) - GridTracker is a warehouse of amateur radio information presented in an easy to use interface, from live traffic decodes, logbooks, real-time spot reports, weather, current solar conditions and more!
