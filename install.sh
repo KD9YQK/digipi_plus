@@ -235,6 +235,6 @@ else
 fi
 echo "---------- Final Cleanup ----------"
 sleep 1
-sudo apt-get remove xorg-dev libmotif-dev libcurl4-openssl-dev libpcre3-dev libproj-dev libdb5.3-dev libax25-dev libwebp-dev libshp-dev festival-dev libgeotiff-dev libwebp-dev libgraphicsmagick1-dev libpcre2-dev libssl-dev libsqlite3-dev libwxgtk3.0-gtk3-dev -y
-sudo apt autoremove
+# sudo apt-get remove xorg-dev libmotif-dev libcurl4-openssl-dev libpcre3-dev libproj-dev libdb5.3-dev libax25-dev libwebp-dev libshp-dev festival-dev libgeotiff-dev libwebp-dev libgraphicsmagick1-dev libpcre2-dev libssl-dev libsqlite3-dev libwxgtk3.0-gtk3-dev -y
+# sudo apt autoremove -y
 echo "---------- Install Complete ----------"
