@@ -6,6 +6,7 @@ echo "Created by Bob - KD9YQK"
 echo ""
 sleep 1
 echo -n "Checking for Base..."
+sleep 1
 if [ ! -f saves/plus.base ]; then
     echo "NOT FOUND"
     echo "Installing DigiPi Plus Base"
@@ -19,12 +20,15 @@ if [ ! -f saves/plus.base ]; then
     cp /etc/systemd/system/*.service backup/ -v
     echo "Copying Files"
     cp home/emwmrc_plus ~/.emwmrc -v
+    echo "Creating Simlinks"
+    sudo ln -sf /home/pi/digipi_plus/www/*.php /var/www/html/ -v
+    sudo ln -sf /home/pi/digipi_plus/www/*.css /var/www/html/styles -v
     touch saves/plus.base
     echo "DigiPi Plus Base Installed"
 else
     echo "OK"
 fi
-sleep 1
+
 
 if [ ! -f saves/plus.node ]; then
     options+=(1 "AX25 Node Upgrade" off)
@@ -73,15 +77,9 @@ if [ ! -f saves/plus.sdr_igate ]; then
 fi
 
 #build dialogue box with menu options
-cmd=(dialog --backtitle "DigiPi Plus" --checklist "Pick 1 or more options" 30 30 30)
+cmd=(dialog --backtitle "DigiPi Plus" --checklist "Pick 1 or more options" 22 30 16)
 choices=($("${cmd[@]}" "${options[@]}" 2>&1 1>/dev/tty))
-
-clear
 
 for choice in "${choices[@]}"; do
     echo "$choice selected"
 done
-
-echo "Creating Simlinks"
-sudo ln -sf /home/pi/digipi_plus/www/*.php /var/www/html/ -v
-sudo ln -sf /home/pi/digipi_plus/www/*.css /var/www/html/styles -v
