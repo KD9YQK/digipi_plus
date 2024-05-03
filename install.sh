@@ -124,6 +124,24 @@ else
     echo "OK"
 fi
 
+echo -n "Checking for gPredict..."
+sleep 1
+if [ ! -f saves/plus.gpredict ]; then
+    echo "NOT FOUND"
+    read -p "Do you want to install? (y/n) " yn
+    case $yn in
+        [yY] ) echo "Installing gPredict"
+            sleep 1
+            sudo apt install gpredict -y
+            sudo sed -i '/DigiPi Plus/a \        "gPredict"               f.exec "gpredict &"' /home/pi/.emwmrc
+            touch saves/plus.gpredict
+            echo "gPredict Installed";;
+        * ) echo "Skipping";;
+    esac
+else
+    echo "OK"
+fi
+
 echo -n "Checking for Xastir..."
 sleep 1
 if [ ! -f saves/plus.xastir ]; then
