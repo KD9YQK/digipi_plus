@@ -7,10 +7,10 @@ You will need at least a 16gb SD Card that has been expanded to use the entire d
 
 ## Features
 1. AX25 Packet Node Upgrade
-   - Hunt the Wumpus Game
-   - Go Fish Game
-   - Space WX
-   - Ham QSL
+   - [Hunt the Wumpus](https://linuxcommandlibrary.com/man/wump) - BSD Game
+   - [Go Fish](https://linuxcommandlibrary.com/man/go-fish) - BSD Game
+   - [Space WX](https://github.com/bradbrownjr/bpq-apps) - Space Weather Conditions
+   - [Ham QSL](https://github.com/bradbrownjr/bpq-apps) - A text version of the [hamqsl.com](https://hamqsl.com/) widgets.
 2. [PCSI](https://github.com/maqifrnswa/PCSI) - Packet Compressed Sensing Imaging over AX25
 3. [OpenWebRX+](https://fms.komkon.org/OWRX/) - web-based SDR receiver
 4. [Grid Tracker](https://gridtracker.org/) - GridTracker is a warehouse of amateur radio information presented in an easy to use interface, from live traffic decodes, logbooks, real-time spot reports, weather, current solar conditions and more!
@@ -20,8 +20,10 @@ You will need at least a 16gb SD Card that has been expanded to use the entire d
 6. [JS8Spotter](https://kf7mix.com/js8spotter.html) - JS8Spotter can help users sort and track band activity, send APRS messages more easily, view stations on an offline map, send custom automated responses, and even implement simple forms.
 7. [Xastir](https://xastir.org/index.php/Main_Page) - Xastir APRS Program
 8. [gPredict](https://oz9aec.dk/gpredict/) - Real-time satellite tracking and orbit prediction application.
-9. [Trusted QSL](https://www.arrl.org/tqsl-download) - LOTW Logging Software
-
+9. UHF Upgrade
+   - TNC 9600 baud
+   - AX25 Packet Node 9600 baud
+10. [Trusted QSL](https://www.arrl.org/tqsl-download) - LOTW Logging Software
 
 ## Install
 **DON'T install until AFTER initial setup of DigiPi!!! This only works for DigiPi version 1.8-2**
