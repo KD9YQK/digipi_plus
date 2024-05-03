@@ -7,8 +7,8 @@ You will need at least a 16gb SD Card that has been expanded to use the entire d
 
 ## Features
 1. AX25 Packet Node Upgrade
-   - Hunt the Wumpus Game
-   - Go Fish Game
+   - [Hunt the Wumpus](https://linuxcommandlibrary.com/man/wump) - BSD Game
+   - [Go Fish](https://linuxcommandlibrary.com/man/go-fish) - BSD Game
    - Space WX
    - Ham QSL
 2. [PCSI](https://github.com/maqifrnswa/PCSI) - Packet Compressed Sensing Imaging over AX25
