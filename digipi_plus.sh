@@ -38,42 +38,62 @@ fi
 
 if [ ! -f saves/plus.uhf ]; then
     options+=(2 "UHF 9600 Baud Upgrade" off)
+else
+    options+=(2 "UHF 9600 Baud Upgrade" on)
 fi
 
 if [ ! -f saves/plus.pcsi ]; then
     options+=(3 "PCSI" off)
+else
+    options+=(3 "PCSI" oon)
 fi
 
 if [ ! -f saves/plus.gridtracker ]; then
     options+=(4 "Grid Tracker" off)
+else
+    options+=(4 "Grid Tracker" oon)
 fi
 
 if [ ! -f saves/plus.js8spotter ]; then
     options+=(5 "JS8Spotter" off)
+else
+    options+=(5 "JS8Spotter" on)
 fi
 
 if [ ! -f saves/plus.gpredict ]; then
     options+=(6 "gPredict" off)
+else
+    options+=(6 "gPredict" oon)
 fi
 
 if [ ! -f saves/plus.xastir ]; then
     options+=(7 "Xastir" off)
+else
+    options+=(7 "Xastir" on)
 fi
 
 if [ ! -f saves/plus.tqsl ]; then
     options+=(8 "Trusted QSL" off)
+else
+    options+=(8 "Trusted QSL" on)
 fi
 
 if [ ! -f saves/plus.openwebrx ]; then
     options+=(9 "OpenWebRX+" off)
+else
+    options+=(9 "OpenWebRX+" on)
 fi
 
 if [ ! -f saves/plus.rtlsdr ]; then
     options+=(10 "RTL-SDR Drivers" off)
+else
+    options+=(10 "RTL-SDR Drivers" on)
 fi
 
 if [ ! -f saves/plus.sdr_igate ]; then
     options+=(11 "RTL-SDR iGate" off)
+else
+    options+=(11 "RTL-SDR iGate" on)
 fi
 
 #build dialogue box with menu options
