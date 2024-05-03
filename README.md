@@ -20,11 +20,10 @@ You will need at least a 16gb SD Card that has been expanded to use the entire d
 6. [JS8Spotter](https://kf7mix.com/js8spotter.html) - JS8Spotter can help users sort and track band activity, send APRS messages more easily, view stations on an offline map, send custom automated responses, and even implement simple forms.
 7. [Xastir](https://xastir.org/index.php/Main_Page) - Xastir APRS Program
 8. [gPredict](https://oz9aec.dk/gpredict/) - Real-time satellite tracking and orbit prediction application.
-9. [Trusted QSL](https://www.arrl.org/tqsl-download) - LOTW Logging Software
-10. UHF Upgrade
-   - 9600 baud TNC
-   - 9600 baud AX25 Packet Node
-
+9. UHF Upgrade
+   - TNC 9600 baud
+   - AX25 Packet Node 9600 baud
+10. [Trusted QSL](https://www.arrl.org/tqsl-download) - LOTW Logging Software
 
 ## Install
 **DON'T install until AFTER initial setup of DigiPi!!! This only works for DigiPi version 1.8-2**
