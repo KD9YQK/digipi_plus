@@ -21,6 +21,9 @@ You will need at least a 16gb SD Card that has been expanded to use the entire d
 7. [Xastir](https://xastir.org/index.php/Main_Page) - Xastir APRS Program
 8. [gPredict](https://oz9aec.dk/gpredict/) - Real-time satellite tracking and orbit prediction application.
 9. [Trusted QSL](https://www.arrl.org/tqsl-download) - LOTW Logging Software
+10. UHF Upgrade
+   - 9600 baud TNC
+   - 9600 baud AX25 Packet Node
 
 
 ## Install
