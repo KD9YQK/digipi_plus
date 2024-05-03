@@ -32,6 +32,8 @@ fi
 
 if [ ! -f saves/plus.node ]; then
     options+=(1 "AX25 Node Upgrade" off)
+else
+    options+=(1 "AX25 Node Upgrade" on)
 fi
 
 if [ ! -f saves/plus.uhf ]; then
