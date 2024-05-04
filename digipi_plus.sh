@@ -29,7 +29,7 @@ else
     echo "OK"
 fi
 
-installed="Installed:  "
+installed="Installed:\n"
 if [ ! -f saves/plus.node ]; then
     options+=(1 "AX25 Node Upgrade" off)
 else
@@ -98,7 +98,7 @@ fi
 
 
 #build dialogue box with menu options
-cmd=(dialog --backtitle "DigiPi Plus" --checklist ${installed} 22 50 16)
+cmd=(dialog --backtitle "DigiPi Plus" --checklist "${installed}" 22 50 16)
 choices=($("${cmd[@]}" "${options[@]}" 2>&1 1>/dev/tty))
 
 for choice in "${choices[@]}"; do
