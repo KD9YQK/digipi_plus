@@ -29,76 +29,76 @@ else
     echo "OK"
 fi
 
-
+installed="Installed:\n"
 if [ ! -f saves/plus.node ]; then
     options+=(1 "AX25 Node Upgrade" off)
 else
-    options+=(1 "AX25 Node Upgrade" on)
+    installed+="AX25 Node Upgrade, "
 fi
 
 if [ ! -f saves/plus.uhf ]; then
     options+=(2 "UHF 9600 Baud Upgrade" off)
 else
-    options+=(2 "UHF 9600 Baud Upgrade" on)
+    installed+="UHF 9600 Baud Upgrade, "
 fi
 
 if [ ! -f saves/plus.pcsi ]; then
     options+=(3 "PCSI" off)
 else
-    options+=(3 "PCSI" on)
+    installed+="PCSI, "
 fi
 
 if [ ! -f saves/plus.gridtracker ]; then
     options+=(4 "Grid Tracker" off)
 else
-    options+=(4 "Grid Tracker" on)
+    installed+="Grid Tracker, "
 fi
 
 if [ ! -f saves/plus.js8spotter ]; then
     options+=(5 "JS8Spotter" off)
 else
-    options+=(5 "JS8Spotter" on)
+    installed+="JS8Spotter, "
 fi
 
 if [ ! -f saves/plus.gpredict ]; then
     options+=(6 "gPredict" off)
 else
-    options+=(6 "gPredict" on)
+    installed+="gPredict, "
 fi
 
 if [ ! -f saves/plus.xastir ]; then
     options+=(7 "Xastir" off)
 else
-    options+=(7 "Xastir" on)
+    installed+="Xastir, "
 fi
 
 if [ ! -f saves/plus.tqsl ]; then
     options+=(8 "Trusted QSL" off)
 else
-    options+=(8 "Trusted QSL" on)
+    installed+="Trusted QSL, "
 fi
 
 if [ ! -f saves/plus.openwebrx ]; then
     options+=(9 "OpenWebRX+" off)
 else
-    options+=(9 "OpenWebRX+" on)
+    installed+="OpenWebRX+, "
 fi
 
 if [ ! -f saves/plus.rtlsdr ]; then
     options+=(10 "RTL-SDR Drivers" off)
 else
-    options+=(10 "RTL-SDR Drivers" on)
+    installed+="RTL-SDR Drivers, "
 fi
 
 if [ ! -f saves/plus.sdr_igate ]; then
     options+=(11 "RTL-SDR iGate" off)
 else
-    options+=(11 "RTL-SDR iGate" on)
+    installed+="RTL-SDR iGate, "
 fi
 
 
 #build dialogue box with menu options
-cmd=(dialog --backtitle "DigiPi Plus" --checklist "Pick 1 or more options" 22 50 16)
+cmd=(dialog --backtitle "DigiPi Plus" --title "Pick 1 or more options" --checklist $installed 22 50 16)
 choices=($("${cmd[@]}" "${options[@]}" 2>&1 1>/dev/tty))
 
 for choice in "${choices[@]}"; do
