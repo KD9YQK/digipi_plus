@@ -96,10 +96,27 @@ else
     options+=(11 "RTL-SDR iGate" on)
 fi
 
+clear
+sleep 1
+clear
+
 #build dialogue box with menu options
 cmd=(dialog --backtitle "DigiPi Plus" --checklist "Pick 1 or more options" 22 50 16)
 choices=($("${cmd[@]}" "${options[@]}" 2>&1 1>/dev/tty))
 
 for choice in "${choices[@]}"; do
-    echo "$choice selected"
+    case $choice in
+        1)
+            echo "First Option"
+            ;;
+        2)
+            echo "Second Option"
+            ;;
+        3)
+            echo "Third Option"
+            ;;
+        4)
+            echo "Fourth Option"
+            ;;
+    esac
 done
