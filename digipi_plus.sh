@@ -29,7 +29,7 @@ else
     echo "OK"
 fi
 
-installed="Installed:\n"
+installed="Installed:  "
 if [ ! -f saves/plus.node ]; then
     options+=(1 "AX25 Node Upgrade" off)
 else
