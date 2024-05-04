@@ -112,10 +112,11 @@ for choice in "${choices[@]}"; do
                 sleep 1
                 bash node_upgrade.sh
                 touch saves/plus.node
-                echo "AX25 Upgrade Installed";;
+                echo "AX25 Upgrade Installed"
             else
                 echo "OK"
             fi
+            ;;
         2)
             echo -n "Checking for UHF Upgrade..."
             sleep 1
@@ -125,10 +126,11 @@ for choice in "${choices[@]}"; do
                 sleep 1
                 bash uhf_upgrade.sh
                 touch saves/plus.uhf
-                echo "UHF Upgrade Installed";;
+                echo "UHF Upgrade Installed"
             else
                 echo "OK"
             fi
+            ;;
         3)
             echo -n "Checking for PCSI..."
             sleep 1
@@ -138,10 +140,11 @@ for choice in "${choices[@]}"; do
                 sleep 1
                 bash pcsi_install.sh
                 touch saves/plus.pcsi
-                echo "PCSI Installed";;
+                echo "PCSI Installed"
             else
                 echo "OK"
             fi
+            ;;
         4)
             echo -n "Checking for Grid Tracker..."
             sleep 1
@@ -155,10 +158,11 @@ for choice in "${choices[@]}"; do
                 sudo apt install gridtracker -y
                 sudo sed -i '/DigiPi Plus/a \        "Grid Tracker"               f.exec "gridtracker &"' /home/pi/.emwmrc
                 touch saves/plus.gridtracker
-                echo "Grid Tracker Installed";;
+                echo "Grid Tracker Installed"
             else
                 echo "OK"
             fi
+            ;;
         5)
             echo -n "Checking for JS8Spotter..."
             sleep 1
@@ -174,10 +178,11 @@ for choice in "${choices[@]}"; do
                 rm js8spotter-110b_src.zip
                 sudo sed -i '/DigiPi Plus/a \        "JS8Spotter"               f.exec "cd /home/pi/digipi_plus/js8spotter && python3 js8spotter.py &"' /home/pi/.emwmrc
                 touch saves/plus.js8spotter
-                echo "JS8Spotter Installed";;
+                echo "JS8Spotter Installed"
             else
                 echo "OK"
             fi
+            ;;
         6)
             echo -n "Checking for gPredict..."
             sleep 1
@@ -188,10 +193,11 @@ for choice in "${choices[@]}"; do
                 sudo apt install gpredict -y
                 sudo sed -i '/DigiPi Plus/a \        "gPredict"               f.exec "gpredict &"' /home/pi/.emwmrc
                 touch saves/plus.gpredict
-                echo "gPredict Installed";;
+                echo "gPredict Installed"
             else
                 echo "OK"
             fi
+            ;;
         7)
             echo -n "Checking for Xastir..."
             sleep 1
@@ -201,10 +207,11 @@ for choice in "${choices[@]}"; do
                 sleep 1
                 bash xastir_install.sh
                 touch saves/plus.xastir
-                echo "Xastir Installed";;
+                echo "Xastir Installed"
             else
                 echo "OK"
             fi
+            ;;
         8)
             echo -n "Checking for Trusted QSL..."
             sleep 1
@@ -214,10 +221,11 @@ for choice in "${choices[@]}"; do
                 sleep 1
                 bash tqsl_install.sh
                 touch saves/plus.tqsl
-                echo "Trusted QSL Installed";;
+                echo "Trusted QSL Installed"
             else
                 echo "OK"
             fi
+            ;;
         9)
             echo -n "Checking for OpenWebRX..."
             sleep 1
@@ -227,10 +235,11 @@ for choice in "${choices[@]}"; do
                 sleep 1
                 bash openwebrx_install.sh
                 touch saves/plus.openwebrx
-                echo "OpenWebRX Installed";;
+                echo "OpenWebRX Installed"
             else
                 echo "OK"
             fi
+            ;;
         10)
             echo -n "Checking for RTL-SDR Drivers..."
             sleep 1
@@ -243,10 +252,11 @@ for choice in "${choices[@]}"; do
                 sudo cp rtl-sdr/10-rtl-sdr.rules /etc/udev/rules.d/ -v
                 sudo udevadm control --reload-rules
                 touch saves/plus.rtl-sdr
-                echo "RTL-SDR Driver Installed";;
+                echo "RTL-SDR Driver Installed"
             else
                 echo "OK"
             fi
+            ;;
         11)
             echo -n "Checking for RTL-SDR iGate..."
             sleep 1
@@ -260,9 +270,10 @@ for choice in "${choices[@]}"; do
                 sudo cp services/rtlsdr-igate.service /etc/systemd/system/ -v
                 sudo systemctl daemon-reload
                 touch saves/plus.sdr_igate
-                echo "RTL-SDR iGate Installed";;
+                echo "RTL-SDR iGate Installed"
             else
                 echo "OK"
             fi
+            ;;
     esac
 done
