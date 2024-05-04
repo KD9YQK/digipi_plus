@@ -98,7 +98,7 @@ fi
 
 
 #build dialogue box with menu options
-cmd=(dialog --backtitle "DigiPi Plus" --title "Pick 1 or more options" --checklist $installed 22 50 16)
+cmd=(dialog --backtitle "DigiPi Plus" --title "Pick 1 or more options" --checklist ${installed} 22 50 16)
 choices=($("${cmd[@]}" "${options[@]}" 2>&1 1>/dev/tty))
 
 for choice in "${choices[@]}"; do
