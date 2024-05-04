@@ -116,7 +116,6 @@ for choice in "${choices[@]}"; do
             else
                 echo "OK"
             fi
-            ;;
         2)
             echo -n "Checking for UHF Upgrade..."
             sleep 1
@@ -130,7 +129,6 @@ for choice in "${choices[@]}"; do
             else
                 echo "OK"
             fi
-            ;;
         3)
             echo -n "Checking for PCSI..."
             sleep 1
@@ -144,7 +142,6 @@ for choice in "${choices[@]}"; do
             else
                 echo "OK"
             fi
-            ;;
         4)
             echo -n "Checking for Grid Tracker..."
             sleep 1
@@ -162,7 +159,6 @@ for choice in "${choices[@]}"; do
             else
                 echo "OK"
             fi
-            ;;
         5)
             echo -n "Checking for JS8Spotter..."
             sleep 1
@@ -182,7 +178,6 @@ for choice in "${choices[@]}"; do
             else
                 echo "OK"
             fi
-            ;;
         6)
             echo -n "Checking for gPredict..."
             sleep 1
@@ -197,7 +192,6 @@ for choice in "${choices[@]}"; do
             else
                 echo "OK"
             fi
-            ;;
         7)
             echo -n "Checking for Xastir..."
             sleep 1
@@ -211,7 +205,6 @@ for choice in "${choices[@]}"; do
             else
                 echo "OK"
             fi
-            ;;
         8)
             echo -n "Checking for Trusted QSL..."
             sleep 1
@@ -238,7 +231,6 @@ for choice in "${choices[@]}"; do
             else
                 echo "OK"
             fi
-            ;;
         10)
             echo -n "Checking for RTL-SDR Drivers..."
             sleep 1
@@ -255,7 +247,6 @@ for choice in "${choices[@]}"; do
             else
                 echo "OK"
             fi
-            ;;
         11)
             echo -n "Checking for RTL-SDR iGate..."
             sleep 1
@@ -273,7 +264,5 @@ for choice in "${choices[@]}"; do
             else
                 echo "OK"
             fi
-            ;;
-        
     esac
 done
