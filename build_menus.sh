@@ -1,24 +1,24 @@
 #!/bin/bash
 echo "Building Menus..."
 sleep 1
-cp www/plus_form.php.base www/plus_form.php -v
-cp www/plus_services.php.base www/plus_services.php -v
-cp www/plus_links.php.base www/plus_links.php -v
+cp www/plus_form.php.base www/plus_form.php
+cp www/plus_services.php.base www/plus_services.php
+cp www/plus_links.php.base www/plus_links.php
 cp home/emwmrc_plus /home/pi/.emwmrc
-echo "Base Menus Copied"
+echo "Base Menus Created"
 sleep .5
 if [ -f saves/plus.uhf ]; then
     python3 uhf_helper.py
-    sudo cp temp/*.php www/ -v
-    sudo rm temp/*.php -v
+    sudo cp temp/*.php www/
+    sudo rm temp/*.php
     echo "UHF Upgrade added to Homepage Menu"
     sleep .5
 fi
 
 if [ -f saves/plus.pcsi ]; then
     python3 pcsi_helper.py
-    sudo cp temp/*.php www/ -v
-    sudo rm temp/*.php -v
+    sudo cp temp/*.php www/
+    sudo rm temp/*.php
     echo "PCSI Added to Homepage Menu"
     sleep .3
     sudo sed -i '/DigiPi Plus/a \        "pcsiGUI"               f.exec "python3 /home/pi/PCSI/pcsiGUI.py &"' /home/pi/.emwmrc
@@ -65,7 +65,7 @@ fi
 
 if [ -f saves/plus.sdr_igate ]; then
     python3 rtlsdr_helper.py
-    sudo mv temp/*.php www/ -v
+    sudo mv temp/*.php www/
     echo "RTL-SDR iGate Added to Homepage Menu"
     sleep .5
 fi
