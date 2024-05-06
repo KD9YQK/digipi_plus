@@ -6,5 +6,4 @@ cmake .
 make
 sudo make install
 sudo cp /usr/local/lib/libtqsllib.so /usr/lib/libtqsllib.so -v
-sudo sed -i '/DigiPi Plus/a \        "Trusted QSL"               f.exec "tqsl &"' /home/pi/.emwmrc
 cd ..

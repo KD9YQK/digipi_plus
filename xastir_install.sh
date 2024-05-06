@@ -13,6 +13,5 @@ cd build
 make 
 sudo make install
 sudo chmod u+s /usr/local/bin/xastir
-sudo sed -i '/DigiPi Plus/a \        "Xastir"               f.exec "xastir &"' /home/pi/.emwmrc
 cd /home/pi/digipi_plus
 sudo rm -r Xastir -v 

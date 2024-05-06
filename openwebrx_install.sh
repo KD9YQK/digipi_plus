@@ -8,9 +8,6 @@ sudo apt-get install openwebrx -y
 sudo systemctl disable openwebrx
 sudo systemctl stop openwebrx
 
-python3 openwebrx_helper.py
-sudo mv temp/*.php www/
-
 mkdir ~/config/openwebrx
 sudo cp /var/lib/openwebrx/* ~/config/openwebrx/ -v
 chmod +x launchers/openwebrx.sh

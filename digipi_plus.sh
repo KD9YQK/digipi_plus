@@ -84,7 +84,7 @@ else
     installed+="OpenWebRX+, "
 fi
 
-if [ ! -f saves/plus.rtlsdr ]; then
+if [ ! -f saves/plus.rtl-sdr ]; then
     options+=(10 "RTL-SDR Drivers" off)
 else
     installed+="RTL-SDR Drivers, "
@@ -156,7 +156,6 @@ for choice in "${choices[@]}"; do
                 curl  https://debian.gridtracker.org/gridtracker_deb_install.sh | sudo bash
                 sudo apt update
                 sudo apt install gridtracker -y
-                sudo sed -i '/DigiPi Plus/a \        "Grid Tracker"               f.exec "gridtracker &"' /home/pi/.emwmrc
                 touch saves/plus.gridtracker
                 echo "Grid Tracker Installed"
             else
@@ -176,7 +175,6 @@ for choice in "${choices[@]}"; do
                 cp -r js8spotter-110b_src/* js8spotter/
                 rm -r js8spotter-110b_src
                 rm js8spotter-110b_src.zip
-                sudo sed -i '/DigiPi Plus/a \        "JS8Spotter"               f.exec "cd /home/pi/digipi_plus/js8spotter && python3 js8spotter.py &"' /home/pi/.emwmrc
                 touch saves/plus.js8spotter
                 echo "JS8Spotter Installed"
             else
@@ -191,7 +189,6 @@ for choice in "${choices[@]}"; do
                 echo "Installing gPredict"
                 sleep 1
                 sudo apt install gpredict -y
-                sudo sed -i '/DigiPi Plus/a \        "gPredict"               f.exec "gpredict &"' /home/pi/.emwmrc
                 touch saves/plus.gpredict
                 echo "gPredict Installed"
             else
@@ -265,8 +262,6 @@ for choice in "${choices[@]}"; do
                 echo "Installing RTL-SDR iGate"
                 sleep 1
                 chmod +x launchers/direwolf.rtlsdr.sh
-                python3 rtlsdr_helper.py
-                sudo mv temp/*.php www/ -v
                 sudo cp services/rtlsdr-igate.service /etc/systemd/system/ -v
                 sudo systemctl daemon-reload
                 touch saves/plus.sdr_igate
@@ -277,3 +272,6 @@ for choice in "${choices[@]}"; do
             ;;
     esac
 done
+
+bash build_menus.sh
+echo "DigiPi Plus Install Complete. Enjoy!"
