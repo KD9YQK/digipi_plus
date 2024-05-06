@@ -274,4 +274,4 @@ for choice in "${choices[@]}"; do
 done
 
 bash build_menus.sh
-echo "DigiPi Plus Install Complete. Enjoy!"
+echo "DigiPi Plus Install Complete. Please refresh your Homepage to view changes. Enjoy!"
