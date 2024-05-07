@@ -1,15 +1,16 @@
 [Unit]
-Description=uhf-node
-After=graphical.target
+Description=node
 
 [Service]
-ExecStartPre=+systemctl stop fldigi sstv wsjtx ardop tnc300b digipeater node winlinkrms js8call tnc pcsi openwebrx-digipi uhf-tnc uhf-node
-Type=simple
-ExecStart=/home/pi/digipi_plus/launchers/direwolf.uhf-node.sh
-Restart=no
+ExecStartPre=+systemctl stop tnc fldigi sstv wsjtx ardop tnc300b digipeater winlinkrms js8call node pcsi openwebrx-digipi uhf-tnc
+ExecStart=/home/pi/direwolf.uhf-node.sh
 WorkingDirectory=/home/pi/
+StandardOutput=inherit
+StandardError=inherit
+Restart=no
 User=pi
+TimeoutStopSec=3
+KillSignal=SIGINT
 
 [Install]
-WantedBy=graphical.target
-
+WantedBy=multi-user.target

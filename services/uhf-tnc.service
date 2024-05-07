@@ -1,15 +1,14 @@
 [Unit]
-Description=uhf-tnc
+Description=tnc
 After=graphical.target
 
 [Service]
-ExecStartPre=+systemctl stop fldigi sstv wsjtx ardop tnc300b digipeater node winlinkrms js8call tnc pcsi openwebrx-digipi uhf-tnc uhf-node
+ExecStartPre=+systemctl stop fldigi sstv wsjtx ardop tnc300b digipeater node winlinkrms js8call node pcsi openwebrx-digipi uhf-node
 Type=simple
-ExecStart=/home/pi/digipi_plus/launchers/direwolf.uhf-tnc.sh
+ExecStart=/home/pi/direwolf.uhf-tnc.sh
 Restart=no
 WorkingDirectory=/home/pi/
 User=pi
 
 [Install]
 WantedBy=graphical.target
-
