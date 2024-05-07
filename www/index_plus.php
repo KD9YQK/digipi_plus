@@ -24,9 +24,6 @@
         <div id="Settings" class="tabcontent">
             <?php include 'plus_settings.php' ?>
         </div>
-        <br><br><br>
-        <small>1.8-2 KM6LYW ©2024</small>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/dot"><font size="+3" color="#eeeeee">.</font></a>
     </td>
     <td style="width:100%;">
         <iframe src="syslog.php" name="iframe_a" style="height:90vh; width:100%;" title="Digipi Plus"></iframe>
@@ -62,7 +59,8 @@ function openMenu(evt, tabName) {
 document.getElementById("defaultOpen").click();
 </script>
 
-
+<small>1.8-2 KM6LYW ©2024</small>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/dot"><font size="+3" color="#eeeeee">.</font></a>
 </form>
 </font>
 </body>
