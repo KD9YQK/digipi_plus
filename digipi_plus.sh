@@ -169,6 +169,7 @@ for choice in "${choices[@]}"; do
                 echo "NOT FOUND"
                 echo "Installing JS8Spotter"
                 sleep 1
+                sudo pip install simpleaudio
                 wget https://kf7mix.com/files/js8spotter/js8spotter-110b_src.zip
                 mkdir js8spotter
                 unzip js8spotter-110b_src.zip
