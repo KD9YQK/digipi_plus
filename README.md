@@ -32,7 +32,8 @@ sudo remount
 cd ~
 git clone https://github.com/KD9YQK/digipi_plus.git
 cd digipi_plus
-bash install.sh
+sudo apt install dialog
+bash digipi_plus.sh
 ```
 
 ## Known Issues
