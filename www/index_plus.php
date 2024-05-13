@@ -26,13 +26,13 @@
             <?php include 'plus_settings.php' ?>
         </div>
         <div id="Direwatch" class="tabcontent">
-            <img id="direwatch" src="direwatch.png?v=<?php echo filemtime('direwatch.png')?>" width="400", height="400" />
+            <img id="direwatch" src="direwatch.png?v=<?php echo filemtime('direwatch.png'); ?>" width="400", height="400" />
             <script>
                 setInterval(refreshDirewatch, 1000);
 
                 function refreshDirewatch( )
                 {
-                  document.getElementById("direwatch").src="direwatch.png";
+                  document.getElementById("direwatch").src="direwatch.png?v=<?php echo filemtime('direwatch.png');
                 }
             </script>
         </div>
