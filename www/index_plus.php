@@ -28,7 +28,7 @@
         <div id="Direwatch" class="tabcontent">
             <img id="direwatch" src="direwatch.png?v=<?php echo filemtime('direwatch.png'); ?>" width="400", height="400" />
             <script>
-                setInterval(refreshDirewatch, 1000);
+                window.setInterval(refreshDirewatch, 1000);
 
                 function refreshDirewatch( )
                 {
