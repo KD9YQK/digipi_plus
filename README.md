@@ -30,9 +30,9 @@ You will need at least a 16gb SD Card that has been expanded to use the entire d
 ```
 sudo remount
 cd ~
+sudo apt install dialog -y
 git clone https://github.com/KD9YQK/digipi_plus.git
 cd digipi_plus
-sudo apt install dialog
 bash digipi_plus.sh
 ```
 
