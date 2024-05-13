@@ -26,7 +26,6 @@
             <?php include 'plus_settings.php' ?>
         </div>
         <div id="Direwatch" class="tabcontent">
-            <?php include 'direwatch.php' ?>
             <img id="direwatch" src="direwatch.png">
             <script>
                 setInterval(refreshDirewatch, 1000);
