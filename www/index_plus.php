@@ -8,6 +8,7 @@
             <button class="tablinks" type="button" id="defaultOpen" onclick="openMenu(event, 'Services')">Services</button>
             <button class="tablinks" type="button" onclick="openMenu(event, 'Programs')">Programs</button>
             <button class="tablinks" type="button" onclick="openMenu(event, 'Settings')">Settings</button>
+            <button class="tablinks" type="button" onclick="openMenu(event, 'Direwatch')">Direwatch</button>
         </div>
         <div id="Services" class="tabcontent">
             <?php include 'orig_services.php' ?>
