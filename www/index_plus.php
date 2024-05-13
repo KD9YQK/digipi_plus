@@ -32,7 +32,7 @@
 
                 function refreshDirewatch( )
                 {
-                  document.getElementById("direwatch").src="direwatch.png?v=<?php echo filemtime('direwatch.png');
+                  document.getElementById("direwatch").src="direwatch.png?v=" + filemtime('direwatch.png');
                 }
             </script>
         </div>
