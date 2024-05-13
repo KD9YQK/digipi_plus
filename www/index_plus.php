@@ -27,6 +27,15 @@
         </div>
         <div id="Direwatch" class="tabcontent">
             <?php include 'direwatch.php' ?>
+            <img id="direwatch" src="direwatch.png">
+            <script>
+                setInterval(refreshDirewatch, 1000);
+
+                function refreshDirewatch( )
+                {
+                  document.getElementById("direwatch").src="direwatch.png";
+                }
+            </script>
         </div>
     </td>
     <td style="width:100%;">
