@@ -24,6 +24,9 @@
         <div id="Settings" class="tabcontent">
             <?php include 'plus_settings.php' ?>
         </div>
+        <div id="Direwatch" class="tabcontent">
+            <?php include 'direwatch.php' ?>
+        </div>
     </td>
     <td style="width:100%;">
         <iframe src="syslog.php" name="iframe_a" style="height:90vh; width:100%;" title="Digipi Plus"></iframe>
