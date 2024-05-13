@@ -4,7 +4,7 @@
 <tr>
     <td>
         <center><?php include 'header.php' ?></center>
-        <div class="tab" style="text-align: center; width:410px;">
+        <div class="tab" style="text-align: center; width:400px;">
             <button class="tablinks" type="button" id="defaultOpen" onclick="openMenu(event, 'Services')">Services</button>
             <button class="tablinks" type="button" onclick="openMenu(event, 'Programs')">Programs</button>
             <button class="tablinks" type="button" onclick="openMenu(event, 'Settings')">Settings</button>
