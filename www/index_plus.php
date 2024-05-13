@@ -3,7 +3,7 @@
 <table>
 <tr>
     <td>
-        <?php include 'header.php' ?>
+        <center></center><?php include 'header.php' ?></center?
         <div class="tab" style="text-align: center; width:420px;">
             <button class="tablinks" type="button" id="defaultOpen" onclick="openMenu(event, 'Services')">Services</button>
             <button class="tablinks" type="button" onclick="openMenu(event, 'Programs')">Programs</button>
