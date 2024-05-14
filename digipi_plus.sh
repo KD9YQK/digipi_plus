@@ -5,7 +5,7 @@ echo "DigiPi Plus Installer"
 echo "Created by Bob - KD9YQK"
 echo ""
 sleep 1
-echo -n "Checking for Base..."
+echo -n "Checking for DigiPi Plus Base..."
 sleep 1
 if [ ! -f saves/plus.base ]; then
     echo "NOT FOUND"
