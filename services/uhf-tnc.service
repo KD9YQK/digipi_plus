@@ -3,9 +3,9 @@ Description=tnc
 After=graphical.target
 
 [Service]
-ExecStartPre=+systemctl stop fldigi sstv wsjtx ardop tnc300b digipeater node winlinkrms js8call node
+ExecStartPre=+systemctl stop fldigi sstv wsjtx ardop tnc300b digipeater node winlinkrms js8call node uhf-node
 Type=simple
-ExecStart=/home/pi/direwolf.rtlsdr.sh
+ExecStart=/home/pi/direwolf.uhf-tnc.sh
 Restart=no
 WorkingDirectory=/home/pi/
 User=pi

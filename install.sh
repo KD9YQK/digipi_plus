@@ -46,6 +46,23 @@ else
     echo "OK"
 fi
 
+echo -n "Checking for UHF Upgrade..."
+sleep 1
+if [ ! -f saves/plus.uhf ]; then
+    echo "NOT FOUND"
+    read -p "Do you want to install? (y/n) " yn
+    case $yn in
+        [yY] ) echo "Installing UHF TNC and Node"
+            sleep 1
+            bash uhf_upgrade.sh
+            touch saves/plus.uhf
+            echo "UHF Upgrade Installed";;
+        * ) echo "Skipping";;
+    esac
+else
+    echo "OK"
+fi
+
 echo -n "Checking for PCSI..."
 sleep 1
 if [ ! -f saves/plus.pcsi ]; then
@@ -78,6 +95,81 @@ if [ ! -f saves/plus.gridtracker ]; then
             sudo sed -i '/DigiPi Plus/a \        "Grid Tracker"               f.exec "gridtracker &"' /home/pi/.emwmrc
             touch saves/plus.gridtracker
             echo "Grid Tracker Installed";;
+        * ) echo "Skipping";;
+    esac
+else
+    echo "OK"
+fi
+
+echo -n "Checking for JS8Spotter..."
+sleep 1
+if [ ! -f saves/plus.js8spotter ]; then
+    echo "NOT FOUND"
+    read -p "Do you want to install? (y/n) " yn
+    case $yn in
+        [yY] ) echo "Installing JS8Spotter"
+            sleep 1
+            wget https://kf7mix.com/files/js8spotter/js8spotter-110b_src.zip
+            mkdir js8spotter
+            unzip js8spotter-110b_src.zip
+            cp -r js8spotter-110b_src/* js8spotter/
+            rm -r js8spotter-110b_src
+            rm js8spotter-110b_src.zip
+            sudo sed -i '/DigiPi Plus/a \        "JS8Spotter"               f.exec "cd /home/pi/digipi_plus/js8spotter && python3 js8spotter.py &"' /home/pi/.emwmrc
+            touch saves/plus.js8spotter
+            echo "JS8Spotter Installed";;
+        * ) echo "Skipping";;
+    esac
+else
+    echo "OK"
+fi
+
+echo -n "Checking for gPredict..."
+sleep 1
+if [ ! -f saves/plus.gpredict ]; then
+    echo "NOT FOUND"
+    read -p "Do you want to install? (y/n) " yn
+    case $yn in
+        [yY] ) echo "Installing gPredict"
+            sleep 1
+            sudo apt install gpredict -y
+            sudo sed -i '/DigiPi Plus/a \        "gPredict"               f.exec "gpredict &"' /home/pi/.emwmrc
+            touch saves/plus.gpredict
+            echo "gPredict Installed";;
+        * ) echo "Skipping";;
+    esac
+else
+    echo "OK"
+fi
+
+echo -n "Checking for Xastir..."
+sleep 1
+if [ ! -f saves/plus.xastir ]; then
+    echo "NOT FOUND"
+    read -p "Do you want to install? (y/n) " yn
+    case $yn in
+        [yY] ) echo "Installing Xastir"
+            sleep 1
+            bash xastir_install.sh
+            touch saves/plus.xastir
+            echo "Xastir Installed";;
+        * ) echo "Skipping";;
+    esac
+else
+    echo "OK"
+fi
+
+echo -n "Checking for Trusted QSL..."
+sleep 1
+if [ ! -f saves/plus.tqsl ]; then
+    echo "NOT FOUND"
+    read -p "Do you want to install? (y/n) " yn
+    case $yn in
+        [yY] ) echo "Installing Trusted QSL"
+            sleep 1
+            bash tqsl_install.sh
+            touch saves/plus.tqsl
+            echo "Trusted QSL Installed";;
         * ) echo "Skipping";;
     esac
 else
@@ -141,3 +233,8 @@ if [ ! -f saves/plus.sdr_igate ]; then
 else
     echo "OK"
 fi
+echo "---------- Final Cleanup ----------"
+sleep 1
+# sudo apt-get remove xorg-dev libmotif-dev libcurl4-openssl-dev libpcre3-dev libproj-dev libdb5.3-dev libax25-dev libwebp-dev libshp-dev festival-dev libgeotiff-dev libwebp-dev libgraphicsmagick1-dev libpcre2-dev libssl-dev libsqlite3-dev libwxgtk3.0-gtk3-dev -y
+# sudo apt autoremove -y
+echo "---------- Install Complete ----------"

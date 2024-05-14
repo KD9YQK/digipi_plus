@@ -10,10 +10,10 @@ sudo fdisk /dev/mmcblk0
 
 Then type `p` to list the partition table
 
-There should be two partitions. if you look in the last column labeled System you should have...
+There should be two partitions. if you look in the last column labeled Type you should have...
 
-1) W95 FAT32
-2) Linux
+1. W95 FAT32
+2. Linux
 
 ### Make a note of the start number for partiton 2!!!
 This will be needed later. It will likely still be on the screen (just in case).

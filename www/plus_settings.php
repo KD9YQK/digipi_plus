@@ -15,6 +15,9 @@
     <a href=/log.php title="Direwolf Log" target="log"><strong>PktLog</strong></a>
   </td>
   <td>
+    <a href=/direwatch.php target="screen"><strong>Screen</strong></a>
+  </td>
+  <td>
     <a href=/index.php><strong>Refresh</strong></a>
   </td>
 </tr>

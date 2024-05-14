@@ -254,14 +254,16 @@ DigiPi Plus Tabs
 ------------------------*/
 
 /* Style the tab */
-.tab {
+.tab
+{
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
 }
 
 /* Style the buttons inside the tab */
-.tab button {
+.tab button
+{
     background-color: inherit;
     float: left;
     border: none;
@@ -273,17 +275,14 @@ DigiPi Plus Tabs
 }
 
 /* Change background color of buttons on hover */
-.tab button:hover {
-    background-color: #ddd;
-}
+.tab button:hover { background-color: #ddd; }
 
 /* Create an active/current tablink class */
-.tab button.active {
-    background-color: #ccc;
-}
+.tab button.active { background-color: #ccc; }
 
 /* Style the tab content */
-.tabcontent {
+.tabcontent
+{
     display: none;
     padding: 6px 12px;
     -webkit-animation: fadeEffect 1s;
@@ -291,14 +290,59 @@ DigiPi Plus Tabs
 }
 
 /* Fade in tabs */
-@-webkit-keyframes fadeEffect {
+@-webkit-keyframes fadeEffect
+{
     from {opacity: 0;}
     to {opacity: 1;}
 }
 
-@keyframes fadeEffect {
+@keyframes fadeEffect
+{
     from {opacity: 0;}
     to {opacity: 1;}
+}
+
+#mySidenav a
+{
+	position: absolute;
+	right: 10px;
+	transition: 0.3s;
+	padding: 5px;
+	width: 20px;
+	text-decoration: none;
+	font-size: 20px;
+	color: #555;
+	overflow: hidden;
+	border-radius: 5px 5px 5px 5px;
+	text-align: right;
+	background-color: #555;
+}
+  
+#mySidenav a:hover
+{
+	right: 10;
+	width: 100px;
+	color: white;
+}
+  
+#syslog
+{
+	top: 40px;
+}
+  
+#pktlog
+{
+	top: 80px;
+}
+  
+#shell
+{
+	top: 120px;
+}
+  
+#vnc
+{
+	top: 160px;
 }
 
 

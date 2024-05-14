@@ -50,9 +50,9 @@ sleep 1 # wait for direwolf to initialize gpio
 
 # remove "-o" flag to see list of stations
 if [ $NEWLAT = 39.9999 ]; then  # location not yet set
-   sudo /home/pi/direwatch.py -o --log "/run/direwolf.log" --title_text "PCSI"  &
+   sudo /home/pi/direwatch.py -o --save "/run/direwatch.png" --log "/run/direwolf.log" --title_text "PCSI"  &
 else
-   sudo /home/pi/direwatch.py -o --log "/run/direwolf.log" --title_text "PCSI" --lat $NEWLAT --lon $NEWLON  &
+   sudo /home/pi/direwatch.py -o --save "/run/direwatch.png" --log "/run/direwolf.log" --title_text "PCSI" --lat $NEWLAT --lon $NEWLON  &
 fi
 
 # wait for direwolf to open port 8001
