@@ -278,4 +278,4 @@ chmod +x launchers/*.sh
 bash build_services.sh
 sudo systemctl daemon-reload
 bash build_menus.sh
-echo "DigiPi Plus Install Complete. Please refresh your Homepage to view changes. Enjoy!"
+echo "DigiPi Plus Install Complete. Please refresh your Homepage with Ctrl+Shift+R to view changes. Enjoy!"
