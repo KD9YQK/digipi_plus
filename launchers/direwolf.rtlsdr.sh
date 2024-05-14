@@ -25,9 +25,9 @@ source <(head -n 25 localize.sh)
 
 # remove "-o" flag to see list of stations
 if [ $NEWLAT = 39.9999 ]; then  # location not yet set
-   sudo /home/pi/direwatch.py -o --log "/run/direwolf.log" --title_text "RTL-SDR iGate"  &
+   sudo /home/pi/direwatch.py -o --save "/run/direwatch.png" --log "/run/direwolf.log" --title_text "RTL-SDR iGate"  &
 else
-   sudo /home/pi/direwatch.py -o --log "/run/direwolf.log" --title_text "RTL-SDR iGate" --lat $NEWLAT --lon $NEWLON  &
+   sudo /home/pi/direwatch.py -o --save "/run/direwatch.png" --log "/run/direwolf.log" --title_text "RTL-SDR iGate" --lat $NEWLAT --lon $NEWLON  &
 fi
 
 # wait for direwolf to open port 8001
