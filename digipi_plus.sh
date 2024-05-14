@@ -274,5 +274,7 @@ for choice in "${choices[@]}"; do
     esac
 done
 
+chmod +x launchers/*.sh
+bash build_services.sh
 bash build_menus.sh
 echo "DigiPi Plus Install Complete. Please refresh your Homepage to view changes. Enjoy!"

@@ -68,4 +68,4 @@ with open("www/plus_form.php") as f_old, open("temp/plus_form.php", "w") as f_ne
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    add_EXECSTARTPRE('rtlsdr-igate')
+    pass

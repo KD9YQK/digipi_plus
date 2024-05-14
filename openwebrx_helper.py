@@ -1,6 +1,4 @@
 #!/bin/python
-from helper import add_EXECSTARTPRE
-# /lib/systemd/system/openwebrx.service
 
 with open("www/plus_services.php") as f_old, open("temp/plus_services.php", "w") as f_new:
     for line in f_old:
@@ -60,4 +58,4 @@ with open("www/plus_links.php") as f_old, open("temp/plus_links.php", "w") as f_
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    add_EXECSTARTPRE('openwebrx-digipi')
+    pass

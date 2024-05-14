@@ -24,9 +24,10 @@ You will need at least a 16gb SD Card that has been expanded to use the entire d
    - TNC 9600 baud
    - AX25 Packet Node 9600 baud
 10. [Trusted QSL](https://www.arrl.org/tqsl-download) - LOTW Logging Software
+11. UHF 9600 Baud TNC and AX25 Node Support
 
 ## Install
-**DON'T install until AFTER initial setup of DigiPi!!! This only works for DigiPi version 1.8-2**
+**DON'T install until AFTER initial setup of DigiPi!!! This only works for DigiPi version 1.8-3**
 ```
 sudo remount
 cd ~
@@ -46,6 +47,10 @@ RTL-SDR will cause an error to occur on **Raspberry Pi 4** that looks like `rtls
   3. Added Logs, Shell, and VNC to Homepage
   4. Added Trusted QSL
   5. Added gPredict
+  6. Added UHF 9600 Baud TNC and AX25 Node
+  7. Upgraded for DigiPi v1.8.3
+  8. New 'dialog' installer
+  9. Re-configured for easy future updates without need to re-flash.
 - 04/23/2024 - v1.1 Release - Not compatable with previous version.
   1. Added Space WX and Ham QSL to AX25 Node
   2. Added new Homepage which organizes the menus, and adds the syslog in the blank free space

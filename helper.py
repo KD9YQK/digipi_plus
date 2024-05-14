@@ -22,3 +22,7 @@ def add_EXECSTARTPRE(new:str):
                             else:
                                 line = line.replace('stop', f'stop {new}')
                         f_new.write(line)
+
+if __name__ == '__main__':
+    import sys
+    add_EXECSTARTPRE(sys.argv[1])
