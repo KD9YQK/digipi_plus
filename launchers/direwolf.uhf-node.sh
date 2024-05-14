@@ -37,7 +37,7 @@ sudo mv /tmp/direwolf.node.conf /run/direwolf.node.conf
 
 direwolf -B 9600 -r 48000 -d t -p -q d -t 0 -c /run/direwolf.node.conf | tee /home/pi/direwolf.log &
 
-sudo /home/pi/direwatch.py  --log "/run/direwolf.log" --title_text "ax25 Node"  &
+sudo /home/pi/direwatch.py --save "/run/direwatch.png" --log "/run/direwolf.log" --title_text "ax25 Node"  &
 
 sleep 5
 sudo modprobe netrom
