@@ -1,13 +1,14 @@
 ## Potential GPIO Fix - 4/13/2024 - In Testing
 1) First let's fix the python module. This will replace RPi.GPIO with a newer module that uses the same commands.
    ```
-   sudo apt update && sudo apt install python3-rpi-lgpio  --auto-remove --purge
+   sudo apt update && sudo apt install python3-rpi-lgpio  --auto-remove --purge -y
    ```
 2) Next We need to fix the issue of pins not showing in /sys/class/gpio. We will use the 'sysfs-gpio-shim' by info-beamer https://github.com/info-beamer/sysfs-gpio-shim.
 
 3) This is going to require building libgpiod2.1. Lets do that first.
    ```
    cd ~
+   sudo apt install autoconf-archive -y
    git clone https://github.com/brgl/libgpiod.git
    cd libgpiod
    ./autogen.sh
