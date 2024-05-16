@@ -41,7 +41,13 @@ bash digipi_plus.sh
 RTL-SDR will cause an error to occur on **Raspberry Pi 4** that looks like `rtlsdr_read_reg failed with -7` and `rtlsdr_write_reg failed with -7` when running Direwolf, or with OpenWebRX showing the device as inactive. There is an error in the firmware regarding the USB ports and communicating with the RTL-SDR. To fix, the firmware will need to be upgraded. For directions on how to fix, click [here.](kernel6.6_fix.md)
 
 ## Changelog
-- ??/??/2024 - v1.2 Release
+- ??/??/2024 - v1.3 Release
+  1. Email and WebChat added to sidebar
+  2. Added Help and Tutorials Web Pages - TODO
+  3. Created Service for Xastir - TODO
+  4. Created Dummy VNC Service - TODO
+  5. Minor changes to install script - TODO
+- 05/14/2024 - v1.2 Release
   1. Added JS8Spotter
   2. Added Xastir
   3. Added Logs, Shell, and VNC to Homepage
