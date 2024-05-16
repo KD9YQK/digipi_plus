@@ -50,6 +50,13 @@
     <script>
         document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':6080/vnc.html?port=6080&password=test11&autoconnect=true" target="iframe_a" id="vnc">VNC</a>' )
     </script>
+    <script>
+        document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':8080" target="iframe_a" id="email">Email</a>' )
+    </script>
+    <script>
+        document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':8080" target="iframe_a" id="webchat">WebChat</a>' )
+    </script>
+
 </div>
 
 <script>
