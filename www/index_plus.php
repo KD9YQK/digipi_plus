@@ -54,7 +54,7 @@
         document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':8080" target="iframe_a" id="email">Email</a>' )
     </script>
     <script>
-        document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':8080" target="iframe_a" id="webchat">WebChat</a>' )
+        document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':8055" target="iframe_a" id="webchat">WebChat</a>' )
     </script>
 
 </div>
