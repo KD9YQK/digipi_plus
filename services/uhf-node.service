@@ -3,7 +3,7 @@ Description=node
 
 [Service]
 ExecStartPre=+systemctl stop tnc fldigi sstv wsjtx ardop tnc300b digipeater winlinkrms js8call node uhf-tnc
-ExecStart=/home/pi/digipi_plus/launchers/uhf-node.sh
+ExecStart=bash /home/pi/digipi_plus/launchers/direwolf.uhf-node.sh
 WorkingDirectory=/home/pi/
 StandardOutput=inherit
 StandardError=inherit
