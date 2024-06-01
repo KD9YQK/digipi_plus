@@ -1,4 +1,8 @@
-<h1 text-align=center><u>DigiPi Plus</u></h1>
+<html>
+<body>
+<div style="text-align: center;">
+<h1><u>DigiPi Plus</u></h1>
+</div>
 <p>
     DigiPi Plus is intended to be a suppliment to the DigiPi image created by <a href="digipi.org">Craig KM6LYW</a>, with the goal being to add more functionality to the original project.
     The idea is to be minimally intrusive to the original system, yet provide a user friendly experience with minimal configuration effort.
@@ -46,3 +50,5 @@
 <p>
 <a href="extend_fs.php">Extend Filesystem</a> - Extend the filesystem on the SD-card.
 <br>
+</body>
+</html>
