@@ -14,7 +14,7 @@
     sudo remount
     cd digipi_plus
     bash digipi_plus.sh
-</code>
+</code></pre>
 <br>
 
 <h2><u>Trusted QSL</u></h2>
