@@ -311,11 +311,9 @@ DigiPi Plus Tabs
 	width: 20px;
 	text-decoration: none;
 	font-size: 20px;
-	color: #555;
 	overflow: hidden;
 	border-radius: 5px 5px 5px 5px;
 	text-align: right;
-	background-color: #555;
 }
   
 #mySidenav a:hover
@@ -328,36 +326,48 @@ DigiPi Plus Tabs
 #syslog
 {
 	top: 40px;
+	color: #555;
+	background-color: #555;
 }
   
 #pktlog
 {
 	top: 80px;
+	color: #555;
+	background-color: #555;
 }
   
 #shell
 {
 	top: 120px;
+	color: #555;
+	background-color: #555;
 }
   
 #vnc
 {
 	top: 160px;
+	color: #555;
+	background-color: #555;
 }
 
 #email
 {
 	top: 200px;
+	color: #555;
+	background-color: #555;
 }
 
 #webchat
 {
 	top: 240px;
+	color: #555;
+	background-color: #555;
 }
 #help
 {
 	top: 280px;
-	color: #000000;
+	color: rgb(128, 0, 0);
 	background-color: rgb(128, 0, 0);
 }
 
