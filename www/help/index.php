@@ -1,15 +1,15 @@
-<h1>DigiPi Plus</h1>
+<h1><u>DigiPi Plus</u></h1>
 <p>
     DigiPi Plus is intended to be a suppliment to the DigiPi image created by Craig KM6LYW, with the goal being to add more functionality to the original project.
     The idea is to be as least intrusive to the original system as possible, as well as provide a user friendly experience with minimal configuration effort.
     Please enjoy the additions, and feel free to reach out with any comments, bugs, and/or suggestions.
-<br>
+<p>
 - Bob KD9YQK
 <br><br>
-<h2>Upgrading DigiPi Plus</h2>
+<h2><u>Upgrading DigiPi Plus</u></h2>
 <p>
     DigiPi Plus is an ever-expanding project and will be subject to many potential updates in the future. To check for updates, or install additional software, run the following commands.
-<br>TODO
+<p>TODO
 
 <br><br>
 <h2>Trusted QSL</h2>
