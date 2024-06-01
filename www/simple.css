@@ -357,6 +357,8 @@ DigiPi Plus Tabs
 #help
 {
 	top: 280px;
+	color: #000000;
+	background-color: rgb(128, 0, 0);
 }
 
 /* -----------------------
