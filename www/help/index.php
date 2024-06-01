@@ -1,10 +1,10 @@
 <html>
 <head>
-<style>
-p.indent {
-    text-indent: 40px;
-}
-</style>
+    <style>
+        p {
+        text-indent: 40px;
+        }
+    </style>
 </head>
 <body>
 <div style="text-align: center;">
