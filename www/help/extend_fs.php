@@ -34,3 +34,5 @@ sudo resize2fs /dev/mmcblk0p2
 <code>sudo reboot</code>
 You can now verify that the system is using the full capacity of the SD Card by entering the following command:
 <code>df -h</code></p>
+<br>
+<a href="help/index.php">Back</a>
