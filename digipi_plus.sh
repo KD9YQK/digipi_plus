@@ -23,6 +23,7 @@ if [ ! -f saves/plus.base ]; then
     echo "Creating Simlinks"
     sudo ln -sf /home/pi/digipi_plus/www/*.php /var/www/html/ -v
     sudo ln -sf /home/pi/digipi_plus/www/*.css /var/www/html/styles -v
+    sudo ln -sf /home/pi/digipi_plus/www/help/ /var/www/html -v
     touch saves/plus.base
     echo "DigiPi Plus Base Installed"
 else

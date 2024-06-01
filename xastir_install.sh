@@ -15,3 +15,9 @@ sudo make install
 sudo chmod u+s /usr/local/bin/xastir
 cd /home/pi/digipi_plus
 sudo rm -r Xastir -v 
+
+sudo mkdir /var/www/html/xastir -v
+sudo cp www/xastir/index.php /var/www/html/xastir/ -v
+sudo cp ~/direwolf.tnc.conf launchers/direwolf.xastir.conf -v
+sudo cp services/xastir.service /etc/systemd/system/ -v
+ln -sf /home/pi/digipi_plus/launchers/xastir.sh /home/pi -v

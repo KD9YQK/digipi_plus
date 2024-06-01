@@ -1,0 +1,15 @@
+[Unit]
+Description=xastir
+After=graphical.target
+
+[Service]
+ExecStartPre=+systemctl stop fldigi sstv wsjtx ardop tnc300b digipeater node winlinkrms js8call tnc
+Type=simple
+ExecStart=bash /home/pi/xastir.sh
+Restart=no
+WorkingDirectory=/home/pi/
+User=pi
+
+[Install]
+WantedBy=graphical.target
+

@@ -21,6 +21,11 @@
     <a href=/index.php><strong>Refresh</strong></a>
   </td>
 </tr>
+<tr>
+  <td>
+  <a href=/help/index.php><strong>Help</strong></a>
+  </td>
+</tr>
 </table>
 
 <input type="submit" name="reboot" value="Reboot">
