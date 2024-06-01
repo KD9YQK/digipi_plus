@@ -1,4 +1,11 @@
 <html>
+<head>
+<style>
+p.indent {
+    text-indent: 40px;
+}
+</style>
+</head>
 <body>
 <div style="text-align: center;">
 <h1><u>DigiPi Plus</u></h1>
