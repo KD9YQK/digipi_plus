@@ -4,6 +4,9 @@
         p {
         text-indent: 40px;
         }
+        p.code {
+            background-color: #000000;
+        }
     </style>
 </head>
 <body>
@@ -20,12 +23,12 @@
 </div>
 
 <h2><u>Upgrading DigiPi Plus</u></h2>
-<p>DigiPi Plus is an ever-expanding project and will be subject to many potential updates in the future. To check for updates, or install additional software, run the following commands.
-<pre><code>
+<p>DigiPi Plus is an ever-expanding project and will be subject to many potential updates in the future. To check for updates, or install additional software, run the following commands.</p>
+<p class='code'><pre><code>
     sudo remount
     cd digipi_plus
     bash digipi_plus.sh
-</code></pre>
+</code></pre></p>
 
 <h2><u>Trusted QSL</u></h2>
 <div>
