@@ -18,7 +18,7 @@
 <div>
     <p>- Bob KD9YQK</p>
 </div>
-<br><br>
+
 <h2><u>Upgrading DigiPi Plus</u></h2>
 <p>DigiPi Plus is an ever-expanding project and will be subject to many potential updates in the future. To check for updates, or install additional software, run the following commands.
 <pre><code>
@@ -26,37 +26,41 @@
     cd digipi_plus
     bash digipi_plus.sh
 </code></pre>
-<br>
 
 <h2><u>Trusted QSL</u></h2>
 <div>
     <p>Trusted QSL can be opened by minimizing the active app in the VNC, right-clicking the grey background and selecting it from the pop-up menu.</p>
 </div>
-<br><br>
 
 <h2><u>OpenWebRX+</u></h2>
-<p>In order to save OpenWebRX+ configuration, first press the "Save Configs" button in the Settings tab, then turn OFF the OpenWebRX service.
-    Next time you start, the configurations should be saved.
-<br><br>
+<div>
+    <p>In order to save OpenWebRX+ configuration, first press the "Save Configs" button in the Settings tab, then turn OFF the OpenWebRX service.
+    Next time you start, the configurations should be saved.</p>
+</div>
 
 <h2><u>Grid Tracker</u></h2>
-<p>Grid Tracker can be opened from within the VNC by minimizing WSJT-X and then right-clicking on the grey background. A menu should appear showing Grid Tracker.
-    Pressing the "Save Configs" button in the Settings tab is required on your FIRST run in order to create the necessary files, or an error will occur.
-<br><br>
+<div>
+    <p>Grid Tracker can be opened from within the VNC by minimizing WSJT-X and then right-clicking on the grey background. A menu should appear showing Grid Tracker.
+    Pressing the "Save Configs" button in the Settings tab is required on your FIRST run in order to create the necessary files, or an error will occur.</p>
+</div>
 
 <h2><u>Xastir</u></h2>
-<p>On the FIRST initial run, press the "Save Configs" button in the Settings tab. Xastir will need to be manually started by right-clicking the grey background 
-    in the VNC and selecting it from the menu. Make all your changes to the configuration at this time.
-<br><br>
+<div>
+    <p>On the FIRST initial run, press the "Save Configs" button in the Settings tab. Xastir will need to be manually started by right-clicking the grey background 
+    in the VNC and selecting it from the menu. Make all your changes to the configuration at this time.</p>
+</div>
 
 <h2><u>JS8Spotter</u></h2>
-<p>JS8Spotter can be opened by minimizing JS8Call in the VNC, right-clicking the grey background and selecting it from the pop-up menu.
-<br><br>
+<div>
+    <p>JS8Spotter can be opened by minimizing JS8Call in the VNC, right-clicking the grey background and selecting it from the pop-up menu.</p>
+</div>
 
 <h2><u>Misc. Tutorials</u></h2>
-<p>Here are some useful tutorials to aide in the setup of DigiPi.
+<div>
+<p>Here are some useful tutorials to aide in the setup of DigiPi.</p>
 <br>
 <a href="extend_fs.php">Extend Filesystem</a> - Extend the filesystem on the SD-card.
 <br>
+</div>
 </body>
 </html>
