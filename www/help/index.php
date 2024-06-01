@@ -13,7 +13,8 @@
 <h2><u>Upgrading DigiPi Plus</u></h2>
 <p>
     DigiPi Plus is an ever-expanding project and will be subject to many potential updates in the future. To check for updates, or install additional software, run the following commands.
-<pre><code>sudo remount
+<pre><code>
+    sudo remount
     cd digipi_plus
     bash digipi_plus.sh
 </code>
