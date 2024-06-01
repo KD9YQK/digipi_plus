@@ -3,10 +3,14 @@
 <div style="text-align: center;">
 <h1><u>DigiPi Plus</u></h1>
 </div>
-<p>DigiPi Plus is intended to be a suppliment to the DigiPi image created by <a href="digipi.org">Craig KM6LYW</a>, with the goal being to add more functionality to the original project.
+<div>
+    <p>DigiPi Plus is intended to be a suppliment to the DigiPi image created by <a href="digipi.org">Craig KM6LYW</a>, with the goal being to add more functionality to the original project.
     The idea is to be minimally intrusive to the original system, yet provide a user friendly experience with minimal configuration effort.
-    Please enjoy the additions, and feel free to reach out with any comments, bugs, and/or suggestions.
-<p>- Bob KD9YQK
+    Please enjoy the additions, and feel free to reach out with any comments, bugs, and/or suggestions.</p>
+</div>
+<div>
+    <p>- Bob KD9YQK</p>
+</div>
 <br><br>
 <h2><u>Upgrading DigiPi Plus</u></h2>
 <p>DigiPi Plus is an ever-expanding project and will be subject to many potential updates in the future. To check for updates, or install additional software, run the following commands.
@@ -18,7 +22,9 @@
 <br>
 
 <h2><u>Trusted QSL</u></h2>
-<p>Trusted QSL can be opened by minimizing the active app in the VNC, right-clicking the grey background and selecting it from the pop-up menu.
+<div>
+    <p>Trusted QSL can be opened by minimizing the active app in the VNC, right-clicking the grey background and selecting it from the pop-up menu.</p>
+</div>
 <br><br>
 
 <h2><u>OpenWebRX+</u></h2>
