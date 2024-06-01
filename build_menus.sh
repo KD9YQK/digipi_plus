@@ -45,6 +45,11 @@ if [ -f saves/plus.gpredict ]; then
 fi
 
 if [ -f saves/plus.xastir ]; then
+    python3 xastir_helper.py
+    sudo cp temp/*.php www/
+    sudo rm temp/*.php
+    echo "Xastir Added to Homepage Menu"
+    sleep .3
     sudo sed -i '/DigiPi Plus/a \        "Xastir"               f.exec "xastir &"' /home/pi/.emwmrc
     echo "Xastir Added to GUI Menu"
     sleep .5
