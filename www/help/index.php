@@ -1,4 +1,4 @@
-<h1><u>DigiPi Plus</u></h1>
+<h1 text-align=center><u>DigiPi Plus</u></h1>
 <p>
     DigiPi Plus is intended to be a suppliment to the DigiPi image created by <a href="digipi.org">Craig KM6LYW</a>, with the goal being to add more functionality to the original project.
     The idea is to be minimally intrusive to the original system, yet provide a user friendly experience with minimal configuration effort.
