@@ -1,3 +1,7 @@
+<html>
+<head>
+</head>
+<body>
 <h1 id="resizing-digipi-sd-card">Resizing Digipi SD Card</h1>
 <h2 id="step-by-step-instructions">Step by Step Instructions</h2>
 <p>From the command line or a terminal window enter the following</p>
@@ -36,3 +40,5 @@ You can now verify that the system is using the full capacity of the SD Card by 
 <code>df -h</code></p>
 <br>
 <a href="index.php">Back</a>
+</body>
+</html>

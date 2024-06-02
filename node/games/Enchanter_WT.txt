@@ -1,0 +1,192 @@
+                                 ENCHANTER
+                                 (Infocom)
+
+Welcome  to  the wonderful world of Enchanter! Before we start, a few words
+about the game: first, it helps to make a map as you go along. You will not
+be  visiting all the locations, and if you make a misstep somewhere, having
+a  map  will  save  you a lot of time and trouble. Second, you will need to
+have  food and water with you most of the time. Make sure you eat and drink
+when  the  program warns you that you are hungry and thirsty. Also, keep in
+mind that, if your water supply runs out, you can always get more, but once
+the  bread is gone, you won't be able to obtain more food. So, don't go too
+far  astray,  or  you  might starve to death! Finally, remember to save the
+game every once in a while, especially before doing anything dangerous!
+
+Ok,  the game begins with your being summoned by Belboz to a council of the
+Circle  of  Enchanters.  You  are told that you must put an end to Krill, a
+nasty  and  powerful  Wizard, after which, with your trusty spell book, you
+are  sent  into  the  game proper, where you find yourself at a fork in the
+road.  From  there,  go NE, then North, and you will be in a shack. Get the
+jug  and  the  lantern, then open the oven door and get the bread. You have
+food, now you need some water.
+
+Go  South from the shack, then NE, SE, NE to the Shady Brook. Here you fill
+your  jug  with  water.  Head  SW, SE to another fork in the road, and from
+there  SW,  SW  to  a  deserted village. Well, almost deserted. There's one
+place that seems to be inhabited. You head South, and run into an old crone
+who  hands you a spell scroll, and pushes you back out the door again. This
+scroll  has  the  REZROV  spell. Use the GNUSTO spell to write it into your
+spell  book,  then  learn  the spell. Now, go NE, NE and you're back at the
+fork.  From  there,  head  along  East  until you come to the outer gate of
+Krill's castle. REZROV the gate, then continue East to the inside gate.
+
+Learn  the  FROTZ,  NITFOL,  and  REZROV spells. FROTZ the lantern, then go
+North  twice  to  the tower, and then Up the tower steps to the Jewel Room.
+There is an egg here, with all manner of little switches and doodads on it.
+You  could  actually  open the egg by figuring out the proper sequence, but
+that  isn't  necessary.  REZROV  the  egg,  and  it  will open, to reveal a
+shredded  scroll.  There  is no way to avoid this, even if you opened it by
+hand.  Don't  worry  about that, however. Just get the scroll, and drop the
+egg.  Learn REZROV once more (very handy, that spell!), then go Down to the
+Tower,  and  from there due East through the four Mirror Rooms to the North
+Gate. REZROV the gate.
+
+Now  move  out  North  through the gate to the Woods. Here you find another
+spell  scroll.  This  is  the  KREBF  spell, which will repair the shredded
+scroll.  You  will  only  need this spell once, so you don't really have to
+GNUSTO  it. In any case, cast the KREBF spell on the shredded scroll, which
+will  be  restored  and  usable. The spell on this scroll is ZIFMIA. GNUSTO
+that  one, then walk East to the Swamp. NITFOL the frogs, who will tell you
+how to get the CLEESH spell. GNUSTO that one, too.
+
+Now,  return  to  the  North  Gate, and from there go back West through the
+Mirror  Rooms to the Tower, and then from there due South until you come to
+the Southwest Tower. Go East to the South Hall, then South to dungeon. Open
+the  cell  door  and enter the cell. Examine the walls. Aha! A loose block!
+Move the block, and you will be able to move East into a secret room. There
+is another spell scroll here, the EXEX spell. Get the scroll and GNUSTO the
+spell.  You  will  also  find  a  silver  spoon here, but that item is just
+"window  dressing";  it has no useful purpose in the game, you should leave
+it behind. Now go back West, then South and Up to the South Hall again.
+
+Drop  everything  you  have, and go East into the Gallery. In the dark, you
+will  see that one portrait is lit up. Move that, and you will find a black
+candle  and  a  black  scroll.  The scroll holds the OZMOO spell. Get these
+items and return West. Pick up your supplies (you won't need the lantern if
+you  take  the  candle),  then  GNUSTO  the  OZMOO spell. About now, you're
+probably  feeling  a  bit  tired.  Go West to the Tower, and Up the stairs.
+Well,  look  at  that!  A  comfy  featherbed. Get into bed and drift off to
+sleep.
+
+While  you  sleep,  you  have  a  dream.  The dream is an indication of the
+location  of  another  scroll. When morning comes, get up, then examine the
+bedpost.  Aha!  A  hidden switch! Press it, and a compartment will open up,
+revealing  the  VAXUM  spell. Get that scroll and GNUSTO the spell. It will
+soon  be time for you to get yourself killed (among other things), so learn
+the OZMOO, NITFOL, and EXEX spells.
+
+Go  down  the  stairs,  the  head East until you come to the South Gate. Go
+South  from  there to the meadow, then SE to the Shore. Here you will see a
+giant turtle with a rainbow-coloured shell. Cast NITFOL on the turtle, then
+tell  him to follow you. Return to the South Gate and go East from there to
+the  base  of the Southeast Tower. Go up the stairs, and you will be in the
+Engine  Room,  which is full of all sorts of dangerous and incomprehensible
+machinery.  Cast  EXEX  spell on the turtle, then tell him to go SE and get
+the scroll.
+
+The speed spell will make him fast enough to dodge safely through that room
+into  the  Control Room, where the Kulcad spell scroll is. On his way back,
+he'll  set  off  a trap, but his heavy shell will protect him. You couldn't
+have  managed it, because you have no protection from the sharp spears. The
+turtle will give you the scroll, then return to the beach. The Kulcad spell
+is  too  powerful  for you to GNUSTO, so you'll have to just hold on to the
+scroll until you need it. And now, it's time for you to die.
+
+Go  down the stairs, then West to the Hall and North to the Closet. Pick up
+the  Jewelled  Box and continue North to the Courtyard. Don't bother trying
+REZROV  on  the Box; even that spell isn't powerful enough to open it. Just
+go  East to the front of the temple, drop everything you have, then go East
+once  more.  You  will be captured and put in a cell to await a sacrificial
+ceremony, at which you will be the guest of honour!
+
+Now,  OZMOO  yourself,  and Wait. The creatures will soon come for you, and
+you  will  be  offered  up on an altar and a knife plunged into your heart.
+Because of the OZMOO spell, you won't really be dead. However, you now have
+the  means  of  opening  the Jewelled Box. Once you are on your feet again,
+step  down from the altar, amd go East back to the courtyard. Cut the rope,
+then  open  the  box  and  get  the MELBOR scroll. Pick up the rest of your
+possessions, and GNUSTO the MELBOR spell.
+
+Now,  learn  MELBOR,  VAXUM  and ZIFMIA, then head West, West to the Inside
+Gate,  and from there to the Mirror Rooms. Here you must wait until you see
+the  Adventurer  on  the  other  side  of the mirror. At that point, ZIFMIA
+Adventurer,  and  he  will appear before you, a little bit upset. Since you
+have  a move to spare here, MELBOR yourself, then VAXUM the Adventurer, who
+will  now  be  very  friendly  towards you. He will also be looking at your
+inventory with covetous eyes.
+
+As  soon  as  he's  been  VAXUM'd, head directly East until you come to the
+Guarded  Room.  Don't worry, your new friend will follow you along. Once at
+the  door (and you should carefully read the description of it; it's really
+amusing),  tell the Adventurer to open it. He will do so, and the illusions
+of  monsters  will  disappear, revealing only a plain wooden door. Go North
+through the door into the Map Room.
+
+Here is one of those variable things in the game. There are several objects
+in  this  room,  two  of which, the map and the pencil, are crucial to your
+success. Sometimes, the Adventurer will pick up one or both of these items.
+You must get them back from him before he leaves, or you may never catch up
+to  him  again,  in which case the game is lost. If the Adventurer picks up
+something  you  need, tell him to give it to you, and he will. In any case,
+you  should drop the dagger now because you don't need it anymore. You also
+won't  need the purple scroll with the FILFRE spell. Make sure you have the
+map and the pencil, then go back to the North Gate, and from there South to
+the Library.
+
+Examine  the  ashes  on the floor, then the tracks in the ashes. These will
+lead  you  to  a mousehole in the wall. Reach inside, and you will find the
+scroll  with  the  GONDAR spell. GNUSTO that one. While you're poking about
+here,  you  might hear gutteral voices coming towards you. Don't worry; the
+MELBOR  spell  will keep you protected from any of the hairy creatures that
+might enter the room.
+
+There is also a dusty old book here that you might want to read, as it will
+help  you to understand what you're doing next. From the Library, return to
+the  South  Hall,  then go down into the dungeon, and down once more to the
+first Translucent Room. You will probably be tired now, so just go to sleep
+right  where  you  are; nothing will hurt you. You only had to sleep in the
+bed to have the dream to find the VAXUM spell.
+
+When you wake up, eat and drink if necessary, then drop your spell book and
+the  jug.  Look at the map, and you will see some lettered points connected
+by lines. This is a magic map of the area where you are now. If you connect
+two  adjacent  points  with  the  pencil,  an  opening will actually appear
+between  those two rooms. Likewise, if you erase a line between two points,
+then you close off the opening between the two rooms. However, you can only
+use  the  eraser twice and the point twice before each becomes useless. Now
+that you know what you have, let's put it to some good use.
+
+You  are  standing  at the moment at point 'B' on the map. From there, move
+South, East, NE, SE, and you will be at point 'F'. The point all by itself,
+'P' is where the Unseen Terror currently resides, and you are about to free
+it.  Draw  a  line  from 'P' to 'F'. You will see the opening appear in the
+wall  before  your  eyes, and then a very scared Belboz will appear briefly
+with  a warning. Now, move SW twice (the first time you won't get anywhere)
+and you will be at point 'P', where the GUNCHO spell is.
+
+Now,  erase  the  line  from  'B'  to  'R', which will keep the Terror from
+escaping. Also erase the line from 'M' to 'V', which traps him in the rooms
+again.  Pick  up  the GUNCHO scroll, and make your way to point 'J'. Draw a
+line  from 'J' to 'B', then walk West to 'B' and get your spell book. Learn
+the CLEESH, GONDAR, and MELBOR spells. The GUNCHO spell is too strong to be
+written in your book, so you'll have to carry the scroll with you.
+
+Now,  go  Up  twice to the South Hall. MELBOR yourself, then go West to the
+South  Gate,  and from there due North to the Junction. At that point, head
+East  twice  to  the  Winding Stairs. This is another powerful illusion; no
+matter  how  much  you walk up or down, you will never get anywhere. KULCAD
+the  stairs,  and  they  will disappear, leaving you over a Bottomless Pit!
+Fortunately, the bannister turned into a vellum scroll containing the IZYUK
+spell. IZYUK yoursel, and fly East into (ta-da!) The Warlock's Tower!
+
+Here,  at  last,  you come face-to-face with Krill himself. However, before
+you  can  take  care  of  him,  you will have to get rid of a couple of his
+friends.  When  the  dragon  attacks, GONDAR the dragon, and when the being
+attacks,  CLEESH him. Now, you're ready for the main event. As Krill begins
+his chant, GUNCHO him. He is banished forever from this plane of existence,
+and you have become a member of the Circle Of Enchanters!!
+
+Of  course,  this is just the beginning; there will be other tasks awaiting
+you in the future......
+
+   ********************************************************************
