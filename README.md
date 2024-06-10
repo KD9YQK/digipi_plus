@@ -25,6 +25,7 @@ You will need at least a 16gb SD Card that has been expanded to use the entire d
    - AX25 Packet Node 9600 baud
 10. [Trusted QSL](https://www.arrl.org/tqsl-download) - LOTW Logging Software
 11. UHF 9600 Baud TNC and AX25 Node Support
+12. [Ham Dashboard](https://github.com/VA3HDL/hamdashboard) - A Web based Ham Resource Dashboard
 
 ## Install
 **DON'T install until AFTER initial setup of DigiPi!!! This only works for DigiPi version 1.8-3**
@@ -47,6 +48,7 @@ RTL-SDR will cause an error to occur on **Raspberry Pi 4** that looks like `rtls
   3. Created Service for Xastir - TODO
   4. Created Dummy VNC Service - TODO
   5. Minor changes to install script - TODO
+  6. Added Ham Dashboard
 - 05/14/2024 - v1.2 Release
   1. Added JS8Spotter
   2. Added Xastir

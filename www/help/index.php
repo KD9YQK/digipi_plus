@@ -55,6 +55,11 @@
     <p>JS8Spotter can be opened by minimizing JS8Call in the VNC, right-clicking the grey background and selecting it from the pop-up menu.</p>
 </div>
 
+<h2><u>Ham Dashboard</u></h2>
+<div>
+    <p>Ham Dashboard can be customized to your location by viewing the tutorials videos <a href="https://github.com/VA3HDL/hamdashboard" target="_blank">here.</a></p>
+</div>
+
 <h2><u>Misc. Tutorials</u></h2>
 <div>
 <p>Here are some useful tutorials to aide in the setup of DigiPi.</p>
@@ -62,5 +67,7 @@
 <a href="extend_fs.php">Extend Filesystem</a> - Extend the filesystem on the SD-card.
 <br>
 </div>
+
+<small>DigiPi Plus v1.3 KD9YQK ©2024</small>
 </body>
 </html>

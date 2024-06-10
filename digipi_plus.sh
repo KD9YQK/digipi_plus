@@ -97,6 +97,11 @@ else
     installed+="RTL-SDR iGate, "
 fi
 
+if [ ! -f saves/plus.hamdash ]; then
+    options+=(12 "Ham Dash" off)
+else
+    installed+="Ham Dash, "
+fi
 
 #build dialogue box with menu options
 cmd=(dialog --backtitle "DigiPi Plus" --checklist "${installed}" 22 50 16)
@@ -268,6 +273,21 @@ for choice in "${choices[@]}"; do
                 sudo systemctl daemon-reload
                 touch saves/plus.sdr_igate
                 echo "RTL-SDR iGate Installed"
+            else
+                echo "OK"
+            fi
+            ;;
+        12)
+            echo -n "Checking for Ham Dash..."
+            sleep 1
+            if [ ! -f saves/plus.sdr_igate ]; then
+                echo "NOT FOUND"
+                echo "Installing Ham Dash"
+                sleep 1
+                git clone https://github.com/VA3HDL/hamdashboard.git
+                sudo ln -sf /home/pi/digipi_plus/hamdashboard/ /var/www/html -v
+                touch saves/plus.hamdash
+                echo "Ham Dash Installed"
             else
                 echo "OK"
             fi

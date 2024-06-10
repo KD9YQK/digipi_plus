@@ -74,3 +74,11 @@ if [ -f saves/plus.sdr_igate ]; then
     echo "RTL-SDR iGate Added to Homepage Menu"
     sleep .5
 fi
+
+if [ -f saves/plus.hamdash ]; then
+    python3 hamdash_helper.py
+    sudo cp temp/*.php www/
+    sudo rm temp/*.php
+    echo "Ham Dash Added to Homepage Menu"
+    sleep .2
+fi
