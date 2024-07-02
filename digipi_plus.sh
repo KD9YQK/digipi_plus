@@ -116,13 +116,10 @@ for choice in "${choices[@]}"; do
                 echo "NOT FOUND"
                 echo "Installing AX25 Node Upgrade"
                 sleep 1
-                bash node_upgrade.sh
                 touch saves/plus.node
-                echo "AX25 Upgrade Installed"
+                echo "AX25 Upgrade Installed. The Node Upgrade Installer will run towards the end of this script."
             else
                 echo "OK"
-                sleep 1
-                bash node_upgrade.sh
             fi
             ;;
         2)
@@ -296,6 +293,15 @@ for choice in "${choices[@]}"; do
             ;;
     esac
 done
+
+if [ ! -f saves/plus.node ]; then
+    echo "Skipping AX25 Node Upgrade"
+else
+    echo "Starting AX25 Node Upgrade"
+    sleep 1
+    bash node_upgrade.sh
+fi
+;;
 
 chmod +x launchers/*.sh
 bash build_services.sh
