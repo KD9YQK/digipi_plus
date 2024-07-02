@@ -23,7 +23,8 @@
 <p>DigiPi Plus is an ever-expanding project and will be subject to many potential updates in the future. To check for updates, or install additional software, run the following commands.</p>
 <pre><code>
     sudo remount
-    cd digipi_plus
+    cd ~/digipi_plus
+    git pull
     bash digipi_plus.sh
 </code></pre>
 
@@ -63,9 +64,9 @@
 <h2><u>Misc. Tutorials</u></h2>
 <div>
 <p>Here are some useful tutorials to aide in the setup of DigiPi.</p>
-<br>
+<br><p>
 <a href="extend_fs.php">Extend Filesystem</a> - Extend the filesystem on the SD-card.
-<br>
+    </p><br>
 </div>
 
 <small>DigiPi Plus v1.3 KD9YQK ©2024</small>
