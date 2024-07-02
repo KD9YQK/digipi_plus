@@ -121,6 +121,8 @@ for choice in "${choices[@]}"; do
                 echo "AX25 Upgrade Installed"
             else
                 echo "OK"
+                sleep 1
+                bash node_upgrade.sh
             fi
             ;;
         2)
