@@ -24,7 +24,7 @@ else
     options+=(2 "Space WX" on)
 fi
 
-if [ ! -f saves/node/wump.node ]; then
+if [ ! -f saves/node/wumpus.node ]; then
     options+=(3 "Hunt the Wumpus" off)
 else
     options+=(3 "Hunt the Wumpus" on)
