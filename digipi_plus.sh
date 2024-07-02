@@ -301,7 +301,6 @@ else
     sleep 1
     bash node_upgrade.sh
 fi
-;;
 
 chmod +x launchers/*.sh
 bash build_services.sh
