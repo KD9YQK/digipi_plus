@@ -6,6 +6,7 @@ if [ ! -f saves/plus.node ]; then
     chmod +x ~/digipi_plus/node/wumpus.sh
     chmod +x ~/digipi_plus/node/hamqsl.py
     chmod +x ~/digipi_plus/node/space.py
+    chmod +x ~/digipi_plus/node/zork2.sh
 
     echo "Backing up /etc/ax25/uronode.conf as /etc/ax25/uronode.conf.bak"
     sudo cp /etc/ax25/uronode.conf /etc/ax25/uronode.conf.bak -v
@@ -40,6 +41,48 @@ if [ ! -f saves/node/gofish.node ]; then
     options+=(4 "Go Fish" off)
 else
     options+=(4 "Go Fish" on)
+fi
+
+if [ ! -f saves/node/zork2.node ]; then
+    options+=(5 "Zork II - The Wizard of Frobozz" off)
+else
+    options+=(5 "Zork II - The Wizard of Frobozz" on)
+fi
+
+if [ ! -f saves/node/zork3.node ]; then
+    options+=(6 "Zork III - The Dungeon Master" off)
+else
+    options+=(6 "Zork III - The Dungeon Master" on)
+fi
+
+if [ ! -f saves/node/zork0.node ]; then
+    options+=(7 "Zork Zero - The Revenge of Megaboz" off)
+else
+    options+=(7 "Zork Zero - The Revenge of Megaboz" on)
+fi
+
+if [ ! -f saves/node/zorkb.node ]; then
+    options+=(8 "Beyond Zork - The Coconut of Quendor" off)
+else
+    options+=(8 "Beyond Zork - The Coconut of Quendor" on)
+fi
+
+if [ ! -f saves/node/cutthroats.node ]; then
+    options+=(9 "Cutthroats" off)
+else
+    options+=(9 "Cutthroats" on)
+fi
+
+if [ ! -f saves/node/arthur.node ]; then
+    options+=(10 "Arthur - The Quest for Excaliber" off)
+else
+    options+=(10 "Arthur - The Quest for Excaliber" on)
+fi
+
+if [ ! -f saves/node/enchanter.node ]; then
+    options+=(11 "Enchanter" off)
+else
+    options+=(11 "Enchanter" on)
 fi
 
 #build dialogue box with menu options
@@ -82,6 +125,69 @@ for choice in "${choices[@]}"; do
                 touch saves/node/gofish.node
             else
                 rm saves/node/gofish.node
+            fi
+            ;;
+        5)
+            if [ ! -f saves/zork2.node ]; then
+                sudo sed -i '/EMail/a \ExtCmd		Zork2	1	nobody	/home/pi/digipi_plus/node/zork2.sh zork2.sh' /etc/ax25/uronode.conf
+                sudo sed -i '/HITCH/a \  GO	- Play Zork II ' /etc/ax25/uronode.motd
+                touch saves/node/zork2.node
+            else
+                rm saves/node/zork2.node
+            fi
+            ;;
+        6)
+            if [ ! -f saves/zork3.node ]; then
+                sudo sed -i '/EMail/a \ExtCmd		Zork3	1	nobody	/home/pi/digipi_plus/node/zork3.sh zork3.sh' /etc/ax25/uronode.conf
+                sudo sed -i '/HITCH/a \  GO	- Play Zork III ' /etc/ax25/uronode.motd
+                touch saves/node/zork3.node
+            else
+                rm saves/node/zork3.node
+            fi
+            ;;
+        7)
+            if [ ! -f saves/zork0.node ]; then
+                sudo sed -i '/EMail/a \ExtCmd		Zork0	1	nobody	/home/pi/digipi_plus/node/zork0.sh zork0.sh' /etc/ax25/uronode.conf
+                sudo sed -i '/HITCH/a \  GO	- Play Zork Zero ' /etc/ax25/uronode.motd
+                touch saves/node/zork0.node
+            else
+                rm saves/node/zork0.node
+            fi
+            ;;
+        8)
+            if [ ! -f saves/zorkb.node ]; then
+                sudo sed -i '/EMail/a \ExtCmd		BeyondZork	1	nobody	/home/pi/digipi_plus/node/zorkb.sh zorkb.sh' /etc/ax25/uronode.conf
+                sudo sed -i '/HITCH/a \  GO	- Play Beyond Zork ' /etc/ax25/uronode.motd
+                touch saves/node/zorkb.node
+            else
+                rm saves/node/zorkb.node
+            fi
+            ;;
+        9)
+            if [ ! -f saves/cutthroats.node ]; then
+                sudo sed -i '/EMail/a \ExtCmd		Cutthroats	1	nobody	/home/pi/digipi_plus/node/cutthroats.sh cuttthroats.sh' /etc/ax25/uronode.conf
+                sudo sed -i '/HITCH/a \  GO	- Play Cutthroats ' /etc/ax25/uronode.motd
+                touch saves/node/cutthroats.node
+            else
+                rm saves/node/cutthroats.node
+            fi
+            ;;
+        10)
+            if [ ! -f saves/arthur.node ]; then
+                sudo sed -i '/EMail/a \ExtCmd		Arthur	1	nobody	/home/pi/digipi_plus/node/arthur.sh arthur.sh' /etc/ax25/uronode.conf
+                sudo sed -i '/HITCH/a \  GO	- Play Arthur ' /etc/ax25/uronode.motd
+                touch saves/node/arthur.node
+            else
+                rm saves/node/arthur.node
+            fi
+            ;;
+        11)
+            if [ ! -f saves/enchanter.node ]; then
+                sudo sed -i '/EMail/a \ExtCmd		Enchanter	1	nobody	/home/pi/digipi_plus/node/enchanter.sh enchanter.sh' /etc/ax25/uronode.conf
+                sudo sed -i '/HITCH/a \  GO	- Play Enchanter ' /etc/ax25/uronode.motd
+                touch saves/node/enchanter.node
+            else
+                rm saves/node/enchanter.node
             fi
             ;;
     esac
