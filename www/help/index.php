@@ -64,9 +64,10 @@
 <h2><u>Misc. Tutorials</u></h2>
 <div>
 <p>Here are some useful tutorials to aide in the setup of DigiPi.</p>
-<br><p>
+<p>
 <a href="extend_fs.php">Extend Filesystem</a> - Extend the filesystem on the SD-card.
-    </p><br>
+</p>
+<br>
 </div>
 
 <small>DigiPi Plus v1.3 KD9YQK ©2024</small>
