@@ -11,6 +11,7 @@ You will need at least a 16gb SD Card that has been expanded to use the entire d
    - [Go Fish](https://linuxcommandlibrary.com/man/go-fish) - BSD Game
    - [Space WX](https://github.com/bradbrownjr/bpq-apps) - Space Weather Conditions
    - [Ham QSL](https://github.com/bradbrownjr/bpq-apps) - A text version of the [hamqsl.com](https://hamqsl.com/) widgets.
+   - Infocom Games - Zork II, Zork III, Zork Zero, Beyond Zork, Cutthroats, Enchanter, Arthur
 2. [PCSI](https://github.com/maqifrnswa/PCSI) - Packet Compressed Sensing Imaging over AX25
 3. [OpenWebRX+](https://fms.komkon.org/OWRX/) - web-based SDR receiver
 4. [Grid Tracker](https://gridtracker.org/) - GridTracker is a warehouse of amateur radio information presented in an easy to use interface, from live traffic decodes, logbooks, real-time spot reports, weather, current solar conditions and more!
@@ -44,11 +45,12 @@ RTL-SDR will cause an error to occur on **Raspberry Pi 4** that looks like `rtls
 ## Changelog
 - ??/??/2024 - v1.3 Release
   1. Email and WebChat added to sidebar
-  2. Added Help and Tutorials Web Pages - TODO
+  2. Added Help and Tutorials Web Pages - WIP
   3. Created Service for Xastir - TODO
   4. Created Dummy VNC Service - TODO
   5. Minor changes to install script - TODO
   6. Added Ham Dashboard
+  7. Added more Infocom Games
 - 05/14/2024 - v1.2 Release
   1. Added JS8Spotter
   2. Added Xastir
