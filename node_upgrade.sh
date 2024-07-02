@@ -1,13 +1,6 @@
 #!/bin/bash
 if [ ! -f saves/plus.node ]; then
     echo "Upgrading AX25 packet node"
-    sudo apt install bsdgames -y
-    chmod +x ~/digipi_plus/node/gofish.sh
-    chmod +x ~/digipi_plus/node/wumpus.sh
-    chmod +x ~/digipi_plus/node/hamqsl.py
-    chmod +x ~/digipi_plus/node/space.py
-    chmod +x ~/digipi_plus/node/zork2.sh
-
     echo "Backing up /etc/ax25/uronode.conf as /etc/ax25/uronode.conf.bak"
     sudo cp /etc/ax25/uronode.conf /etc/ax25/uronode.conf.bak -v
 
@@ -96,6 +89,7 @@ for choice in "${choices[@]}"; do
                 sudo sed -i '/EMail/a \ExtCmd		HAMQSL	3	nobody	/home/pi/digipi_plus/node/hamqsl.py hamqsl.py' /etc/ax25/uronode.conf
                 sudo sed -i '/WEB/a \  HAMQSL - Get current band conditions ' /etc/ax25/uronode.motd
                 touch saves/node/hamqsl.node
+                chmod +x ~/digipi_plus/node/hamqsl.py
             else
                 rm saves/node/hamqsl.node
             fi
@@ -105,6 +99,7 @@ for choice in "${choices[@]}"; do
                 sudo sed -i '/EMail/a \ExtCmd		SPACE	3	nobody	/home/pi/digipi_plus/node/space.py space.py' /etc/ax25/uronode.conf
                 sudo sed -i '/WEB/a \  SPACE - Get current space WX ' /etc/ax25/uronode.motd
                 touch saves/node/spacewx.node
+                chmod +x ~/digipi_plus/node/space.py
             else
                 rm saves/node/spacewx.node
             fi
@@ -114,6 +109,8 @@ for choice in "${choices[@]}"; do
                 sudo sed -i '/EMail/a \ExtCmd		WUmpus	3	nobody	/home/pi/digipi_plus/node/wumpus.sh wumpus.sh' /etc/ax25/uronode.conf
                 sudo sed -i '/HITCH/a \  WUMP  - Play Hunt The Wumpus ' /etc/ax25/uronode.motd
                 touch saves/node/wumpus.node
+                sudo apt install bsdgames -y
+                chmod +x ~/digipi_plus/node/wumpus.sh
             else
                 rm saves/node/wumpus.node
             fi
@@ -123,6 +120,8 @@ for choice in "${choices[@]}"; do
                 sudo sed -i '/EMail/a \ExtCmd		GOfish	1	nobody	/home/pi/digipi_plus/node/gofish.sh gofish.sh' /etc/ax25/uronode.conf
                 sudo sed -i '/HITCH/a \  GO	- Play Go Fish ' /etc/ax25/uronode.motd
                 touch saves/node/gofish.node
+                sudo apt install bsdgames -y
+                chmod +x ~/digipi_plus/node/gofish.sh
             else
                 rm saves/node/gofish.node
             fi
@@ -132,6 +131,7 @@ for choice in "${choices[@]}"; do
                 sudo sed -i '/EMail/a \ExtCmd		Zork2	1	nobody	/home/pi/digipi_plus/node/zork2.sh zork2.sh' /etc/ax25/uronode.conf
                 sudo sed -i '/HITCH/a \  GO	- Play Zork II ' /etc/ax25/uronode.motd
                 touch saves/node/zork2.node
+                chmod +x ~/digipi_plus/node/zork2.sh
             else
                 rm saves/node/zork2.node
             fi
@@ -141,6 +141,7 @@ for choice in "${choices[@]}"; do
                 sudo sed -i '/EMail/a \ExtCmd		Zork3	1	nobody	/home/pi/digipi_plus/node/zork3.sh zork3.sh' /etc/ax25/uronode.conf
                 sudo sed -i '/HITCH/a \  GO	- Play Zork III ' /etc/ax25/uronode.motd
                 touch saves/node/zork3.node
+                chmod +x ~/digipi_plus/node/zork3.sh
             else
                 rm saves/node/zork3.node
             fi
@@ -150,6 +151,7 @@ for choice in "${choices[@]}"; do
                 sudo sed -i '/EMail/a \ExtCmd		Zork0	1	nobody	/home/pi/digipi_plus/node/zork0.sh zork0.sh' /etc/ax25/uronode.conf
                 sudo sed -i '/HITCH/a \  GO	- Play Zork Zero ' /etc/ax25/uronode.motd
                 touch saves/node/zork0.node
+                chmod +x ~/digipi_plus/node/zork0.sh
             else
                 rm saves/node/zork0.node
             fi
@@ -159,6 +161,7 @@ for choice in "${choices[@]}"; do
                 sudo sed -i '/EMail/a \ExtCmd		BeyondZork	1	nobody	/home/pi/digipi_plus/node/zorkb.sh zorkb.sh' /etc/ax25/uronode.conf
                 sudo sed -i '/HITCH/a \  GO	- Play Beyond Zork ' /etc/ax25/uronode.motd
                 touch saves/node/zorkb.node
+                chmod +x ~/digipi_plus/node/zorkb.sh
             else
                 rm saves/node/zorkb.node
             fi
@@ -168,6 +171,7 @@ for choice in "${choices[@]}"; do
                 sudo sed -i '/EMail/a \ExtCmd		Cutthroats	1	nobody	/home/pi/digipi_plus/node/cutthroats.sh cuttthroats.sh' /etc/ax25/uronode.conf
                 sudo sed -i '/HITCH/a \  GO	- Play Cutthroats ' /etc/ax25/uronode.motd
                 touch saves/node/cutthroats.node
+                chmod +x ~/digipi_plus/node/cutthroats.sh
             else
                 rm saves/node/cutthroats.node
             fi
@@ -177,6 +181,7 @@ for choice in "${choices[@]}"; do
                 sudo sed -i '/EMail/a \ExtCmd		Arthur	1	nobody	/home/pi/digipi_plus/node/arthur.sh arthur.sh' /etc/ax25/uronode.conf
                 sudo sed -i '/HITCH/a \  GO	- Play Arthur ' /etc/ax25/uronode.motd
                 touch saves/node/arthur.node
+                chmod +x ~/digipi_plus/node/arthur.sh
             else
                 rm saves/node/arthur.node
             fi
@@ -186,6 +191,7 @@ for choice in "${choices[@]}"; do
                 sudo sed -i '/EMail/a \ExtCmd		Enchanter	1	nobody	/home/pi/digipi_plus/node/enchanter.sh enchanter.sh' /etc/ax25/uronode.conf
                 sudo sed -i '/HITCH/a \  GO	- Play Enchanter ' /etc/ax25/uronode.motd
                 touch saves/node/enchanter.node
+                chmod +x ~/digipi_plus/node/enchanter.sh
             else
                 rm saves/node/enchanter.node
             fi
