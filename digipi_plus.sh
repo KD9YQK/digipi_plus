@@ -103,6 +103,12 @@ else
     installed+="Ham Dash, "
 fi
 
+if [ ! -f saves/plus.chirp ]; then
+    options+=(13 "Chirp-Next" off)
+else
+    installed+="Chirp-Next, "
+fi
+
 #build dialogue box with menu options
 cmd=(dialog --backtitle "DigiPi Plus" --checklist "${installed}" 22 50 16)
 choices=($("${cmd[@]}" "${options[@]}" 2>&1 1>/dev/tty))
@@ -279,7 +285,7 @@ for choice in "${choices[@]}"; do
         12)
             echo -n "Checking for Ham Dash..."
             sleep 1
-            if [ ! -f saves/plus.sdr_igate ]; then
+            if [ ! -f saves/plus.hamdash ]; then
                 echo "NOT FOUND"
                 echo "Installing Ham Dash"
                 sleep 1
@@ -287,6 +293,22 @@ for choice in "${choices[@]}"; do
                 sudo ln -sf /home/pi/digipi_plus/hamdashboard/ /var/www/html -v
                 touch saves/plus.hamdash
                 echo "Ham Dash Installed"
+            else
+                echo "OK"
+            fi
+            ;;
+        13)
+            echo -n "Checking for Chirp-Next..."
+            sleep 1
+            if [ ! -f saves/plus.chirp ]; then
+                echo "NOT FOUND"
+                echo "Installing Chirp-Next"
+                sleep 1
+                cd ~/digipi_plus/chirp
+                sudo apt install python3-wxgtk4.0 pipx
+                pipx install --system-site-packages ./chirp-20240626-py3-none-any.whl
+                touch saves/plus.chirp
+                echo "Chirp-Next Installed"
             else
                 echo "OK"
             fi

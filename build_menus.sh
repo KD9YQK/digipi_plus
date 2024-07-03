@@ -82,3 +82,9 @@ if [ -f saves/plus.hamdash ]; then
     echo "Ham Dash Added to Homepage Menu"
     sleep .2
 fi
+
+if [ -f saves/plus.chirp ]; then
+    sudo sed -i '/DigiPi Plus/a \        "Chirp-Next"               f.exec "~/.local/bin/chirp &"' /home/pi/.emwmrc
+    echo "Chirp-Next Added to GUI Menu"
+    sleep .5
+fi
