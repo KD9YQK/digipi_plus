@@ -311,6 +311,7 @@ for choice in "${choices[@]}"; do
                 cd ~/digipi_plus
                 touch saves/plus.chirp
                 echo "Chirp-Next Installed"
+                sleep 10
             else
                 echo "OK"
             fi
