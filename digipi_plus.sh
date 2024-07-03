@@ -304,7 +304,7 @@ for choice in "${choices[@]}"; do
                 echo "NOT FOUND"
                 echo "Installing Chirp-Next"
                 sleep 1
-                cd ~/digipi_plus/chirp
+                cd ~/digipi_plus
                 sudo apt install python3-wxgtk4.0 pipx -y
                 wget https://archive.chirpmyradio.com/chirp_next/next-20240626/chirp-20240626-py3-none-any.whl
                 pipx install --system-site-packages ./chirp-20240626-py3-none-any.whl
