@@ -30,6 +30,10 @@ else
     echo "OK"
 fi
 
+Max_RAM(){
+    free | awk 'NR==2 {print $2}'
+}
+
 installed="Installed:\n"
 if [ ! -f saves/plus.node ]; then
     options+=(1 "AX25 Node Upgrade" off)
@@ -49,10 +53,12 @@ else
     installed+="PCSI, "
 fi
 
-if [ ! -f saves/plus.gridtracker ]; then
-    options+=(4 "Grid Tracker" off)
-else
-    installed+="Grid Tracker, "
+if (($(Max_RAM) > 1000000)); then
+    if [ ! -f saves/plus.gridtracker ]; then
+        options+=(4 "Grid Tracker" off)
+    else
+        installed+="Grid Tracker, "
+    fi
 fi
 
 if [ ! -f saves/plus.js8spotter ]; then
@@ -107,6 +113,14 @@ if [ ! -f saves/plus.chirp ]; then
     options+=(13 "Chirp-Next" off)
 else
     installed+="Chirp-Next, "
+fi
+
+if (($(Max_RAM) > 1000000)); then
+    if [ ! -f saves/plus.xfce ]; then
+        options+=(14 "XFCE4 Desktop" off)
+    else
+        installed+="XFCE4 Desktop, "
+    fi
 fi
 
 #build dialogue box with menu options
@@ -304,16 +318,55 @@ for choice in "${choices[@]}"; do
                 echo "NOT FOUND"
                 echo "Installing Chirp-Next"
                 sleep 1
-                cd ~/digipi_plus
+                cd ~/digipi_plus/chirp
                 sudo apt install python3-wxgtk4.0 pipx -y
-                wget https://archive.chirpmyradio.com/chirp_next/next-20240626/chirp-20240626-py3-none-any.whl
+                echo ""
+                echo "Umounting and creating a new 20M RAMDISK for /tmp"
+                echo ""
+                sudo umount -l /tmp
+                sudo mount -t tmpfs -o size=20M tmpfs /tmp
                 pipx install --system-site-packages ./chirp-20240626-py3-none-any.whl
+                echo ""
+                echo "Returning the RAMDISK for /tmp back to 10M"
+                echo ""
+                sudo umount -l /tmp
+                sudo mount -t tmpfs -o size=10M tmpfs /tmp
+                echo ""
+                echo "There is a bug in Chirp that prevents it from starting. Installing a patched file which fixes the error."
+                echo "This will be removed in a future update once the owners of Chirp patch on their end."
+                sleep 1
+                rm ~/.local/pipx/venvs/chirp/lib/python3.11/site-packages/chirp/wxui/main.py -v
+                cp main.py ~/.local/pipx/venvs/chirp/lib/python3.11/site-packages/chirp/wxui -v
+                echo ""
+                
                 cd ~/digipi_plus
                 touch saves/plus.chirp
                 echo "Chirp-Next Installed"
                 sleep 10
             else
                 echo "OK"
+            fi
+            ;;
+        14)
+            echo -n "Checking for XFCE4 Desktop..."
+            sleep 1
+            if [ ! -f saves/plus.xfce ]; then
+                echo "NOT FOUND"
+                echo "Installing XFCE4 and Chromium"
+                sleep 1
+                echo "Umounting and creating a new 200M RAMDISK for /var/tmp"
+                echo ""
+                sudo umount -l /var/tmp
+                sudo mount -t tmpfs -o size=200M tmpfs /var/tmp
+                sudo apt install xfce4 chromium -y
+                echo "Returning the RAMDISK for /var/tmp back to 10M"
+                echo ""
+                sudo umount -l /var/tmp
+                sudo mount -t tmpfs -o size=10M tmpfs /var/tmp
+                touch saves/plus.xfce
+                echo "XFCE4 and Chromium Installed"
+            else
+                echo ""
             fi
             ;;
     esac
