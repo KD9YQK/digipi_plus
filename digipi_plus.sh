@@ -115,13 +115,6 @@ else
     installed+="Chirp-Next, "
 fi
 
-if (($(Max_RAM) > 1000000)); then
-    if [ ! -f saves/plus.xfce ]; then
-        options+=(14 "XFCE4 Desktop" off)
-    else
-        installed+="XFCE4 Desktop, "
-    fi
-fi
 
 #build dialogue box with menu options
 cmd=(dialog --backtitle "DigiPi Plus" --checklist "${installed}" 22 50 16)
@@ -345,28 +338,6 @@ for choice in "${choices[@]}"; do
                 sleep 10
             else
                 echo "OK"
-            fi
-            ;;
-        14)
-            echo -n "Checking for XFCE4 Desktop..."
-            sleep 1
-            if [ ! -f saves/plus.xfce ]; then
-                echo "NOT FOUND"
-                echo "Installing XFCE4 and Chromium"
-                sleep 1
-                echo "Umounting and creating a new 200M RAMDISK for /var/tmp"
-                echo ""
-                sudo umount -l /var/tmp
-                sudo mount -t tmpfs -o size=200M tmpfs /var/tmp
-                sudo apt install xfce4 chromium -y
-                echo "Returning the RAMDISK for /var/tmp back to 10M"
-                echo ""
-                sudo umount -l /var/tmp
-                sudo mount -t tmpfs -o size=10M tmpfs /var/tmp
-                touch saves/plus.xfce
-                echo "XFCE4 and Chromium Installed"
-            else
-                echo ""
             fi
             ;;
     esac
