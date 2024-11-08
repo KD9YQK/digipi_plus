@@ -1,7 +1,28 @@
 <div class="settings">
 <a href="/wifi.php" title="Setup Wifi connection">
   <img src="/images/icons/wifi.png" width=32px height=32px>
-  <strong> Wifi</strong>
+  <strong>Wifi</strong>
+</a>
+</div>
+
+<div class="settings">
+<a href="/shell.php" title="Command Prompt" target="shell">
+  <img src="/images/icons/shell.png" width=32px height=32px>
+  <strong>Shell</strong>
+</a>
+</div>
+
+<div class="settings">
+<a href="/syslog.php" title="System Log File" target="syslog">
+  <img src="/images/icons/slog.png" width=32px height=32px>
+  <strong> SysLog</strong>
+</a>
+</div>
+
+<div class="settings">
+<a href="/log.php" title="Direwolf Packet Log File" target="syslog">
+  <img src="/images/icons/plog.png" width=32px height=32px>
+  <strong> PktLog</strong>
 </a>
 </div>
 
