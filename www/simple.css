@@ -140,7 +140,10 @@ Settings
 	/*justify-content: center; /* Align horizontal */
 	align-items: center; /* Align vertical */
 }
-
+.settings img
+{
+	vertical-align: middle;
+}
 
 /* -----------------------
 Nav
