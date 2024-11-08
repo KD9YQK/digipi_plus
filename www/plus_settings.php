@@ -1,5 +1,5 @@
 <a href="/wifi.php" title="Setup Wifi connection">
-  <img src="/images/icons/wifi.png">
+  <img src="/images/icons/wifi.png" width=16px height=16px>
   <strong>Wifi</strong>
 </a>
 
