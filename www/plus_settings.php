@@ -1,3 +1,8 @@
+<a href="/wifi.php" title="Setup Wifi connection">
+  <img src="images/icons/wifi.png">
+  <strong>Wifi</strong>
+</a>
+
 <table>
 <tr>
   <td>
