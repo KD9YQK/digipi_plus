@@ -1,7 +1,9 @@
+<div class="settings">
 <a href="/wifi.php" title="Setup Wifi connection">
   <img src="/images/icons/wifi.png" width=32px height=32px>
   <strong> Wifi</strong>
 </a>
+</div>
 
 <table>
 <tr>
