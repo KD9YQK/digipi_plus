@@ -15,46 +15,37 @@
 <div class="settings">
 <a href="/syslog.php" title="System Log File" target="syslog">
   <img src="/images/icons/slog.png" width=32px height=32px>
-  <strong> SysLog</strong>
+  <strong>SysLog</strong>
 </a>
 </div>
 
 <div class="settings">
-<a href="/log.php" title="Direwolf Packet Log File" target="syslog">
+<a href="/log.php" title="Direwolf Packet Log File" target="pktlog">
   <img src="/images/icons/plog.png" width=32px height=32px>
-  <strong> PktLog</strong>
+  <strong>PktLog</strong>
 </a>
 </div>
 
-<table>
-<tr>
-  <td>
-    <a href="/wifi.php" title="Setup Wifi connection"><strong>Wifi</strong></a>
-  </td>
-  <td>
-    <a href=/shell.php target="shell" title="Command prompt"><strong>Shell</strong></a>
-  </td>
-  <td >
-    <a href=/syslog.php title="System log file" target="syslog"><strong>SysLog</strong></a>
-  </td>
-</tr>
-<tr>
-  <td>
-    <a href=/log.php title="Direwolf Log" target="log"><strong>PktLog</strong></a>
-  </td>
-  <td>
-    <a href=/direwatch.php target="screen"><strong>Screen</strong></a>
-  </td>
-  <td>
-    <a href=/index.php><strong>Refresh</strong></a>
-  </td>
-</tr>
-<tr>
-  <td>
-  <a href=/help/index.php><strong>Help</strong></a>
-  </td>
-</tr>
-</table>
+<div class="settings">
+<a href="/direwatch.php" title="Direwatch Screen" target="screen">
+  <img src="/images/icons/screen.png" width=32px height=32px>
+  <strong>Screen</strong>
+</a>
+</div>
+
+<div class="settings">
+<a href="/index.php" title="Refresh">
+  <img src="/images/icons/refresh.png" width=32px height=32px>
+  <strong>Refresh</strong>
+</a>
+</div>
+
+<div class="settings">
+<a href="/help.php" title="Digipi Plus Help" target="help">
+  <img src="/images/icons/help.png" width=32px height=32px>
+  <strong>Help</strong>
+</a>
+</div>
 
 <input type="submit" name="reboot" value="Reboot">
 &nbsp;
