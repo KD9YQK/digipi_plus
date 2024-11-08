@@ -56,6 +56,7 @@
     <script>
         document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':8055" target="iframe_a" id="webchat">WebChat</a>' )
     </script>
+    <a href="https://aprs.fi/" target='iframe_a' id="shell">APRS.fi</a>
     <a href="help/index.php" target='iframe_a' id="help">Help</a>
 </div>
 
