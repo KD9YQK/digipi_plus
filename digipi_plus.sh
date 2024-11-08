@@ -24,6 +24,7 @@ if [ ! -f saves/plus.base ]; then
     sudo ln -sf /home/pi/digipi_plus/www/*.php /var/www/html/ -v
     sudo ln -sf /home/pi/digipi_plus/www/*.css /var/www/html/styles -v
     sudo ln -sf /home/pi/digipi_plus/www/help/ /var/www/html -v
+    sudo ln -sf /home/pi/digipi_plus/www/images/ /var/www/html/images -v
     touch saves/plus.base
     echo "DigiPi Plus Base Installed"
 else
