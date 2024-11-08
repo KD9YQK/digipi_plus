@@ -145,6 +145,12 @@ Settings
 	vertical-align: middle;
 }
 
+.settings strong
+{
+	font-size: 20px;
+        padding-left: 20px;
+}
+
 /* -----------------------
 Nav
 ------------------------*/
