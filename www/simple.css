@@ -132,6 +132,17 @@ Layout styles
 }
 
 /* -----------------------
+Settings
+------------------------*/
+.settings
+{
+	display: flex;
+	/*justify-content: center; /* Align horizontal */
+	align-items: center; /* Align vertical */
+}
+
+
+/* -----------------------
 Nav
 ------------------------*/
 
