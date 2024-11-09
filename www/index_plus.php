@@ -89,8 +89,8 @@ body {
 
 <script>
 function openNav() {
-  document.getElementById("mySidebar").style.width = "450px";
-  document.getElementById("main").style.marginLeft = "450px";
+  document.getElementById("mySidebar").style.width = "480px";
+  document.getElementById("main").style.marginLeft = "480px";
 }
 
 function closeNav() {
