@@ -43,6 +43,7 @@
 <div>
     <p>Grid Tracker can be opened from within the VNC by minimizing WSJT-X and then right-clicking on the grey background. A menu should appear showing Grid Tracker.
     Pressing the "Save Configs" button in the Settings tab is required on your FIRST run in order to create the necessary files, or an error will occur.</p>
+    <p>Grid Tracker is only available for Pis with more than 1gb RAM, and will not show in the installer if your Pi doesn't have enough RAM.</p>
 </div>
 
 <h2><u>Xastir</u></h2>
@@ -66,6 +67,8 @@
 <p>Here are some useful tutorials to aide in the setup of DigiPi.</p>
 <p>
 <a href="extend_fs.php">Extend Filesystem</a> - Extend the filesystem on the SD-card.
+<br>
+<a href="node_sysinfo.php">Node System Info</a> - Add real time system info to your packet node using crontab and screenfetch.
 </p>
 <br>
 </div>
