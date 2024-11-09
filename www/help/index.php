@@ -11,12 +11,12 @@
 <h1><u>DigiPi Plus</u></h1>
 </div>
 <div>
-    <p>DigiPi Plus is intended to be a suppliment to the DigiPi image created by <a href="digipi.org" target="_blank">Craig KM6LYW</a>, with the goal being to add more functionality to the original project.
+    <p>DigiPi Plus is intended to be a suppliment to the DigiPi image created by <a href="https://digipi.org" target="_blank">Craig KM6LYW</a>, with the goal being to add more functionality to the original project.
     The idea is to be minimally intrusive to the original system, yet provide a user friendly experience with minimal configuration effort.
     Please enjoy the additions, and feel free to reach out with any comments, bugs, and/or suggestions.</p>
 </div>
 <div>
-    <p>- <a href="kd9yqk.com" target="_blank">Bob KD9YQK</a></p>
+    <p>- <a href="https://kd9yqk.com" target="_blank">Bob KD9YQK</a></p>
 </div>
 
 <h2><u>Upgrading DigiPi Plus</u></h2>
