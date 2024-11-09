@@ -2,9 +2,9 @@
 <head>
 </head>
 <body>
-<h1 id="resizing-digipi-sd-card">Resizing Digipi SD Card</h1>
+<h1 id="resizing-digipi-sd-card">Use Screenfetch to update node Info command.</h1>
 <h2 id="step-by-step-instructions">Step by Step Instructions</h2>
-
+<p>Note: This requires being able to write to the SD Card. See this tutorial on how to change from read-only to read-write.</p>
 <p>From the command line or a terminal window enter the following</p>
 <pre><code>
 sudo remount
