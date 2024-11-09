@@ -19,7 +19,7 @@ sudo crontab -e
 <p>If there is an option to create a new file, select Y; if there is an option to select an editor, select NANO</p>
 <p>Scroll down to the end of the file and add the following line.</p>
 <pre><code>
-*/1 * * * * screenfetch -d '-host;-shell;-pkgs' > /etc/ax25/uronode.info
+*/1 * * * * screenfetch -n -d '-host;-shell;-pkgs' > /etc/ax25/uronode.info
 </code></pre>
 
 <p>Press <code>ctrl-x</code> then press <code>s</code> to close and save the file. You should now see an update every minute in your syslog. </p>
