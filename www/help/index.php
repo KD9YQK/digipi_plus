@@ -67,12 +67,11 @@
 <p>Here are some useful tutorials to aide in the setup of DigiPi.</p>
 <p>
 <a href="extend_fs.php">Extend Filesystem</a> - Extend the filesystem on the SD-card.
-<br>
+</p><p>
 <a href="node_sysinfo.php">Node System Info</a> - Add real time system info to your packet node using crontab and screenfetch.
 </p>
-<br>
 </div>
-
+<br>
 <small>DigiPi Plus v1.3 KD9YQK ©2024</small>
 </body>
 </html>
