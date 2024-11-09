@@ -2,6 +2,7 @@
 
 <form action="index.php" method="post">
   <center><?php include 'header.php' ?></center>
+  <div style = "color: white; background-color: black">
   <div class="tab" style="text-align: center; width:410px;">
       <button class="tablinks" type="button" id="defaultOpen" onclick="openMenu(event, 'Services')">Services</button>
       <button class="tablinks" type="button" onclick="openMenu(event, 'Programs')">Programs</button>
@@ -58,5 +59,6 @@ document.getElementById("defaultOpen").click();
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/dot"><font size="+3" color="#eeeeee">.</font></a>
 </form>
 </font>
+</div>
 </body>
 </html>
