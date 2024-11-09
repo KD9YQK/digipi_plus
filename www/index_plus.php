@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <LINK href="/styles/simple.css" rel="stylesheet" type="text/css">
 <style>
-body {
+.body {
   font-family: "Lato", sans-serif;
 }
 
@@ -58,7 +58,7 @@ body {
   background-color: #444;
 }
 
-#main {
+.main {
   transition: margin-left .5s;
   padding: 16px;
   
