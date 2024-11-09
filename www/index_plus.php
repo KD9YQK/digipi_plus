@@ -49,7 +49,7 @@
   color: white;
   padding: 10px 15px;
   left: 1%;
-  top: 99%;
+  bottom: 1%;
   border: none;
   position: absolute;
 }
