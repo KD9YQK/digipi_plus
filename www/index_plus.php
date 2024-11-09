@@ -75,7 +75,7 @@ body {
 
 <div id="mySidebar" class="sidebar">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-  <iframe src="plus_menu.php" name="iframe_b" width=100% height=80%></iframe>
+  <iframe src="plus_menu.php" name="iframe_b" width=100% height=80% scrolling="no"></iframe>
   <a href="#">About</a>
   <a href="#">Services</a>
   <a href="#">Clients</a>
