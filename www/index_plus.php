@@ -84,7 +84,7 @@ body {
 
 <div id="main">
   <button class="openbtn" onclick="openNav()">☰</button>  
-  <iframe src="syslog.php" name="iframe_a" style="height:90vh; width:100%;" title="Digipi Plus"></iframe>
+  <iframe src="syslog.php" name="iframe_a" style="height:94vh; width:100%;" title="Digipi Plus"></iframe>
 </div>
 
 <script>
