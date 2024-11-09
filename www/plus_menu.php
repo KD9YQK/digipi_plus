@@ -1,6 +1,6 @@
 
 
-<form action="index.php" method="post">
+<form action="plus_menu.php" method="post">
   <center><?php include 'header.php' ?></center>
   <div class="tab" style="text-align: center; width:410px;">
       <button class="tablinks" type="button" id="defaultOpen" onclick="openMenu(event, 'Services')">Services</button>
