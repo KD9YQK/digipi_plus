@@ -48,8 +48,8 @@
   background-color: #111;
   color: white;
   padding: 10px 15px;
-  left: 5%;
-  top: 90%;
+  left: 1%;
+  top: 99%;
   border: none;
   position: absolute;
 }
