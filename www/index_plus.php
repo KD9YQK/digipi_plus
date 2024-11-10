@@ -76,10 +76,19 @@
 <div id="mySidebar" class="sidebar">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
   <iframe src="plus_menu.php" name="iframe_b" width=100% height=80% scrolling="no"></iframe>
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
+  <a href="syslog.php" target='iframe_a' id="syslog">SysLog</a>
+  <a href="log.php" target='iframe_a' id="pktlog">PktLog</a>
+  <a href="shell.php" target='iframe_a' id="shell">Shell</a>
+  <script>
+      document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':6080/vnc.html?port=6080&password=test11&autoconnect=true" target="iframe_a" id="vnc">VNC</a>' )
+  </script>
+  <script>
+      document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':8080" target="iframe_a" id="email">Email</a>' )
+  </script>
+  <script>
+      document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':8055" target="iframe_a" id="webchat">WebChat</a>' )
+  </script>
+  <a href="help/index.php" target='iframe_a' id="help">Help</a>
 </div>
 
 <div id="main">
