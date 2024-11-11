@@ -19,3 +19,6 @@ if [ -f saves/plus.sdr_igate ]; then
     python3 helper.py 'rtlsdr-igate'
 fi
 
+if [ -f saves/plus.xastir ]; then
+    python3 helper.py 'xastir'
+fi

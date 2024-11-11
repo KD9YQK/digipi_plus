@@ -23,11 +23,17 @@ if [ ! -f saves/plus.base ]; then
     echo "Creating Simlinks"
     sudo ln -sf /home/pi/digipi_plus/www/*.php /var/www/html/ -v
     sudo ln -sf /home/pi/digipi_plus/www/*.css /var/www/html/styles -v
+    sudo ln -sf /home/pi/digipi_plus/www/help/ /var/www/html -v
+    sudo ln -sf /home/pi/digipi_plus/www/images/ /var/www/html/images -v
     touch saves/plus.base
     echo "DigiPi Plus Base Installed"
 else
     echo "OK"
 fi
+
+Max_RAM(){
+    free | awk 'NR==2 {print $2}'
+}
 
 installed="Installed:\n"
 if [ ! -f saves/plus.node ]; then
@@ -48,10 +54,12 @@ else
     installed+="PCSI, "
 fi
 
-if [ ! -f saves/plus.gridtracker ]; then
-    options+=(4 "Grid Tracker" off)
-else
-    installed+="Grid Tracker, "
+if (($(Max_RAM) > 1000000)); then
+    if [ ! -f saves/plus.gridtracker ]; then
+        options+=(4 "Grid Tracker" off)
+    else
+        installed+="Grid Tracker, "
+    fi
 fi
 
 if [ ! -f saves/plus.js8spotter ]; then
@@ -96,6 +104,18 @@ else
     installed+="RTL-SDR iGate, "
 fi
 
+if [ ! -f saves/plus.hamdash ]; then
+    options+=(12 "Ham Dash" off)
+else
+    installed+="Ham Dash, "
+fi
+
+if [ ! -f saves/plus.chirp ]; then
+    options+=(13 "Chirp-Next" off)
+else
+    installed+="Chirp-Next, "
+fi
+
 
 #build dialogue box with menu options
 cmd=(dialog --backtitle "DigiPi Plus" --checklist "${installed}" 22 50 16)
@@ -110,9 +130,8 @@ for choice in "${choices[@]}"; do
                 echo "NOT FOUND"
                 echo "Installing AX25 Node Upgrade"
                 sleep 1
-                bash node_upgrade.sh
                 touch saves/plus.node
-                echo "AX25 Upgrade Installed"
+                echo "AX25 Upgrade Installed. The Node Upgrade Installer will run towards the end of this script."
             else
                 echo "OK"
             fi
@@ -271,11 +290,70 @@ for choice in "${choices[@]}"; do
                 echo "OK"
             fi
             ;;
+        12)
+            echo -n "Checking for Ham Dash..."
+            sleep 1
+            if [ ! -f saves/plus.hamdash ]; then
+                echo "NOT FOUND"
+                echo "Installing Ham Dash"
+                sleep 1
+                git clone https://github.com/VA3HDL/hamdashboard.git
+                sudo ln -sf /home/pi/digipi_plus/hamdashboard/ /var/www/html -v
+                touch saves/plus.hamdash
+                echo "Ham Dash Installed"
+            else
+                echo "OK"
+            fi
+            ;;
+        13)
+            echo -n "Checking for Chirp-Next..."
+            sleep 1
+            if [ ! -f saves/plus.chirp ]; then
+                echo "NOT FOUND"
+                echo "Installing Chirp-Next"
+                sleep 1
+                cd ~/digipi_plus/chirp
+                sudo apt install python3-wxgtk4.0 pipx -y
+                echo ""
+                echo "Umounting and creating a new 20M RAMDISK for /tmp"
+                echo ""
+                sudo umount -l /tmp
+                sudo mount -t tmpfs -o size=20M tmpfs /tmp
+                pipx install --system-site-packages ./chirp-20240626-py3-none-any.whl
+                echo ""
+                echo "Returning the RAMDISK for /tmp back to 10M"
+                echo ""
+                sudo umount -l /tmp
+                sudo mount -t tmpfs -o size=10M tmpfs /tmp
+                echo ""
+                echo "There is a bug in Chirp that prevents it from starting. Installing a patched file which fixes the error."
+                echo "This will be removed in a future update once the owners of Chirp patch on their end."
+                sleep 1
+                rm ~/.local/pipx/venvs/chirp/lib/python3.11/site-packages/chirp/wxui/main.py -v
+                cp main.py ~/.local/pipx/venvs/chirp/lib/python3.11/site-packages/chirp/wxui -v
+                echo ""
+                
+                cd ~/digipi_plus
+                touch saves/plus.chirp
+                echo "Chirp-Next Installed"
+                sleep 10
+            else
+                echo "OK"
+            fi
+            ;;
     esac
 done
+
+if [ ! -f saves/plus.node ]; then
+    echo "Skipping AX25 Node Upgrade"
+else
+    echo "Starting AX25 Node Upgrade"
+    sleep 1
+    bash node_upgrade.sh
+fi
 
 chmod +x launchers/*.sh
 bash build_services.sh
 sudo systemctl daemon-reload
 bash build_menus.sh
-echo "DigiPi Plus Install Complete. Please refresh your Homepage to view changes. Enjoy!"
+echo "DigiPi Plus Install Complete. Please refresh your Homepage with Ctrl+Shift+R to view changes. Enjoy!"

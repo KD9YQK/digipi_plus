@@ -1,0 +1,404 @@
+This file contains two different solves.  --Stacy
+
+- - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+           Cutthroats             Part I
+
+ Welcome aboard, matey! Dust off your scuba tank, shake out your
+flippers, and prepare to go treasure hunting. But first, a word
+from our sponsor. Cutthroats, like most Infocom games, has
+several solutions. This walkthru will show you one way of
+completing the adventure. However, there are others, so when
+you've finished, you might want re-play the game, doing 
+different things, to see if you can come up with another way of
+recovering the treasures successfully. 
+
+Also, you should be aware that you can only recover treasures
+from 2 of the ships, the Sao Vera and the S.S. Leviathan. The
+other wrecks are only red herrings, and you don't have to bother
+with them. Which of the two real wrecks you will dive for depends
+on the item you are shown by Johnny Red. If he shows you the gold
+coin, it's the Sao Vera; if it's the dinner plate, then the ship
+is the Leviathan. 
+
+Further, most of your actions up to the dive itself will be
+pretty much the same, so this section of the walkthru will take
+you up almost to the dive itself. After that, consult either the
+Sao Vera section, or the Leviathan section, depending on which
+ship you're investigating. 
+
+Ok! The game starts with a long lead in, explaining how you came
+by the book of shipwrecks. You will have to sit through this on
+each boot-up; no way around it. After that, the game really
+begins, with you lying in bed in your scruffy room at the Red
+Boar Inn. The first thing to do is stand up, then wind your watch
+(time is important in the game, and if your watch runs  down, you
+can't keep track of the time). 
+
+There's a note on the floor. Read that, then open your dresser.
+Inside are the shipwreck book, your bankbook, and a room key. Get
+the key, open the door, go out, and lock the door again. You
+don't want to leave the door open, or the Weasel will come by
+later and steal the shipwreck book. If that happens, the game is
+over before it even starts. You don't need to take the book with
+you, so locking the door is effective here. 
+
+Now, go downstairs and out to the Wharf Road. Follow the road
+East until you get to the Shanty. Enter the Shanty, and you will
+see Johnny Red and Pete the Rat already there. Sit down and order
+breakfast, then wait for Weasel to show. Order a glass of water
+when you get thirsty. While you're waiting, you might want to
+listen to the parrot. He doesn't have anything important to say,
+but you might get a chuckle out of him. 
+
+Eventually, Weasel will arrive, and Johnny will ask if you're
+interested in doing some treasure hunting. Say yes, and then
+Johnny will have you all meet again a little later at the
+lighthouse, in order to keep McGinty from finding out what you're
+up to. After that, leave the Shanty, go back West to the end of
+Wharf Road, and from there Southwest twice and Northwest once,
+which brings you to the lighthouse. Now, wait for Pete, who will
+be the last person to arrive. 
+
+Once Pete gets there, Johnny will show an object, either the coin
+or the plate. This indicates which wreck to dive for. After that,
+he'll give further instructions, which you should read carefully.
+When he's finished, go back to your room at the Red Boar. Get
+your passbook. If you're diving for the Leviathan, also get your
+scuba gear from the closet (scuba gear not needed for the Sao
+Vera). 
+
+Leave the room (lock the door behind you!), and go back out. Walk
+East along Wharf road to the end, and go Southeast to the Ocean
+Road. If you're going to use your scuba gear for the dive, go
+Southwest into the alley, and drop your scuba gear there. You
+don't want McGinty to see you lugging it around. 
+
+Follow the Ocean Road south to the end, then go Southwest to the
+Ocean Road, and North into the bank. Make your withdrawl, then
+leave and return to Ocean Road, where you go Southeast to Point
+Lookout. Drop your passbook here (that Mcginty has sharp eyes,
+and you don't want him to see you with that, either), and wait
+for Johnny. 
+
+When Johnny arrives, show him the money you just took from the
+bank. He'll be satisfied, and then ask if the wreck is more than
+200 feet underwater. Answer yes if it's the Sao Vera, no if it's
+the Leviathan. The two of you will then head back to
+International Outfitters to rent a ship and purchase supplies and
+equipment. McGinty will be in the store when you get there. 
+However, just wait, and he'll leave eventually. 
+
+Johnny will make his purchases first, and you will have to chip
+in some of the cash you're carrying. However, you will have
+plenty of money left over to buy whatever you need. When it's
+your turn, buy the flashlight and the shark repellent. If you're
+diving for the Sao Vera, that's all you need. However, if you are
+diving for the Leviathan, also buy the following items: C
+battery, putty, and electromagnet, and also rent the small air
+compresser (so you can fill your tank). All these items will be
+delivered to the ship for you, so you don't have to take them
+with you. 
+
+Now, it's time to uncover a little double-dealing. Leave
+Outfitters, and go back East along Wharf Road to the end, then
+Southeast again to Ocean Road. Go along Ocean Road to the end,
+then Southwest to Shore Road, and continue West along Shore Road
+until you reach the Ferry dock. Wait around. 
+
+Soon McGinty will appear, and a short while later, Weasel. The
+two men will go off to a corner and talk. Then Weasel will hand
+something to McGinty, and board the Ferry (you can't get on it
+yourself, but you have other things to do, anyway). Ok, now
+you've seen that, go back to Ocean Road, and then into the
+alleyway. 
+
+The alley runs behind all the buildings, and it will come in very
+handy! Go West along the alley (pick up your scuba gear if you
+dropped it here earlier) , until you're standing behind the
+vacant lot, which is next door to McGinty's. Wait here, and
+McGinty will come by, heading from East to West. Continue
+waiting, and he will soon re-appear, going from West to East (he
+is walking along Wharf Road, of course). 
+
+Once you see him the second time, go West once, and you're behind
+his store. The door is locked, but you can open the window and
+get through into the place. Here you will find an envelope that
+proves the Weasel is out to double-cross you all. Get the
+envelope, then leave by the window. 
+
+Go back along the alley to the Vacant lot, then go straight North
+until you come to the dock where the rental ships are moored.
+Both ships have approximately the same layout; they are slightly
+different on the top deck, but below they are exactly the same.
+Enter whichever ship has been rented for the dive, and go below
+deck. Then go north until you reach the crews quarters, and hide
+your envelope under the bed. You don't want Weasel to know you
+have it (he'll kill you), and if you show it to Johnny now,
+you'll cancel the expedition. 
+
+Now you have to do some more waiting. The delivery boy will come
+around, and drop off the items you've bought. Then the others
+will start to arrive. When Johnny comes, go to the Captain's
+Cabin, and tell him the longitude and latitude of the wreck,
+which you can easily get by looking at the shipwreck book that
+came in the game package. Then go back to the crews quarters, and 
+wait some more. Eventually, you'll reach the dive site. At this
+point, you should now read either the Sao Vera section or the
+Leviathan section, whichever is applicable. 
+
+
+           Cutthroats             Part II - Leviathan
+
+ Ok, so it's time for the Leviathan. Get up, then go North to the
+storage locker. Here you will find all the things you bought at
+Outfitters. Put on your wet suit and flippers. Get the drill and
+the C battery, open the drill, put the battery inside, and close
+the drill. Get the remaining items, except the compresser. Fill
+your tank with the compresser, then go South. Along the way, get
+the envelope from under the bed. 
+
+Stop in the galley to eat and drink, then continue on South to
+the Captain's Quarters. Show Johnny the envelope. That will take
+care of Weasel! Now go North and up. Put on your tank and mask.
+Johnny will tell you about the orange line, but for this dive, it
+won't be needed. 
+
+You're all set, so dive in! Once underwater, turn on your
+flashlight, because it's going to get dark pretty soon. Oops! A
+shark just showed up! Good thing you have the repellent. Open the
+canister, and the shark will take off. Now, just keep going down
+until you reach the wreck. 
+
+You're on the top deck of the Leviathan, with a hole at your
+feet. Go down through the hole, to the Middle Deck. Here, you can
+only go up or down, so go down again, to the Below Decks area.
+From there, go South, to the room with the closed door. You might
+want to read the sign on the door before you open it. 
+
+Once past the door, you're in a mine locker. All the mines are
+tied down, except for one loose one, floating in front of a hole.
+Fortunately, you can take care of that problem without
+difficulty. Touch the magnet to the mine, then turn on the
+magnet. Drop the magnet (why that doesn't blow you to bits, I
+don't know, but that's how it works). Now you can go up through
+the hole. 
+
+You're on the Middle Deck again, although a different part of it.
+The way South is narrow, so remove your tank, then go due South
+until you come to the room with the safe. This is the tricky
+part. Turn on the drill, drill the lock, and then *immediately*
+turn off the drill again. Otherwise, it will burn out, and you'll
+have a big problem later! 
+
+Ok, inside the safe is a glass case containing some valuable
+stamps. Alas, there is a crack in the case, and water is starting
+to seep in. However, don't be alarmed; you'll have enough time to
+fix that. Go back North to the room with the hole in it. Put your
+tank back on. Go through the hole into the mine locker, then
+North, then up through another hole. 
+
+Surprise! This room still has air in it. Good thing, too, because
+the water level in the case was starting to get too high for
+comfort! Now, turn on the drill, and drill a hole in the case. As
+the water drains out, the drill dies (lasted just long enough).
+Now, open the tube of putty, and put the glob of putty on the
+hole. The putty will seal both the hole and the crack. 
+
+And that's just about it for the Leviathan. All you have to do
+now is go back through the ship, and up to your own boat, where
+your comrades are waiting. Congratulations! You're now a very
+rich diver! 
+
+
+           Cutthroats             Part III - Sao Vera
+
+ So, it's off to the Sao Vera. This one has a few more obstacles
+than the Leviathan did, but none of them are particularly
+difficult. The first thing is to get off the bed, and head North
+to the Storage Locker. Here you'll find the flashlight and
+repellent, as well as a deap-sea diving outfit. There is also a
+small machine here, that you won't be needing (it's a locater
+box. If you really want to fiddle with it, you have to buy a dry 
+cell to make it work). 
+
+Get everything but the box, then go back South. Get the envelope
+from under your bed, stop off in the Galley to eat and drink,
+then continue on to Johnny's cabin. Show him the envelope, which
+will put an end to Weasel's double-cross. Now wear the suit and
+go up on deck. 
+
+Johnny will be there, and will tell you about the orange line.
+Keep in mind what he says. If you look around, you'll see a large
+air compressor, with an air hose. Attach that to your suit, and
+then turn on the compressor. You're all set, so dive in! 
+
+Once underwater, turn on your flashlight. There's that pesky
+shark again! Open your canister to get rid of it, then keep on
+going down. It will be a long way down, but you'll get there. 
+
+Now you're on the top deck of the Sao Vera, with a hole at your
+feet. Go down the hole. Crash! Looks like the ladder broke. You
+may have a problem getting back up again! Then again, maybe not.
+Leave that for now, and make your way South, into the room with
+the iron bars. Get one, because it will come in handy soon. 
+
+Then keep going South, until you come to the room with the bunks
+barring the way. Move the bunks with the bar, then wedge the bar
+under the bunks to keep them from moving back. Now you can go
+South again, to another room, with a ladder leading down. Climb
+down that one. 
+
+Oops! Crash again! This time, though, the whole ladder didn't
+crumble. Still, it's going to be hard to reach it on your way
+back. No matter, you still have to find tha treasure, so go
+North. 
+
+Uh Oh!! There's a giant squid here! Good thing for you it's
+asleep. And if you're smart, you won't wake it up! So, just go
+right on by, don't try doing anything to the squid at all. In the
+next room is an oak chest, along with a hole in the side of the
+ship. Leave that for now, and keep going North. 
+
+In the next room are some skeletons, remains of the crew. Examine
+them, and you'll see one wears a scabbard. In the scabbard is a
+sword. Get that, and go North again, to the last room. Here you
+will find a maple chest. The chest is to heavy to carry, so push
+it back South until you come to the oak chest (note: you must say
+"Push Maple Chest South"). 
+
+Hmmmm, now, which chest to take? Let's try the oak chest. Push
+that out West through the hole (carefully! You don't want to cut
+your air supply!). Wait awhile, and the orange line will appear.
+Get that, tie it to the oak chest, and tug on the line. The chest
+will slowly make its way upward, while you return to the ship. 
+
+Now, push the maple chest south, past the sleeping squid, and
+south again into the room with the ladder. Climb on the chest,
+and you'll be able to reach the ladder and climb back up to the
+middle deck. 
+
+>From there, go North until you reach the room with the cask in
+it. Now, push the cask north with you, until you come back to the
+room with the mast and the rope tied around it. Climb on the
+cask, then cut the rope with the sword. Drop the sword (you can't
+leave with it), and then make your way up and out. 
+
+Once on the top deck, just keep going up until you're back on the
+boat. The chest will be opened to display hundreds of gold coins.
+Congratulations, you're now a very rich diver! 
+**************************************
+
+107 LINES - 27 SECTORS
+BROUGHT TO YOU BY )> THE UNKNOWN HACKER
+
+:----------------------------------------------------------------------------:
+                    cutthroats solve by:green manalishi
+:----------------------------------------------------------------------------:
+  this is probably the best infocom text adventure yet, don't ruin you're 
+ adventure by cheating with this sheet, just use this in emergencies!
+
+ note: these are the commands needed to solve the leviathan ver. of the game
+ characters: the diver (you) - supposedly an expert diver, who, just like 
+everyone else on the island is waiting for his ship to come in.. 
+             johnny red - the pirate leader. proud, but not a backstabber, 
+makes a good leader on the quest
+             pete the rat - the cook on the ship, one-eyed and fairly trust-
+worthy also.
+             the weasel - the name says it all, works in a plot to reap the 
+benefits of the expedition all by himslef. little backstabber.
+             mcginty - the owner of mcginty's salvage. disgusting habits, self
+-ish and unsure.. 'asshole'
+             other characters - just fill in the other needed roles, can be 
+asked questions, but don't always answer...
+             -get yourself a copy of the docs. re-written by the i.c. of trade
+
+now onto the solve!
+
+          2nd note: many things are random in this game, just follow the solve
+and there shoudlent be too many problems, if something goes wrong restore game
+
+<start: in your room>
+      "look out window" "wind watch" "get out of bed" "read note" 
+"open dresser" "get passbook and room key" "look in closet" "i" "open door" 
+"n" "close door" "lock door" "wait" (until the weasel comes, originally hoping
+to steal your passbook) "n" "n" "e" "e" "e" "e" "s" "sit" 
+<in shanty: breakfast>
+      "order food" "order drink" "eat food" "drink drink" "yes" 
+"get out of chair" "n" "w" "w" "s" "s" "w" "w" "e" "e" "e" "e" "ne" "s" "s" 
+"sw" "w" "w" "e" "e" "n" "look" (until 9:00) "n"
+<in the mariners trust bank>
+      "withdraw $603" "s" "ne" "n" "nw" "w" "w" "w" "open window"
+"look through window" "w" "drop passbook" (so mcginty wont know you are 
+leaving) "e" "e" "n" "n" "w" "w" "sw" "sw" "nw" "wait" (until johnny starts to
+talk, if he pulls out the dinner plate then continue with:) "examine plate" 
+"se" "ne" "ne" "e" "s" "n" "e" "e" "s" "n" "e" "s" "buy drink" "drink drink" 
+"n" "se" "s" "s" "se" "i"
+<point lookout>
+      "wait" (until johnny red comes along) "yes" "show $500" "no" "nw" "n" 
+"n" "nw" "w" "s" "wait" (until mcginty leaves) "look" "give (amount of money
+john says you need to pitch in)" "buy c battery and putty" "buy flashlight and
+repellent" "buy electromagnet" "rent compressor" "i" "n" "e" "s" "sit"
+<the shanty: lunch>
+      "wait" (until johnny starts to talk) "order food" "order drink"
+"eat food" "drink drink" "get out of chair" "n" "se" "s" "s" "sw" "w" "w"
+(interesting: the weasel gives mcginty his seaman card here..) 
+"wait" (for mcginty to go east) "e" "e" "ne" "n" "n" "nw" "w" "w" "s" "s" "w"
+"look through window" "w" "e" "wait" "look through window" (if mcginty is gone
+continue with:) "open window" "enter window" "get envelope" (the weasels 
+seaman card: thus the collateral for the deal) 
+"n" "w" "s" "s" "unlock door" "open door" "s" "read envelope" "get all from 
+closet"
+<your room: picking up diving gear>
+      "i" "n" "close door" "lock door"  "n" "n" "e" "e" "s" "s" "w" "w" 
+"drop room key" "e" "e" "e" "e" "ne" "nw" "s" "sit" "order drink" "drink drnk"
+<the shanty: kick-back time>
+      "wait" "wait" "n" "w" "s" "wait" "wait" (until deliveryboy leaves) "n"
+"w" "n" "w" "s" "d" "n" "n" "n" "get c battery" "get drill" "open panel" 
+"put c battery in drill" "close panel" "s" "s" "s" "s" 
+<in the captans cabin on the night wind>     "wait" "wait" "wait" "latidude is
+30" "longitide is 15" "wait" "wait" "wait" "wait" "drop envelope" "n" "u" "n"
+"s" "drop wet suit" "drop flippers" "drop mask" "drop drill" "i" "w" "n" "d"
+<in storage locker>
+     "n" "get all" "examine compressor" "examine air tank" "fill tank with air
+" "s" "s" "drink water" "s" "d" "u" "s" "n" "n" "n" "look under bunk" "n" "s" 
+"u" "w" "s" "examine drill" "n" "wait" (until 5:45)
+<in the wheelhouse with johnny red>
+nnnn---eeeeee-----xxxxxx-------ttttt!!!!!!!!
+"s" "d" "n" 
+<in the galley: dinner>
+    "eat stew" "drink water" "n" "i" (now that the yelling is over) "sleep"
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+  (asshole, that was a good dream!)
+  "get out of bunk" "u" "sit" **in the next part when you see an obstacle to
+starboard push right, when you see an obstacle to port push left, 
+'wait' the rest of the time until midnight. if you need a midnight snack go to
+galley for some stew right after you avoid an obstacle**
+<bunk: sleep (9 hours total!!) >
+    "get out of chair" (sleepwalking) "d" "sleep" (asshole, shut up!) "rest"
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+<the galley: break/fast!>
+    "get out of bed" "s" "eat stew" "drink water" "s" "s" (now to the captan's
+cabin to alert of the traitor!) "get envelope" "show envelope to johnny" (ha!)
+"n" "u" (ha!) "d" (ha!) "u" **now it's time for the dive.. preparations.....**
+<aft deck>
+   "drop all" "get watch" "wear watch" "get wet suit" "wear wet suit" "get air
+tank" "wear air tank" "get flippers" "wear flippers" "get mask" "wear mask" 
+"i" "look" "get tube" "get flashlight" "get canister" "get drill" 
+"get electromagnet" "i" "look" **jump!**
+<in the ocean: by the wreck, in the wreck, the completion of the game>
+   "dive in ocean" "open lid" (haha loan shark!) "d" "turn on flashlight" "d" 
+"d" "d" "s" "open door" "s" "put magnet on mine" "turn on magnet" "drop magnet
+" "u" "remove tank" "s" "s" (now for the operations-careful..)
+"turn drill on" "drill safe with drill" "turn drill off" "grab case" "n" "n"
+"d" "n" "u" "drop tank" "examine tank" "examine glass case" "examine stamps"
+(holy shit!! now to attempt to preserve them so they have value at all!)
+  "turn drill on" "drill case with drill" (sputter..., just in time, now to 
+patch that sloppy?! job) "open tube" "put glob in case" (whew!!) "d" "n" 
+(the final stretch) "u" "u" "u" "u" "u" 
+- end of session - 
+you have now come up with the $50 million dollar stamp collection, and you are
+classified as - a rich diver! -         your adventure is now over!
+:----------------------------------------------------------------------------:
+cutthroats solve  written by- green manalishi  thanx to- the i.c. of trade!

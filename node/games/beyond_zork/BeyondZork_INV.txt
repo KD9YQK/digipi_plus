@@ -1,0 +1,1095 @@
+***************************************************************************
+*                             InvisiClues(tm)                             *
+*                          The Hint Booklet for                           *
+*                    Plundered Hearts and Beyond Zork                     *
+***************************************************************************
+
+[Copyright by Infocom, Inc. Provided for non-commercial use only, with the
+sole intent of making information available that would otherwise be lost.
+
+To whoever presently holds the copyright to the information contained in
+this file: if you think the existence of this file violates your copyright,
+please complain and the file will be removed.
+
+Typed in from the original hintbook by Graeme Cree (Plundered Hearts) and
+Paul David Doherty (Beyond Zork).]
+
+
+Sample Question
+***************
+
+There's a bird nearby with a jewel in its beak. How can I get it?
+  A. You can't catch the bird, but you can make it drop the jewel.
+  B. What do birds like to eat?
+  C. TAKE THE WORM FROM THE FISHERMAN. If you then DROP THE WORM, the bird
+     will drop the jewel.
+
+
+TABLE OF CONTENTS
+*****************
+
+InvisiClues for Beyond Zork
+***************************
+
+Grubbo-by-the-Sea
+The Wine Cellar
+The Lighthouse
+The Ethereal Plane of Atrii
+Accardi-by-the-Sea
+The Moors
+The Castle
+Mizniaport
+The Fields of Frotzen
+Froon
+Gurth
+The Jungles of Miznia
+Thriff
+The Forest
+The Ruins
+Underground
+That Which Can Be Named
+Variable Magic Item Lists
+Treasure Locations and Values
+For Your Amusement
+
+
+Grubbo-by-the-Sea
+*****************
+
+Why can't I talk to the old sailor?
+  A. Perhaps he's a bit hard of hearing.
+  B. YELL AT THE SAILOR.
+  C. Oh, well. You don't need to talk to him anyway.
+
+What's the significance of the sailor's painting?
+  A. You'll find out, if you live long enough.
+
+How do I get the driftwood out of the water?
+  A. Easy. Just GET THE DRIFTWOOD OUT OF THE WATER.
+
+What's a shillelagh?
+  A. EXAMINE THE SHILLELAGH.
+  B. "Shillelagh" is an Irish word for a cudgel.
+  C. A cudgel is a club for bashing things.
+
+A leprechaun stole my shillelagh! How do I get it back?
+  A. EXAMINE THE RAINBOW. It may hold a clue to the thief's whereabouts.
+  B. LOOK UNDER THE POT OF GOLD.
+  C. Rainbow? Pot of gold?
+  D. Remember the warning in the introduction! Don't let the presence or
+     absence of questions influence your play, and don't assume that long
+     answers are associated with important questions.
+
+What's the significance of the sign outside the tavern?
+  A. Read the room description again, carefully.
+  B. Part of the sign is made of a real lantern.
+  C. TAKE THE LANTERN OFF THE HOOK. You'll be glad you did.
+
+How do I get into the tavern?
+  A. Just GO INTO THE TAVERN. (Make sure you OPEN THE FRONT DOOR first.)
+
+One of the bandits threw a dagger at me! What should I do?
+  A. Relax. They're just amusing themselves.
+  B. Besides, there may be something in it for you.
+  C. PULL THE DAGGER OUT OF THE WALL. It might come in handy later.
+
+Why won't the cook let me take the giant onion?
+  A. Why should he? It's his onion. He may be willing to trade for it,
+     though.
+  B. ASK THE COOK ABOUT THE GIANT ONION.
+  C. After you retrieve the wine bottle, GIVE THE BOTTLE TO THE COOK. Now
+     you can ROLL THE ONION in any direction you like.
+
+How do I get into the wine cellar?
+  A. There's a door leading downward.
+  B. OPEN THE CELLAR DOOR. GO DOWN THE STAIRS.
+
+
+The Wine Cellar
+***************
+
+The Lore and Legends of Quendor doesn't say anything about rat-ants!
+  A. Take heart. The Rat-Ant's Cookbook says plenty about peasants.
+  B. Rat-ants, though small, can be quite deadly. Fight back!
+
+What do I do with the crinkly scroll?
+  A. READ THE SCROLL. It may give you a clue.
+  B. If strange, flowing runes are inscribed across the top of the scroll,
+     skip ahead to the next question.
+  C. The strange word on the scroll is its Word of Power.
+  D. To invoke a scroll's Magick, you must speak its Word of Power. For
+     example, if the scroll's word is "Foo," type SAY "FOO" or just FOO.
+
+I can't read the runes on a scroll! What's going on?
+  A. Your character's intelligence isn't high enough to read this scroll.
+     You must either find a way to improve your character's intelligence, or
+     RESTART the story with a smarter character.
+
+I spoke the Word on the crinkly scroll. What happened?
+  A. The "refreshing pink aura" that surrounded you when you spoke the Word
+     also surrounded your possessions.
+  B. EXAMINE the items you were holding when you read the scroll.
+  C. The crinkly scroll is a Scroll of Refreshment. If you're holding the
+     rusty lantern when you read this scroll, the lantern now "looks good as
+     new," and you'll find that it lasts much longer. The rusty dagger is
+     also renewed and sharpened by the scroll.
+  D. Other items can be affected by the Scroll of Refreshment. Experiment!
+
+My scroll disappeared! How do I get it back?
+  A. You don't. Ever. So forget it.
+
+How do I see in the dark?
+  A. You need a source of light.
+  B. Remember the name of the tavern upstairs?
+  C. Remember that sign outside the tavern?
+  D. Remember the rusty lantern hanging on that sign outside the tavern?
+  E. You'll need that lantern to survive in the wine cellar. Next time,
+     remember to read room descriptions carefully, and try to TAKE
+     everything that isn't nailed down.
+
+I just found a wand (stick, rod, stave, cane or staff)! How do I use it?
+  A. Just point it at the thing you want to affect.
+
+How do I get the tiny crown from the discipline crab?
+  A. He's not likely to give it up without a fight.
+  B. ATTACK THE DISCIPLINE CRAB
+  C. If you win, he'll drop the crown.
+
+Can I do anything with the pile of seashells?
+  A. SEARCH THE PILE. There may be something interesting within.
+
+Why can't I climb the stack of crates?
+  A. Not very coordinated, are you?
+  B. Coordination is related to dexterity.
+  C. Your character's dexterity isn't high enough to climb the stack. You
+     must either find a way to improve your character's dexterity, or
+     RESTART the story with a more dexterous character.
+  D. Something in the cellar can help you increase your dexterity.
+  E. Read The Lore and Legends of Quendor.
+  F. One of the rooms in the wine cellar has moss on the walls.
+  G. The "Moss of Mareilon" entry in Lore and Legends explains how you can
+     use the moss to improve your dexterity.
+  H. Be patient. It takes a few moves for the moss to take effect.
+
+My lantern keeps going out. Where can I recharge it?
+  A. Bring it to the nearest hardware store. (Too bad there aren't any
+     hardware stores in this part of Quendor.)
+  B. The crinkly scroll can serve the same purpose, though.
+  C. Refer to the questions about the crinkly scroll for more clues.
+
+Help! A skeleton is strangling me!
+  A. The slightest defense is enough to defeat the skeleton.
+  B. KICK THE SKELETON. Preferably before he kills you.
+
+How do I decipher the runes on the amulet?
+  A. Something about the runes makes them different from the swirls and
+     flourishes.
+  B. It's their color.
+  C. Magick can't help you here, but perhaps Science can.
+  D. Specifically, the Science of Optics.
+  E. A color filter might help you distinguish the green runes from the red
+     swirls and flourishes.
+  F. Something in the cellar can be used as a red color filter.
+  G. It's the bottle of wine.
+  H. LOOK AT THE AMULET THROUGH THE WINE BOTTLE. The red, transparent liquid
+     will mask out the red swirls enough for you to read the green runes.
+
+Of what use is the amulet?
+  A. It makes a nice necklace. PUT ON THE AMULET.
+  B. While wearing the amulet, speak the Word of Power inscribed upon it.
+     (See the previous question on how to read the amulet.)
+  C. For even more fun, type STATUS before you speak the amulet's Word.
+  D. Be warned! The extra strength lasts only a few moves. Also, you can
+     only invoke the amulet's Magick three times.
+
+How do I get back upstairs out of the cellar?
+  A. If you had a key, maybe you could unlock the door. Unfortunately, there
+     are no keys to be found. Looks as if you'll have to break the door
+     down.
+  B. You'd have to be pretty strong to break down that door.
+  C. It's unlikely that any character you would create would be strong
+     enough to do the job.
+  D. Luckily, there's something magical in the wine cellar that can help.
+  E. PUT ON THE AMULET and speak the Word of Power inscribed upon it. (See
+     previous two questions.)
+  F. This should boost your strength enough to BREAK DOWN THE CELLAR DOOR.
+     (If your character's strength isn't high enough, you must either find a
+     way to improve it, or RESTART the story with a stronger character.)
+  G. There are three other magical ways out of the cellar, but you might not
+     yet have the magic items needed.
+  H. The Wand of Sayonara will also get you out. You want to teleport
+     yourself, so POINT THE WAND OF SAYONARA AT MYSELF.
+  I. The scroll of Recall will transport you out, but only if you've said
+     its Word of Power elsewhere. Speaking the Word of Power a second time
+     will return you to where it was first spoken.
+  J. The scroll of Gating (the palimpsest) will also save you. Just hold the
+     palimpsest and speak its Word of Power.
+
+I saved my game just before I entered the wine cellar. When I restored and
+went down again, the geography was different! What's going on?
+  A. The wine cellar is one of several "regions" in the story which are
+     randomly generated the first time you enter them. The geography isn't
+     the only thing that varies; the names of magic items and the locations
+     of treasures and monsters may also differ. Once you enter a region, its
+     attributes remain constant for the remainder of the story.
+
+
+The Lighthouse
+**************
+
+What's the meaning of the inscription on the cliff wall?
+  A. It's a riddle.
+  B. A dictionary might help you find the answer.
+  C. Forks have tines. "Ere" means "before." The word "report" has many
+     meanings.
+  D. Don't develop the next hint unless you're really stumped.
+  E. Type the word LIGHTNING and watch what happens.
+
+That giant slug is tough! Anything I can do to improve my odds?
+  A. You don't need to defeat the slug to complete the story.
+  B. Bloodthirsty, eh? Well, if fighting, Magick or running away don't work,
+     there is an alternative.
+  C. Chemical warfare.
+  D. Slugs are notoriously sensitive to a certain common substance.
+  E. That substance is salt.
+  F. There's a patch of brine at the Tidal Flats near the lighthouse.
+  G. Go to the Tidal Flats and GET SOME SALT. Then return to the lighthouse
+     and HURL THE SALT AT THE GIANT SLUG.
+
+How do I get the dust bunny?
+  A. Just PICK UP THE DUST BUNNY.
+  B. Prolific, aren't they?
+  C. You can't take any of the dust bunnies. But you'll have to get rid of
+     them to complete the story.
+
+These dust bunnies are driving me nuts! What do I do?
+  A. Read The Lore and Legends of Quendor.
+  B. There are no lemon-scented sprays to be found in this story.
+  C. There is an excellent source of static electricity, though.
+  D. It's in the tavern.
+  E. It's the bearskin rug lying on the floor.
+  F. See what happens when you WALK ACROSS THE BEARSKIN RUG.
+  G. Try touching something after you walk across the rug.
+  H. Bring the rug to the room with dust bunnies. PUT DOWN THE RUG THEN WALK
+     ACROSS IT. TOUCH A DUST BUNNY.
+  I. Don't forget to PICK UP THE RING. You'll need it later.
+
+Is there any way to get rid of the dornbeast?
+  A. You can fight the dornbeast, but you're not likely to survive. Only the
+     most powerful Magick can destroy him. That dorn is tough ... but not
+     invulnerable.
+  B. Read The Lore and Legends of Quendor.
+  C. Have you studied the illustration of the dornbeast?
+  D. The dornbeast has 69 sensitive eyes.
+  E. There's an object in the game which can wreak havoc on sensitive eyes.
+  F. It's in the tavern.
+  G. It's the giant onion in the kitchen.
+  H. Roll the giant onion into the Lamphouse. CUT THE GIANT ONION WITH THE
+     DAGGER (or any other sharp weapon). This will inconvenience the
+     dornbeast long enough for you to GET THE SEA CHEST and scram! (Refer to
+     a previous question if you can't take the giant onion.)
+  I. You don't need to kill the dornbeast, but if you want to get maximum
+     experience in the story (for more endurance) you can repeatedly cut the
+     onion and attack the dornbeast while he's disabled by the onion.
+     Alternately, POINT THE WAND (or whatever) OF ANNIHILATION AT THE
+     DORNBEAST.
+
+Is there anything in the debris besides the chest?
+  A. SEARCH THE DEBRIS.
+  B. The sextant you find is a valuable treasure.
+
+How do I open the sea chest?
+  A. Easy. Just OPEN THE CHEST.
+  B. Relax. Pay attention to everything the stallion tells you.
+  C. And don't open that chest again!
+
+What on earth can I do with a vague outline?
+  A. Nothing... on earth.
+  B. The old woman at the Magick Shoppe may be able to tell you.
+  C. Have you brought the outline to another plane of existence?
+  D. Have you examined the palimpsest?
+  E. Have you discovered the palimpsest's Word of Power?
+  F. While holding the vague outline, speak the Word of Power inscribed upon
+     the palimpsest.
+  G. Check your inventory. The outline has changed.
+
+What is a palimpsest?
+  A. A palimpsest is a writing surface (in this case, a scroll) which has
+     been erased and reused.
+  B. The palimpsest is the only scroll in the story which can be reused.
+
+
+The Ethereal Plane of Atrii
+***************************
+
+Where am I?
+  A. Read The Lore and Legends of Quendor. Look under the entry on
+     Implementors.
+
+An outline is blocking my path!
+  A. Whack it with something!
+  B. Ordinary weapons don't seem to work here.
+  C. You need an extraordinary weapon.
+  D. It's the vague outline.
+  E. The outline isn't so vague on the Plane of Atrii.
+
+What are these curtains doing here?
+  A. Just hanging around.
+  B. Do they remind you of any other locations in the story?
+  C. Each of the shops (in Accardi, Mizniaport and Gurth) has a curtain.
+  D. WALK THROUGH THE CURTAIN. Convenient, eh?
+
+Is there anything I can do with the Implementors?
+  A. Pay attention.
+  B. Follow orders.
+  C. Rejoice in your good fortune! Few indeed are those lucky enough to
+     witness an Implementors' Lunch.
+
+
+Accardi-by-the-Sea
+******************
+
+Why aren't there any price tags in the weapon shop?
+  A. This is a very exclusive establishment. Its patrons would probably be
+     offended by such crass commercialism.
+  B. Maybe the old woman behind the counter can help you.
+  C. You can ASK THE OLD WOMAN ABOUT anything in the display case.
+
+Which weapon should I buy?
+  A. The best you can afford.
+  B. The old woman doesn't haggle.
+  C. Don't forget to ask the old woman about the scabbard.
+
+I only have one zorkmid! Where can I find more?
+  A. You won't find any zorkmids lying around. But those other things you've
+     been picking up might be worth something.
+  B. If you think an item may be valuable, SHOW IT TO THE OLD WOMAN to find
+     out how much it's worth. You can then SELL THE ITEM to beef up your
+     supply of zorkmids.
+  C. You can also TRADE items you have for items in the display case.
+
+How do I get into the Guild Hall?
+  A. That warning nymph sure is a pest, eh?
+  B. You can't get past the warning nymph without help.
+  C. Stick around for a few moves. Help is on the way.
+  D. The monkey grinder will squash the nymph for you soon after he appears.
+     Nothing can stop you now (except the monkey grinder).
+  E. You can fight the monkey grinder, but survival is unlikely. Wands and
+     scrolls aren't much good against him, either.
+  F. Read The Lore and Legends of Quendor.
+  G. Did you notice the statistic regarding the literacy rate of monkey
+     grinders?
+  H. There is an object in the story that could be dangerous to someone who
+     can't read.
+  I. It's in the lighthouse.
+  J. Have you noticed the warning plaque on the sea chest?
+  K. GIVE THE SEA CHEST TO THE MONKEY GRINDER after he squashes the warning
+     nymph. Now you can WALK INTO THE GUILD HALL.
+
+What can I do with the hurdy-gurdy?
+  A. EXAMINE THE HURDY-GURDY and its various parts before you experiment.
+  B. You can turn the crank to the left or right.
+  C. Try closing the hurdy-gurdy before turning the crank.
+  D. Try pointing the dial at different pictures before turning the crank.
+  E. Try putting things into the hurdy-gurdy before you close it and turn
+     the crank.
+
+
+The Moors
+*********
+
+Help! An eldritch vapor is stealing my possessions!
+  A. The vapor won't steal anything that you wield or wear.
+  B. Whack it a few times with a good weapon. It'll go away.
+  C. Once you've gotten rid of the vapor, look around. You'll find your
+     stolen possessions in the moors, scattered but intact.
+
+The pterodactyl won't let me near. Should I ignore him?
+  A. Not if you want to finish the story.
+  B. If you could heal the pterodactyl's wound, maybe he would trust you.
+  C. The Lore and Legends of Quendor mentions a cure for wounds.
+  D. You'll find what you need near the Hilltop where the story began.
+  E. PICK A WEED from the patch around the billboard at Edge of Storms. You
+     can use it to heal the pterodactyl.
+
+How do I treat the pterodactyl? He still won't let me near!
+  A. Extracting the arrow is likely to be painful.
+  B. You must put the pterodactyl to sleep before you can treat him. There
+     are two ways to do this, both involving Magick.
+  C. One way is to obtain a Wand of Anesthesia. This can be tricky, as the
+     wand's location varies from game to game. If you find the wand, POINT
+     IT AT THE PTERODACTYL for immediate results.
+  D. The other method involves the hurdy-gurdy.
+  E. One of the dial settings on the hurdy-gurdy produces an especially
+     relaxing effect.
+  F. Bring the hurdy-gurdy to the pterodactyl's room. POINT THE DIAL AT THE
+     PICTURE OF AN EAR. CLOSE THE HURDY-GURDY. TURN THE CRANK TO THE RIGHT.
+     The soothing music will lull the pterodactyl to sleep. GET THE ARROW
+     (yuck). Now RUB THE WEED AGAINST THE WOUND. When the pterodactyl wakes
+     up, you'll have a valuable new friend.
+
+Why should I want a pterodactyl for a friend?
+  A. He can do something you can't do.
+  B. He can fly.
+  C. GET ON THE PTERODACTYL. After you've cured him, of course.
+  D. His skinny back obviously wasn't meant for riders.
+  E. There's a device for supporting riders of skinny backs.
+  F. You'll find one in Mizniaport, southwest of the moors.
+  G. It's inside the stall.
+  H. Once you've figured out how to get the saddle, bring it to the
+     pterodactyl and put it on him. RIDE THE PTERODACTYL. Now you can soar
+     all over the place by saying FLY (or giving him directions)!
+
+The pterodactyl disappeared! Where did he go?
+  A. He flew off when you left him alone.
+  B. You can call him back with the whistle. I hope you took it with you.
+
+Is the whistle useful?
+  A. Definitely. Try blowing the whistle anywhere outdoors.
+  B. Try blowing it when the pterodactyl isn't nearby.
+  C. You can use the whistle to summon the pterodactyl up to three times. He
+     won't appear if you're near a monster, or anyplace where it would be
+     difficult or dangerous for him to land.
+
+The winds make navigation a real pain. Is there anything I can do?
+  A. It would be nice if you knew which way the wind was blowing.
+  B. It would be even nicer if you could control the wind.
+  C. Read The Lore and Legends of Quendor.
+  D. Have you found a compass rose yet?
+  E. There's a compass rose growing in the Fields of Frotzen. Refer to the
+     Fields of Frotzen section of the booklet for clues.
+  F. If you EXAMINE THE ROSE, you can see which way the wind is blowing
+     from.
+  G. To change the wind direction, POINT THE STEM TO THE SOUTH (or towards
+     whichever way you want the wind to blow from). Now you can fly
+     anywhere.
+
+
+The Castle
+**********
+
+What's the Magick password that will lower the drawbridge?
+  A. Ask the pelican.
+  B. Insist.
+  C. CUT OFF THE PELICAN'S HEAD. That'll teach him to listen!
+  D. Password? Drawbridge? Pelican? This isn't Wishbringer.
+
+Help! I keep getting caught by the Queen!
+  A. She's likely to catch anybody she sees.
+  B. If she couldn't see you, she might not catch you.
+  C. Find a place to hide.
+  D. HIDE BEHIND THE BUSH and keep quiet! She'll go away eventually.
+
+Is the morgia bush good for anything?
+  A. You can hide in it. Ouch! (See previous question.)
+  B. Read The Lore and Legends of Quendor.
+  C. Morgia root increases your strength. Try it. You'll like It.
+
+How do I get the jar?
+  A. The same way the Queen did.
+  B. Wait for the Queen to leave. GET OUT OF THE BUSH. OPEN THE STATUE.
+
+How do I get out of the castle?
+  A. The same way you got there.
+  B. BLOW THE WHISTLE.
+
+
+Mizniaport
+**********
+
+Haven't I seen this old woman somewhere before?
+  A. Perhaps, if you've visited another store previously.
+  B. EXAMINE THE OLD WOMAN. How curious.
+
+How do I buy things in the boutique?
+  A. The same way you buy things everywhere else.
+  B. Refer to the questions about the weapon shop for more help.
+
+Which armor should I buy?
+  A. The best you can afford.
+  B. One item has an unusual description.
+  C. EXAMINE THE CLOAK.
+  D. If you can afford it, BUY THE CLOAK and bring it to the Magick Shoppe
+     in Gurth City. ASK THE OLD WOMAN ABOUT THE CLOAK.
+
+Do I need the horseshoe?
+  A. Yes.
+  B. PICK UP THE HORSESHOE. It'll come in handy later.
+
+How do I shoe the unicorn? I can't find any nails!
+  A. There are no nails to be found. Use the red-hot spikes instead.
+  B. There aren't any red-hot spikes, either.
+  C. You don't need to shoe the unicorn.
+
+I can't reach the saddle!
+  A. There are two ways to get the saddle. Both require Magick.
+  B. One way is to obtain a Wand of Levitation. If you find the wand, POINT
+     IT AT THE SADDLE. Then PICK UP THE SADDLE.
+  C. The other way is more violent (and fun).
+  D. It involves the amulet.
+  E. PUT ON THE AMULET and speak its Word of Power. Your increased strength
+     will allow you to BREAK DOWN THE STALL. Then you can GO INTO THE STALL
+     and PICK UP THE SADDLE.
+
+That unicorn sure looks sad. Isn't there anything I can do for her?
+  A. She probably doesn't enjoy being cooped up like that.
+  B. There are three (count 'em, three!) ways to free the unicorn. All
+     require the use of Magick.
+  C. The first two solutions are the same ones you can use to obtain the
+     saddle. Refer to the previous question for clues.
+  D. The third solution involves an object found in the lighthouse.
+  E. It's the sea chest.
+  F. Have you tried to OPEN THE SEA CHEST? (Don't do it more than once.)
+  G. The Lore and Legends of Quendor has something to say about unicorns.
+  H. SHOW THE SEA CHEST TO THE UNICORN. Note her reaction.
+  I. GIVE THE SEA CHEST TO THE UNICORN.
+
+
+The Fields of Frotzen
+*********************
+
+How do I get past the lightning at Edge of Storms?
+  A. Somebody above the clouds doesn't like you.
+  B. The Implementors dwell above the clouds. You should pay them a visit.
+  C. You need to have read the palimpsest in order to continue.
+  D. Listen to what the mild-mannered Implementor says when he offers you
+     the goblet?
+  E. You can go west from Edge of Storms (or east from Intersection) as long
+     as you're holding the Implementors' goblet.
+
+How do I catch the butterfly?
+  A. You need a lure.
+  B. Insects are attracted to sweet things.
+  C. You'll find something sweet on the Ethereal Plane of Atrii.
+  D. There's a sweet, sticky coating inside the goblet.
+  E. Just bring the goblet to the butterfly's vicinity and WAIT. It won't
+     take long for her to find the sweet coating.
+
+Is there any way to get a scarecrow?
+  A. No. You don't need to move any scarecrows to complete the story.
+
+What do I do with the scarecrows?
+  A. EXAMINE each one of them.
+  B. One of the scarecrows is not like the others.
+  C. Only one of the scarecrows seems to be doing its job.
+  D. Something about the "good" scarecrow is fending off the corbies.
+  E. The corbies see something about the "good" scarecrow that you don't.
+  F. Read The Lore and Legends of Quendor.
+  G. Your color vision is muted while you're in the Fields of Frotzen.
+  H. There is an object in the story that enhances colors.
+  I. It's the hurdy-gurdy.
+  J. Bring the hurdy-gurdy to one of the scarecrows. CLOSE THE HURDY-GURDY.
+     POINT THE DIAL AT THE PICTURE OF AN EYE. TURN THE CRANK TO THE RIGHT.
+     You can now discern the color of the rags on each scarecrow.
+  K. The corbies don't like the color of the "good" scarecrow. You can use
+     this information to your advantage later.
+
+How do I get by the corbies blocking off part of the fields?
+  A. You can't fight your way through. There are too many.
+  B. Have you noticed the scarecrows scattered around the fields?
+  C. Have you determined the significance of the scarecrows? If not, refer
+     to the question about the scarecrows before going any further.
+  D. If you had something of the correct color, the corbies would let you
+     by.
+  E. See the question about the farmhouse and the section about Froon.
+
+Where'd this farmhouse come from?
+  A. Wait around outside until a storm starts brewing.
+  B. Maybe the answer is inside, safe from the storm.
+  C. GO INTO THE FARMHOUSE. WAIT. Happy landings.
+
+
+Froon
+*****
+
+How do I polish the giant boot?
+  A. With the giant rag...
+  B. that's in the giant bag...
+  C. held by the giant hag.
+  D. ASK THE GIANT HAG FOR THE GIANT RAG IN THE GIANT BAG.
+  E. Rag? Hag? Bag? You don't need to polish the giant boot.
+
+Nothing is happening here in Froon. What do I do?
+  A. LOOK UNDER THE HOUSE.
+  B. EXAMINE THE FLOWERS.
+  C. That's not a flower! That's an inhabitant of Froon.
+  D. Wait for the mayor to show up.
+
+Does it matter which key I take?
+  A. Only if you want to finish the story.
+  B. Do any of the colors look familiar?
+  C. The scarecrows in the Fields of Frotzen are dressed in the same colors
+     as the three keys.
+  D. Only one of the scarecrows fends off the corbies.
+  E. The corbies stay away from it because they don't like that color.
+  F. Take the key that corresponds to the color of the "good" scarecrow.
+     Now you can fend off corbies, too!
+
+
+Gurth
+*****
+
+The street hawker dropped something!
+  A. Oh, well. She's gone now.
+  B. PICK UP THE FISH CAKE. Quickly!
+
+This old woman looks awfully familiar.
+  A. She may indeed, if you've visited another store previously.
+
+Is there anything I need to buy in the Magick Shoppe?
+  A. Many of the items are quite useful. One is essential.
+  B. Unfortunately, it's the most expensive item. The hourglass.
+  C. It's impossible to afford the hourglass unless you find something
+     incredibly valuable to trade for it.
+  D. Such a treasure lies in the jungles of Miznia.
+  E. Take a ride on the Skyway and pay attention to the conductor.
+  F. You must retrieve the Crocodile's Tear. When you do, SELL THE TEAR TO
+     THE OLD WOMAN. Now you can afford the hourglass.
+
+Can I do anything at the Shady Wall?
+  A. You bet.
+  B. But only if you have a gray sphere. Refer to the appropriate question
+     for details.
+
+
+The Jungles of Miznia
+*********************
+
+How do I get into the gondola?
+  A. Just GET INTO THE GONDOLA.
+  B. It helps if you wait for the conductor to say "All aboard."
+
+Are the support towers good for anything?
+  A. Of course. They hold up the gondola. They're also a convenient way to
+     visit the jungle.
+  B. Read the room description carefully as you pass one of the towers.
+  C. There's a maintenance platform near the top of each tower.
+  D. JUMP ONTO THE PLATFORM as your gondola passes by one of the towers. Now
+     you can CLIMB DOWN A LADDER and visit the jungle.
+
+What can I do with the mossy rock?
+  A. The question is, what will the mossy rock do with you?
+  B. It's not really a mossy rock. It's a bloodworm!
+  C. It's clobberin' time!
+
+It's completely dark! What happened?
+  A. Looks like you've fallen into the idol. Hope you brought your lantern.
+
+Is there any light source besides the lantern?
+  A. Yes. One magic item produces a very brief glow of light.
+  B. It's the amulet.
+  C. PUT ON THE AMULET and speak its Word of Power. The glowing star will
+     provide two moves' worth of illumination.
+
+Is there anything to do inside the idol?
+  A. Reread the room description.
+  B. Read The Lore and Legends of Quendor.
+  C. The moss on the walls should look familiar.
+  D. It's Moss of Mareilon. Use it to boost your dexterity. It can't hurt.
+
+Why can't I see the secret door in the idol?
+  A. It's an awfully good secret.
+  B. So secret that it doesn't even exist.
+  C. Sorry. There is no secret door.
+
+How do I get back outside of the idol?
+  A. There are no less than four ways to escape from the idol. All of them
+     involve Magick.
+  B. One of the ways involves a wand.
+  C. The Wand of Eversion will do the trick.
+  D. "Eversion" means "inside out."
+  E. POINT THE WAND OF EVERSION AT THE IDOL. You're free!
+  F. The other three ways are the same as getting out of the cellar. Just
+     develop the last three clues pertaining to escaping from the Cellar.
+
+I can see the Crocodile's Tear, but I can't reach it without falling into
+the idol! This is driving me crazy!
+  A. The idol's maw is like a seesaw.
+  B. You need something heavier than you to hold down the bottom end.
+  C. One of your jungle friends may be able to help.
+  D. How about the mother hungus?
+  E. You have to get the mother hungus to follow you.
+  F. Read The Lore and Legends of Quendor.
+  G. If you threaten the baby hungus, his mother will chase you through the
+     jungle!
+  H. The hungus is slow. Give her time to catch up. If you're wearing the
+     cloak, take it off... it makes it harder for her to follow you.
+  I. Lead the mother hungus to the idol. GET INTO THE MAW. The mother will
+     climb up onto the bottom edge. Now you can climb up and GET THE JEWEL.
+  J. Sort of.
+
+I lost the jewel! How do I get it back?
+  A. A great, big bottle of laxative might work.
+  B. Unfortunately, there's no laxative to be found. Try something else.
+  C. There's a wand that can help.
+  D. It's the Wand of Eversion.
+  E. "Eversion" means "inside out."
+  F. POINT THE WAND OF EVERSION AT THE MOTHER HUNGUS.
+
+Poor widdle baby hungus! Is there any way to rescue him?
+  A. Yes. (Sniff.)
+  B. To rescue the baby, you must obtain a Wand of Levitation. This can be
+     tricky, as the wand's location varies from game to game.
+  C. When you find the wand, POINT IT AT THE BABY HUNGUS.
+  D. But don't free the baby before you get the Crocodile's Tear! Otherwise,
+     you won't be able to complete the story.
+
+What can I do at the waterfall?
+  A. Nothing. It's just scenery.
+
+
+Thriff
+******
+
+How do I stop the hunter from finding the minx?
+  A. He might not find her if he didn't know where to look.
+  B. He's following her footprints in the snow.
+  C. Quick! RUB OUT THE FOOTPRINTS before the hunter arrives.
+
+Where do I find chocolate truffles?
+  A. Read The Lore and Legends of Quendor.
+  B. They're not easy to find without help.
+  C. One of the creatures in Lore and Legends can help you.
+  D. Bring the minx to an oak tree and put her down. WAIT.
+  E. PICK UP THE CHOCOLATE TRUFFLE before she eats it herself!
+  F. And don't leave the truffle anywhere she can get her paws on it.
+
+Those truffles don't last very long, do they?
+  A. Nope. The Lore and Legends of Quendor says so.
+  B. There is a way to keep truffles fresh.
+  C. The clock setting on the hurdy-gurdy will renew the truffles when you
+     turn the crank to the left (if the truffle is inside).
+  D. However, they'll start decaying again right away.
+  E. There's a way to keep them eternally fresh.
+  F. Don't continue unless you've visited the forest north of Gurth.
+  G. Have you answered the riddle on the boulder?
+  H. Remember what the hollow voice says when you answer the riddle.
+  I. DROP THE CHOCOLATE TRUFFLE INTO THE POOL. Or, WALK INTO THE POOL while
+     holding a truffle. It will now remain fresh forever.
+
+Can I do anything at the Rock Wall?
+  A. Definitely. But only if you have a gray sphere. Refer to the
+     appropriate question for details.
+
+Is there anything I can do in the Chapel?
+  A. Be quiet and pay attention.
+  B. SIT DOWN ON THE PEW. Cardinal Toolbox is rather long-winded.
+  C. LOOK UNDER THE PEW. Surprise!
+
+How do I get the reliquary?
+  A. You have to earn it.
+  B. Listen to the Cardinal's sermon. There may be an opportunity here.
+  C. If you save Thriff from the Christmas tree monsters, "anything you ask
+     will be your reward."
+  D. Including the reliquary.
+  E. After you thwart the Christmas tree monsters, find the Cardinal. ASK
+     THE CARDINAL FOR THE RELIQUARY.
+
+What is the glyph in the snowy clearing?
+  A. Listen to Cardinal Toolbox in the chapel.
+  B. It's a Glyph of Warding, left by Orkan. It prevents the Christmas tree
+     monsters from entering the village.
+
+The Christmas tree monsters won't let me past!
+  A. They wouldn't be very good monsters if they did, would they?
+  B. The Lore and Legends of Quendor is full of useful facts.
+  C. You need a caterpillar. (See next question.)
+  D. Once you've got a caterpillar, show it to the Christmas tree monsters.
+     Then you'll be able to get by them.
+
+Where do I find a caterpillar?
+  A. Where do caterpillars come from?
+  B. More precisely, what comes from caterpillars?
+  C. Butterflies!
+  D. You need to first get the butterfly from the Fields of Frotzen.
+  E. Now you need to turn back the clock on the butterfly.
+  F. The clock on the hurdy-gurdy that is.
+  G. PUT THE GOBLET (along with the butterfly) IN THE GURDY. CLOSE THE
+     GURDY. TURN THE DIAL TO THE CLOCK. TURN THE CRANK TO THE LEFT. OPEN THE
+     GURDY. Abracadabra ... Poof! A caterpillar.
+
+Is the leaflet useful for anything?
+  A. READ THE LEAFLET.
+  B. OPEN THE PARCEL.
+
+What do I do with the little black book?
+  A. READ IT. Some of the information in it will prove useful.
+
+How did that dome get on top of the mountain?
+  A. Somebody who knows a lot about Magick left it there.
+  B. Read the little black book in the Laboratory.
+  C. Did you LOOK UNDER THE DOME yet?
+  D. Orkan cast a yonked girgol spell on the lava to keep it from erupting.
+
+How do I stop the glyph from melting with the snow?
+  A. You can't. You must find some other way to thwart the Christmas tree
+     monsters.
+
+How do I thwart the Christmas tree monsters?
+  A. That Glyph of Warding seems to work just fine. But it's going to melt
+     sooner or later. You must inscribe a more permanent Glyph.
+  B. LOOK UNDER THE DOME at the Mountain Peak.
+  C. You need to free that lava from Orkan's spell.
+  D. There is a Magick item that neutralizes Magick.
+  E. It's the Dispel Wand.
+  F. POINT THE DISPEL WAND AT THE DOME.
+  G. Run! The lava will bury you if you don't get out of its path!
+
+I buried the Christmas trees, but they still trample the village!
+  A. Obviously you didn't destroy all of the trees.
+  B. The trees aren't the only things you destroyed in the Snowy Clearing.
+  C. You also melted the Glyph of Warding.
+  D. You need to inscribe another Glyph before the lava cools and the
+     surviving trees trample the village.
+
+I can't return to the clearing! It's too hot!
+  A. If you wait for the lava to cool, then it's too late. You need Magick
+     help to survive that heat.
+  B. There is a Magick item that will help you resist heat.
+  C. It's found on the third level of the lighthouse.
+  D. It's the dust bunny.
+  E. When you defeat the dust bunnies, they coalesce into a ring. Take that
+     ring to the Magick Shoppe and SHOW IT TO THE OLD WOMAN.
+  F. PUT ON THE RING. Now you can walk onto the hot lava safely.
+
+I made it to the Lava Flow! Now what?
+  A. The lava underfoot is still soft.
+  B. It's an ideal drawing medium.
+  C. INSCRIBE A GLYPH ON THE GROUND. When the lava cools, you'll have a
+     Glyph of Warding permanently etched into the rock.
+
+What tool do I need to inscribe a glyph?
+  A. Read the black book from the Laboratory.
+  B. Did you look inside the mailbox outside the Laboratory?
+  C. Did you read the leaflet and open the parcel?
+  D. You need the burin to inscribe a glyph. (As in _Spellbreaker_.)
+
+Where can I study glyphs? I don't know which one to inscribe!
+  A. There's one you can study in the Snowy Clearing.
+  B. There's another one in the little black book.
+  C. Just examining either one is enough.
+
+Is the thing in the reliquary useful?
+  A. Not by itself. Does it remind you of something you found somewhere
+     else?
+  B. Something in the Laboratory on the workbench?
+  C. The black hemisphere. EXAMINE THE BLACK HEMISPHERE.
+  D. EXAMINE THE WHITE HEMISPHERE.
+  E. The peg and the hole go together.
+  F. PUT THE PEG INTO THE HOLE.
+
+What can I do with the gray sphere?
+  A. EXAMINE THE GRAY SPHERE.
+  B. PEER INTO THE GRAY SPHERE.
+  C. You need something to make the swirls more intelligible.
+  D. You need more intelligence.
+  E. Unless you started with a super-intelligent character, you must find
+     ways to boost your intelligence.
+  F. A fish cake will help, but it's probably not enough.
+  G. The Enlightenment potion will help, but it's probably not enough.
+  H. There's one more thing you can do that will boost your intelligence.
+  I. Did you ever listen to the bandits in the Rusty Lantern?
+  J. You need to obtain the item that they are talking about.
+  K. It's a helmet. Stop reading these hints until you get it.
+  L. PUT ON THE HELMET. Your intelligence goes up!
+  M. If you've done all three thing [sic] to boost your intelligence, now
+     you can PEER INTO THE GRAY SPHERE.
+  N. One of the visions holds an important clue.
+  O. While standing at either the Shady Wall (southwest of Gurth) or the
+     Rock Wall (northwest of Thriff), repeat the Word of Power uttered by
+     the warlock you saw in the vision.
+  P. PUSH THE OUTLINE, like the warlock did.
+
+
+The Forest
+**********
+
+What does the inscription on the boulder mean?
+  A. It's a riddle.
+  B. Don't develop the next hint unless you're really stumped.
+  C. Type the word YOUTH and watch what happens.
+
+How do I get across the bridge?
+  A. You can't. Ever. Really. You cannot reach the far side of the bridge by
+     walking across.
+  B. There is a way to get off the bridge. Five ways, in fact. Four involve
+     Magick.
+  C. The non-Magick way involves the item you found on the bridge.
+  D. It's the umbrella.
+  E. GET THE UMBRELLA THEN OPEN IT. JUMP.
+  F. Three more ways are the same as those for getting out of the cellar.
+     Just develop the last three clues pertaining to escaping from the
+     Cellar.
+  G. The pterodactyl may also be able to help you if you've helped him.
+  H. BLOW THE WHISTLE. If you've saddled the pterodactyl and have not used
+     up your three summons, CLIMB ON THE PTERODACTYL and FLY.
+
+
+The Ruins
+*********
+
+Help! I can't kill the undead warrior!
+  A. Of course not. He's not really alive.
+  B. If weapons don't work, perhaps Magick will.
+  C. There is a Magick item that can deal with undead creatures.
+  D. THROW THE VIAL OF HOLY WATER AT THE UNDEAD WARRIOR.
+
+Are the weeds at the Glare good for anything?
+  A. Read The Lore and Legends of Quendor.
+  B. It's spenseweed.
+
+What is the significance of the arch in the Plaza?
+  A. EXAMINE THE ARCH.
+  B. There's something with a similar shape elsewhere in the story.
+  C. It's in the Magick Shoppe in the display case.
+  D. ASK THE OLD WOMAN ABOUT THE HOURGLASS.
+  E. Try experimenting with the hourglass near the arch.
+  F. Under the arch.
+  G. STAND UNDER THE ARCH. TURN OVER THE HOURGLASS.
+
+How do I get the helmet out of the trench?
+  A. Just REACH INTO THE TRENCH.
+  B. Sorry, there's no way you can move the stallion to get the helmet.
+  C. Looks as if you'll have to come back later. Much later.
+
+I don't know exactly where (when?) to dig!
+  A. You need to mark the location of the trench.
+  B. Some creatures are prized for their ability to dig up things.
+  C. Read The Lore and Legends of Quendor.
+  D. Minxes aren't known for digging up helmets.
+  E. They are able to dig up truffles, though.
+  F. Unfortunately, chocolate truffles don't last very long. Refer to the
+     question about truffles to find out how to make them last.
+  G. The minx can't dig if the ground is too hard.
+  H. Take a truffle to the Pool of Eternal Youth. PUT THE TRUFFLE IN THE
+     POOL. Now take the truffle back in time to the Battleground. DROP THE
+     TRUFFLE INTO THE TRENCH. Now go forward in time with the minx to
+     Desolation. The minx will do the rest.
+
+
+Underground
+***********
+
+How do I see underground? It's dark.
+  A. You need a source of light. The lantern, perhaps? Perhaps not.
+  B. If you've been to the castle, reflect on the problem for a while. If
+     not, you need to get there before continuing.
+  C. Experiment with the jar. And with the mirrors.
+  D. Reread the description for the Rock Wall room carefully.
+  E. Blow a bubble mirror just inside the Rock Wall.
+  F. The mirrors rotate, as if they were on pivots.
+  G. From the secret doorway at Rock Wall: GO INSIDE. OPEN THE JAR. TAKE THE
+     CIRCLET. BLOW A BUBBLE. TURN THE MIRROR TO THE SOUTH.
+  H. Using a series of mirrors, you can reflect sunlight into any one of the
+     Underground passageways.
+
+Is there any way to stop the lucksuckers?
+  A. Read The Lore and Legends of Quendor.
+  B. HIT THE LUCKSUCKER with the best weapons you've got.
+  C. Lucksuckers aren't affected by ordinary weapons.
+  D. Good luck charms can forestall their attack.
+  E. Try showing one of your good luck charms to a lucksucker.
+  F. Throw a good luck charm at a lucksucker.
+
+How do I deal with the lurking presences in the dark?
+  A. You can't see them to fight them without Magick.
+  B. Wearing the helmet will enable you to attack them normally.
+  C. The grues are the toughest monsters in the game. You need to be well
+     prepared to fight them.
+  D. Protected plate mall and a honed elvish sword are the best weapons
+     against the grues.
+
+What is the shadow in the corner?
+  A. It is unwise to speak of such things.
+  B. It's an ur-grue. Consult The Lore and Legends of Quendor for all the
+     terrifying details.
+
+How do I deal with the shadow?
+  A. Very carefully.
+  B. The Lore and Legends of Quendor may shed some light on the matter.
+  C. You need to shed some light on the shadow.
+  D. Sunlight.
+  E. Arrange some mirrors so that a beam of sunlight illuminates the
+     Treasure Chamber. BLOW A BUBBLE in the Chamber. TURN THE MIRROR TO THE
+     EAST.
+
+I don't want to strangle baby grues! How do I survive the ur-grue's attack?
+  A. Uh-oh. Looks as if all your compassion was sucked away. Nobody with an
+     ounce of compassion could strangle a baby ... not even a baby grue.
+  B. You didn't accumulate enough compassion during the course of the story
+     to survive the ur-grue's attack.
+  C. There are three ways to gain compassion.
+  D. Rescuing the minx. (Which you've probably already done.)
+  E. Releasing the unicorn also gains compassion.
+  F. The third way to gain compassion is to rescue the baby hungus by using
+     the levitation wand.
+
+Look at all that plunder! How do I bring it home?
+  A. Don't you want to gloat over it first?
+  B. Don't you want to SEARCH IT?
+  C. Oh, my. What have we here?
+  D. PICK UP THE COCONUT. And don't let it go!
+  E. Congratulations.
+
+
+That Which Can be Named
+***********************
+
+  Weapons
+    Dagger, Shillelagh, Spade, Battle-axe, Longsword, Vague Outline/Phase
+    Blade
+
+  Animals
+    Pterodactyl, Minx, Butterfly/Caterpillar
+
+
+Variable Magic Items Lists
+**************************
+
+  Wands
+    Anethesia [sic], Annihilation, Dispel, Eversion, Levitation, Sayonara
+
+  Scrolls
+    Fireworks, Gating, Honing, Mischief, Protection, Refreshment
+
+  Potions
+    Death, Enlightenment, Forgetfulness, Healing, Might
+
+
+Treasure Locations and Values
+*****************************
+(Note -- Magick items can also be resold for zorkmids.)
+
+  Treasure               Location                Value
+
+  Silver Ornament        Christmas Trees            2
+  Truffles (3)           Under Oak Trees            5
+  Gold Doubloon          Crab's Nest               10
+  Tiny Crown             On the Crab               20
+  Bubble Gum Card        2nd Floor Lighthouse      30
+  Sextant                Lamphouse                 30
+  Ivory Tusk             Jungle                    40
+  Diamond                Snow Wight                50
+  Crocodile's Tear       Idol                    1000
+
+
+For Your Amusement
+******************
+
+Have you tried...
+
+  asking the old woman (each one) about almost anything?
+  asking the cook about himself?
+  pointing the Sayonara wand at the snow wight?
+  insulting the cruel puppet?
+  pointing the Levitation wand at the reliquary?
+  touching people after crossing the bear rug?
+  opening the umbrella while flying on the pterodactyl?
+  opening the umbrella indoors?
+  eating a truffle in front of the minx?
+  selling a truffle to the old woman?
+  tasting the sticky coating in the goblet?
+  opening the chest a second time?
+  turning the crank on the hurdy-gurdy (12 possibilities) near the old
+    woman?
+  drinking the potion of forgetfulness? death?

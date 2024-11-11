@@ -1,0 +1,178 @@
+ENCHANTER
+
+Enchanter was Infocom's 9th game (and the fourth fantasy game after the
+three ZORKs. In fact, it became the first of a new trilogy taking place in
+the ZORK univerce). It was written by the ZORK trilogy authors, Marc Blank
+and Dave Lebling.
+
+You are the ensign enchanter who is destined to liberate his land from the
+domination of the evil Warlock. You already know some spells, but you'll have
+to learn a lot more if you are to succeed...
+
+Difficulty level: STANDARD
+
+At the beginning you know the following spells:
+FROTZ will cause an item to become a light source.
+NITFOL makes you understand the language of the animals.
+GNUSTO writes a spell to your spellbook.
+BLORB will protect a possession of yours.
+
+COMMODORE EMULATOR NOTE: It is not recommended to play any Infocom game on CCS64, since
+there is no way to turn off its 1541 emulation and the games load too slow.
+On C64S, Vice, and PC64, though, any Infocom game will load instantly and you
+will notice no delay for loading new text while playing, making the gameplay
+more enjoyable!
+
+Well, that's all!
+Best Regards
+Dimitris
+
+
+A Brief History Of Magic
+By Gustar Woomax
+
+Copied right in 927 GUE. All rights reversed.
+A POPULAR ENCHANTING book.
+
+
+The history of magic can be broken down into four distinct periods: the
+Empirical Age, the Scientific Age, the Industrial Age, and the Age of
+Guilds. Each of these will be explored in some depth in order to give
+the reader a sense of the course of events which has shaped the use of
+magic in today's society.
+
+The Empirical Age
+
+  Primitive cultures had naturally assumed that the disorderly nature of
+our world was due to such supernatural causes as magic. With the
+founding of the "natural" sciences, however, nature was increasingly
+viewed as being orderly. As the sciences progressed, the knowledge and
+lore of magic largely disappeared. As early as the 5th century GUE
+(Great Underground Empire), however, such students of the mystic arts as
+Bizboz and Dinbar thoroughly examined ancient writings on the subject.
+Bizboz himself wrote what became the seminal work in Thaumaturgy, "On
+the Presence of Incredibly Weird Stuff Going On," in 473 GUE, in which
+he claimed to have discovered "for-the-most-part Natural Rules" by which
+this "Weird Stuff" is ordered.
+  This work was ridiculed by the leading scholars of the time, leading
+to Bizboz's removal from the faculty at the Galepath University, and,
+eventually, to his tragic suicide in 475 GUE. His work, however,
+encouraged others in the pursuit of magical knowledge, with mixed
+results. Charlatans, claiming to have created magical potions and
+powders, regularly fooled the gullible population into buying potions
+which claimed to do such things as "reverse hair loss" and "draw Trebled
+Fromps in Double Fanucci." Such appeals to public ignorance led King
+Duncanthrax in 672 GUE to write the Unnatural Acts, which provided stiff
+penalties for those convicted of selling "Unnatural or Supernatural
+substances."
+
+The Scientific Age
+
+  While the charlatans were at work, serious students took up the cause
+of magic, attempting to explain the natural world as a byproduct of the
+interrelated workings of the sciences of Physics, Medicine, Chemistry,
+Mathematics, and Thaumaturgy. Their success in demonstrating the
+so-called first principles of Thaumaturgy, namely Presence, Incantation,
+and Unusual Effect, led to a loosening of the Unnatural Acts to allow
+what became known as Scientific Thaumaturgy. During this period, the
+first chapter of the Guild of Enchanters was founded at the tiny hamlet
+of Accardi-by-the-Sea by the great thaumaturge, Vilboz.
+  During the reign of Frobwit the Flatter (701-727 GUE), the art and
+science of Thaumaturgy flourished. The first reliable Incantation
+Device, known to scholars as the Hyperbolic Incantation Concentrator,
+was produced at the Thaumaturgical Institute in 723 GUE. The long, thin,
+portable device, nicknamed the "magic wand" by the lay press, became an
+instant sensation among the populace, and gained a certain measure of
+respect for the fledgling science.
+  A major advance in Thaumaturgy occurred when Davmar, working in
+newly-crowned King Mumberthrax Flathead's laboratory, discovered a means
+by which Incantation could be stored on special Presence-imbued paper.
+These so-called scrolls were found, however, to be destroyed during the
+spells' Incantation. Nonetheless, scrolls soon replaced the
+temperamental and poorly-understood "wand" as the primary means of
+Incantation.
+  The problem of imbuing Presence became a deterrent to the rapid growth
+of magical science. The creation of a single powerful scroll could take
+literally months for even the most creative and productive thaumaturge.
+This roadblock prevented the widespread use of magic for generations.
+
+The Industrial Age
+
+  The Industrial Age dawned in 769 GUE with a discovery by a
+little-known thaumaturge named Berzio. Berzio, working for years in his
+own self-made workshop and often going for days without food, drink, or
+sleep, created the means by which Presence could be transferred from a
+scroll to a specially impregnated paper by use of a simple spell, which
+he named after his dog, Gnusto. This paper, in turn, held the Presence
+even after the Incantation had been finished, solving the major problem
+in spell production. The euphoria which greeted this discovery was
+tempered by the finding that very powerful spells could not be
+transferred in this way. Nevertheless, spell "books," which were capable
+of holding dozens of spells, were produced in great number, leading to
+the founding of a new industry.
+  Another advance in Thaumaturgy occurred with the finding that certain
+liquids and powders could be imbued with the magical Presence. Such
+potions are of great interest, although their limitations have prevented
+them from supplanting scrolls as the primary method of Incantation. The
+first of these potions, which obviates the need for food and drink, was
+given the name BERZIO, in honor of the great thaumaturge.
+
+The Age of Guilds
+
+  As the use of magic became more prevalent, so did the problems
+inherent in its use. Since magic had become available to people in all
+professions, conflicts arose. One famous issue involved the question of
+whether the plumber's FIZMO spell ("cause stopped-up pipes to unclog")
+could be sold as a digestive aid by physicians. The issue came to a head
+in the aftermath of the Endless Fire of 773 GUE, so named because it
+burned for 4 weeks after destroying the city of Mareilon. It was later
+found to have been started by a civil servant who thought he was casting
+the ZEMDOR spell ("turn original into triplicate") but who, instead,
+cast the ZIMBOR spell ("turn one really big city into lots of tiny,
+little ashes").
+  This led Lord Dimwit Flathead (the Excessive) to issue a series of
+5,521 edicts over the following few weeks, which had the effect of
+severely limiting access to magic (and, incidentally, lawyers).
+Henceforth, all magic was entrusted to the various Guilds of Enchanters,
+which by now existed in many small communities. Each Guild, whose elders
+comprised the so-called Circle of Enchanters, was empowered to form
+schools for the training of new Enchanters. This official sanctioning of
+the Guilds led to the formation of numerous other chapters, with
+membership in the various Guilds in excess of 2,000 by the year 800 GUE.
+Despite the fall of the Great Underground Empire in 883 GUE under the
+feeble-minded reign of Wurb Flathead, the Guild of Enchanters remains
+virtually unchanged in character today.
+
+Today's Enchanter
+
+  Since the fall of the Empire, magic has again become a mysterious art,
+practiced primarily by trained Sorcerers, although a few spells, such as
+UMBOZ ("obviate need for dusting") and NERZO ("balance checkbook"), have
+been approved for over-the-counter sale. Upon graduation from an
+accredited Thaumaturgical College, an Enchanter is given a spell book
+with a few spells, none of which has great power. As an Enchanter
+continues his or her studies, new spells may be obtained; these may be
+copied into a spell book for use whenever the occasion warrants.
+  The Enchanter's job is not as easy as is commonly thought. An
+Enchanter must memorize a spell written in a spell book before casting
+it. (Spells on scrolls and those which have been permanently etched in
+the memory by training needn't be memorized.) Moreover, if an Enchanter
+needs to use a particular spell twice, it must be memorized twice, since
+the effort of casting it makes it a jumble in one's memory. In fact,
+even a night's sleep will make an Enchanter forget any memorized spells.
+But, in spite of the rigors of spell casting, the personal rewards are
+great, and the job of Enchanter remains a popular and well-respected
+vocation.
+
+An Afterthought
+
+  The most fitting words regarding the history of magic were written
+over a century ago by the renowned historian Ozmar in 821 GUE. He wrote:
+"The greatest irony is this: that the ancients of our kind were nearer
+to knowing the truth about Science than those who called themselves
+Scientists. Science has taught us much and given us new words for old
+mysteries. But beneath these words are mysteries, and beneath them more
+mysteries. The pursuit of Magic has given these mysteries meaning and
+provided for our people great benefits unrealized as yet by Science. One
+day, perhaps, a great union will be formed between Magic and Science,
+and the final mysteries will be solved."

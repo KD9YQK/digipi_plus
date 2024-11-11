@@ -1,0 +1,67 @@
+CUTTHROATS
+
+Cutthroats was Infocom's 13th game and was written by Michael Berlin (the
+author of Suspended and Infidel), and Jerry Wolper.
+
+You are an experienced diver who wants to search an old shipwreck site (close
+to Hardscrabble Island) for treasure. Organize your efforts and seek fame and
+fortune underwater. Watch out, though,'cause some people won't be happy if
+you succeed...
+
+The game has 4 different shipwrecks. Each time you start a new game, one
+shipwreck is chosen automatically by the computer, so every time you restart
+you usually face a different challenge. The shipwrecks are:
+The "SAO VERA", a Portuguese cargo vessel sunk in 1698.
+The H.M.S."INTRANSIGENT", a British frigate sunk in 1766.
+"THE FIANNA" (ex.name"GLORIA DIEU"), a British tea clipper sunk in 1887.
+And the S.S."LEVIATHAN", an American express steamship (which looked like the
+Titanic) sunk in 1916 by a German warship.
+
+Difficulty level: STANDARD
+
+Some special commands you should know:
+PUSH (something) TO THE (direction) - this one will prove useful...
+WITHDRAW $(some amount of money) - from your bank account!
+
+Other commands to have in mind:
+ATTACK   BREAK    BUY      CLIMB    CLOSE
+CUT      DIVE     DRINK    DROP     EAT
+EXAMINE  GIVE     INSERT   JUMP     LOCK
+PULL     READ     RENT     SLEEP    TAKE
+TURN OFF TURN ON  WEDGE    WIND     YELL
+
+O.K. when you first loaded this one you could see all the new improvements
+that Infocom did to "modernize" its adventures:
+
+First of all, a fastloader was included and the game asked you if you were
+"Loading from a Commodore 1541 disk drive?" in order to use it.
+
+Second: The loading message "Loading game ..." was replaced by the more
+classy "The story is loading ..."
+
+Third: Infocom desided to adopt a gray background with white text (black for
+the top location/score line and cursor). No more blues!
+
+Fourth: the cursor became a thin line, like the cursor of MS DOS.
+
+Fifth: a sound effect was heard when you typed a letter, and another one if
+you pressed a cursor key, or you tried to move the cursor with DEL past the
+beginning of the command entry line (no more messing around!).
+
+Sixth: the game wouldn't freeze after quit...it would restart! (So, you still
+had to turn off your computer--I wonder, were they promoting reset switches?)
+And Seventh: Added support for the new Commodore Plus 4! Wow! (However, soon
+the PLUS4 were abandoned...)
+
+COMMODORE EMULATOR NOTE: It is not recommended to play any Infocom game on CCS64, since
+there is no way to turn off its 1541 emulation and the games load too slow.
+On C64S, Vice, and PC64, though, any Infocom game will load instantly and you
+will notice no delay for loading new text while playing, making the gameplay
+much more enjoyable!
+
+ALSO REMEMBER to answer NO at the Loading-from-a-1541 question, in order to
+maintain high-speed emulator loading!
+
+Well, that's all!
+Best Regards
+Dimitris

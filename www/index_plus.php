@@ -1,58 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<LINK href="/styles/plus.css" rel="stylesheet" type="text/css">
+<style>
+  .body {
+    font-family: "Lato", sans-serif;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+</style>
+</head>
 
-<form action="index.php" method="post">
-<table>
-<tr>
-    <td>
-        <center><?php include 'header.php' ?></center>
-        <div class="tab" style="text-align: center; width:410px;">
-            <button class="tablinks" type="button" id="defaultOpen" onclick="openMenu(event, 'Services')">Services</button>
-            <button class="tablinks" type="button" onclick="openMenu(event, 'Programs')">Programs</button>
-            <button class="tablinks" type="button" onclick="openMenu(event, 'Settings')">Settings</button>
-            <button class="tablinks" type="button" onclick="openMenu(event, 'Direwatch')">Direwatch</button>
-        </div>
-        <div id="Services" class="tabcontent">
-            <?php include 'orig_services.php' ?>
-            <?php include 'orig_form.php' ?>
-            <?php include 'plus_services.php' ?>
-            <?php include 'plus_form.php' ?>
-        </div>
+<body>
 
-        <div id="Programs" class="tabcontent">
-            <?php include 'orig_links.php' ?>
-            <?php include 'plus_links.php' ?>
-        </div>
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <iframe src="plus_menu.php" name="iframe_b" width=100% height=80% scrolling="no"></iframe>
+  <a href="syslog.php" target='iframe_a'>SysLog</a>
+  <a href="log.php" target='iframe_a'>PktLog</a>
+  <a href="shell.php" target='iframe_a'>Shell</a>
+  <script>
+      document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':6080/vnc.html?port=6080&password=test11&autoconnect=true" target="iframe_a">VNC</a>' )
+  </script>
+  <script>
+      document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':8080" target="iframe_a">Email</a>' )
+  </script>
+  <script>
+      document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':8055" target="iframe_a">WebChat</a>' )
+  </script>
+  <a href="help/index.php" target='iframe_a'>Help</a>
 
-        <div id="Settings" class="tabcontent">
-            <?php include 'plus_settings.php' ?>
-        </div>
-        <div id="Direwatch" class="tabcontent">
-            <img id="direwatch" src="direwatch.png?v=<?php echo Date("Y.m.d.G.i.s"); ?>" width="400", height="400" />
-            <script>
-                window.setInterval(refreshDirewatch, 1000);
-
-                function refreshDirewatch( )
-                {
-                  document.getElementById("direwatch").src="direwatch.png?v=" + Date("Y.m.d.G.i.s");
-                }
-            </script>
-        </div>
-    </td>
-    <td style="width:100%;">
-        <iframe src="syslog.php" name="iframe_a" style="height:90vh; width:100%;" title="Digipi Plus"></iframe>
-    </td>
-</tr>
-</table>
-
-<div id="mySidenav" class="sidenav">
-    <a href="syslog.php" target='iframe_a' id="syslog">SysLog</a>
-    <a href="log.php" target='iframe_a' id="pktlog">PktLog</a>
-    <a href="shell.php" target='iframe_a' id="shell">Shell</a>
-    <script>
-        document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':6080/vnc.html?port=6080&password=test11&autoconnect=true" target="iframe_a" id="vnc">VNC</a>' )
-    </script>
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰</button>  
+  <iframe src="home_plus.php" name="iframe_a" style="height:96vh; width:100%;" title="Digipi Plus" scrolling="no"></iframe>
 </div>
 <script>
-    
 function openNav() {
   document.getElementById("mySidebar").style.width = "480px";
   document.getElementById("main").style.marginLeft = "480px";
@@ -62,29 +49,5 @@ function closeNav() {
   document.getElementById("main").style.marginLeft= "0";
 }
 </script>
-    
-<script>
-function openMenu(evt, tabName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
-
-<small>1.8-2 KM6LYW ©2024</small>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/dot"><font size="+3" color="#eeeeee">.</font></a>
-</form>
-</font>
 </body>
 </html>
