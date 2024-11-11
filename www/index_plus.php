@@ -21,9 +21,7 @@
 <div id="mySidebar" class="sidebar">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
   <iframe src="plus_menu.php" name="iframe_b" width=100% height=50% scrolling="vertical"></iframe>
-  /* -------------------
-    Menu Start
-    ------------------- */
+  
   <div class="settings">
   <a href="/shell.php" title="Command Prompt" target='iframe_a'>
     <img src="/images/icons/shell.png" width=32px height=32px>
@@ -85,10 +83,8 @@
     <strong>Help</strong>
   </a>
   </div>
-  /* -------------------
-    Menu end
-    ------------------- */
 </div>
+  
 <div id="main">
   <button class="openbtn" onclick="openNav()">☰</button>  
   <iframe src="home_plus.php" name="iframe_a" style="height:96vh; width:100%;" title="Digipi Plus" scrolling="no"></iframe>
