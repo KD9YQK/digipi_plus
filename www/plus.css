@@ -12,8 +12,6 @@ body
         font: 1em/1.2 "Arial", Arial, Helvetica, Geneva, sans-serif; 
 
 	overflow:initial !important;
-	display: flex;
-	align-items: center; /* Align vertical */
 }
 
 h1,h2,h3,h4,h5,h6
