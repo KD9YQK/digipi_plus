@@ -7,7 +7,7 @@
 <body>
   <div style="margin-top:20%">
     <center>
-    <h1>DigiPi Plus</h1>
+    <h1 style="font-size=32px">DigiPi Plus</h1>
     </center>
   </div>
 </body>
