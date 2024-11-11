@@ -5,7 +5,7 @@
 
 <title>DigiPi </title>
 
-<body  style="position: relative; height: 100%; width: 100%; overflow: hidden;">
+<body  style="position: relative; height: 100%; width: 100%; overflow: hidden; align-items: center;">
 
 
 <table width=400>
