@@ -77,7 +77,7 @@ document.getElementById("defaultOpen").click();
 </script>
 
 <small>1.9-1 KM6LYW ©2024</small>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/dot"><font size="+3" color="#eeeeee">.</font></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/dot"><font size="+3" color="#111">.</font></a>
 </form>
 </center>
 </body>
