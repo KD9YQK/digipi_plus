@@ -20,7 +20,7 @@
 
 <div id="mySidebar" class="sidebar">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-  <iframe src="plus_menu.php" name="iframe_b" width=100% height=60% scrolling="no"></iframe>
+  <iframe src="plus_menu.php" name="iframe_b" width=100% scrolling="no"></iframe>
   <a href="syslog.php" target='iframe_a'>SysLog</a>
   <a href="log.php" target='iframe_a'>PktLog</a>
   <a href="shell.php" target='iframe_a'>Shell</a>
