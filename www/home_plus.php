@@ -5,7 +5,7 @@
 <LINK href="/styles/plus.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-  <div>
+  <div style="margin-top:20%">
     <center>
     <h1>DigiPi Plus</h1>
     </center>
