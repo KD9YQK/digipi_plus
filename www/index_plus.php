@@ -51,7 +51,18 @@
         document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':6080/vnc.html?port=6080&password=test11&autoconnect=true" target="iframe_a" id="vnc">VNC</a>' )
     </script>
 </div>
-
+<script>
+    
+function openNav() {
+  document.getElementById("mySidebar").style.width = "480px";
+  document.getElementById("main").style.marginLeft = "480px";
+}
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+    
 <script>
 function openMenu(evt, tabName) {
     var i, tabcontent, tablinks;
