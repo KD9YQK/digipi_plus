@@ -80,7 +80,7 @@ th, td
 a { text-decoration:none; }
 a:link { color: royalblue; }
 a:visited { color: royalblue; }
-a:focus { color: black; }
+a:focus { color: white; }
 a:hover { color: green; }
 a:active { color: red; }
 
