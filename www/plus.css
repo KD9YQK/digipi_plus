@@ -139,6 +139,7 @@ Settings
 	display: flex;
 	/*justify-content: center; /* Align horizontal */
 	align-items: center; /* Align vertical */
+	margin: 0 0 0;
 }
 .settings img
 {
