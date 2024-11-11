@@ -5,7 +5,7 @@ After=graphical.target
 [Service]
 ExecStartPre=+systemctl stop fldigi sstv wsjtx ardop tnc300b digipeater node winlinkrms js8call node uhf-node
 Type=simple
-ExecStart=/home/pi/direwolf.uhf-tnc.sh
+ExecStart=bash /home/pi/digipi_plus/launchers/direwolf.uhf-tnc.sh
 Restart=no
 WorkingDirectory=/home/pi/
 User=pi

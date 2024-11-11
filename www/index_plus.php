@@ -34,7 +34,6 @@
       document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':8055" target="iframe_a">WebChat</a>' )
   </script>
   <a href="help/index.php" target='iframe_a'>Help</a>
-</div>
 
 <div id="main">
   <button class="openbtn" onclick="openNav()">☰</button>  
