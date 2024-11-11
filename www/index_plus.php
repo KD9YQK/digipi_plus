@@ -44,24 +44,20 @@
 </div>
 
 <div class="settings">
-<a href="/direwatch.php" title="Direwatch Screen" target='iframe_a'>
-  <img src="/images/icons/screen.png" width=32px height=32px>
-  <strong>Screen</strong>
-</a>
-</div>
-
-<div class="settings">
 <a href="/help.php" title="Digipi Plus Help" target='iframe_a'>
   <img src="/images/icons/help.png" width=32px height=32px>
   <strong>Help</strong>
 </a>
 </div>
-  <a href="syslog.php" target='iframe_a'>SysLog</a>
-  <a href="log.php" target='iframe_a'>PktLog</a>
-  <a href="shell.php" target='iframe_a'>Shell</a>
-  <script>
-      document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':6080/vnc.html?port=6080&password=test11&autoconnect=true" target="iframe_a">VNC</a>' )
-  </script>
+
+<div class="settings">
+<script>
+  document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':6080/vnc.html?port=6080&password=test11&autoconnect=true" target="iframe_a">' )
+</script>
+  <img src="/images/icons/screen.png" width=32px height=32px>
+  <strong>VNC</strong>
+</a>
+</div>
   <script>
       document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':8080" target="iframe_a">Email</a>' )
   </script>
