@@ -34,7 +34,7 @@
       document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':8055" target="iframe_a">WebChat</a>' )
   </script>
   <a href="help/index.php" target='iframe_a'>Help</a>
-
+</div>
 <div id="main">
   <button class="openbtn" onclick="openNav()">☰</button>  
   <iframe src="home_plus.php" name="iframe_a" style="height:96vh; width:100%;" title="Digipi Plus" scrolling="no"></iframe>
