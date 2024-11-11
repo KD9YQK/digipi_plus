@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<LINK href="/styles/simple.css" rel="stylesheet" type="text/css">
+<LINK href="plus.css" rel="stylesheet" type="text/css">
 <style>
 .body {
   font-family: "Lato", sans-serif;
@@ -94,34 +94,6 @@
 <div id="main">
   <button class="openbtn" onclick="openNav()">☰</button>  
   <iframe src="syslog.php" name="iframe_a" style="height:96vh; width:100%;" title="Digipi Plus" scrolling="no"></iframe>
-</div>
-
-<script>
-function openNav() {
-  document.getElementById("mySidebar").style.width = "480px";
-  document.getElementById("main").style.marginLeft = "480px";
-}
-
-function closeNav() {
-  document.getElementById("mySidebar").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-}
-</script>
-
-<div id="mySidenav" class="sidenav">
-    <a href="syslog.php" target='iframe_a' id="syslog">SysLog</a>
-    <a href="log.php" target='iframe_a' id="pktlog">PktLog</a>
-    <a href="shell.php" target='iframe_a' id="shell">Shell</a>
-    <script>
-        document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':6080/vnc.html?port=6080&password=test11&autoconnect=true" target="iframe_a" id="vnc">VNC</a>' )
-    </script>
-    <script>
-        document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':8080" target="iframe_a" id="email">Email</a>' )
-    </script>
-    <script>
-        document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':8055" target="iframe_a" id="webchat">WebChat</a>' )
-    </script>
-    <a href="help/index.php" target='iframe_a' id="help">Help</a>
 </div>
 
 </form>
