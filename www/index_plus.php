@@ -21,6 +21,41 @@
 <div id="mySidebar" class="sidebar">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
   <iframe src="plus_menu.php" name="iframe_b" width=100% height=50% scrolling="vertical"></iframe>
+  
+<div class="settings">
+<a href="/shell.php" title="Command Prompt" target='iframe_a'>
+  <img src="/images/icons/shell.png" width=32px height=32px>
+  <strong>Shell</strong>
+</a>
+</div>
+
+<div class="settings">
+<a href="/syslog.php" title="System Log File" target='iframe_a'>
+  <img src="/images/icons/slog.png" width=32px height=32px>
+  <strong>SysLog</strong>
+</a>
+</div>
+
+<div class="settings">
+<a href="/log.php" title="Direwolf Packet Log File" target='iframe_a'>
+  <img src="/images/icons/plog.png" width=32px height=32px>
+  <strong>PktLog</strong>
+</a>
+</div>
+
+<div class="settings">
+<a href="/direwatch.php" title="Direwatch Screen" target='iframe_a'>
+  <img src="/images/icons/screen.png" width=32px height=32px>
+  <strong>Screen</strong>
+</a>
+</div>
+
+<div class="settings">
+<a href="/help.php" title="Digipi Plus Help" target='iframe_a'>
+  <img src="/images/icons/help.png" width=32px height=32px>
+  <strong>Help</strong>
+</a>
+</div>
   <a href="syslog.php" target='iframe_a'>SysLog</a>
   <a href="log.php" target='iframe_a'>PktLog</a>
   <a href="shell.php" target='iframe_a'>Shell</a>
