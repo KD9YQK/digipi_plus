@@ -21,7 +21,9 @@
 <div id="mySidebar" class="sidebar">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
   <iframe src="plus_menu.php" name="iframe_b" width=100% height=50% scrolling="vertical"></iframe>
-  
+/* -------------------
+  Menu Start
+  ------------------- */
 <div class="settings">
 <a href="/shell.php" title="Command Prompt" target='iframe_a'>
   <img src="/images/icons/shell.png" width=32px height=32px>
@@ -58,14 +60,34 @@
   <strong>VNC</strong>
 </a>
 </div>
-  <script>
-      document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':8080" target="iframe_a">Email</a>' )
-  </script>
-  <script>
-      document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':8055" target="iframe_a">WebChat</a>' )
-  </script>
-  <a href="help/index.php" target='iframe_a'>Help</a>
+
+<div class="settings">
+<script>
+  document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':8080" target="iframe_a">' )
+</script>
+  <img src="/images/icons/email.png" width=32px height=32px>
+  <strong>Email</strong>
+</a>
 </div>
+
+<div class="settings">
+<script>
+  document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':8055" target="iframe_a">' )
+</script>
+  <img src="/images/icons/webchat.png" width=32px height=32px>
+  <strong>Webchat</strong>
+</a>
+</div>
+
+<div class="settings">
+<a href="/help.php" title="Digipi Plus Help" target='iframe_a'>
+  <img src="/images/icons/help.png" width=32px height=32px>
+  <strong>Help</strong>
+</a>
+</div>
+/* -------------------
+  Menu end
+  ------------------- */
 <div id="main">
   <button class="openbtn" onclick="openNav()">☰</button>  
   <iframe src="home_plus.php" name="iframe_a" style="height:96vh; width:100%;" title="Digipi Plus" scrolling="no"></iframe>
