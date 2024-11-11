@@ -19,6 +19,7 @@
 <body>
 
 <div id="mySidebar" class="sidebar">
+  <h1>DigiPi Plus</h1>
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
   <iframe src="plus_menu.php" name="iframe_b" width=100% height=50% scrolling="vertical"></iframe>
   
