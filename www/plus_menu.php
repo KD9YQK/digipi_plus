@@ -5,8 +5,8 @@
 
 <title>DigiPi </title>
 
-<body  style="position: relative; height: 100%; width: 100%; overflow: hidden; align-items: center;">
-
+<body  style="position: relative; height: 100%; width: 100%; overflow: hidden;">
+<center>
 
 <table width=400>
 <tr>
@@ -79,6 +79,6 @@ document.getElementById("defaultOpen").click();
 <small>1.9-1 KM6LYW ©2024</small>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/dot"><font size="+3" color="#eeeeee">.</font></a>
 </form>
-</font>
+</center>
 </body>
 </html>
