@@ -404,9 +404,8 @@ Wide styles
 .sidebar .title {
   position: absolute;
   top: 0;
-  right: 25px;
+  left: 10px;
   font-size: 36px;
-  margin-left: 5px;
 }
 
 .openbtn {
