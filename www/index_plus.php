@@ -40,6 +40,15 @@
   <button class="openbtn" onclick="openNav()">☰</button>  
   <iframe src="syslog.php" name="iframe_a" style="height:96vh; width:100%;" title="Digipi Plus" scrolling="no"></iframe>
 </div>
-
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "480px";
+  document.getElementById("main").style.marginLeft = "480px";
+}
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
 </body>
 </html>
