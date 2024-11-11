@@ -403,7 +403,7 @@ Wide styles
 
 .sidebar .title {
   position: absolute;
-  top: 0;
+  top: 5;
   left: 10px;
   font-size: 36px;
 }
