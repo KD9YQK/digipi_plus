@@ -1,7 +1,7 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <LINK href="/styles/plus.css" rel="stylesheet" type="text/css">
+  <LINK href="../styles/simple.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <h1 id="resizing-digipi-sd-card">Resizing Digipi SD Card</h1>
