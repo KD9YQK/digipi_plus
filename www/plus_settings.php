@@ -41,7 +41,7 @@
 </div>
 
 <div class="settings" style="margin:0 0 1.5em;">
-<a href="/help.php" title="Digipi Plus Help" target="help">
+<a href="/help/help.php" title="Digipi Plus Help" target="help">
   <img src="/images/icons/help.png" width=32px height=32px>
   <strong>Help</strong>
 </a>
