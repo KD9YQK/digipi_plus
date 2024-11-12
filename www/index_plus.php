@@ -88,7 +88,7 @@
   
 <div id="main">
   <button class="openbtn" onclick="openNav()">☰</button>  
-  <iframe src="home_plus.php" name="iframe_a" style="height:96vh; width:100%;" title="Digipi Plus" scrolling="no"></iframe>
+  <iframe src="home_plus.php" name="iframe_a" style="height:96vh; width:100%;" title="Digipi Plus" scrolling="vertical"></iframe>
 </div>
 <script>
 function openNav() {
