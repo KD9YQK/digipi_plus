@@ -79,7 +79,7 @@
   </div>
   
   <div class="settings">
-  <a href="/help/help.php" title="Digipi Plus Help" target='iframe_a'>
+  <a href="/help/index.php" title="Digipi Plus Help" target='iframe_a'>
     <img src="/images/icons/help.png" width=32px height=32px>
     <strong>Help</strong>
   </a>
