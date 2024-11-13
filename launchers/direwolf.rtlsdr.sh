@@ -25,16 +25,13 @@ source <(head -n 25 localize.env)
 
 # remove "-o" flag to see list of stations
 if [ $NEWLAT = 39.9999 ]; then  # location not yet set
-   sudo /home/pi/direwatch.py -o --save "/run/direwatch.png" --log "/run/direwolf.log" --title_text "DigiPi TNC" --display $NEWDISPLAYTYPE  &
+   sudo /home/pi/direwatch.py -o --save "/run/direwatch.png" --log "/run/direwolf.log" --title_text "RTL-SDR Igate" --display $NEWDISPLAYTYPE  &
 else
-   sudo /home/pi/direwatch.py -o --save "/run/direwatch.png" --log "/run/direwolf.log" --title_text "DigiPi TNC" --lat $NEWLAT --lon $NEWLON --display $NEWDISPLAYTYPE &
+   sudo /home/pi/direwatch.py -o --save "/run/direwatch.png" --log "/run/direwolf.log" --title_text "RTL-SDR Igate" --lat $NEWLAT --lon $NEWLON --display $NEWDISPLAYTYPE &
 fi
 
 # wait for direwolf to open port 8001
 sleep 1
-
-# bind bluetooth serial port to direwolf's KISS interface on port 8001
-sudo rfcomm --raw watch /dev/rfcomm0 1 socat -d -d tcp4:127.0.0.1:8001 /dev/rfcomm0  > /tmp/rfcom.out 2>/tmp/rfcom.out
 
 sleep infinity
 
