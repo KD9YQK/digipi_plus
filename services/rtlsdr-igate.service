@@ -1,9 +1,8 @@
 [Unit]
 Description=tnc
-After=graphical.target
 
 [Service]
-ExecStartPre=+systemctl stop fldigi sstv wsjtx ardop tnc300b digipeater node winlinkrms js8call node
+ExecStartPre=+systemctl stop fldigi sstv wsjtx ardop tnc300b digipeater node winlinkrms js8call node tnc
 Type=simple
 ExecStart=bash /home/pi/digipi_plus/launchers/direwolf.rtlsdr.sh
 Restart=no
