@@ -4,7 +4,9 @@ echo ""
 echo "DigiPi Plus Installer"
 echo "Created by Bob - KD9YQK"
 echo ""
-sleep 1
+sleep 2
+sudo apt update
+echo ""
 echo -n "Checking for DigiPi Plus Base..."
 sleep 1
 if [ ! -f saves/plus.base ]; then
@@ -21,6 +23,7 @@ if [ ! -f saves/plus.base ]; then
     echo "Copying Files"
     cp home/emwmrc_plus ~/.emwmrc -v
     touch saves/plus.base
+    sudo apt install dialog
     echo "DigiPi Plus Base Installed"
 else
     echo "OK"
