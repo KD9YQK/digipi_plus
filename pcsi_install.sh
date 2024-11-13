@@ -8,8 +8,9 @@ sudo cp services/pcsi.service /etc/systemd/system/ -v
 ln -sf /home/pi/digipi_plus/launchers/pcsi.sh /home/pi -v
 sudo systemctl daemon-reload
 
-sudo apt install python3-opencv python3-tk python3-pil.imagetk -y
-sudo pip install numpy imageio pylbfgs pyserial pillow
-sudo pip install bitstring==4.1.4
+sudo apt install python3-opencv python3-tk python3-pil.imagetk python3-numpy python3-imageio python3-pil libopenblas0 -y
 cd ~
 git clone https://github.com/maqifrnswa/PCSI.git
+python3 -m venv --system-site-packages PCSI
+PCSI/bin/pip install pylbfgs pyserial
+PCSI/bin/pip install bitstring==4.1.4
