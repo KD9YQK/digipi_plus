@@ -1,9 +1,10 @@
 [Unit]
 Description=pcsi
 After=graphical.target
+Requires=tnc.service
 
 [Service]
-ExecStartPre=+systemctl stop fldigi sstv wsjtx ardop tnc300b digipeater node winlinkrms js8call tnc
+ExecStartPre=+systemctl stop fldigi sstv wsjtx ardop tnc300b digipeater node winlinkrms js8call
 Type=simple
 ExecStart=bash /home/pi/digipi_plus/launchers/pcsi.sh
 Restart=no
