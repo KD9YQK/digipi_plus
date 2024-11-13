@@ -20,7 +20,7 @@ source ~/localize.env
 # stop stuff
 vncserver -kill :1
 sudo kill `ps aux | grep launch | grep -v grep | awk '{print $2}'`  # novnc socket
-sudo killall pcsiGUI 
+sudo killall xastir 
 
 # start stuff
 nice -n 5 vncserver -depth 16                               # runs in background
