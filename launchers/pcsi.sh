@@ -15,7 +15,7 @@ function ctrl_c() {
 
 sudo sh -c  "echo performance  > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor"
 
-source ~/localize.sh
+source ~/localize.env
 
 # stop stuff
 vncserver -kill :1
