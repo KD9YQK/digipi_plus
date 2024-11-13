@@ -12,5 +12,5 @@ sudo apt install python3-opencv python3-tk python3-pil.imagetk python3-numpy pyt
 cd ~
 git clone https://github.com/maqifrnswa/PCSI.git
 python3 -m venv --system-site-packages PCSI
-PCSI/bin/pip install pylbfgs pyserial
-PCSI/bin/pip install bitstring==4.1.4
+TMPDIR=/home/pi/tmp PCSI/bin/pip install pylbfgs pyserial
+TMPDIR=/home/pi/tmp PCSI/bin/pip install bitstring==4.1.4
