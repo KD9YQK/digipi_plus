@@ -15,9 +15,6 @@ function openMenu(evt, tabName) {
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
 }
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
 </script>
 
 <title>DigiPi </title>
@@ -56,6 +53,10 @@ document.getElementById("defaultOpen").click();
           }
       </script>
   </div>
+<script>
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
 
 <small>1.9-2 KM6LYW ©2024</small>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/dot"><font size="+3" color="#111">.</font></a>
