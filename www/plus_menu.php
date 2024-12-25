@@ -3,7 +3,6 @@
 <LINK href="/styles/plus.css" rel="stylesheet" type="text/css">
 <script>
 function openMenu(evt, tabName) {
-    echo "test";
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
