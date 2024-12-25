@@ -199,6 +199,9 @@ for choice in "${choices[@]}"; do
                 cp -r js8spotter-110b_src/* js8spotter/
                 rm -r js8spotter-110b_src
                 rm js8spotter-110b_src.zip
+                sudo apt install python3-tk python3-pil python3-pil.imagetk
+                python3 -m venv --system-site-packages js8spotter
+                js8spotter/bin/pip install simpleaudio
                 touch saves/plus.js8spotter
                 echo "JS8Spotter Installed"
             else
