@@ -1,32 +1,4 @@
 <?php include 'header.php' ?>
-<!---
-<html>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<LINK href="styles/simple.css" rel="stylesheet" type="text/css">
-
-
-<title>DigiPi </title>
-
-<body  style="position: relative; height: 100%; width: 100%; overflow: hidden;">
-
-
-<table width=400 >
-<tr>
-  <td width=10% bgcolor="lightgrey">
-    <font size=+3><strong>DigiPi</strong> </font>
-  </td>
-  <td width=10% bgcolor="lightgrey" >
-    <img align=right height=40px src="radio.png">
-  </td>
-</tr>
-</table>
-<br/>
-
--->
-
-<!---
-<h1><strong>DigiPi</strong></h1>
---->
 
 <form action="index.php" method="post">
 
@@ -60,6 +32,18 @@ if (isset($_POST["digipeater"])) {
   }
 }
 
+if (isset($_POST["tracker"])) {
+  $submit = $_POST["tracker"];
+    if ( $submit == 'on' ) {
+      $output = shell_exec('sudo systemctl start tracker');
+      echo $output;
+  }
+  if ( $submit == 'off' ) {
+      $output = shell_exec('sudo systemctl stop tracker');
+      echo $output;
+  }
+}
+
 if (isset($_POST["webchat"])) {
   $submit = $_POST["webchat"];
   if ( $submit == 'on' ) {
@@ -83,7 +67,6 @@ if (isset($_POST["tnc300b"])) {
       echo $output;
   }
 }
-
 if (isset($_POST["winlinkrms"])) {
   $submit = $_POST["winlinkrms"];
   if ( $submit == 'on' ) {
@@ -119,7 +102,6 @@ if (isset($_POST["ardop"])) {
       echo $output;
   }
 }
-
 if (isset($_POST["rigctld"])) {
   $submit = $_POST["rigctld"];
   if ( $submit == 'on' ) {
@@ -156,7 +138,6 @@ if (isset($_POST["wsjtx"])) {
       echo $output;
   }
 }
-
 if (isset($_POST["fldigi"])) {
   $submit = $_POST["fldigi"];
   if ( $submit == 'on' ) {
@@ -182,7 +163,6 @@ if (isset($_POST["js8call"])) {
       echo $output;
   }
 }
-
 if (isset($_POST["sstv"])) {
   $submit = $_POST["sstv"];
   if ( $submit == 'on' ) {
@@ -199,22 +179,23 @@ if (isset($_POST["sstv"])) {
 
 ?>
 
+
 <table width="400px">
+<!-- does nothing
  <col width="10px" />
  <col width="320px" />
- <col width="70" />
-
+ <col width="70px" />
+-->
 <?php
 
 # give systemd a chance to settle down
-sleep(2);
+sleep(1);
 
 
 #-- tnc -------------------------------------------
 
 echo "<tr>";
 $output = shell_exec('systemctl is-active tnc');
-#$output = str_replace("failed", "inactive", $output);
 $output = chop($output);
   if ($output == "active")
   {
@@ -230,13 +211,12 @@ $output = chop($output);
   }
 echo "&nbsp;";
 echo "</td><td>";
-echo "<font size=+1>TNC & APRS igate</font></td>";
-echo '<td align="right" nowrap>';
+echo "<font size=+1>APRS TNC/igate</font></td>";
+echo '<td align="right" } nowrap>';
 echo '<input type="submit" name="tnc" value="on"> ';
 echo '<input type="submit" name="tnc" value="off">';
 echo "</font>";
 echo "</td></tr>";
-
 #-- tnc300b ----------------------------------------
 
 echo "<tr>";
@@ -256,14 +236,13 @@ $output = chop($output);
      echo '<td bgcolor="lightgrey">';
   }
 echo "&nbsp;";
-echo "</td><td>";
-echo "<font size=+1>TNC & APRS igate (HF)</font></td>";
+echo "</td><td nowrap>";
+echo "<font size=+1>APRS HF TNC/igate</font></td>";
 echo '<td align="right" nowrap>';
 echo '<input type="submit" name="tnc300b" value="on"> ';
 echo '<input type="submit" name="tnc300b" value="off">';
 echo "</font>";
 echo "</td></tr>";
-
 #-- digipeater -------------------------------------
 
 echo "<tr>";
@@ -290,7 +269,31 @@ echo '<input type="submit" name="digipeater" value="on"> ';
 echo '<input type="submit" name="digipeater" value="off">';
 echo "</font>";
 echo "</td></tr>";
+#-- tracker -------------------------------------------
 
+echo "<tr>";
+$output = shell_exec('systemctl is-active tracker');
+$output = chop($output);
+  if ($output == "active")
+  {
+     echo '<td bgcolor="lightgreen">';
+  }
+  elseif ($output == "failed")
+  {
+     echo '<td bgcolor="red">';
+  }
+  else
+  {
+     echo '<td bgcolor="lightgrey">';
+  }
+echo "&nbsp;";
+echo "</td><td>";
+echo "<font size=+1>APRS GPS Tracker</font></td>";
+echo '<td align="right" } nowrap>';
+echo '<input type="submit" name="tracker" value="on"> ';
+echo '<input type="submit" name="tracker" value="off">';
+echo "</font>";
+echo "</td></tr>";
 #-- webchat ----------------------------------------
 
 echo "<tr>";
@@ -317,7 +320,6 @@ echo '<input type="submit" name="webchat" value="on"> ';
 echo '<input type="submit" name="webchat" value="off">';
 echo "</font>";
 echo "</td></tr>";
-
 #-- Linux NODE AX.25 ------------------------------------
 
 echo "<tr>";
@@ -338,13 +340,12 @@ $output = chop($output);
   }
 echo "&nbsp;";
 echo "</td><td>";
-echo "<font size=+1>Linux Node AX.25</font></td>";
+echo "<font size=+1>AX.25 Networking</font></td>";
 echo '<td align="right" nowrap>';
 echo '<input type="submit" name="node" value="on"> ';
 echo '<input type="submit" name="node" value="off">';
 echo "</font>";
 echo "</td></tr>";
-
 
 #-- Winlink Server -------------------------------------
 
@@ -373,7 +374,6 @@ echo '<input type="submit" name="winlinkrms" value="off">';
 echo "</font>";
 echo "</td></tr>";
 
-
 #-- Pat Email Client -----------------------------------
 
 echo "<tr>";
@@ -400,7 +400,6 @@ echo '<input type="submit" name="pat" value="on"> ';
 echo '<input type="submit" name="pat" value="off">';
 echo "</font>";
 echo "</td></tr>";
-
 
 #-- ARDOP ---------------------------------------------
 
@@ -429,7 +428,6 @@ echo '<input type="submit" name="ardop" value="off">';
 echo "</font>";
 echo "</td></tr>";
 
-
 #-- RIGCTLD ---------------------------------------------
 
 echo "<tr>";
@@ -457,7 +455,6 @@ echo '<input type="submit" name="rigctld" value="off">';
 echo "</font>";
 echo "</td></tr>";
 
-
 #-- WSJTX FT8  -------------------------------------------
 
 echo "<tr>";
@@ -477,14 +474,13 @@ $output = chop($output);
      echo '<td bgcolor="lightgrey">';
   }
 echo "&nbsp;";
-echo "</td><td>";
+echo "</td><td nowrap>";
 echo "<font size=+1>WSJTX FT8</font></td>";
 echo '<td align="right" nowrap>';
 echo '<input type="submit" name="wsjtx" value="on"> ';
 echo '<input type="submit" name="wsjtx" value="off">';
 echo "</font>";
 echo "</td></tr>";
-
 
 #-- SSTV --------------------------------------------------
 
@@ -513,7 +509,6 @@ echo '<input type="submit" name="sstv" value="off">';
 echo "</font>";
 echo "</td></tr>";
 
-
 #-- FLDIGI --------------------------------------------------
 
 echo "<tr>";
@@ -540,7 +535,6 @@ echo '<input type="submit" name="fldigi" value="on"> ';
 echo '<input type="submit" name="fldigi" value="off">';
 echo "</font>";
 echo "</td></tr>";
-
 
 #-- JS8CALL -------------------------------------------------
 
@@ -576,13 +570,13 @@ $output = shell_exec('sudo systemctl reset-failed sstv 2> /dev/null');
 $output = shell_exec('sudo systemctl reset-failed wsjtx 2> /dev/null'); 
 $output = shell_exec('sudo systemctl reset-failed ardop 2> /dev/null'); 
 $output = shell_exec('sudo systemctl reset-failed tnc300b 2> /dev/null'); 
+$output = shell_exec('sudo systemctl reset-failed tracker 2> /dev/null'); 
 $output = shell_exec('sudo systemctl reset-failed digipeater 2> /dev/null');
 $output = shell_exec('sudo systemctl reset-failed tnc 2> /dev/null');
 $output = shell_exec('sudo systemctl reset-failed node 2> /dev/null'); 
 $output = shell_exec('sudo systemctl reset-failed winlinkrms 2> /dev/null'); 
 $output = shell_exec('sudo systemctl reset-failed pat 2> /dev/null'); 
 $output = shell_exec('sudo systemctl reset-failed js8call 2> /dev/null'); 
-
 
 ?>
 
@@ -591,12 +585,11 @@ $output = shell_exec('sudo systemctl reset-failed js8call 2> /dev/null');
 <br/>
 <br/>
 
-<!--<table cellpadding="4" bgcolor="#dddddd" border="1" style="border-width:1px;border-color:black; border-collapse:collapse;"  > -->
-<table>
+<table width=400>
 <tr>
   <td width="100px">
     <script language="JavaScript">
-    document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':8080' + '" target="pat" title="Pat Email Client"><strong>PatEmail</strong></a> ' );
+    document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':8080' + '" target="pat" title="Pat Email Client"><strong>PatEmail</strong><>
     </script>
   </td>
   <td width="100px">
@@ -633,19 +626,20 @@ $output = shell_exec('sudo systemctl reset-failed js8call 2> /dev/null');
     <a href=/syslog.php title="System log file" target="syslog"><strong>SysLog</strong></a>
   </td>
   <td >
-    <a href=/index.php><strong>Refresh</strong></a>
+    <a href=/direwatch.php target="screen"><strong>Screen</strong></a>
   </td>
   <td colspan="1">
      <a href="/webchat.php" target="webchat" title="APRS Messaging"><strong>Webchat</strong></a>
   </td>
 </tr>
 
+<?php
+  if (!file_exists("/var/cache/digipi/localized.txt")) {
+    echo '<tr><td colspan=3><a href="/setup.php" title="REQUIRED!  Enter your callsign and other local information" " target="setup"><font color="green"><strong>Initialize>
+  }
+?>  
 
 </table>
-
-<?php include 'plus_submit.php' ?>
-<?php include 'plus_form.php' ?>
-<?php include 'plus_links.php' ?>
 
 
 
@@ -657,7 +651,7 @@ $output = shell_exec('sudo systemctl reset-failed js8call 2> /dev/null');
     <input title="Write current application configurations (ft8, js8call, etc) to SD card" type="submit" name="save" value="Save Configs">  
     &nbsp; 
     <br/><br/>
-    <small>1.8-2 KM6LYW ©2024</small>
+    <small>1.9-2 KM6LYW ©2025</small>
 
 <br/><br/>
 
@@ -674,18 +668,19 @@ if (isset($_POST["reboot"])) {
 #          $IP = "0.0.0.0";
 #      }
       $output = shell_exec("sudo killall direwatch.py");
-      $output = shell_exec("sudo /home/pi/digibanner.py -b DigiPi -s Rebooting..."); 
+      putenv(shell_exec("grep ^NEWDISPLAYTYPE= /home/pi/localize.env | tail -1"));
+      $output = shell_exec("sudo /home/pi/digibanner.py -b DigiPi -s Rebooting... -d \$NEWDISPLAYTYPE");
       $output = shell_exec("sudo /sbin/shutdown -r 0");
       echo $output;
   }
 }
-
 if (isset($_POST["shutdown"])) {
   $submit = $_POST["shutdown"];
   if ( $submit == 'Shutdown' ) {
       echo "<br/><br/><strong><font color=red>Shutting down DigiPi...</font></strong><br/> ";
       $output = shell_exec("sudo killall direwatch.py");
-      $output = shell_exec("sudo /home/pi/digibanner.py -b Digipi -s Shutdown..."); 
+      putenv(shell_exec("grep ^NEWDISPLAYTYPE= /home/pi/localize.env | tail -1"));
+      $output = shell_exec("sudo /home/pi/digibanner.py -b DigiPi -s Shutdown... -d \$NEWDISPLAYTYPE");
       $output = shell_exec("sudo /sbin/shutdown -h 0");
       echo $output;
   }
