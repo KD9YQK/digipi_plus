@@ -1,5 +1,6 @@
 <?php   
 
+
 $submit = "none";
 
 if (isset($_POST["tnc"])) {
@@ -14,6 +15,7 @@ if (isset($_POST["tnc"])) {
   }
 }
 
+
 if (isset($_POST["digipeater"])) {
   $submit = $_POST["digipeater"];
   if ( $submit == 'on' ) {
@@ -22,6 +24,18 @@ if (isset($_POST["digipeater"])) {
   }
   if ( $submit == 'off' ) {
       $output = shell_exec('sudo systemctl stop digipeater');
+      echo $output;
+  }
+}
+
+if (isset($_POST["tracker"])) {
+  $submit = $_POST["tracker"];
+    if ( $submit == 'on' ) {
+      $output = shell_exec('sudo systemctl start tracker');
+      echo $output;
+  }
+  if ( $submit == 'off' ) {
+      $output = shell_exec('sudo systemctl stop tracker');
       echo $output;
   }
 }
@@ -49,7 +63,6 @@ if (isset($_POST["tnc300b"])) {
       echo $output;
   }
 }
-
 if (isset($_POST["winlinkrms"])) {
   $submit = $_POST["winlinkrms"];
   if ( $submit == 'on' ) {
@@ -85,7 +98,6 @@ if (isset($_POST["ardop"])) {
       echo $output;
   }
 }
-
 if (isset($_POST["rigctld"])) {
   $submit = $_POST["rigctld"];
   if ( $submit == 'on' ) {
@@ -122,7 +134,6 @@ if (isset($_POST["wsjtx"])) {
       echo $output;
   }
 }
-
 if (isset($_POST["fldigi"])) {
   $submit = $_POST["fldigi"];
   if ( $submit == 'on' ) {
@@ -148,7 +159,6 @@ if (isset($_POST["js8call"])) {
       echo $output;
   }
 }
-
 if (isset($_POST["sstv"])) {
   $submit = $_POST["sstv"];
   if ( $submit == 'on' ) {
