@@ -6,8 +6,8 @@ body
 {
 	margin: 0;
 	padding: 5;
-	color: #333;
-	background-color: #fdfdfd;
+	color: white;
+	background-color: #111;
 /*      font: 1em/1.2 "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; */
         font: 1em/1.2 "Arial", Arial, Helvetica, Geneva, sans-serif; 
 
@@ -65,7 +65,7 @@ table
 	background-color: transparent;
 	border-spacing: 0;
 	border-collapse: collapse;
-	border-top: 1px solid #ddd;
+	/* border-top: 1px solid #ddd; */
 }
 
 th, td
@@ -73,14 +73,14 @@ th, td
 	padding: .2em 1em;
 	vertical-align: top;
 	text-align: left;
-	border-bottom: 1px solid #ddd;
+	/* border-bottom: 1px solid #ddd; */
         font: 1em/1.2 "Arial", Arial, Helvetica, Geneva, sans-serif; 
 }
 
 a { text-decoration:none; }
 a:link { color: royalblue; }
 a:visited { color: royalblue; }
-a:focus { color: black; }
+a:focus { color: white; }
 a:hover { color: green; }
 a:active { color: red; }
 
@@ -139,6 +139,7 @@ Settings
 	display: flex;
 	/*justify-content: center; /* Align horizontal */
 	align-items: center; /* Align vertical */
+	margin: 0 0 0;
 }
 .settings img
 {
@@ -398,6 +399,13 @@ Wide styles
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+}
+
+.sidebar .title {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  font-size: 36px;
 }
 
 .openbtn {

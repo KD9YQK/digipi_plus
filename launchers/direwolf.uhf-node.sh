@@ -19,25 +19,38 @@ sudo killall kissattach
 # zero out old direwolf log file in case /run/ is full
 truncate --size 0 /run/direwolf.log
 
+# prioritize USB audio device
+grep -i usb /proc/asound/cards > /dev/null 2>&1
+if [ $? -eq 0 ]; then
+   export ALSA_CARD=`grep -i usb /proc/asound/cards | head -1 | cut -c 2-2`
+else
+   export ALSA_CARD=0
+fi
+echo "ALSA_CARD:  $ALSA_CARD"
+
 # create a custom direwolf conf file, based on audio audio and ptt method
 cp /home/pi/direwolf.node.conf /tmp/direwolf.node.conf
 USBPRESENT=`grep "USB" /proc/asound/cards | wc -l`
-source <(head -n 25 localize.sh)
+source <(head -n 25 localize.env)
 if [ $NEWRIGNUMBER = DTR ]; then
   sed -i "s/\#PTT \/dev\/DEVICEFILE DTR/PTT \/dev\/$NEWDEVICEFILE DTR/gi" /tmp/direwolf.node.conf
 elif [ $NEWRIGNUMBER = RTS ]; then
   sed -i "s/\#PTT \/dev\/DEVICEFILE RTS/PTT \/dev\/$NEWDEVICEFILE RTS/gi" /tmp/direwolf.node.conf
 elif [ $USBPRESENT -eq 0 -o $NEWRIGNUMBER = GPIO ]; then
-  sed -i "s/\#PTT GPIO/PTT GPIO/gi" /tmp/direwolf.node.conf
+  GPIOCHIP=`gpiofind GPIO12 | cut -f 1 -d\ `
+  sed -i "s/\#PTT GPIOD gpiochip0/PTT GPIOD $GPIOCHIP/" /tmp/direwolf.node.conf
+  sed -i "s/\DCD GPIOD gpiochip0/DCD GPIOD $GPIOCHIP/" /tmp/direwolf.node.conf
 else
   sed -i "s/\#PTT RIG RIGNUMBER DEVICEFILE/PTT RIG $NEWRIGNUMBER \/dev\/$NEWDEVICEFILE/gi" /tmp/direwolf.node.conf
 fi
 
 sudo mv /tmp/direwolf.node.conf /run/direwolf.node.conf
 
-direwolf -B 9600 -r 48000 -d t -p -q d -t 0 -c /run/direwolf.node.conf | tee /home/pi/direwolf.log &
+direwolf -B 9600 -r 48000 -d t -d o -p -q d -t 0 -c /run/direwolf.node.conf |& grep --line-buffered -v PTT_METHOD > /home/pi/direwolf.log &
 
-sudo /home/pi/direwatch.py --save "/run/direwatch.png" --log "/run/direwolf.log" --title_text "ax25 Node"  &
+#direwolf -B 9600 -r 48000 -d t -p -q d -t 0 -c /run/direwolf.node.conf | tee /home/pi/direwolf.log &
+
+sudo /home/pi/direwatch.py --save "/run/direwatch.png" --log "/run/direwolf.log" --title_text "ax25 Node" --display $NEWDISPLAYTYPE  &
 
 sleep 5
 sudo modprobe netrom
@@ -70,7 +83,6 @@ do
 #echo "^]"
 #echo "quit"
 #} | telnet 74.208.216.182 14580
-
 # winlink advertisement 
 if [ -n "$WINLINKALSO" ]; then
   /usr/local/bin/rmsgw_aci

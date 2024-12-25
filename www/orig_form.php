@@ -1,19 +1,19 @@
 <table width="400px">
+<!-- does nothing
  <col width="10px" />
  <col width="320px" />
- <col width="70" />
-
+ <col width="70px" />
+-->
 <?php
 
 # give systemd a chance to settle down
-sleep(2);
+sleep(1);
 
 
 #-- tnc -------------------------------------------
 
 echo "<tr>";
 $output = shell_exec('systemctl is-active tnc');
-#$output = str_replace("failed", "inactive", $output);
 $output = chop($output);
   if ($output == "active")
   {
@@ -29,13 +29,12 @@ $output = chop($output);
   }
 echo "&nbsp;";
 echo "</td><td>";
-echo "<font size=+1>TNC & APRS igate</font></td>";
-echo '<td align="right" nowrap>';
+echo "<font size=+1>APRS TNC/igate</font></td>";
+echo '<td align="right" } nowrap>';
 echo '<input type="submit" name="tnc" value="on"> ';
 echo '<input type="submit" name="tnc" value="off">';
 echo "</font>";
 echo "</td></tr>";
-
 #-- tnc300b ----------------------------------------
 
 echo "<tr>";
@@ -55,14 +54,13 @@ $output = chop($output);
      echo '<td bgcolor="lightgrey">';
   }
 echo "&nbsp;";
-echo "</td><td>";
-echo "<font size=+1>TNC & APRS igate (HF)</font></td>";
+echo "</td><td nowrap>";
+echo "<font size=+1>APRS HF TNC/igate</font></td>";
 echo '<td align="right" nowrap>';
 echo '<input type="submit" name="tnc300b" value="on"> ';
 echo '<input type="submit" name="tnc300b" value="off">';
 echo "</font>";
 echo "</td></tr>";
-
 #-- digipeater -------------------------------------
 
 echo "<tr>";
@@ -89,7 +87,31 @@ echo '<input type="submit" name="digipeater" value="on"> ';
 echo '<input type="submit" name="digipeater" value="off">';
 echo "</font>";
 echo "</td></tr>";
+#-- tracker -------------------------------------------
 
+echo "<tr>";
+$output = shell_exec('systemctl is-active tracker');
+$output = chop($output);
+  if ($output == "active")
+  {
+     echo '<td bgcolor="lightgreen">';
+  }
+  elseif ($output == "failed")
+  {
+     echo '<td bgcolor="red">';
+  }
+  else
+  {
+     echo '<td bgcolor="lightgrey">';
+  }
+echo "&nbsp;";
+echo "</td><td>";
+echo "<font size=+1>APRS GPS Tracker</font></td>";
+echo '<td align="right" } nowrap>';
+echo '<input type="submit" name="tracker" value="on"> ';
+echo '<input type="submit" name="tracker" value="off">';
+echo "</font>";
+echo "</td></tr>";
 #-- webchat ----------------------------------------
 
 echo "<tr>";
@@ -116,7 +138,6 @@ echo '<input type="submit" name="webchat" value="on"> ';
 echo '<input type="submit" name="webchat" value="off">';
 echo "</font>";
 echo "</td></tr>";
-
 #-- Linux NODE AX.25 ------------------------------------
 
 echo "<tr>";
@@ -137,13 +158,12 @@ $output = chop($output);
   }
 echo "&nbsp;";
 echo "</td><td>";
-echo "<font size=+1>Linux Node AX.25</font></td>";
+echo "<font size=+1>AX.25 Networking</font></td>";
 echo '<td align="right" nowrap>';
 echo '<input type="submit" name="node" value="on"> ';
 echo '<input type="submit" name="node" value="off">';
 echo "</font>";
 echo "</td></tr>";
-
 
 #-- Winlink Server -------------------------------------
 
@@ -172,7 +192,6 @@ echo '<input type="submit" name="winlinkrms" value="off">';
 echo "</font>";
 echo "</td></tr>";
 
-
 #-- Pat Email Client -----------------------------------
 
 echo "<tr>";
@@ -199,7 +218,6 @@ echo '<input type="submit" name="pat" value="on"> ';
 echo '<input type="submit" name="pat" value="off">';
 echo "</font>";
 echo "</td></tr>";
-
 
 #-- ARDOP ---------------------------------------------
 
@@ -228,7 +246,6 @@ echo '<input type="submit" name="ardop" value="off">';
 echo "</font>";
 echo "</td></tr>";
 
-
 #-- RIGCTLD ---------------------------------------------
 
 echo "<tr>";
@@ -256,7 +273,6 @@ echo '<input type="submit" name="rigctld" value="off">';
 echo "</font>";
 echo "</td></tr>";
 
-
 #-- WSJTX FT8  -------------------------------------------
 
 echo "<tr>";
@@ -276,14 +292,13 @@ $output = chop($output);
      echo '<td bgcolor="lightgrey">';
   }
 echo "&nbsp;";
-echo "</td><td>";
+echo "</td><td nowrap>";
 echo "<font size=+1>WSJTX FT8</font></td>";
 echo '<td align="right" nowrap>';
 echo '<input type="submit" name="wsjtx" value="on"> ';
 echo '<input type="submit" name="wsjtx" value="off">';
 echo "</font>";
 echo "</td></tr>";
-
 
 #-- SSTV --------------------------------------------------
 
@@ -312,7 +327,6 @@ echo '<input type="submit" name="sstv" value="off">';
 echo "</font>";
 echo "</td></tr>";
 
-
 #-- FLDIGI --------------------------------------------------
 
 echo "<tr>";
@@ -339,7 +353,6 @@ echo '<input type="submit" name="fldigi" value="on"> ';
 echo '<input type="submit" name="fldigi" value="off">';
 echo "</font>";
 echo "</td></tr>";
-
 
 #-- JS8CALL -------------------------------------------------
 
@@ -375,13 +388,13 @@ $output = shell_exec('sudo systemctl reset-failed sstv 2> /dev/null');
 $output = shell_exec('sudo systemctl reset-failed wsjtx 2> /dev/null'); 
 $output = shell_exec('sudo systemctl reset-failed ardop 2> /dev/null'); 
 $output = shell_exec('sudo systemctl reset-failed tnc300b 2> /dev/null'); 
+$output = shell_exec('sudo systemctl reset-failed tracker 2> /dev/null'); 
 $output = shell_exec('sudo systemctl reset-failed digipeater 2> /dev/null');
 $output = shell_exec('sudo systemctl reset-failed tnc 2> /dev/null');
 $output = shell_exec('sudo systemctl reset-failed node 2> /dev/null'); 
 $output = shell_exec('sudo systemctl reset-failed winlinkrms 2> /dev/null'); 
 $output = shell_exec('sudo systemctl reset-failed pat 2> /dev/null'); 
 $output = shell_exec('sudo systemctl reset-failed js8call 2> /dev/null'); 
-
 
 ?>
 

@@ -1,5 +1,4 @@
-<!--<table cellpadding="4" bgcolor="#dddddd" border="1" style="border-width:1px;border-color:black; border-collapse:collapse;"  > -->
-<table>
+<table width=400>
 <tr>
   <td width="100px">
     <script language="JavaScript">
@@ -25,10 +24,32 @@
   </td>
 </tr>
 <tr>
+  <td>
+    <a href="/wifi.php" title="Setup Wifi connection"><strong>Wifi</strong></a>
+  </td>
+  <td>
+    <a href=/shell.php target="shell" title="Command prompt"><strong>Shell</strong></a>
+  </td>
+  <td>
+    <a href=/log.php title="Direwolf Log" target="log"><strong>PktLog</strong></a>
+  </td>
+</tr>
+<tr>
+  <td >
+    <a href=/syslog.php title="System log file" target="syslog"><strong>SysLog</strong></a>
+  </td>
+  <td >
+    <a href=/direwatch.php target="screen"><strong>Screen</strong></a>
+  </td>
   <td colspan="1">
      <a href="/webchat.php" target="webchat" title="APRS Messaging"><strong>Webchat</strong></a>
   </td>
 </tr>
 
+<?php
+  if (!file_exists("/var/cache/digipi/localized.txt")) {
+    echo '<tr><td colspan=3><a href="/setup.php" title="REQUIRED!  Enter your callsign and other local information" " target="setup"><font color="green"><strong>Initialize</strong></font></a> </td></tr>';
+  }
+?>  
 
 </table>

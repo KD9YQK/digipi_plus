@@ -4,7 +4,9 @@ echo ""
 echo "DigiPi Plus Installer"
 echo "Created by Bob - KD9YQK"
 echo ""
-sleep 1
+sleep 2
+sudo apt update
+echo ""
 echo -n "Checking for DigiPi Plus Base..."
 sleep 1
 if [ ! -f saves/plus.base ]; then
@@ -20,16 +22,18 @@ if [ ! -f saves/plus.base ]; then
     cp /etc/systemd/system/*.service backup/ -v
     echo "Copying Files"
     cp home/emwmrc_plus ~/.emwmrc -v
-    echo "Creating Simlinks"
-    sudo ln -sf /home/pi/digipi_plus/www/*.php /var/www/html/ -v
-    sudo ln -sf /home/pi/digipi_plus/www/*.css /var/www/html/styles -v
-    sudo ln -sf /home/pi/digipi_plus/www/help/ /var/www/html -v
-    sudo ln -sf /home/pi/digipi_plus/www/images/ /var/www/html/images -v
     touch saves/plus.base
+    sudo apt install dialog
     echo "DigiPi Plus Base Installed"
 else
     echo "OK"
 fi
+
+echo "Creating Simlinks"
+sudo ln -sf /home/pi/digipi_plus/www/*.php /var/www/html/ -v
+sudo ln -sf /home/pi/digipi_plus/www/*.css /var/www/html/styles -v
+sudo ln -sf /home/pi/digipi_plus/www/help/ /var/www/html -v
+sudo ln -sf /home/pi/digipi_plus/www/images/ /var/www/html/images -v
 
 Max_RAM(){
     free | awk 'NR==2 {print $2}'
