@@ -45,13 +45,6 @@
   </div>
   
   <div class="settings">
-  <a href="/help.php" title="Digipi Plus Help" target='iframe_a'>
-    <img src="/images/icons/help.png" width=32px height=32px>
-    <strong>Help</strong>
-  </a>
-  </div>
-  
-  <div class="settings">
   <script>
     document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':6080/vnc.html?port=6080&password=test11&autoconnect=true" target="iframe_a">' )
   </script>
