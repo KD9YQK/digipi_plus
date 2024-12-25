@@ -29,7 +29,7 @@ You will need at least a 16gb SD Card that has been expanded to use the entire d
 12. [Ham Dashboard](https://github.com/VA3HDL/hamdashboard) - A Web based Ham Resource Dashboard
 
 ## Install
-**DON'T install until AFTER initial setup of DigiPi!!! This only works for DigiPi version 1.8-3**
+**DON'T install until AFTER initial setup of DigiPi!!! This only works for DigiPi version 1.9-2**
 ```
 sudo remount
 cd ~
@@ -43,7 +43,7 @@ bash digipi_plus.sh
 RTL-SDR will cause an error to occur on **Raspberry Pi 4** that looks like `rtlsdr_read_reg failed with -7` and `rtlsdr_write_reg failed with -7` when running Direwolf, or with OpenWebRX showing the device as inactive. There is an error in the firmware regarding the USB ports and communicating with the RTL-SDR. To fix, the firmware will need to be upgraded. For directions on how to fix, click [here.](kernel6.6_fix.md)
 
 ## Changelog
-- ??/??/2024 - v1.3 Release
+- 12/25/2024 - v1.3 Release
   1. Email and WebChat added to sidebar
   2. Added Help and Tutorials Web Pages - WIP
   3. Created Service for Xastir - TODO
@@ -58,7 +58,7 @@ RTL-SDR will cause an error to occur on **Raspberry Pi 4** that looks like `rtls
   4. Added Trusted QSL
   5. Added gPredict
   6. Added UHF 9600 Baud TNC and AX25 Node
-  7. Upgraded for DigiPi v1.8.3
+  7. Upgraded for DigiPi v1.9.2
   8. New 'dialog' installer
   9. Re-configured for easy future updates without need to re-flash.
 - 04/23/2024 - v1.1 Release - Not compatable with previous version.
