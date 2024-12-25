@@ -48,7 +48,7 @@
 
 <?php
   if (!file_exists("/var/cache/digipi/localized.txt")) {
-    echo '<tr><td colspan=3><a href="/setup.php" title="REQUIRED!  Enter your callsign and other local information" " target="setup"><font color="green"><strong>Initialize>
+    echo '<tr><td colspan=3><a href="/setup.php" title="REQUIRED!  Enter your callsign and other local information" " target="setup"><font color="green"><strong>Initialize</strong></font></a> </td></tr>';
   }
 ?>  
 
