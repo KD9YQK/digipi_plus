@@ -43,7 +43,7 @@ function openMenu(evt, tabName) {
       <?php include 'plus_settings.php' ?>
   </div>
   <div id="Direwatch" class="tabcontent">
-      <img id="direwatch" src="direwatch.png?v=<?php echo Date("Y.m.d.G.i.s"); ?>" width="400", height="400" />
+      <img id="direwatch" src="direwatch.png?v=<?php echo Date('Y.m.d.G.i.s'); ?>" width="400", height="400" />
       <script>
           window.setInterval(refreshDirewatch, 1000);
   
