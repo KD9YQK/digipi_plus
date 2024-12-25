@@ -2,7 +2,7 @@
 <tr>
   <td width="100px">
     <script language="JavaScript">
-    document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':8080' + '" target="pat" title="Pat Email Client"><strong>PatEmail</strong><>
+    document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':8080' + '" target="pat" title="Pat Email Client"><strong>PatEmail</strong></a> ' );
     </script>
   </td>
   <td width="100px">
