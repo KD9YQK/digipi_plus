@@ -33,7 +33,7 @@ if [ -f saves/plus.gridtracker ]; then
 fi
 
 if [ -f saves/plus.js8spotter ]; then
-    sudo sed -i '/DigiPi Plus/a \        "JS8Spotter"               f.exec "cd /home/pi/digipi_plus/js8spotter && python3 js8spotter.py &"' /home/pi/.emwmrc
+    sudo sed -i '/DigiPi Plus/a \        "JS8Spotter"               f.exec "cd /home/pi/digipi_plus/js8spotter && bin/python3 js8spotter.py &"' /home/pi/.emwmrc
     echo "JS8Spotter Added to GUI Menu"
     sleep .5
 fi
