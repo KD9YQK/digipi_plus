@@ -366,7 +366,10 @@ for choice in "${choices[@]}"; do
                 python -m venv venv
                 cd ~/digipi_plus
                 venv/bin/pip3 install -r requirements.txt
-                
+                sudo cp services/mmbr.service /etc/systemd/system/ -v
+                ln -sf /home/pi/digipi_plus/launchers/mmbr.sh /home/pi -v
+                sudo systemctl daemon-reload
+                sudo systmctl start mmbr
                 touch saves/plus.mmbr
                 echo "MMBR Installed"
             else
