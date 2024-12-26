@@ -134,6 +134,12 @@ for choice in "${choices[@]}"; do
                 echo "NOT FOUND"
                 echo "Installing AX25 Node Upgrade"
                 sleep 1
+                echo "Upgrading AX25 packet node"
+                echo "Backing up /etc/ax25/uronode.conf as /etc/ax25/uronode.conf.bak"
+                sudo cp /etc/ax25/uronode.conf /etc/ax25/uronode.conf.bak -v
+
+                echo "Backing up /etc/ax25/uronode.motd as /etc/ax25/uronode.motd.bak"
+                sudo cp /etc/ax25/uronode.motd /etc/ax25/uronode.motd.bak -v
                 touch saves/plus.node
                 echo "AX25 Upgrade Installed. The Node Upgrade Installer will run towards the end of this script."
             else
