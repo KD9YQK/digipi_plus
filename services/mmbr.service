@@ -8,6 +8,3 @@ Restart=yes
 WorkingDirectory=/home/pi/
 User=pi
 KillSignal=SIGINT
-
-[Install]
-WantedBy=multi-user.target
