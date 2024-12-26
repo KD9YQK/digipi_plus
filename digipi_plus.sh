@@ -375,6 +375,7 @@ for choice in "${choices[@]}"; do
                 ln -sf /home/pi/digipi_plus/launchers/mmbr.sh /home/pi -v
                 sudo systemctl daemon-reload
                 sudo systmctl start mmbr
+                cd ~/digipi_plus
                 touch saves/plus.mmbr
                 echo "MMBR Installed"
             else
