@@ -88,3 +88,9 @@ if [ -f saves/plus.chirp ]; then
     echo "Chirp-Next Added to GUI Menu"
     sleep .5
 fi
+
+if [ -f saves/plus.mmbr ]; then
+    python mmbr_helper.py
+    echo "MMBR Added to Homepage Menu"
+    sleep .5
+fi
