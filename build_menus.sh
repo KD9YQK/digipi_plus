@@ -90,7 +90,7 @@ if [ -f saves/plus.chirp ]; then
 fi
 
 if [ -f saves/plus.mmbr ]; then
-    python mmbr_helper.py
+    python3 mmbr_helper.py
     sudo cp temp/*.php www/
     sudo rm temp/*.php
     echo "MMBR Added to Homepage Menu"
