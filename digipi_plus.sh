@@ -350,7 +350,25 @@ for choice in "${choices[@]}"; do
                 cd ~/digipi_plus
                 touch saves/plus.chirp
                 echo "Chirp-Next Installed"
-                sleep 10
+            else
+                echo "OK"
+            fi
+            ;;
+        14)
+            echo -n "Checking for MMBR..."
+            sleep 1
+            if [ ! -f saves/plus.mmbr ]; then
+                echo "NOT FOUND"
+                echo "Installing MMBR"
+                sleep 1
+                git clone https://github.com/KD9YQK/ham-microblog.git
+                cd ham-microblog
+                python -m venv venv
+                cd ~/digipi_plus
+                venv/bin/pip3 install -r requirements.txt
+                
+                touch saves/plus.mmbr
+                echo "MMBR Installed"
             else
                 echo "OK"
             fi
