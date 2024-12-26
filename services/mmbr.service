@@ -7,3 +7,4 @@ ExecStart=bash /home/pi/mmbr.sh
 Restart=no
 WorkingDirectory=/home/pi/
 User=pi
+KillSignal=SIGINT
