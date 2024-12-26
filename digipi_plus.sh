@@ -374,6 +374,7 @@ for choice in "${choices[@]}"; do
                 sudo cp services/mmbr.service /etc/systemd/system/ -v
                 ln -sf /home/pi/digipi_plus/launchers/mmbr.sh /home/pi -v
                 sudo systemctl daemon-reload
+                sudo systmctl enable mmbr
                 sudo systmctl start mmbr
                 cd ~/digipi_plus
                 touch saves/plus.mmbr
