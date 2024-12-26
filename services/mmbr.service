@@ -7,7 +7,7 @@ ExecStart=bash /home/pi/mmbr.sh
 Restart=no
 WorkingDirectory=/home/pi/
 User=pi
-KillSignal=SIGINT
+KillMode=mixed
 
 [Install]
 WantedBy=multi-user.target
