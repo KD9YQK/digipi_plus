@@ -58,9 +58,8 @@ RTL-SDR will cause an error to occur on **Raspberry Pi 4** that looks like `rtls
   4. Added Trusted QSL
   5. Added gPredict
   6. Added UHF 9600 Baud TNC and AX25 Node
-  7. Upgraded for DigiPi v1.9.2
-  8. New 'dialog' installer
-  9. Re-configured for easy future updates without need to re-flash.
+  7. New 'dialog' installer
+  8. Re-configured for easy future updates without need to re-flash.
 - 04/23/2024 - v1.1 Release - Not compatable with previous version.
   1. Added Space WX and Ham QSL to AX25 Node
   2. Added new Homepage which organizes the menus, and adds the syslog in the blank free space
