@@ -120,6 +120,11 @@ else
     installed+="Chirp-Next, "
 fi
 
+if [ ! -f saves/plus.mmbr ]; then
+    options+=(14 "MMBR - Messages Must Be Received" off)
+else
+    installed+="MMBR, "
+fi
 
 #build dialogue box with menu options
 cmd=(dialog --backtitle "DigiPi Plus" --checklist "${installed}" 22 50 16)
