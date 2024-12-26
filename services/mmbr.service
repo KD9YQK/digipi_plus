@@ -4,7 +4,7 @@ Description=mmbr
 [Service]
 Type=simple
 ExecStart=bash /home/pi/mmbr.sh
-Restart=yes
+Restart=no
 WorkingDirectory=/home/pi/
 User=pi
 KillSignal=SIGINT
