@@ -370,7 +370,7 @@ for choice in "${choices[@]}"; do
                 cd ham-microblog
                 python -m venv venv
                 cd ~/digipi_plus
-                venv/bin/pip3 install -r requirements.txt
+                TMPDIR=/home/pi/tmp venv/bin/pip3 install -r requirements.txt
                 sudo cp services/mmbr.service /etc/systemd/system/ -v
                 ln -sf /home/pi/digipi_plus/launchers/mmbr.sh /home/pi -v
                 sudo systemctl daemon-reload
