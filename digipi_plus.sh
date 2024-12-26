@@ -294,7 +294,8 @@ for choice in "${choices[@]}"; do
                 echo "NOT FOUND"
                 echo "Installing RTL-SDR iGate"
                 sleep 1
-                chmod +x launchers/direwolf.rtlsdr.sh
+                cp launchers/direwolf.rtlsdr.sh ~/
+                chmod +x ~/direwolf.rtlsdr.sh
                 sudo cp services/rtlsdr-igate.service /etc/systemd/system/ -v
                 sudo systemctl daemon-reload
                 touch saves/plus.sdr_igate
