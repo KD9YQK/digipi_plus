@@ -1,0 +1,9 @@
+[Unit]
+Description=mmbr
+
+[Service]
+Type=simple
+ExecStart=bash /home/pi/mmbr.sh
+Restart=no
+WorkingDirectory=/home/pi/
+User=pi
