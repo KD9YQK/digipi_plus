@@ -45,12 +45,12 @@ RTL-SDR will cause an error to occur on **Raspberry Pi 4** that looks like `rtls
 ## Changelog
 - 12/25/2024 - v1.3 Release
   1. Email and WebChat added to sidebar
-  2. Added Help and Tutorials Web Pages - WIP
-  3. Created Service for Xastir - TODO
-  4. Created Dummy VNC Service - TODO
-  5. Minor changes to install script - TODO
-  6. Added Ham Dashboard
-  7. Added more Infocom Games
+  2. Added Help and Tutorials Web Pages
+  3. Created Service for Xastir
+  4. Minor changes to install script
+  5. Added Ham Dashboard
+  6. Added more Infocom Games
+  7. Updated to work with DigiPi v.1.9-2
 - 05/14/2024 - v1.2 Release
   1. Added JS8Spotter
   2. Added Xastir
