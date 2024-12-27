@@ -126,6 +126,12 @@ else
     installed+="MMBR, "
 fi
 
+if [ ! -f saves/plus.flutils ]; then
+    options+=(15 "FL Utils - FLAmp, FLMsg, FLWrap" off)
+else
+    installed+="FL Utils, "
+fi
+
 #build dialogue box with menu options
 cmd=(dialog --backtitle "DigiPi Plus" --checklist "${installed}" 22 50 16)
 choices=($("${cmd[@]}" "${options[@]}" 2>&1 1>/dev/tty))
@@ -379,6 +385,20 @@ for choice in "${choices[@]}"; do
                 cd ~/digipi_plus
                 touch saves/plus.mmbr
                 echo "MMBR Installed"
+            else
+                echo "OK"
+            fi
+            ;;
+        15)
+            echo -n "Checking for FL Utils..."
+            sleep 1
+            if [ ! -f saves/plus.flutils ]; then
+                echo "NOT FOUND"
+                echo "Installing FL Utils"
+                sleep 1
+                sudo apt install flamp flmsg flwrap
+                touch saves/plus.flutils
+                echo "FL Utils Installed"
             else
                 echo "OK"
             fi
