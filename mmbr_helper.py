@@ -5,8 +5,7 @@ with open("www/plus_links.php") as f_old, open("temp/plus_links.php", "w") as f_
     for line in f_old:
         f_new.write(line)
         if "<!-- Row2 -->" in line:
-            f_new.write("  <td><a href='127.0.0.1:5000' target='mmbr' title='Display MMBR Screen'><strong>MMBR</strong></a></td>\n")
-
+            f_new.write("""  <td width="100px"><script language="JavaScript">document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':5000' + '" target="mmbr" title="MMBR - Messages Must Be Received"><strong>MMBR</strong></a> ' );</script></td>\n""")
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':

@@ -82,3 +82,11 @@ if [ -f saves/plus.flutils ]; then
     sudo sed -i '/DigiPi Plus/a \        "FLAmp"               f.exec "flamp &"' /home/pi/.emwmrc
     echo "FLAmp Added to Desktop Menu"
 fi
+
+if [ -f saves/plus.mmbr ]; then
+    python3 mmbr_helper.py
+    sudo cp temp/*.php www/
+    sudo rm temp/*.php
+    echo "MMBR Added to Homepage Menu"
+    sleep .5
+fi

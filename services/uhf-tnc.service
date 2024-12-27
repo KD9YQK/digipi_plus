@@ -11,4 +11,4 @@ WorkingDirectory=/home/pi/
 User=pi
 
 [Install]
-WantedBy=graphical.target
+WantedBy=multi-user.target

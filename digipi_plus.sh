@@ -120,6 +120,11 @@ else
     installed+="Chirp-Next, "
 fi
 
+if [ ! -f saves/plus.mmbr ]; then
+    options+=(14 "MMBR - Messages Must Be Received" off)
+else
+    installed+="MMBR, "
+fi
 
 #build dialogue box with menu options
 cmd=(dialog --backtitle "DigiPi Plus" --checklist "${installed}" 22 50 16)
@@ -350,7 +355,30 @@ for choice in "${choices[@]}"; do
                 cd ~/digipi_plus
                 touch saves/plus.chirp
                 echo "Chirp-Next Installed"
-                sleep 10
+            else
+                echo "OK"
+            fi
+            ;;
+        14)
+            echo -n "Checking for MMBR..."
+            sleep 1
+            if [ ! -f saves/plus.mmbr ]; then
+                echo "NOT FOUND"
+                echo "Installing MMBR"
+                sleep 1
+                git clone https://github.com/KD9YQK/ham-microblog.git
+                cd ham-microblog
+                python -m venv venv
+                cd ~/digipi_plus
+                TMPDIR=/home/pi/tmp venv/bin/pip3 install -r requirements.txt
+                sudo cp services/mmbr.service /etc/systemd/system/ -v
+                ln -sf /home/pi/digipi_plus/launchers/mmbr.sh /home/pi -v
+                sudo systemctl daemon-reload
+                sudo systmctl enable mmbr
+                sudo systmctl start mmbr
+                cd ~/digipi_plus
+                touch saves/plus.mmbr
+                echo "MMBR Installed"
             else
                 echo "OK"
             fi
