@@ -88,5 +88,4 @@ if [ -f saves/plus.mmbr ]; then
     sudo cp temp/*.php www/
     sudo rm temp/*.php
     echo "MMBR Added to Homepage Menu"
-    sleep .5
 fi
