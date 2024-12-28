@@ -27,6 +27,13 @@ You will need at least a 16gb SD Card that has been expanded to use the entire d
 10. [Trusted QSL](https://www.arrl.org/tqsl-download) - LOTW Logging Software
 11. UHF 9600 Baud TNC and AX25 Node Support
 12. [Ham Dashboard](https://github.com/VA3HDL/hamdashboard) - A Web based Ham Resource Dashboard
+13. [MMBR](https://kd9yqk.com/mmbr/index.php) - Messages Must Be Received. A social media like blogging platform that utilizes multiple radio modes like JS8Call and APRS.
+    - NOTE: This requires read/write to be enabled for sd-card. Will not work in the default read-only configuration!!!.
+    - This tool is always running in the background.
+15. [FL Utils](http://www.w1hkj.com/)
+    - FLAmp
+    - FLMsg
+    - FLWrap
 
 ## Install
 **DON'T install until AFTER initial setup of DigiPi!!! This only works for DigiPi version 1.9-2**
@@ -43,6 +50,9 @@ bash digipi_plus.sh
 RTL-SDR will cause an error to occur on **Raspberry Pi 4** that looks like `rtlsdr_read_reg failed with -7` and `rtlsdr_write_reg failed with -7` when running Direwolf, or with OpenWebRX showing the device as inactive. There is an error in the firmware regarding the USB ports and communicating with the RTL-SDR. To fix, the firmware will need to be upgraded. For directions on how to fix, click [here.](kernel6.6_fix.md)
 
 ## Changelog
+- 01/01/2025 - v1.31 Release
+  1. Added FLAmp, FLMsg, and FLWrap
+  2. Added MMBR
 - 12/25/2024 - v1.3 Release
   1. Email and WebChat added to sidebar
   2. Added Help and Tutorials Web Pages
