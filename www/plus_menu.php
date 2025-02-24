@@ -58,7 +58,7 @@ function openMenu(evt, tabName) {
 document.getElementById("defaultOpen").click();
 </script>
 
-<small>1.9-2 KM6LYW ©2024</small>
+<small>1.9-3 KM6LYW ©2025</small>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/dot"><font size="+3" color="#111">.</font></a>
 </form>
 </center>
