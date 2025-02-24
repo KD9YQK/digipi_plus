@@ -1,9 +1,7 @@
 <?php include 'header.php' ?>
 
-<form action="index.php" method="post">
 
 <?php   
-
 
 $submit = "none";
 
@@ -11,36 +9,29 @@ if (isset($_POST["tnc"])) {
   $submit = $_POST["tnc"];
   if ( $submit == 'on' ) {
       $output = shell_exec('sudo systemctl start tnc');
-      echo $output;
   }
-  if ( $submit == 'off' ) {
+  else {
       $output = shell_exec('sudo systemctl stop tnc');
-      echo $output;
   }
 }
-
 
 if (isset($_POST["digipeater"])) {
   $submit = $_POST["digipeater"];
   if ( $submit == 'on' ) {
       $output = shell_exec('sudo systemctl start digipeater');
-      echo $output;
   }
   if ( $submit == 'off' ) {
       $output = shell_exec('sudo systemctl stop digipeater');
-      echo $output;
   }
 }
 
 if (isset($_POST["tracker"])) {
   $submit = $_POST["tracker"];
-    if ( $submit == 'on' ) {
+  if ( $submit == 'on' ) {
       $output = shell_exec('sudo systemctl start tracker');
-      echo $output;
   }
   if ( $submit == 'off' ) {
       $output = shell_exec('sudo systemctl stop tracker');
-      echo $output;
   }
 }
 
@@ -48,11 +39,9 @@ if (isset($_POST["webchat"])) {
   $submit = $_POST["webchat"];
   if ( $submit == 'on' ) {
       $output = shell_exec('sudo systemctl start webchat');
-      echo $output;
   }
   if ( $submit == 'off' ) {
       $output = shell_exec('sudo systemctl stop webchat');
-      echo $output;
   }
 }
 
@@ -60,22 +49,19 @@ if (isset($_POST["tnc300b"])) {
   $submit = $_POST["tnc300b"];
   if ( $submit == 'on' ) {
       $output = shell_exec('sudo systemctl start tnc300b');
-      echo $output;
   }
   if ( $submit == 'off' ) {
       $output = shell_exec('sudo systemctl stop tnc300b');
-      echo $output;
   }
 }
+
 if (isset($_POST["winlinkrms"])) {
   $submit = $_POST["winlinkrms"];
   if ( $submit == 'on' ) {
       $output = shell_exec('sudo systemctl start winlinkrms');
-      echo $output;
   }
   if ( $submit == 'off' ) {
       $output = shell_exec('sudo systemctl stop winlinkrms');
-      echo $output;
   }
 }
 
@@ -83,11 +69,9 @@ if (isset($_POST["pat"])) {
   $submit = $_POST["pat"];
   if ( $submit == 'on' ) {
       $output = shell_exec('sudo systemctl start pat');
-      echo $output;
   }
   if ( $submit == 'off' ) {
       $output = shell_exec('sudo systemctl stop pat');
-      echo $output;
   }
 }
 
@@ -95,22 +79,19 @@ if (isset($_POST["ardop"])) {
   $submit = $_POST["ardop"];
   if ( $submit == 'on' ) {
       $output = shell_exec('sudo systemctl start ardop');
-      echo $output;
   }
   if ( $submit == 'off' ) {
       $output = shell_exec('sudo systemctl stop ardop');
-      echo $output;
   }
 }
+
 if (isset($_POST["rigctld"])) {
   $submit = $_POST["rigctld"];
   if ( $submit == 'on' ) {
       $output = shell_exec('sudo systemctl start rigctld');
-      echo $output;
   }
   if ( $submit == 'off' ) {
       $output = shell_exec('sudo systemctl stop rigctld');
-      echo $output;
   }
 }
 
@@ -118,11 +99,9 @@ if (isset($_POST["node"])) {
   $submit = $_POST["node"];
   if ( $submit == 'on' ) {
       $output = shell_exec('sudo systemctl start node');
-      echo $output;
   }
   if ( $submit == 'off' ) {
       $output = shell_exec('sudo systemctl stop node');
-      echo $output;
   }
 }
 
@@ -130,24 +109,21 @@ if (isset($_POST["wsjtx"])) {
   $submit = $_POST["wsjtx"];
   if ( $submit == 'on' ) {
       $output = shell_exec('sudo systemctl start wsjtx');
-      sleep(5);
-      echo $output;
+      sleep(3);
   }
   if ( $submit == 'off' ) {
       $output = shell_exec('sudo systemctl stop wsjtx');
-      echo $output;
   }
 }
+
 if (isset($_POST["fldigi"])) {
   $submit = $_POST["fldigi"];
   if ( $submit == 'on' ) {
       $output = shell_exec('sudo systemctl start fldigi');
-      sleep(5);
-      echo $output;
+      sleep(3);
   }
   if ( $submit == 'off' ) {
       $output = shell_exec('sudo systemctl stop fldigi');
-      echo $output;
   }
 }
 
@@ -155,20 +131,18 @@ if (isset($_POST["js8call"])) {
   $submit = $_POST["js8call"];
   if ( $submit == 'on' ) {
       $output = shell_exec('sudo systemctl start js8call');
-      sleep(5);
-      echo $output;
+      sleep(3);
   }
   if ( $submit == 'off' ) {
       $output = shell_exec('sudo systemctl stop js8call');
-      echo $output;
   }
 }
+
 if (isset($_POST["sstv"])) {
   $submit = $_POST["sstv"];
   if ( $submit == 'on' ) {
       $output = shell_exec('sudo systemctl start sstv');
-      sleep(5);
-      echo $output;
+      sleep(3);
   }
   if ( $submit == 'off' ) {
       $output = shell_exec('sudo systemctl stop sstv');
@@ -177,20 +151,11 @@ if (isset($_POST["sstv"])) {
 }
 
 
-?>
+echo '<table width="400px">';
 
-
-<table width="400px">
-<!-- does nothing
- <col width="10px" />
- <col width="320px" />
- <col width="70px" />
--->
-<?php
 
 # give systemd a chance to settle down
 sleep(1);
-
 
 #-- tnc -------------------------------------------
 
@@ -200,49 +165,69 @@ $output = chop($output);
   if ($output == "active")
   {
      echo '<td bgcolor="lightgreen">';
+     $checked = "checked";
   }
   elseif ($output == "failed")
   {
      echo '<td bgcolor="red">';
+     $checked = "";
   }
   else
   {
      echo '<td bgcolor="lightgrey">';
+     $checked = "";
   }
-echo "&nbsp;";
-echo "</td><td>";
-echo "<font size=+1>APRS TNC/igate</font></td>";
-echo '<td align="right" } nowrap>';
-echo '<input type="submit" name="tnc" value="on"> ';
-echo '<input type="submit" name="tnc" value="off">';
-echo "</font>";
-echo "</td></tr>";
+echo '</td>';
+echo '<td>';
+echo '<font size=+1>APRS TNC/igate</font></td>';
+echo '<td nowrap>';
+echo '<form action="index.php" method="post">';
+echo '<label class="switch switch-light">';
+echo '  <input type="hidden" name="tnc" value="off">';
+echo "  <input onChange='this.form.submit()' class='switch-input' type='checkbox' name='tnc' value='on'  $checked />";
+echo '	<span class="switch-label" ></span> ';
+echo '	<span class="switch-handle"></span> ';
+echo '</label>';
+echo '</form>';
+echo '</font>';
+echo '</td></tr>';
+
 #-- tnc300b ----------------------------------------
 
 echo "<tr>";
 $output = shell_exec('systemctl is-active tnc300b');
-#$output = str_replace("failed", "inactive", $output);
 $output = chop($output);
   if ($output == "active")
   {
      echo '<td bgcolor="lightgreen">';
+     $checked = "checked";
   }
   elseif ($output == "failed")
   {
      echo '<td bgcolor="red">';
+     $checked = "";
   }
   else
   {
      echo '<td bgcolor="lightgrey">';
+     $checked = "";
   }
-echo "&nbsp;";
-echo "</td><td nowrap>";
-echo "<font size=+1>APRS HF TNC/igate</font></td>";
-echo '<td align="right" nowrap>';
-echo '<input type="submit" name="tnc300b" value="on"> ';
-echo '<input type="submit" name="tnc300b" value="off">';
-echo "</font>";
-echo "</td></tr>";
+echo '</td>';
+echo '<td>';
+echo '<font size=+1>APRS HF TNC/igate</font></td>';
+echo '<td nowrap>';
+echo '<form action="index.php" method="post">';
+echo '<label class="switch switch-light">';
+echo '  <input type="hidden" name="tnc300b" value="off">';
+echo "  <input onChange='this.form.submit()' class='switch-input' type='checkbox' name='tnc300b' value='on'  $checked />";
+echo '	<span class="switch-label" ></span> ';
+echo '	<span class="switch-handle"></span> ';
+echo '</label>';
+echo '</form>';
+echo '</font>';
+echo '</td></tr>';
+
+
 #-- digipeater -------------------------------------
 
 echo "<tr>";
@@ -252,23 +237,34 @@ $output = chop($output);
   if ($output == "active")
   {
      echo '<td bgcolor="lightgreen">';
+     $checked = "checked";
   }
   elseif ($output == "failed")
   {
      echo '<td bgcolor="red">';
+     $checked = "";
   }
   else
   {
      echo '<td bgcolor="lightgrey">';
+     $checked = "";
   }
-echo "&nbsp;";
-echo "</td><td>";
-echo "<font size=+1>APRS Digipeater</font></td>";
-echo '<td align="right" nowrap>';
-echo '<input type="submit" name="digipeater" value="on"> ';
-echo '<input type="submit" name="digipeater" value="off">';
-echo "</font>";
-echo "</td></tr>";
+echo '</td>';
+echo '<td>';
+echo '<font size=+1>APRS Digipeater</font></td>';
+echo '<td nowrap>';
+echo '<form action="index.php" method="post">';
+echo '<label class="switch switch-light">';
+echo '  <input type="hidden" name="digipeater" value="off">';
+echo "  <input onChange='this.form.submit()' class='switch-input' type='checkbox' name='digipeater' value='on'  $checked />";
+echo '  <span class="switch-label" ></span> ';
+echo '  <span class="switch-handle"></span> ';
+echo '</label>';
+echo '</form>';
+echo '</font>';
+echo '</td></tr>';
+
+
 #-- tracker -------------------------------------------
 
 echo "<tr>";
@@ -277,23 +273,34 @@ $output = chop($output);
   if ($output == "active")
   {
      echo '<td bgcolor="lightgreen">';
+     $checked = "checked";
   }
   elseif ($output == "failed")
   {
      echo '<td bgcolor="red">';
+     $checked = "";
   }
   else
   {
      echo '<td bgcolor="lightgrey">';
+     $checked = "";
   }
-echo "&nbsp;";
-echo "</td><td>";
-echo "<font size=+1>APRS GPS Tracker</font></td>";
-echo '<td align="right" } nowrap>';
-echo '<input type="submit" name="tracker" value="on"> ';
-echo '<input type="submit" name="tracker" value="off">';
-echo "</font>";
-echo "</td></tr>";
+echo '</td>';
+echo '<td>';
+echo '<font size=+1>APRS GPS Tracker</font></td>';
+echo '<td nowrap>';
+echo '<form action="index.php" method="post">';
+echo '<label class="switch switch-light">';
+echo '  <input type="hidden" name="tracker" value="off">';
+echo "  <input onChange='this.form.submit()' class='switch-input' type='checkbox' name='tracker' value='on'  $checked />";
+echo '  <span class="switch-label" ></span> ';
+echo '  <span class="switch-handle"></span> ';
+echo '</label>';
+echo '</form>';
+echo '</font>';
+echo '</td></tr>';
+
+
 #-- webchat ----------------------------------------
 
 echo "<tr>";
@@ -303,23 +310,34 @@ $output = chop($output);
   if ($output == "active")
   {
      echo '<td bgcolor="lightgreen">';
+     $checked = "checked";
   }
   elseif ($output == "failed")
   {
      echo '<td bgcolor="red">';
+     $checked = "";
   }
   else
   {
      echo '<td bgcolor="lightgrey">';
+     $checked = "";
   }
-echo "&nbsp;";
-echo "</td><td>";
-echo "<font size=+1>APRS Webchat</font></td>";
-echo '<td align="right" nowrap>';
-echo '<input type="submit" name="webchat" value="on"> ';
-echo '<input type="submit" name="webchat" value="off">';
-echo "</font>";
-echo "</td></tr>";
+echo '</td>';
+echo '<td>';
+echo '<font size=+1>APRS WebChat</font></td>';
+echo '<td nowrap>';
+echo '<form action="index.php" method="post">';
+echo '<label class="switch switch-light">';
+echo '  <input type="hidden" name="webchat" value="off">';
+echo "  <input onChange='this.form.submit()' class='switch-input' type='checkbox' name='webchat' value='on'  $checked />";
+echo '  <span class="switch-label" ></span> ';
+echo '  <span class="switch-handle"></span> ';
+echo '</label>';
+echo '</form>';
+echo '</font>';
+echo '</td></tr>';
+
+
 #-- Linux NODE AX.25 ------------------------------------
 
 echo "<tr>";
@@ -329,23 +347,33 @@ $output = chop($output);
   if ($output == "active")
   {
      echo '<td bgcolor="lightgreen">';
+     $checked = "checked";
   }
   elseif ($output == "failed")
   {
      echo '<td bgcolor="red">';
+     $checked = "";
   }
   else
   {
      echo '<td bgcolor="lightgrey">';
+     $checked = "";
   }
-echo "&nbsp;";
-echo "</td><td>";
-echo "<font size=+1>AX.25 Networking</font></td>";
-echo '<td align="right" nowrap>';
-echo '<input type="submit" name="node" value="on"> ';
-echo '<input type="submit" name="node" value="off">';
-echo "</font>";
-echo "</td></tr>";
+echo '</td>';
+echo '<td>';
+echo '<font size=+1>AX.25 Node Network</font></td>';
+echo '<td nowrap>';
+echo '<form action="index.php" method="post">';
+echo '<label class="switch switch-light">';
+echo '  <input type="hidden" name="node" value="off">';
+echo "  <input onChange='this.form.submit()' class='switch-input' type='checkbox' name='node' value='on'  $checked />";
+echo '  <span class="switch-label" ></span> ';
+echo '  <span class="switch-handle"></span> ';
+echo '</label>';
+echo '</form>';
+echo '</font>';
+echo '</td></tr>';
+
 
 #-- Winlink Server -------------------------------------
 
@@ -356,23 +384,33 @@ $output = chop($output);
   if ($output == "active")
   {
      echo '<td bgcolor="lightgreen">';
+     $checked = "checked";
   }
   elseif ($output == "failed")
   {
      echo '<td bgcolor="red">';
+     $checked = "";
   }
   else
   {
      echo '<td bgcolor="lightgrey">';
+     $checked = "";
   }
-echo "&nbsp;";
-echo "</td><td>";
-echo "<font size=+1>Winlink Email Server</font></td>";
-echo '<td align="right" nowrap>';
-echo '<input type="submit" name="winlinkrms" value="on"> ';
-echo '<input type="submit" name="winlinkrms" value="off">';
-echo "</font>";
-echo "</td></tr>";
+echo '</td>';
+echo '<td>';
+echo '<font size=+1>Winlink Email Server</font></td>';
+echo '<td nowrap>';
+echo '<form action="index.php" method="post">';
+echo '<label class="switch switch-light">';
+echo '  <input type="hidden" name="winlinkrms" value="off">';
+echo "  <input onChange='this.form.submit()' class='switch-input' type='checkbox' name='winlinkrms' value='on'  $checked />";
+echo '  <span class="switch-label" ></span> ';
+echo '  <span class="switch-handle"></span> ';
+echo '</label>';
+echo '</form>';
+echo '</font>';
+echo '</td></tr>';
+
 
 #-- Pat Email Client -----------------------------------
 
@@ -383,23 +421,33 @@ $output = chop($output);
   if ($output == "active")
   {
      echo '<td bgcolor="lightgreen">';
+     $checked = "checked";
   }
   elseif ($output == "failed")
   {
      echo '<td bgcolor="red">';
+     $checked = "";
   }
   else
   {
      echo '<td bgcolor="lightgrey">';
+     $checked = "";
   }
-echo "&nbsp;";
-echo "</td><td>";
-echo "<font size=+1>Pat Winlink Email Client</font></td>";
-echo '<td align="right" nowrap>';
-echo '<input type="submit" name="pat" value="on"> ';
-echo '<input type="submit" name="pat" value="off">';
-echo "</font>";
-echo "</td></tr>";
+echo '</td>';
+echo '<td>';
+echo '<font size=+1>Pat Winlink Email Client</font></td>';
+echo '<td nowrap>';
+echo '<form action="index.php" method="post">';
+echo '<label class="switch switch-light">';
+echo '  <input type="hidden" name="pat" value="off">';
+echo "  <input onChange='this.form.submit()' class='switch-input' type='checkbox' name='pat' value='on'  $checked />";
+echo '  <span class="switch-label" ></span> ';
+echo '  <span class="switch-handle"></span> ';
+echo '</label>';
+echo '</form>';
+echo '</font>';
+echo '</td></tr>';
+
 
 #-- ARDOP ---------------------------------------------
 
@@ -410,50 +458,69 @@ $output = chop($output);
   if ($output == "active")
   {
      echo '<td bgcolor="lightgreen">';
+     $checked = "checked";
   }
   elseif ($output == "failed")
   {
      echo '<td bgcolor="red">';
+     $checked = "";
   }
   else
   {
      echo '<td bgcolor="lightgrey">';
+     $checked = "";
   }
-echo "&nbsp;";
-echo "</td><td>";
-echo "<font size=+1>ARDOP Modem</font></td>";
-echo '<td align="right" nowrap>';
-echo '<input type="submit" name="ardop" value="on"> ';
-echo '<input type="submit" name="ardop" value="off">';
-echo "</font>";
-echo "</td></tr>";
+echo '</td>';
+echo '<td>';
+echo '<font size=+1>ARDOP Modem</font></td>';
+echo '<td nowrap>';
+echo '<form action="index.php" method="post">';
+echo '<label class="switch switch-light">';
+echo '  <input type="hidden" name="ardop" value="off">';
+echo "  <input onChange='this.form.submit()' class='switch-input' type='checkbox' name='ardop' value='on'  $checked />";
+echo '  <span class="switch-label" ></span> ';
+echo '  <span class="switch-handle"></span> ';
+echo '</label>';
+echo '</form>';
+echo '</font>';
+echo '</td></tr>';
+
 
 #-- RIGCTLD ---------------------------------------------
 
-echo "<tr>";
-$output = shell_exec('systemctl is-active rigctld');
-#$output = str_replace("failed", "inactive", $output);
-$output = chop($output);
-  if ($output == "active")
-  {
-     echo '<td bgcolor="lightgreen">';
-  }
-  elseif ($output == "failed")
-  {
-     echo '<td bgcolor="red">';
-  }
-  else
-  {
-     echo '<td bgcolor="lightgrey">';
-  }
-echo "&nbsp;";
-echo "</td><td>";
-echo "<font size=+1>Rig Control Daemon</font></td>";
-echo '<td align="right" nowrap>';
-echo '<input type="submit" name="rigctld" value="on"> ';
-echo '<input type="submit" name="rigctld" value="off">';
-echo "</font>";
-echo "</td></tr>";
+#echo "<tr>";
+#$output = shell_exec('systemctl is-active rigctld');
+#$output = chop($output);
+#  if ($output == "active")
+#  {
+#     echo '<td bgcolor="lightgreen">';
+#     $checked = "checked";
+#  }
+#  elseif ($output == "failed")
+#  {
+#     echo '<td bgcolor="red">';
+#     $checked = "";
+#  }
+#  else
+#  {
+#     echo '<td bgcolor="lightgrey">';
+#     $checked = "";
+#  }
+#echo '</td>';
+#echo '<td>';
+#echo '<font size=+1>Rig Control Daemon</font></td>';
+#echo '<td nowrap>';
+#echo '<form action="index.php" method="post">';
+#echo '<label class="switch switch-light">';
+#echo '  <input type="hidden" name="rigctld" value="off">';
+#echo "  <input onChange='this.form.submit()' class='switch-input' type='checkbox' name='rigctld' value='on'  $checked />";
+#echo '  <span class="switch-label" ></span> ';
+#echo '  <span class="switch-handle"></span> ';
+#echo '</label>';
+#echo '</form>';
+#echo '</font>';
+#echo '</td></tr>';
+
 
 #-- WSJTX FT8  -------------------------------------------
 
@@ -464,23 +531,33 @@ $output = chop($output);
   if ($output == "active")
   {
      echo '<td bgcolor="lightgreen">';
+     $checked = "checked";
   }
   elseif ($output == "failed")
   {
      echo '<td bgcolor="lightgreen">';
+     $checked = "";
   }
   else
   {
      echo '<td bgcolor="lightgrey">';
+     $checked = "";
   }
-echo "&nbsp;";
-echo "</td><td nowrap>";
-echo "<font size=+1>WSJTX FT8</font></td>";
-echo '<td align="right" nowrap>';
-echo '<input type="submit" name="wsjtx" value="on"> ';
-echo '<input type="submit" name="wsjtx" value="off">';
-echo "</font>";
-echo "</td></tr>";
+echo '</td>';
+echo '<td>';
+echo '<font size=+1>WSJTX FT8</font></td>';
+echo '<td nowrap>';
+echo '<form action="index.php" method="post">';
+echo '<label class="switch switch-light">';
+echo '  <input type="hidden" name="wsjtx" value="off">';
+echo "  <input onChange='this.form.submit()' class='switch-input' type='checkbox' name='wsjtx' value='on'  $checked />";
+echo '  <span class="switch-label" ></span> ';
+echo '  <span class="switch-handle"></span> ';
+echo '</label>';
+echo '</form>';
+echo '</font>';
+echo '</td></tr>';
+
 
 #-- SSTV --------------------------------------------------
 
@@ -491,23 +568,33 @@ $output = chop($output);
   if ($output == "active")
   {
      echo '<td bgcolor="lightgreen">';
+     $checked = "checked";
   }
   elseif ($output == "failed")
   {
      echo '<td bgcolor="lightgreen">';
+     $checked = "";
   }
   else
   {
      echo '<td bgcolor="lightgrey">';
+     $checked = "";
   }
-echo "&nbsp;";
-echo "</td><td>";
-echo "<font size=+1>Slow Scan TV</font></td>";
-echo '<td align="right" nowrap>';
-echo '<input type="submit" name="sstv" value="on"> ';
-echo '<input type="submit" name="sstv" value="off">';
-echo "</font>";
-echo "</td></tr>";
+echo '</td>';
+echo '<td>';
+echo '<font size=+1>Slow Scan TV</font></td>';
+echo '<td nowrap>';
+echo '<form action="index.php" method="post">';
+echo '<label class="switch switch-light">';
+echo '  <input type="hidden" name="sstv" value="off">';
+echo "  <input onChange='this.form.submit()' class='switch-input' type='checkbox' name='sstv' value='on'  $checked />";
+echo '  <span class="switch-label" ></span> ';
+echo '  <span class="switch-handle"></span> ';
+echo '</label>';
+echo '</form>';
+echo '</font>';
+echo '</td></tr>';
+
 
 #-- FLDIGI --------------------------------------------------
 
@@ -518,23 +605,33 @@ $output = chop($output);
   if ($output == "active")
   {
      echo '<td bgcolor="lightgreen">';
+     $checked = "checked";
   }
   elseif ($output == "failed")
   {
      echo '<td bgcolor="lightgreen">';
+     $checked = "";
   }
   else
   {
      echo '<td bgcolor="lightgrey">';
+     $checked = "";
   }
-echo "&nbsp;";
-echo "</td><td>";
-echo "<font size=+1>FLDigi</font></td>";
-echo '<td align="right" nowrap>';
-echo '<input type="submit" name="fldigi" value="on"> ';
-echo '<input type="submit" name="fldigi" value="off">';
-echo "</font>";
-echo "</td></tr>";
+echo '</td>';
+echo '<td>';
+echo '<font size=+1>FLDigi</font></td>';
+echo '<td nowrap>';
+echo '<form action="index.php" method="post">';
+echo '<label class="switch switch-light">';
+echo '  <input type="hidden" name="fldigi" value="off">';
+echo "  <input onChange='this.form.submit()' class='switch-input' type='checkbox' name='fldigi' value='on'  $checked />";
+echo '  <span class="switch-label" ></span> ';
+echo '  <span class="switch-handle"></span> ';
+echo '</label>';
+echo '</form>';
+echo '</font>';
+echo '</td></tr>';
+
 
 #-- JS8CALL -------------------------------------------------
 
@@ -545,23 +642,33 @@ $output = chop($output);
   if ($output == "active")
   {
      echo '<td bgcolor="lightgreen">';
+     $checked = "checked";
   }
   elseif ($output == "failed")
   {
      echo '<td bgcolor="lightgreen">';
+     $checked = "";
   }
   else
   {
      echo '<td bgcolor="lightgrey">';
+     $checked = "";
   }
-echo "&nbsp;";
-echo "</td><td>";
-echo "<font size=+1>JS8Call</font></td>";
-echo '<td align="right" nowrap>';
-echo '<input type="submit" name="js8call" value="on"> ';
-echo '<input type="submit" name="js8call" value="off">';
-echo "</font>";
-echo "</td></tr>";
+echo '</td>';
+echo '<td>';
+echo '<font size=+1>JS8Call</font></td>';
+echo '<td nowrap>';
+echo '<form action="index.php" method="post">';
+echo '<label class="switch switch-light">';
+echo '  <input type="hidden" name="js8call" value="off">';
+echo "  <input onChange='this.form.submit()' class='switch-input' type='checkbox' name='js8call' value='on'  $checked />";
+echo '  <span class="switch-label" ></span> ';
+echo '  <span class="switch-handle"></span> ';
+echo '</label>';
+echo '</form>';
+echo '</font>';
+echo '</td></tr>';
+
 
 #craiger systemd thinks a sigkill is a failure, so reset failed service status
 #This will turn red/failed service into grey/stopped 
@@ -577,19 +684,19 @@ $output = shell_exec('sudo systemctl reset-failed node 2> /dev/null');
 $output = shell_exec('sudo systemctl reset-failed winlinkrms 2> /dev/null'); 
 $output = shell_exec('sudo systemctl reset-failed pat 2> /dev/null'); 
 $output = shell_exec('sudo systemctl reset-failed js8call 2> /dev/null'); 
-
 ?>
-
 </table>
 
-<br/>
-<br/>
+
+<p>
+&nbsp;
+</p>
 
 <table width=400>
 <tr>
   <td width="100px">
     <script language="JavaScript">
-    document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':8080' + '" target="pat" title="Pat Email Client"><strong>PatEmail</strong><>
+    document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':8080' + '" target="pat" title="Pat Email Client"><strong>PatEmail</strong></a> ' );
     </script>
   </td>
   <td width="100px">
@@ -601,7 +708,7 @@ $output = shell_exec('sudo systemctl reset-failed js8call 2> /dev/null');
 </tr>
 <tr>
   <td>
-    <a href="/ft8" target="ft8" title="Dispaly FT8 screen"><strong>WSJTX FT8</strong>
+    <a href="/ft8" target="ft8" title="Dispaly FT8 screen"><strong>WSJTX</strong>
   </td>
   <td>
     <a href="/tv" target="tv" title="Dispaly SSTV screen"><strong>SSTV</strong>
@@ -632,10 +739,21 @@ $output = shell_exec('sudo systemctl reset-failed js8call 2> /dev/null');
      <a href="/webchat.php" target="webchat" title="APRS Messaging"><strong>Webchat</strong></a>
   </td>
 </tr>
+<tr>
+   <td>
+     <a href="/alsa.php" target="audio" title="Audio Settings"><strong>Audio</strong></a>
+   </td>
+   <td>
+     <a href="/sysinfo.php" target="sysinfo" title="System Information"><strong>SysInfo</strong></a>
+   </td>
+   <td>
+     <a href="/gps.php" target="gps" title="GPS Status"><strong>GPS</strong></a>
+   </td>
+</tr>
 
 <?php
   if (!file_exists("/var/cache/digipi/localized.txt")) {
-    echo '<tr><td colspan=3><a href="/setup.php" title="REQUIRED!  Enter your callsign and other local information" " target="setup"><font color="green"><strong>Initialize>
+    echo '<tr><td colspan=3><a href="/setup.php" title="REQUIRED!  Enter your callsign and other local information" " target="setup"><font color="green"><strong>Initialize</strong></font></a> </td></tr>';
   }
 ?>  
 
@@ -643,35 +761,40 @@ $output = shell_exec('sudo systemctl reset-failed js8call 2> /dev/null');
 
 
 
-<br/><br/>
-    <input type="submit" name="reboot" value="Reboot">
+<p>
+
+<form action="index.php" method="post">
+    <input type="submit" name="reboot" value="Restart">
     &nbsp;
     <input type="submit" name="shutdown" value="Shutdown">   
     &nbsp;
-    <input title="Write current application configurations (ft8, js8call, etc) to SD card" type="submit" name="save" value="Save Configs">  
+    <input title="Write current application configurations/logs to SD card" type="submit" name="save" value="Save Configuration">  
     &nbsp; 
     <br/><br/>
-    <small>1.9-2 KM6LYW ©2025</small>
 
-<br/><br/>
+<table width="400" style="padding-bottom: 3px;" >
+<tr>
+  <td  width=10% style="padding: 3px; background-image: linear-gradient(to bottom, #fafafa 0%, lightgrey 90%); background-origin: border-box; border-spacing: 0px; border: 0px solid transparent;"  >
+    <small><br>1.9-3.Beta3 KM6LYW ©2025</small>
+  </td>
+</tr>
+</table>
+
+</form>
+</p>
 
 
+<p>
 <?php
+$submit = "none";
 if (isset($_POST["reboot"])) {
   $submit = $_POST["reboot"];
-  if ( $submit == 'Reboot' ) {
+  if ( $submit == 'Restart' ) {
       echo "<br/><br/><strong><font color=red>Restarting DigiPi...</font></strong><br/> ";
-#      if (isset($_SERVER['SERVER_ADDR'])) {
-#          $IP = $_SERVER['SERVER_ADDR'];
-#      }
-#      else {
-#          $IP = "0.0.0.0";
-#      }
       $output = shell_exec("sudo killall direwatch.py");
       putenv(shell_exec("grep ^NEWDISPLAYTYPE= /home/pi/localize.env | tail -1"));
-      $output = shell_exec("sudo /home/pi/digibanner.py -b DigiPi -s Rebooting... -d \$NEWDISPLAYTYPE");
+      $output = shell_exec("sudo /home/pi/digibanner.py -b DigiPi -s Restarting... -d \$NEWDISPLAYTYPE");
       $output = shell_exec("sudo /sbin/shutdown -r 0");
-      echo $output;
   }
 }
 if (isset($_POST["shutdown"])) {
@@ -682,28 +805,25 @@ if (isset($_POST["shutdown"])) {
       putenv(shell_exec("grep ^NEWDISPLAYTYPE= /home/pi/localize.env | tail -1"));
       $output = shell_exec("sudo /home/pi/digibanner.py -b DigiPi -s Shutdown... -d \$NEWDISPLAYTYPE");
       $output = shell_exec("sudo /sbin/shutdown -h 0");
-      echo $output;
   }
 }
-
 if (isset($_POST["save"])) {
   $submit = $_POST["save"];
-  if ( $submit == 'Save Configs' ) {
+  if ( $submit == 'Save Configuration' ) {
       echo "<br/><br/><strong><font color=red>Saving configuration...</font></strong><br/> ";
       $output = shell_exec("sudo -i -u pi /home/pi/saveconfigs.sh");
-      #echo $output;
-      echo "<br/><br/><strong><font color=red>Please reboot or shutdown gracefully.</font></strong><br/> ";
+      echo "<br/><br/><strong><font color=red>Please restart or shutdown gracefully.</font></strong><br/> ";
   }
 }
-
 ?>
+</p>
 
 <br/>
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/dot"><font size="+3" color="#eeeeee">.</font></a>
 
-</form>
 
-</font>
+
+</p>
 </body>
 </html>
