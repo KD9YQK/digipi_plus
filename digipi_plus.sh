@@ -132,6 +132,12 @@ else
     installed+="FL Utils, "
 fi
 
+if [ ! -f saves/plus.vara ]; then
+    options+=(16 "VARA - VaraHF and VaraVHF" off)
+else
+    installed+="VARA, "
+fi
+
 #build dialogue box with menu options
 cmd=(dialog --backtitle "DigiPi Plus" --checklist "${installed}" 22 50 16)
 choices=($("${cmd[@]}" "${options[@]}" 2>&1 1>/dev/tty))
@@ -382,6 +388,48 @@ for choice in "${choices[@]}"; do
                 sleep 1
                 sudo apt install flamp flmsg flwrap
                 touch saves/plus.flutils
+                echo "FL Utils Installed"
+            else
+                echo "OK"
+            fi
+            ;;
+        16)
+            echo -n "Checking for VARA..."
+            sleep 1
+            if [ ! -f saves/plus.vara ]; then
+                echo "NOT FOUND"
+                echo "Installing VARA"
+                sleep 1
+                echo "Preparing to install pi-apps"
+                sleep 1
+                cd ~
+                wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bash
+                echo "A reboot will be required when install is complete!"
+                
+                echo "Removing /tmp RAMDRIVE"
+                sudo umount -l /tmp
+                echo "Switch to 64bit kernel"
+                sleep 1
+                if [ -f /boot/firmware/config.txt ]; then
+                  boot_config="/boot/firmware/config.txt"
+                elif [ -f /boot/config.txt ]; then
+                  boot_config="/boot/config.txt"
+                else
+                  error 'User error: The /boot/config.txt and /boot/firmware/config.txt files are missing! You must be on an unsupported system.'
+                fi
+                echo "" | sudo tee --append $boot_config >/dev/null
+                echo "arm_64bit=1" | sudo tee --append $boot_config >/dev/null
+                echo "Copying custom pi-apps wine install script."
+                sleep 1
+                cd ~/pi-apps/apps
+                cd 'Wine (x86)'
+                mv install-32 install-32.bak -v
+                cp ~/digipi_plus/pi-apps/wine.install-32 install-32 -v
+                cd ~/pi-apps
+                ./manage install 'Wine (x86)'
+                
+                cd ~/digipi_plus
+                touch saves/plus.vara
                 echo "FL Utils Installed"
             else
                 echo "OK"
