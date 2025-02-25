@@ -439,8 +439,16 @@ for choice in "${choices[@]}"; do
                 sleep 1
                 rm vara_wine.zip -v
                 cd ~/digipi_plus
+                echo "Creating alias for varahf"
+                sed '/^exit.*/i alias varahf="wine ~/.wine/drive_c/VARA/VARA.exe"' /etc/rc.local > temp/rc.local.1
+                alias varahf="wine ~/.wine/drive_c/VARA/VARA.exe"
+                echo "Creating alias for varafm"
+                sed '/^exit.*/i alias varafm="wine ~/.wine/drive_c/VARAFM/VARAFM.exe"' temp/rc.local.1 > temp/rc.local.2
+                alias varafm="wine ~/.wine/drive_c/VARAFM/VARAFM.exe"
+                rm rc.local.1
+                sudo mv temp/rc.local.1 /etc/rc.local
                 touch saves/plus.vara
-                echo "FL Utils Installed"
+                echo "VARA Installed"
             else
                 echo "OK"
             fi
