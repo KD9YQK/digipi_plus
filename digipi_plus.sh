@@ -337,27 +337,11 @@ for choice in "${choices[@]}"; do
                 echo "NOT FOUND"
                 echo "Installing Chirp-Next"
                 sleep 1
-                cd ~/digipi_plus/chirp
+                cd ~/digipi_plus/temp
                 sudo apt install python3-wxgtk4.0 pipx -y
-                echo ""
-                echo "Umounting and creating a new 20M RAMDISK for /tmp"
-                echo ""
-                sudo umount -l /tmp
-                sudo mount -t tmpfs -o size=20M tmpfs /tmp
-                pipx install --system-site-packages ./chirp-20240626-py3-none-any.whl
-                echo ""
-                echo "Returning the RAMDISK for /tmp back to 10M"
-                echo ""
-                sudo umount -l /tmp
-                sudo mount -t tmpfs -o size=10M tmpfs /tmp
-                echo ""
-                echo "There is a bug in Chirp that prevents it from starting. Installing a patched file which fixes the error."
-                echo "This will be removed in a future update once the owners of Chirp patch on their end."
-                sleep 1
-                rm ~/.local/pipx/venvs/chirp/lib/python3.11/site-packages/chirp/wxui/main.py -v
-                cp main.py ~/.local/pipx/venvs/chirp/lib/python3.11/site-packages/chirp/wxui -v
-                echo ""
-                
+                wget https://archive.chirpmyradio.com/chirp_next/next-20250221/chirp-20250221-py3-none-any.whl
+                pipx install --system-site-packages ./chirp-20250221-py3-none-any.whl
+                pipx ensurepath
                 cd ~/digipi_plus
                 touch saves/plus.chirp
                 echo "Chirp-Next Installed"
