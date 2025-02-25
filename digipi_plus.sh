@@ -419,6 +419,7 @@ for choice in "${choices[@]}"; do
                 fi
                 echo "" | sudo tee --append $boot_config >/dev/null
                 echo "arm_64bit=1" | sudo tee --append $boot_config >/dev/null
+                
                 echo "Copying custom pi-apps wine install script."
                 sleep 1
                 cd ~/pi-apps/apps
@@ -428,6 +429,15 @@ for choice in "${choices[@]}"; do
                 cd ~/pi-apps
                 ./manage install 'Wine (x86)'
                 
+                cd ~
+                echo "Downloading premade wine env to save time."
+                sleep 1
+                wget https://kd9yqk.com/downloads/vara_wine.zip
+                echo "Extracting wine env..."
+                unzip vara_wine.zip -q
+                echo "Deleting downloaded zip"
+                sleep 1
+                rm vara_wine.zip -v
                 cd ~/digipi_plus
                 touch saves/plus.vara
                 echo "FL Utils Installed"
