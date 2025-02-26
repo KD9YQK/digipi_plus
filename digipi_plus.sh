@@ -5,6 +5,7 @@ echo "DigiPi Plus Installer"
 echo "Created by Bob - KD9YQK"
 echo ""
 sleep 2
+do_reboot=false
 sudo apt update
 echo ""
 echo -n "Checking for DigiPi Plus Base..."
@@ -459,6 +460,7 @@ for choice in "${choices[@]}"; do
                 rm rc.local.1
                 sudo mv temp/rc.local.1 /etc/rc.local
                 touch saves/plus.vara
+                do_reboot=true
                 echo "VARA Installed"
             else
                 echo "OK"
@@ -480,3 +482,9 @@ bash build_services.sh
 sudo systemctl daemon-reload
 bash build_menus.sh
 echo "DigiPi Plus Install Complete. Please refresh your Homepage with Ctrl+Shift+R to view changes. Enjoy!"
+sleep 2
+if [ "do_reboot" = true ] ; then
+     if dialog --stdout --title "Reboot Required" --backtitle "Digipi Plus" --yesno "Digipi requires a reboot.  Would you like to do it now?" 7 60; then
+        sudo reboot
+    fi
+fi
