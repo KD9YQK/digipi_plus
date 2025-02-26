@@ -1,36 +1,16 @@
 #!/bin/python
 
-from helper import add_service_menu
+from helper import add_service add_form
 from helper import add_EXECSTARTPRE
 
 
 with open("www/plus_services.php") as f_old, open("temp/plus_services.php", "w") as f_new:
     for line in f_old:
         if "?>" in line:
-            f_new.write("if (isset($_POST['varahf'])) {\n"
-                        "  $submit = $_POST['varahf'];\n"
-                        "  if ( $submit == 'on' ) {\n"
-                        "    $output = shell_exec('sudo systemctl start varahf');\n"
-                        "    sleep(5);\n"
-                        "    echo $output;\n"
-                        "  }\n"
-                        "  if ( $submit == 'off' ) {\n"
-                        "    $output = shell_exec('sudo systemctl stop varahf');\n"
-                        "    echo $output;\n"
-                        "  }\n"
-                        "}\n")
-            f_new.write("if (isset($_POST['varafm'])) {\n"
-                        "  $submit = $_POST['varafm'];\n"
-                        "  if ( $submit == 'on' ) {\n"
-                        "    $output = shell_exec('sudo systemctl start varafm');\n"
-                        "    sleep(5);\n"
-                        "    echo $output;\n"
-                        "  }\n"
-                        "  if ( $submit == 'off' ) {\n"
-                        "    $output = shell_exec('sudo systemctl stop varafm');\n"
-                        "    echo $output;\n"
-                        "  }\n"
-                        "}\n")
+            asv = add_service("varahf", "varahf")
+            f_new.write(asv)
+            asv = add_service("varafm", "varafm")
+            f_new.write(asv)
         f_new.write(line)
 
 
@@ -43,9 +23,9 @@ with open("www/plus_form.php") as f_old, open("temp/plus_form.php", "w") as f_ne
         f_new.write(line)
 
         if "<?php" in line:
-            asm = add_service_menu("Vara HF", "varahf", "varahf")
+            asm = add_form("Vara HF", "varahf", "varahf")
             f_new.write(asm)
-            asm = add_service_menu("Vara FM", "varafm", "varafm")
+            asm = add_form("Vara FM", "varafm", "varafm")
             f_new.write(asm)
           
 
