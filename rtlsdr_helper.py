@@ -1,7 +1,7 @@
 #!/bin/bash
 
 from helper import add_EXECSTARTPRE
-from helper import add_service_menu
+from helper import add_service add_form
 
 
 with open("/home/pi/direwolf.tnc.conf") as f_old, open("/home/pi/digipi_plus/launchers/direwolf.rtlsdr.conf", "w") as f_new:
@@ -21,18 +21,8 @@ with open("/home/pi/direwolf.tnc.conf") as f_old, open("/home/pi/digipi_plus/lau
 with open("www/plus_services.php") as f_old, open("temp/plus_services.php", "w") as f_new:
     for line in f_old:
         if "?>" in line:
-            f_new.write("if (isset($_POST['rtlsdr-igate'])) {\n"
-                        "  $submit = $_POST['rtlsdr-igate'];\n"
-                        "  if ( $submit == 'on' ) {\n"
-                        "    $output = shell_exec('sudo systemctl start rtlsdr-igate');\n"
-                        "    sleep(5);\n"
-                        "    echo $output;\n"
-                        "  }\n"
-                        "  if ( $submit == 'off' ) {\n"
-                        "    $output = shell_exec('sudo systemctl stop rtlsdr-igate');\n"
-                        "    echo $output;\n"
-                        "  }\n"
-                        "}\n")
+            asv = add_service("rtlsdr-igate", "rtlsdr-igate")
+            f_new.write(asv)
         f_new.write(line)
 
 
@@ -44,7 +34,7 @@ with open("www/plus_form.php") as f_old, open("temp/plus_form.php", "w") as f_ne
         f_new.write(line)
 
         if "<?php" in line:
-            asm = add_service_menu("RTL-SDR igate", "rtlsdr-igate", "rtlsdr-igate")
+            asm = add_form("RTL-SDR igate", "rtlsdr-igate", "rtlsdr-igate")
             f_new.write(asm)
 
 
