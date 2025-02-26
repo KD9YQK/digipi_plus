@@ -461,8 +461,6 @@ for choice in "${choices[@]}"; do
                 sudo mv temp/rc.local.1 /etc/rc.local
                 sudo cp services/varahf.service /etc/systemd/system/ -v
                 sudo cp services/varafm.service /etc/systemd/system/ -v
-                chmod +x /home/pi/digipi_plus/launchers/varahf.sh
-                chmod +x /home/pi/digipi_plus/launchers/varafm.sh
                 ln -sf /home/pi/digipi_plus/launchers/varahf.sh /home/pi -v
                 ln -sf /home/pi/digipi_plus/launchers/varafm.sh /home/pi -v
                 sudo systemctl daemon-reload
