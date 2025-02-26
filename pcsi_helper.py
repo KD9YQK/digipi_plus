@@ -1,24 +1,14 @@
 #!/bin/python
 
 from helper import add_EXECSTARTPRE
-from helper import add_service_menu
+from helper import add_service add_form
 
 
 with open("www/plus_services.php") as f_old, open("temp/plus_services.php", "w") as f_new:
     for line in f_old:
         if "?>" in line:
-            f_new.write("if (isset($_POST['pcsi'])) {\n"
-                        "  $submit = $_POST['pcsi'];\n"
-                        "  if ( $submit == 'on' ) {\n"
-                        "    $output = shell_exec('sudo systemctl start pcsi');\n"
-                        "    sleep(5);\n"
-                        "    echo $output;\n"
-                        "  }\n"
-                        "  if ( $submit == 'off' ) {\n"
-                        "    $output = shell_exec('sudo systemctl stop pcsi');\n"
-                        "    echo $output;\n"
-                        "  }\n"
-                        "}\n")
+            asv = add_service("pcsi", "pcsi")
+            f_new.write(asm)
         f_new.write(line)
 
 
@@ -30,7 +20,7 @@ with open("www/plus_form.php") as f_old, open("temp/plus_form.php", "w") as f_ne
         f_new.write(line)
 
         if "<?php" in line:
-            asm = add_service_menu("PCSI", "pcsi", "pcsi")
+            asm = add_form("PCSI", "pcsi", "pcsi")
             f_new.write(asm)
 
 
