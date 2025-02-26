@@ -29,6 +29,7 @@ if [ ! -f saves/plus.base ]; then
     if dialog --stdout --title "Expand Filesystem" --backtitle "Digipi Plus" --yesno "Would you like to expand the filesystem to use all available space on the SD-Card?" 7 60; then
         sudo remount 
         echo "- +" | sudo sfdisk -N2 --no-reread --force /dev/mmcblk0 # one liner magic to resize partition table
+        sudo partprobe # reloads the new table
         sudo resize2fs /dev/mmcblk0p2 # expands disk to use new table
         sudo partprobe # reloads the new table
     fi
