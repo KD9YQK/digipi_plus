@@ -47,7 +47,7 @@ with open("www/plus_form.php") as f_old, open("temp/plus_form.php", "w") as f_ne
                           }
                         echo '</td>';\n
                         echo '<td>';\n
-                        echo '<font size=+1>APRS TNC/igate</font></td>';\n
+                        echo '<font size=+1>OpenWebRX+</font></td>';\n
                         echo '<td nowrap>';\n
                         echo '<form action="plus_menu.php" method="post">';\n
                         echo '<label class="switch switch-light">';\n
