@@ -22,3 +22,7 @@ fi
 if [ -f saves/plus.xastir ]; then
     python3 helper.py 'xastir'
 fi
+if [ -f saves/plus.vara ]; then
+    python3 helper.py 'varahf'
+    python3 helper.py 'varafm'
+fi
