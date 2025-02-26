@@ -20,7 +20,7 @@ def asm(title, service, name):
   retval +="}\n"
   retval +="elseif ($output == 'failed')\n"
   retval +="{\n"
-  retval +="  echo '<td bgcolor="red">';\n"
+  retval +="""  echo '<td bgcolor="red">';\n"""
   retval +="  $checked = '';\n"
   retval +="}\n"
   retval +="else\n"
