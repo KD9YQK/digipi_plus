@@ -8,6 +8,43 @@ no_change = ['autohotspot.service', 'digipi-boot.service', 'digipi-resolv.servic
              'dbus-org.bluez.service', 'dbus-org.freedesktop.Avahi.service', 'dbus-org.freedesktop.nm-dispatcher.service', 'dbus-org.freedesktop.timesync1.service' ]
 
 
+def add_service_menu(title, service, name):
+    retval = (f"#-- {title}  -------------------------------------------------\n\n"
+              "echo '<tr>';\n"
+              f"$output = shell_exec('systemctl is-active {service}');\n"
+              "$output = chop($output);\n"
+               " if ($output == 'active')\n"
+               " {\n"
+               """    echo '<td bgcolor="lightgreen">';\n"""
+               "    $checked = 'checked';\n"
+                  "}\n"
+                "elseif ($output == 'failed')\n"
+                "{\n"
+                """   echo '<td bgcolor="red">';\n"""
+                "   $checked = '';\n"
+                "}\n"
+                "else\n"
+                "{\n"
+                """   echo '<td bgcolor="lightgrey">';\n"""
+                "   $checked = '';\n"
+                "}\n"
+              "echo '</td>';\n"
+              "echo '<td>';\n"
+              f"echo '<font size=+1>{title}</font></td>';\n"
+              "echo '<td nowrap>';\n"
+              """echo '<form action="plus_menu.php" method="post">';\n"""
+              """echo '<label class="switch switch-light">';\n"""
+              """echo '  <input type="hidden" name="%s" value="off">';\n""".format(name)
+              """echo '  <input onChange="this.form.submit()" class="switch-input" type="checkbox" name="%s" value="on"  $checked />';\n""".format(name)
+              """echo '  <span class="switch-label" ></span> ';\n"""
+              """echo '  <span class="switch-handle"></span> ';\n"""
+              "echo '</label>';\n"
+              "echo '</form>';\n"
+              "echo '</font>';\n"
+              "echo '</td></tr>';\n")
+    return retval
+
+
 def add_EXECSTARTPRE(new:str):
     for x in os.listdir(path):
         if x.endswith(".service"):
