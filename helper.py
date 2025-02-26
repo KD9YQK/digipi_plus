@@ -15,7 +15,7 @@ def asm(title, service, name):
   retval +="$output = chop($output);\n"
   retval +="if ($output == 'active')\n"
   retval +="{\n"
-  retval +="  echo '<td bgcolor="lightgreen">';\n"
+  retval +="""  echo '<td bgcolor="lightgreen">';\n"""
   retval +="  $checked = 'checked';\n"
   retval +="}\n"
   retval +="elseif ($output == 'failed')\n"
