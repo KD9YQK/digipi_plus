@@ -9,7 +9,7 @@ no_change = ['autohotspot.service', 'digipi-boot.service', 'digipi-resolv.servic
 
 
 def add_service(service, name):
-  retval = "if (isset($_POST['{}'])) {\n".format(name)
+  retval = "if (isset($_POST['%s'])) {\n" % (name)
   retval +="  $submit = $_POST['{}'];\n".format(name)
   retval +="  if ( $submit == 'on' ) {\n"
   retval +="    $output = shell_exec('sudo systemctl start {}');\n".format(service)
