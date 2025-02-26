@@ -1,7 +1,8 @@
 #!/bin/bash
 
 from helper import add_EXECSTARTPRE
-from helper import add_service add_form
+from helper import add_service
+from helper import add_form
 
 
 with open("/home/pi/direwolf.tnc.conf") as f_old, open("/home/pi/digipi_plus/launchers/direwolf.rtlsdr.conf", "w") as f_new:
