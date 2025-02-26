@@ -41,7 +41,7 @@ def add_service_menu(title, service, name):
               echo '</label>';\n
               echo '</form>';\n
               echo '</font>';\n
-              echo '</td></tr>';\n""".format(title, service, title, name, name)
+              echo '</td></tr>';\n""" % (title, service, title, name, name)
     return retval
 
 
