@@ -23,9 +23,9 @@ with open("www/plus_form.php") as f_old, open("temp/plus_form.php", "w") as f_ne
         f_new.write(line)
 
         if "<?php" in line:
-            asm = add_service_menu("Direwolf UHF TNC", "uhf-tnc", "uhftnc")
+            asm = add_form("Direwolf UHF TNC", "uhf-tnc", "uhftnc")
             f_new.write(asm)
-            asm = add_service_menu("Direwolf UHF TNC", "uhf-node", "uhfnode")
+            asm = add_form("Direwolf UHF TNC", "uhf-node", "uhfnode")
             f_new.write(asm)
 
 
