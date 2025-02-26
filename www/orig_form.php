@@ -388,7 +388,7 @@ $output = chop($output);
   }
   elseif ($output == "failed")
   {
-     echo '<td bgcolor="lightgreen">';
+     echo '<td bgcolor="red">';
      $checked = "";
   }
   else
@@ -425,7 +425,7 @@ $output = chop($output);
   }
   elseif ($output == "failed")
   {
-     echo '<td bgcolor="lightgreen">';
+     echo '<td bgcolor="red">';
      $checked = "";
   }
   else
@@ -462,7 +462,7 @@ $output = chop($output);
   }
   elseif ($output == "failed")
   {
-     echo '<td bgcolor="lightgreen">';
+     echo '<td bgcolor="red">';
      $checked = "";
   }
   else
@@ -499,7 +499,7 @@ $output = chop($output);
   }
   elseif ($output == "failed")
   {
-     echo '<td bgcolor="lightgreen">';
+     echo '<td bgcolor="red">';
      $checked = "";
   }
   else
