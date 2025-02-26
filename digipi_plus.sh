@@ -6,6 +6,7 @@ echo "Created by Bob - KD9YQK"
 echo ""
 sleep 2
 do_reboot=false
+sudo remount
 sudo apt update
 echo ""
 echo -n "Checking for DigiPi Plus Base..."
