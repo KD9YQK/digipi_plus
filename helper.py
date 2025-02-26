@@ -9,40 +9,40 @@ no_change = ['autohotspot.service', 'digipi-boot.service', 'digipi-resolv.servic
 
 
 def asm(title, service, name):
-    retval = """#-- {}  -------------------------------------------------\n\n
-              echo '<tr>';\n
-              $output = shell_exec('systemctl is-active {}');\n
-              $output = chop($output);\n
-              if ($output == 'active')\n
-              {\n
-              echo '<td bgcolor="lightgreen">';\n
-              $checked = 'checked';\n
-              }\n
-              elseif ($output == 'failed')\n
-              {\n
-              echo '<td bgcolor="red">';\n
-              $checked = '';\n
-              }\n
-              else\n
-              {\n
-              echo '<td bgcolor="lightgrey">';\n
-              $checked = '';\n
-              }\n
-              echo '</td>';\n
-              echo '<td>';\n
-              echo '<font size=+1>{}</font></td>';\n
-              echo '<td nowrap>';\n
-              echo '<form action="plus_menu.php" method="post">';\n
-              echo '<label class="switch switch-light">';\n
-              echo '  <input type="hidden" name="{}" value="off">';\n
-              echo '  <input onChange="this.form.submit()" class="switch-input" type="checkbox" name="{}" value="on"  $checked />';\n
-              echo '  <span class="switch-label" ></span> ';\n
-              echo '  <span class="switch-handle"></span> ';\n
-              echo '</label>';\n
-              echo '</form>';\n
-              echo '</font>';\n
-              echo '</td></tr>';\n""".format(title, service, title, name, name)
-    return retval
+  retval = "#-- {}  -------------------------------------------------\n\n".format(title)
+  retval += "echo '<tr>';\n"
+  retval +="$output = shell_exec('systemctl is-active {}');\n".format(service)
+  retval +="$output = chop($output);\n"
+  retval +="if ($output == 'active')\n"
+  retval +="{\n"
+  retval +="  echo '<td bgcolor="lightgreen">';\n"
+  retval +="  $checked = 'checked';\n"
+  retval +="}\n"
+  retval +="elseif ($output == 'failed')\n"
+  retval +="{\n"
+  retval +="  echo '<td bgcolor="red">';\n"
+  retval +="  $checked = '';\n"
+  retval +="}\n"
+  retval +="else\n"
+  retval +="{\n"
+  retval +="""  echo '<td bgcolor="lightgrey">';\n"""
+  retval +="  $checked = '';\n"
+  retval +="}\n"
+  retval +="echo '</td>';\n"
+  retval +="echo '<td>';\n"
+  retval +="echo '<font size=+1>{}</font></td>';\n".format(title)
+  retval +="echo '<td nowrap>';\n"
+  retval +="""echo '<form action="plus_menu.php" method="post">';\n"""
+  retval +="""echo '<label class="switch switch-light">';\n"""
+  retval +="""echo '  <input type="hidden" name="{}" value="off">';\n""".format(name)
+  retval +="""echo '  <input onChange="this.form.submit()" class="switch-input" type="checkbox" name="{}" value="on"  $checked />';\n""".format(name)
+  retval +="""echo '  <span class="switch-label" ></span> ';\n"""
+  retval +="""echo '  <span class="switch-handle"></span> ';\n"""
+  retval +="echo '</label>';\n"
+  retval +="echo '</form>';\n"
+  retval +="echo '</font>';\n"
+  retval +="""echo '</td></tr>';\n"""
+  return retval
 
 
 def add_EXECSTARTPRE(new:str):
