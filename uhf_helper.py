@@ -1,36 +1,16 @@
 #!/bin/python
 
 from helper import add_EXECSTARTPRE
-from helper import add_service_menu
+from helper import add_service add_form
 
 
 with open("www/plus_services.php") as f_old, open("temp/plus_services.php", "w") as f_new:
     for line in f_old:
         if "?>" in line:
-            f_new.write("if (isset($_POST['uhftnc'])) {\n"
-                        "  $submit = $_POST['uhftnc'];\n"
-                        "  if ( $submit == 'on' ) {\n"
-                        "    $output = shell_exec('sudo systemctl start uhf-tnc');\n"
-                        "    sleep(5);\n"
-                        "    echo $output;\n"
-                        "  }\n"
-                        "  if ( $submit == 'off' ) {\n"
-                        "    $output = shell_exec('sudo systemctl stop uhf-tnc');\n"
-                        "    echo $output;\n"
-                        "  }\n"
-                        "}\n")
-            f_new.write("if (isset($_POST['uhfnode'])) {\n"
-                        "  $submit = $_POST['uhfnode'];\n"
-                        "  if ( $submit == 'on' ) {\n"
-                        "    $output = shell_exec('sudo systemctl start uhf-node');\n"
-                        "    sleep(5);\n"
-                        "    echo $output;\n"
-                        "  }\n"
-                        "  if ( $submit == 'off' ) {\n"
-                        "    $output = shell_exec('sudo systemctl stop uhf-node');\n"
-                        "    echo $output;\n"
-                        "  }\n"
-                        "}\n")
+            asv = add_service("uhf-tnc", "uhftnc")
+            f_new.write(asv)
+            asv = add_service("uhf-node", "uhfnode")
+            f_new.write(asv)
         f_new.write(line)
 
 
