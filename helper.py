@@ -9,9 +9,9 @@ no_change = ['autohotspot.service', 'digipi-boot.service', 'digipi-resolv.servic
 
 
 def asm(title, service, name):
-    retval = """#-- %s  -------------------------------------------------\n\n
+    retval = """#-- {}  -------------------------------------------------\n\n
               echo '<tr>';\n
-              $output = shell_exec('systemctl is-active {service}');\n
+              $output = shell_exec('systemctl is-active {}');\n
               $output = chop($output);\n
               if ($output == 'active')\n
               {\n
@@ -30,18 +30,18 @@ def asm(title, service, name):
               }\n
               echo '</td>';\n
               echo '<td>';\n
-              echo '<font size=+1>%s</font></td>';\n
+              echo '<font size=+1>{}</font></td>';\n
               echo '<td nowrap>';\n
               echo '<form action="plus_menu.php" method="post">';\n
               echo '<label class="switch switch-light">';\n
-              echo '  <input type="hidden" name="%s" value="off">';\n
-              echo '  <input onChange="this.form.submit()" class="switch-input" type="checkbox" name="%s" value="on"  $checked />';\n
+              echo '  <input type="hidden" name="{}" value="off">';\n
+              echo '  <input onChange="this.form.submit()" class="switch-input" type="checkbox" name="{}" value="on"  $checked />';\n
               echo '  <span class="switch-label" ></span> ';\n
               echo '  <span class="switch-handle"></span> ';\n
               echo '</label>';\n
               echo '</form>';\n
               echo '</font>';\n
-              echo '</td></tr>';\n""" % (title, service, title, name, name)
+              echo '</td></tr>';\n""".format(title, service, title, name, name)
     return retval
 
 
