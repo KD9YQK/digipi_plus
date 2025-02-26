@@ -89,3 +89,13 @@ if [ -f saves/plus.mmbr ]; then
     sudo rm temp/*.php
     echo "MMBR Added to Homepage Menu"
 fi
+
+if [ -f saves/plus.vara ]; then
+    python3 vara_helper.py
+    sudo cp temp/*.php www/
+    sudo rm temp/*.php
+    echo "VARA Added to Homepage Menu"
+    sudo sed -i '/DigiPi Plus/a \        "VaraHF"               f.exec "varahf &"' /home/pi/.emwmrc
+    sudo sed -i '/DigiPi Plus/a \        "VaraFM"               f.exec "varafm &"' /home/pi/.emwmrc
+    echo "VARA Added to Desktop Menu"
+fi
