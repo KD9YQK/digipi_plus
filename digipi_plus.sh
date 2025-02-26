@@ -459,7 +459,7 @@ for choice in "${choices[@]}"; do
                 sleep 1
                 wget https://kd9yqk.com/downloads/vara_wine.zip
                 echo "Extracting wine env..."
-                unzip vara_wine.zip -q
+                unzip -q vara_wine.zip
                 echo "Deleting downloaded zip"
                 sleep 1
                 rm vara_wine.zip -v
@@ -493,8 +493,8 @@ sudo systemctl daemon-reload
 bash build_menus.sh
 echo "DigiPi Plus Install Complete. Please refresh your Homepage with Ctrl+Shift+R to view changes. Enjoy!"
 sleep 2
-if [ "do_reboot" = true ] ; then
-     if dialog --stdout --title "Reboot Required" --backtitle "Digipi Plus" --yesno "Digipi requires a reboot.  Would you like to do it now?" 7 60; then
+if [ "$do_reboot" = true ] ; then
+    if dialog --stdout --title "Reboot Required" --backtitle "Digipi Plus" --yesno "Digipi requires a reboot.  Would you like to do it now?" 7 60; then
         sudo reboot
     fi
 fi
