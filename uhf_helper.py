@@ -26,7 +26,7 @@ with open("www/plus_form.php") as f_old, open("temp/plus_form.php", "w") as f_ne
         if "<?php" in line:
             asm = add_form("Direwolf UHF TNC", "uhf-tnc", "uhftnc")
             f_new.write(asm)
-            asm = add_form("Direwolf UHF TNC", "uhf-node", "uhfnode")
+            asm = add_form("Direwolf UHF Node", "uhf-node", "uhfnode")
             f_new.write(asm)
 
 
