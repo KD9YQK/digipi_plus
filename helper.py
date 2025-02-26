@@ -8,7 +8,7 @@ no_change = ['autohotspot.service', 'digipi-boot.service', 'digipi-resolv.servic
              'dbus-org.bluez.service', 'dbus-org.freedesktop.Avahi.service', 'dbus-org.freedesktop.nm-dispatcher.service', 'dbus-org.freedesktop.timesync1.service' ]
 
 
-def asm(title, service, name):
+def add_service_menu(title, service, name):
   retval = "#-- {}  -------------------------------------------------\n\n".format(title)
   retval += "echo '<tr>';\n"
   retval +="$output = shell_exec('systemctl is-active {}');\n".format(service)
