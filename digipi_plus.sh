@@ -472,7 +472,7 @@ for choice in "${choices[@]}"; do
                 sed '/^exit.*/i alias varafm="wine ~/.wine/drive_c/VARAFM/VARAFM.exe"' temp/rc.local.1 > temp/rc.local.2
                 alias varafm="wine ~/.wine/drive_c/VARAFM/VARAFM.exe"
                 rm temp/rc.local.1
-                sudo mv temp/rc.local.1 /etc/rc.local
+                sudo mv temp/rc.local.2 /etc/rc.local
                 sudo cp services/varahf.service /etc/systemd/system/ -v
                 sudo cp services/varafm.service /etc/systemd/system/ -v
                 ln -sf /home/pi/digipi_plus/launchers/varahf.sh /home/pi -v
