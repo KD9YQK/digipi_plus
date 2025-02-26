@@ -50,7 +50,7 @@ def add_form(title, service, name):
   retval +="""echo '<form action="plus_menu.php" method="post">';\n"""
   retval +="""echo '<label class="switch switch-light">';\n"""
   retval +="""echo '  <input type="hidden" name="{}" value="off">';\n""".format(name)
-  retval +="""echo '  <input onChange="this.form.submit()" class="switch-input" type="checkbox" name="{}" value="on"  $checked />';\n""".format(name)
+  retval +='''echo "  <input onChange='this.form.submit()' class='switch-input' type='checkbox' name='{}' value='on'  $checked />";\n'''.format(name)
   retval +="""echo '  <span class="switch-label" ></span> ';\n"""
   retval +="""echo '  <span class="switch-handle"></span> ';\n"""
   retval +="echo '</label>';\n"
