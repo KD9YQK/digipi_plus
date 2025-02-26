@@ -457,7 +457,7 @@ for choice in "${choices[@]}"; do
                 echo "Creating alias for varafm"
                 sed '/^exit.*/i alias varafm="wine ~/.wine/drive_c/VARAFM/VARAFM.exe"' temp/rc.local.1 > temp/rc.local.2
                 alias varafm="wine ~/.wine/drive_c/VARAFM/VARAFM.exe"
-                rm rc.local.1
+                rm temp/rc.local.1
                 sudo mv temp/rc.local.1 /etc/rc.local
                 touch saves/plus.vara
                 do_reboot=true
