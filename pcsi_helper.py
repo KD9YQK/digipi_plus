@@ -8,7 +8,7 @@ with open("www/plus_services.php") as f_old, open("temp/plus_services.php", "w")
     for line in f_old:
         if "?>" in line:
             asv = add_service("pcsi", "pcsi")
-            f_new.write(asm)
+            f_new.write(asv)
         f_new.write(line)
 
 
