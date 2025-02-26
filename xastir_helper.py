@@ -1,23 +1,13 @@
 #!/bin/python
-from helper import add_service_menu
+from helper import add_service add_form
 from helper import add_EXECSTARTPRE
 
 
 with open("www/plus_services.php") as f_old, open("temp/plus_services.php", "w") as f_new:
     for line in f_old:
         if "?>" in line:
-            f_new.write("if (isset($_POST['xastir'])) {\n"
-                        "  $submit = $_POST['xastir'];\n"
-                        "  if ( $submit == 'on' ) {\n"
-                        "    $output = shell_exec('sudo systemctl start xastir');\n"
-                        "    sleep(5);\n"
-                        "    echo $output;\n"
-                        "  }\n"
-                        "  if ( $submit == 'off' ) {\n"
-                        "    $output = shell_exec('sudo systemctl stop xastir');\n"
-                        "    echo $output;\n"
-                        "  }\n"
-                        "}\n")
+            asv = add_service("xastir", "xastir")
+            f_new.write(asv)
         f_new.write(line)
 
 
@@ -29,7 +19,7 @@ with open("www/plus_form.php") as f_old, open("temp/plus_form.php", "w") as f_ne
         f_new.write(line)
 
         if "<?php" in line:
-            asm = add_service_menu("Xastir", "xastir", "xastir")
+            asm = add_form("Xastir", "xastir", "xastir")
             f_new.write(asm)
 
 
