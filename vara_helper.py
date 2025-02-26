@@ -62,7 +62,7 @@ with open("www/plus_form.php") as f_old, open("temp/plus_form.php", "w") as f_ne
                         """echo '<input type="submit" name="varahf" value="off">';\n"""
                         "echo '</font>';\n"
                         "echo '</td></tr>';\n")
-          f_new.write("#-- VaraFM  -------------------------------------------------\n\n"
+            f_new.write("#-- VaraFM  -------------------------------------------------\n\n"
                         "echo '<tr>';\n"
                         "$output = shell_exec('systemctl is-active varafm');\n"
                         "#$output = str_replace('failed', 'inactive', $output);\n"
