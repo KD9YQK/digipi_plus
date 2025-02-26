@@ -1,5 +1,6 @@
 #!/bin/python
 
+from helper import add_service_menu
 from helper import add_EXECSTARTPRE
 
 
@@ -42,72 +43,10 @@ with open("www/plus_form.php") as f_old, open("temp/plus_form.php", "w") as f_ne
         f_new.write(line)
 
         if "<?php" in line:
-            f_new.write("#-- VaraHF  -------------------------------------------------\n\n"
-                        echo "<tr>";\n
-                        $output = shell_exec('systemctl is-active varahf');\n
-                        $output = chop($output);\n
-                          if ($output == "active")\n
-                          {\n
-                             echo '<td bgcolor="lightgreen">';\n
-                             $checked = "checked";\n
-                          }\n
-                          elseif ($output == "failed")\n
-                          {\n
-                             echo '<td bgcolor="red">';\n
-                             $checked = "";\n
-                          }\n
-                          else\n
-                          {\n
-                             echo '<td bgcolor="lightgrey">';\n
-                             $checked = "";\n
-                          }
-                        echo '</td>';\n
-                        echo '<td>';\n
-                        echo '<font size=+1>Vara HF</font></td>';\n
-                        echo '<td nowrap>';\n
-                        echo '<form action="plus_menu.php" method="post">';\n
-                        echo '<label class="switch switch-light">';\n
-                        echo '  <input type="hidden" name="varahf" value="off">';\n
-                        echo "  <input onChange='this.form.submit()' class='switch-input' type='checkbox' name='varahf' value='on'  $checked />";\n
-                        echo '  <span class="switch-label" ></span> ';\n
-                        echo '  <span class="switch-handle"></span> ';\n
-                        echo '</label>';\n
-                        echo '</form>';\n
-                        echo '</font>';\n
-                        echo '</td></tr>';\n)
-            f_new.write("#-- VaraFM  -------------------------------------------------\n\n"
-                        echo "<tr>";\n
-                        $output = shell_exec('systemctl is-active varafm');\n
-                        $output = chop($output);\n
-                          if ($output == "active")\n
-                          {\n
-                             echo '<td bgcolor="lightgreen">';\n
-                             $checked = "checked";\n
-                          }\n
-                          elseif ($output == "failed")\n
-                          {\n
-                             echo '<td bgcolor="red">';\n
-                             $checked = "";\n
-                          }\n
-                          else\n
-                          {\n
-                             echo '<td bgcolor="lightgrey">';\n
-                             $checked = "";\n
-                          }
-                        echo '</td>';\n
-                        echo '<td>';\n
-                        echo '<font size=+1>Vara FM</font></td>';\n
-                        echo '<td nowrap>';\n
-                        echo '<form action="plus_menu.php" method="post">';\n
-                        echo '<label class="switch switch-light">';\n
-                        echo '  <input type="hidden" name="varafm" value="off">';\n
-                        echo "  <input onChange='this.form.submit()' class='switch-input' type='checkbox' name='varafm' value='on'  $checked />";\n
-                        echo '  <span class="switch-label" ></span> ';\n
-                        echo '  <span class="switch-handle"></span> ';\n
-                        echo '</label>';\n
-                        echo '</form>';\n
-                        echo '</font>';\n
-                        echo '</td></tr>';\n)
+            asm = add_service_menu("Vara HF", "varahf", "varahf")
+            f_new.write(asm)
+            asm = add_service_menu("Vara FM", "varafm", "varafm")
+            f_new.write(asm)
           
 
 
