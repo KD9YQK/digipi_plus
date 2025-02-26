@@ -175,6 +175,19 @@ for choice in "${choices[@]}"; do
                 echo "OK"
             fi
             ;;
+    esac
+done
+
+if [ ! -f saves/plus.node ]; then
+    echo "Skipping AX25 Node Upgrade"
+else
+    echo "Starting AX25 Node Upgrade"
+    sleep 1
+    bash node_upgrade.sh
+fi
+
+for choice in "${choices[@]}"; do
+    case $choice in
         2)
             echo -n "Checking for UHF Upgrade..."
             sleep 1
@@ -473,14 +486,6 @@ for choice in "${choices[@]}"; do
             ;;
     esac
 done
-
-if [ ! -f saves/plus.node ]; then
-    echo "Skipping AX25 Node Upgrade"
-else
-    echo "Starting AX25 Node Upgrade"
-    sleep 1
-    bash node_upgrade.sh
-fi
 
 chmod +x launchers/*.sh
 bash build_services.sh
