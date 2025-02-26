@@ -1,7 +1,8 @@
 #!/bin/python
 
 from helper import add_EXECSTARTPRE
-from helper import add_service add_form
+from helper import add_service
+from helper import add_form
 
 
 with open("www/plus_services.php") as f_old, open("temp/plus_services.php", "w") as f_new:
