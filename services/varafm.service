@@ -1,5 +1,5 @@
 [Unit]
-Description=pcsi
+Description=varafm
 After=graphical.target
 
 [Service]
