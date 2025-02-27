@@ -12,7 +12,7 @@ sudo chmod +x /usr/local/bin/runonce
 #sudo systemctl start runonce.service
 
 #write out current crontab
-test=$(crontab -l)
+test=$(crontab -l) >> /dev/null
 if [ -z $test ] ; then
   echo "@reboot /bin/bash /usr/local/bin/runonce  2>&1 | logger -t runonce" > mycron
 else
