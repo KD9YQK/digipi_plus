@@ -4,6 +4,7 @@
 # There will also be an entry in your syslog.
 
 sudo mkdir -p /etc/local/runonce.d/ran
+sudo chown -R pi /etc/local/runonce.d/
 sudo cp runonce /usr/local/bin/runonce
 sudo chmod +x /usr/local/bin/runonce
 #sudo cp runonce.service /etc/systemd/system/runonce.service
