@@ -1,0 +1,13 @@
+[Unit]
+Description=Run once
+After=local-fs.target
+After=network.target
+#After=XXX
+
+[Service]
+ExecStart=/usr/local/bin/runonce
+RemainAfterExit=true
+Type=oneshot
+
+[Install]
+WantedBy=multi-user.target
