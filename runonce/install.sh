@@ -19,6 +19,7 @@ else
   crontab -l > mycron
   echo "" >> mycron
   echo "@reboot /bin/bash /usr/local/bin/runonce  2>&1 | logger -t runonce" >> mycron
+fi
 #install new cron file
 crontab mycron
 rm mycron
