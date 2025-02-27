@@ -460,12 +460,11 @@ for choice in "${choices[@]}"; do
                 
                 echo '#!/bin/sh' > vara_install.sh
                 echo 'sleep 30' >> vara_install.sh
-                echo 'echo #############################' >> vara_install.sh
-                echo 'echo #   Vara Install Starting   #' >> vara_install.sh
-                echo 'echo #############################' >> vara_install.sh
+                echo 'echo "#############################"' >> vara_install.sh
+                echo 'echo "#   Vara Install Starting   #"' >> vara_install.sh
+                echo 'echo "#############################"' >> vara_install.sh
                 echo 'cd /home/pi/pi-apps/' >> vara_install.sh
                 echo "./manage install 'Wine (x86)'" >> vara_install.sh
-                echo 'echo ""' >> vara_install.sh
                 echo 'echo "#############################"' >> vara_install.sh
                 echo 'echo "#   Vara Install Complete   #"' >> vara_install.sh
                 echo 'echo "#############################"' >> vara_install.sh
@@ -514,6 +513,6 @@ echo "DigiPi Plus Install Complete. Please refresh your Homepage with Ctrl+Shift
 sleep 2
 if [ "$do_reboot" = true ] ; then
     if dialog --stdout --title "Reboot Required" --backtitle "Digipi Plus" --yesno "Digipi requires a reboot.  Would you like to do it now?" 7 60; then
-        sudo reboot
+        sudo shutdown now -r &
     fi
 fi
