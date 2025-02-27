@@ -14,13 +14,11 @@ sudo chmod +x /usr/local/bin/runonce
 #write out current crontab
 test=$(crontab -l)
 if [ -z $test ] ; then
-  echo "@reboot /bin/bash /usr/local/bin/runonce" > mycron
+  echo "@reboot /bin/bash /usr/local/bin/runonce  2>&1 | logger -t runonce" > mycron
 else
   crontab -l > mycron
   echo "" >> mycron
-  echo "@reboot /bin/bash /usr/local/bin/runonce" >> mycron
-#echo new cron into cron file
-echo "@reboot /bin/bash /usr/local/bin/runonce" >> mycron
+  echo "@reboot /bin/bash /usr/local/bin/runonce  2>&1 | logger -t runonce" >> mycron
 #install new cron file
 crontab mycron
 rm mycron
