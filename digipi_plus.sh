@@ -463,11 +463,11 @@ for choice in "${choices[@]}"; do
                 echo 'echo "#############################"' >> vara_install.sh
                 echo 'echo "#   Vara Install Starting   #"' >> vara_install.sh
                 echo 'echo "#############################"' >> vara_install.sh
-                echo 'nice -n 5 vncserver -depth 16' >> vara_install.sh
+                echo 'USER=pi nice -n 5 vncserver -depth 16' >> vara_install.sh
                 echo '/usr/share/novnc/utils/novnc_proxy --vnc localhost:5901 &' >> vara_install.sh
                 echo 'export DISPLAY=:1 ' >> vara_install.sh
-                echo -n 'xterm -e "cd /home/pi/pi-apps/ && "' >> vara_install.sh
-                echo "./manage install 'Wine (x86)'" >> vara_install.sh
+                echo -n 'xterm -e "/home/pi/pi-apps/manage install"' >> vara_install.sh
+                echo " 'Wine (x86)'" >> vara_install.sh
                 echo 'echo "#############################"' >> vara_install.sh
                 echo 'echo "#   Vara Install Complete   #"' >> vara_install.sh
                 echo 'echo "#############################"' >> vara_install.sh
