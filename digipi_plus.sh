@@ -25,6 +25,10 @@ if [ ! -f saves/plus.base ]; then
     echo "Copying Files"
     cp home/emwmrc_plus ~/.emwmrc -v
     touch saves/plus.base
+    echo 'Installing runonce by KD9YQK'
+    cd ~/digipi_plus/runonce
+    bash install.sh
+    cd ~/digipi_plus
     sudo apt install dialog
     if dialog --stdout --title "Expand Filesystem" --backtitle "Digipi Plus" --yesno "Would you like to expand the filesystem to use all available space on the SD-Card?" 7 60; then
         sudo remount 
@@ -431,11 +435,9 @@ for choice in "${choices[@]}"; do
                 sleep 1
                 cd ~
                 wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bash
-                echo "A reboot will be required when install is complete!"
-                
-                echo "Removing /tmp RAMDRIVE"
-                sudo umount -l /tmp
+                echo ''
                 echo "Switch to 64bit kernel"
+                echo "A reboot will be required when install is complete!"
                 sleep 1
                 if [ -f /boot/firmware/config.txt ]; then
                   boot_config="/boot/firmware/config.txt"
@@ -454,7 +456,21 @@ for choice in "${choices[@]}"; do
                 mv install-32 install-32.bak -v
                 cp ~/digipi_plus/pi-apps/wine.install-32 install-32 -v
                 cd ~/pi-apps
-                ./manage install 'Wine (x86)'
+                #./manage install 'Wine (x86)'
+                
+                echo '#!/bin/sh' > vara_install.sh
+                echo 'sleep 30' >> vara_install.sh
+                echo 'echo #############################' >> vara_install.sh
+                echo 'echo #   Vara Install Starting   #' >> vara_install.sh
+                echo 'echo #############################' >> vara_install.sh
+                echo 'cd /home/pi/pi-apps/' >> vara_install.sh
+                echo "./manage install 'Wine (x86)'" >> vara_install.sh
+                echo 'echo ""' >> vara_install.sh
+                echo 'echo "#############################"' >> vara_install.sh
+                echo 'echo "#   Vara Install Complete   #"' >> vara_install.sh
+                echo 'echo "#############################"' >> vara_install.sh
+                mv vara_install.sh /etc/local/runonce.d/vara_install.sh
+                chmod u+x /etc/local/runonce.d/vara_install.sh
                 
                 cd ~
                 echo "Downloading premade wine env to save time."
@@ -478,10 +494,11 @@ for choice in "${choices[@]}"; do
                 sudo cp services/varafm.service /etc/systemd/system/ -v
                 ln -sf /home/pi/digipi_plus/launchers/varahf.sh /home/pi -v
                 ln -sf /home/pi/digipi_plus/launchers/varafm.sh /home/pi -v
-                sudo systemctl daemon-reload
+                #sudo systemctl daemon-reload
                 touch saves/plus.vara
                 do_reboot=true
-                echo "VARA Installed"
+                echo "VARA Pre-Install Complete.  Please reboot to continue!!!"
+                sleep 3
             else
                 echo "OK"
             fi
