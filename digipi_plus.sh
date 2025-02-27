@@ -514,8 +514,8 @@ sudo systemctl daemon-reload
 bash build_menus.sh
 echo "DigiPi Plus Install Complete. Please refresh your Homepage with Ctrl+Shift+R to view changes. Enjoy!"
 sleep 2
-if [ "$do_reboot" = true ] ; then
-    if dialog --stdout --title "Reboot Required" --backtitle "Digipi Plus" --yesno "Digipi requires a reboot.  Would you like to do it now?" 7 60; then
-        sudo shutdown now -r &
-    fi
-fi
+#if [ "$do_reboot" = true ] ; then
+#    if dialog --stdout --title "Reboot Required" --backtitle "Digipi Plus" --yesno "Digipi requires a reboot.  Would you like to do it now?" 7 60; then
+#        sudo shutdown now -r &
+#    fi
+#fi
