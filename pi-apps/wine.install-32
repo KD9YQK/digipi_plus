@@ -1,237 +1,64 @@
 #!/bin/bash
-
-#note to maintainer, if you change the below version make sure to update it in the uninstall script as well
 version=9.17
-
-if grep -q ARMv6 /proc/cpuinfo ;then
-  error "Wine is not compatible with the Raspberry Pi Zero or other ARMv6 boards."
-fi
-
-kernel="$(uname -m)"
-if ! [[ "$kernel" =~ "64" ]] && [ "$GITHUB_ACTIONS" != "true" ]; then
-  if [ -e /boot/config-$(uname -r) ];then
-    vmsplit_output="$(cat /boot/config-$(uname -r) | grep VMSPLIT)"
-  else
-    if [ ! -e /proc/config.gz ];then
-      sudo modprobe configs || exit 1
-      if [ ! -e /proc/config.gz ];then
-        error "/proc/config.gz does not exist after running sudo modprobe configs!"
-      fi
-    fi
-    vmsplit_output="$(gunzip < /proc/config.gz | grep VMSPLIT)"
-  fi
-fi
-if [ -z "$vmsplit_output" ];then
-  if [[ "$kernel" =~ "64" ]];then
-    status "No memory split information due to running a $kernel kernel. Continuing..."
-  else
-    status "No memory split information and running a $kernel kernel. Strange."
-    status "Continuing..."
-  fi
-elif echo "$vmsplit_output" | grep -q "^CONFIG_VMSPLIT_2G=y" || echo "$vmsplit_output" | grep -q "^# CONFIG_VMSPLIT_3G is not set" ;then
-  
-  #ensure hardware is bcm2836/bcm2837 for kernel compiling to work
-  #note that bcm2709 dts has a compatible tag of bcm2836 so SOC_ID will be bcm2836
-  # obtain SOC_ID
-  get_model
-  if [ "$SOC_ID" == 'bcm2836' ]; then
-    description="You are using a kernel with a 2G/2G memory split.
-Wine will not work on such systems. What would you like to do?
-
-- Compile a 3G/1G kernel (several hours)
-- Exit now"
-    userinput_func "$description" "Compile 3G/1G kernel" "Exit"
-  elif [ "$SOC_ID" == 'bcm2837' ];then
-    description="You are using a kernel with a 2G/2G memory split.
-Wine will not work on such systems. What would you like to do?
-
-- Switch to the 64-bit kernel (about 2 minutes)
-- Compile a 3G/1G kernel (several hours)
-- Exit now"
-    userinput_func "$description" "Switch to a 64-bit kernel" "Compile 3G/1G kernel" "Exit"
-  else
-    error "User error: This script is not capable of handling your $SOC_ID soc with a 2G/2G memory split.\nWhatever you did to get yourself into this situation, undo it and try installing Wine again."
-  fi
-  
-  if [ "$output" == "Switch to a 64-bit kernel" ];then
-    #switch to 64bit kernel
-    if [ -f /boot/firmware/config.txt ]; then
-      boot_config="/boot/firmware/config.txt"
-    elif [ -f /boot/config.txt ]; then
-      boot_config="/boot/config.txt"
-    else
-      error 'User error: The /boot/config.txt and /boot/firmware/config.txt files are missing! You must be on an unsupported system.'
-    fi
-    echo "" | sudo tee --append $boot_config >/dev/null
-    echo "arm_64bit=1" | sudo tee --append $boot_config >/dev/null
-    echo -e "The 64-bit kernel has been enabled by adding 'arm_64bit=1' to $boot_config\nPlease reboot and install the Wine app again."
-    sleep infinity
-  elif [ "$output" == "Compile 3G/1G kernel" ];then
-    #compile 3g/1g kernel
-    if [ -f /boot/firmware/config.txt ]; then
-      bootfiles_location="/boot/firmware"
-    elif [ -f /boot/config.txt ]; then
-      bootfiles_location="/boot"
-    else
-      error 'User error: The /boot/config.txt and /boot/firmware/config.txt files are missing! You must be on an unsupported system.'
-    fi
-    
-    #backup ~/linux if it exists
-    rm -rf ~/linux.bak
-    [ -e ~/linux ] && (echo "$HOME/linux already exists, moving it to $HOME/linux.bak" ; mv -f ~/linux ~/linux.bak)
-    
-    #download kernel source code
-    git_clone --depth=1 https://github.com/raspberrypi/linux || error "Failed to git_clone the raspberry pi kernel repo!"
-    
-    echo "Installing necessary build packages..."
-    install_packages raspberrypi-kernel-headers build-essential bc git wget bison flex libssl-dev make libncurses-dev || exit 1
-    
-    #build for pi3
-    cd ~/linux || error "Failed to enter the ~/linux folder!"
-    KERNEL=kernel7
-    make -j6 bcm2709_defconfig || error "The make command exited with failure. Full command: 'make -j6 bcm2709_defconfig'"
-    
-    #change memory split config
-    echo "Setting memory split to 3G/1G"
-    sed -i 's/CONFIG_VMSPLIT_2G=y/# CONFIG_VMSPLIT_2G is not set/g' ~/linux/.config || error "sed failed to edit $HOME/linux/.config file!"
-    sed -i 's/# CONFIG_VMSPLIT_3G is not set/CONFIG_VMSPLIT_3G=y/g' ~/linux/.config
-    
-    echo '' | make -j6 zImage modules dtbs || error "Failed to make bcm2709_defconfig zImage modules dtbs!"
-    
-    #install
-    echo "Copying new files to $bootfiles_location/..."
-    sudo make modules_install || error "sudo make modules_install failed!"
-    sudo cp arch/arm/boot/dts/broadcom/*.dtb $bootfiles_location/ || error "Failed to copy dtb files to $bootfiles_location!"
-    sudo cp arch/arm/boot/dts/overlays/*.dtb* $bootfiles_location/overlays/ || error "Failed to copy overlays to $bootfiles_location/overlays!"
-    sudo cp arch/arm/boot/dts/overlays/README $bootfiles_location/overlays/
-    sudo cp arch/arm/boot/zImage $bootfiles_location/$KERNEL.img || error "Failed to copy kernel to $bootfiles_location/$KERNEL.img!"
-    cd
-    rm -rf ~/linux
-    
-    echo "Removing the utilities that were used to compile the kernel..."
-    purge_packages
-    
-    #message
-    echo -e "It appears the 3G/1G kernel has been built and installed successfully.\nPlease reboot and install the Wine app again."
-    sleep infinity
-  else
-    error "User error: exited."
-  fi
-else
-  echo "Your system is using a 3G/1G kernel. Continuing..."
-fi
-#Past this point, the pi is running a Wine-compatible kernel.
-
 # Get dependencies
-install_packages cabextract p7zip-full || exit 1
+sudo apt install cabextract p7zip-full
 
 #install box86
-"${DIRECTORY}/manage" install-if-not-installed Box86 || error "Box86 failed to install somehow!"
-if ! command -v box86 >/dev/null ;then
-  error "User error: Pi-Apps thinks Box86 is installed, however no command named 'box86' exists. Please install Box86 manually."
-fi
-#upgrade box86
-echo "Upgrading Box86 if necessary:"
-apt_lock_wait
-sudo apt install --only-upgrade box86-* -y
+sudo dpkg -i box86-generic-arm.deb -y
 echo "Installed Box86 version:"
-box86 -v || error "User error: Something went wrong when trying to run Box86."
+box86 -v
 
-# Remove old wine, while leaving config intact
-pkill -9 wine
-command -v wineserver >/dev/null && wineserver -k
-command -v wine >/dev/null && sudo apt purge -y wine &>/dev/null &
-sudo rm -rf /usr/local/bin/wine /usr/local/bin/wineboot /usr/local/bin/wineserver /usr/local/bin/winecfg /usr/local/bin/winetricks /opt/wine-${version} ~/.cache/winetricks ~/.cache/wine 2>/dev/null
-
-less_tar() { #format tar verbose output to refresh same line with the next extracted file
-  # Read from standard input line by line
-  while IFS='' read -r line; do
-    # Refresh the same line in the terminal with the latest extracted file
-    echo -ne "$line"'\033[0K\r'
-  done
-  echo #add newline before exiting
-}
-
-# Download wine to /opt
-wget https://github.com/Pi-Apps-Coders/files/releases/download/large-files/wine-i386-${version}.tar.gz -O /home/pi/digipi_plus/temp/wine-${version}.tar.gz || error 'Failed to download wine!'
-status "Extracting: /home/pi/digipi_plus/temp/wine-${version}.tar.gz"
-sudo tar -xvf /home/pi/digipi_plus/temp/wine-${version}.tar.gz -C /opt | less_tar
-[ ${PIPESTATUS[0]} != 0 ] && error 'Failed to extract wine!'
-rm -f /home/pi/digipi_plus/temp/wine-${version}.tar.gz
-status_green Done
+# Extract wine to /opt
+sudo tar -xvf wine-9.17.tar.gz -C /opt
 
 #edit wine.inf to disable mime-associations. Nobody wants to double-click a text file, wonder why nothing is happening, then watch 15 Wine notepad windows pop up. Ask me how I know.
-sudo sed -i 's/winemenubuilder.exe -a -r/winemenubuilder.exe -r/' /opt/wine-${version}/share/wine/wine.inf #See: https://askubuntu.com/a/400430
+sudo sed -i 's/winemenubuilder.exe -a -r/winemenubuilder.exe -r/' /opt/wine-9.17/share/wine/wine.inf #See: https://askubuntu.com/a/400430
 
 #download winetricks
-wget -O /home/pi/digipi_plus/temp/winetricks "https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks" || exit 1
-sudo mv /home/pi/digipi_plus/temp/winetricks /opt/wine-${version}/bin/winetricks || error "Failed to move winetricks script to /opt/wine-${version}/bin folder!"
-sudo chmod +x /opt/wine-${version}/bin/winetricks
+sudo cp winetricks /opt/wine-9.17/bin/winetricks
+sudo chmod +x /opt/wine-9.17/bin/winetricks
 
-#download Mono to universal location (to be installed automatically in all wine prefixes)
+#Extract Mono to universal location (to be installed automatically in all wine prefixes)
 #according to https://wiki.winehq.org/Mono#Versions, use Mono 9.3.0 for Wine 9.17
 #wine mono pacakge is called -x86 but contains both x86 and x86_64 binaries
-sudo mkdir -p /opt/wine-${version}/share/wine/mono
-wget -O /home/pi/digipi_plus/temp/wine-mono-9.3.0-x86.tar.xz 'https://dl.winehq.org/wine/wine-mono/9.3.0/wine-mono-9.3.0-x86.tar.xz' || exit 1
-status "Extracting: /home/pi/digipi_plus/temp/wine-mono-9.3.0-x86.tar.xz"
-sudo tar -xvf "/home/pi/digipi_plus/temp/wine-mono-9.3.0-x86.tar.xz" -C "/opt/wine-${version}/share/wine/mono" | less_tar
-[ ${PIPESTATUS[0]} != 0 ] && error 'Failed to extract wine-mono!'
-rm -f "/home/pi/digipi_plus/temp/wine-mono-9.3.0-x86.tar.xz"
-status_green Done
+sudo mkdir -p /opt/wine-9.17/share/wine/mono
+sudo tar -xvf "wine-mono-9.3.0-x86.tar.xz" -C "/opt/wine-9.17/share/wine/mono"
 
-#download Gecko to universal location (to be installed automatically in all wine prefixes)
+#Extract Gecko to universal location (to be installed automatically in all wine prefixes)
 #according to https://wiki.winehq.org/Gecko, use Gecko 2.47.4 for Wine 8.6
-sudo mkdir -p /opt/wine-${version}/share/wine/gecko
-wget -O /home/pi/digipi_plus/temp/wine-gecko-2.47.4-x86.tar.xz 'https://dl.winehq.org/wine/wine-gecko/2.47.4/wine-gecko-2.47.4-x86.tar.xz' || exit 1
-status "Extracting: /home/pi/digipi_plus/temp/wine-gecko-2.47.4-x86.tar.xz"
-sudo tar -xvf "/home/pi/digipi_plus/temp/wine-gecko-2.47.4-x86.tar.xz" -C "/opt/wine-${version}/share/wine/gecko" | less_tar
-[ ${PIPESTATUS[0]} != 0 ] && error 'Failed to extract wine-gecko!'
-rm -f "/home/pi/digipi_plus/temp/wine-gecko-2.47.4-x86.tar.xz"
-status_green Done
+sudo mkdir -p /opt/wine-9.17/share/wine/gecko
+sudo tar -xvf "wine-gecko-2.47.4-x86.tar.xz" -C "/opt/wine-9.17/share/wine/gecko"
 
 status "Creating terminal commands:"
 echo "  - winecfg"
-sudo ln -s /opt/wine-${version}/bin/winecfg /usr/local/bin/winecfg
+sudo ln -s /opt/wine-9.17/bin/winecfg /usr/local/bin/winecfg
 echo "  - wineserver"
-sudo ln -s /opt/wine-${version}/bin/wineserver /usr/local/bin/wineserver
+sudo ln -s /opt/wine-9.17/bin/wineserver /usr/local/bin/wineserver
 echo "  - wineboot"
-sudo ln -s /opt/wine-${version}/bin/wineboot /usr/local/bin/wineboot
+sudo ln -s /opt/wine-9.17/bin/wineboot /usr/local/bin/wineboot
 
 echo "  - wine"
 echo "#!/bin/bash
-if [ -d /opt/wine-${version}/mesa ];then
-  export LD_LIBRARY_PATH=/opt/wine-${version}/mesa/lib/arm-linux-gnueabihf/
-  export LIBGL_DRIVERS_PATH=/opt/wine-${version}/mesa/lib/arm-linux-gnueabihf/dri/
-  export VK_ICD_FILENAMES=/opt/wine-${version}/mesa/share/vulkan/icd.d/broadcom_icd.armv7l.json
+if [ -d /opt/wine-9.17/mesa ];then
+  export LD_LIBRARY_PATH=/opt/wine-9.17/mesa/lib/arm-linux-gnueabihf/
+  export LIBGL_DRIVERS_PATH=/opt/wine-9.17/mesa/lib/arm-linux-gnueabihf/dri/
+  export VK_ICD_FILENAMES=/opt/wine-9.17/mesa/share/vulkan/icd.d/broadcom_icd.armv7l.json
 fi
-/opt/wine-${version}/bin/wine"' "$@"' | sudo tee /usr/local/bin/wine >/dev/null
+/opt/wine-9.17/bin/wine"' "$@"' | sudo tee /usr/local/bin/wine >/dev/null
 
 echo "  - winetricks"
 echo "#!/bin/bash
-BOX86_NOBANNER=1 /opt/wine-${version}/bin/winetricks"' "$@"' | sudo tee /usr/local/bin/winetricks >/dev/null
+BOX86_NOBANNER=1 /opt/wine-9.17/bin/winetricks"' "$@"' | sudo tee /usr/local/bin/winetricks >/dev/null
 
 #make them all executable
-status -n "Making executable... "
-sudo chmod +x /usr/local/bin/winecfg /usr/local/bin/wineserver /usr/local/bin/wineboot /usr/local/bin/wine /usr/local/bin/winetricks || error "\nFailed to mark all commands as executable. Most likely one failed to be generated or copied. These files are:\n/usr/local/bin/winecfg\n/usr/local/bin/wineserver\n/usr/local/bin/wineboot\n/usr/local/bin/wine\n/usr/local/bin/winetricks"
-status_green "Done"
-echo
+sudo chmod +x /usr/local/bin/winecfg /usr/local/bin/wineserver /usr/local/bin/wineboot /usr/local/bin/wine /usr/local/bin/winetricks 
 
 #get mesa and icons from wine-stuff repo
-cd /home/pi/digipi_plus/temp
-rm -rf wine-stuff
-git clone https://github.com/Botspot/wine-stuff || error "Failed to clone wine-stuff repository!"
-sudo mv "$PWD/wine-stuff/icons" /opt/wine-${version}
-sudo mv "$PWD/wine-stuff/Windows_10.msstyles" /opt/wine-${version}
-if [ $(ldd --version | head -n1 | awk '{print $NF}' | sed 's/\..*//g') -ge 2 ] && [ "$(ldd --version | head -n1 | awk '{print $NF}' | sed 's/.*\.//g')" -ge 30 ] && ! package_is_new_enough libgl1-mesa-dri 22.1.0 ;then
-  #only install mesa if glibc is 2.30 or greater and apt mesa version is less than 22.1.0 (which is the version of the binary builds)
-  sudo mv "$PWD/wine-stuff/mesa" /opt/wine-${version}
-fi
-sudo chown -R root:root /opt/wine-${version}
-rm -rf wine-stuff
-cd
+sudo cp "wine-stuff/icons" /opt/wine-9.17
+sudo cp "wine-stuff/Windows_10.msstyles" /opt/wine-9.17
 
-#create menu launchers
-status -n "Creating Menu launchers... "
+sudo chown -R root:root /opt/wine-9.17
+
 #remove old local menu launchers
 rm -f ~/.local/share/applications/wine-config.desktop ~/.local/share/applications/wine-tricks.desktop ~/.local/share/applications/wine-explorer.desktop ~/.local/share/applications/wine-uninstaller.desktop ~/.local/share/applications/wine-taskmgr.desktop ~/.local/share/applications/wine-killer.desktop ~/.local/share/applications/wine-regenerate.desktop
 
@@ -241,6 +68,5 @@ rm -f ~/.local/share/mime/packages/x-wine*
 rm -f ~/.local/share/applications/wine-extension*
 rm -f ~/.local/share/icons/hicolor/*/*/application-x-wine-extension*
 rm -f ~/.local/share/mime/application/x-wine-extension*
-
 
 exit 0
