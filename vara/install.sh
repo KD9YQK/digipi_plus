@@ -1,0 +1,80 @@
+#!/bin/bash
+version=9.17
+# Get dependencies
+sudo apt install cabextract p7zip-full
+
+#install box86
+sudo dpkg -i box86-generic-arm.deb -y
+echo "Installed Box86 version:"
+box86 -v
+
+# Extract wine to /opt
+wget https://kd9yqk.com/wine-9.17.tar.gz
+sudo tar -xvf wine-9.17.tar.gz -C /opt
+rm wine-9.17.tar.gz
+
+#edit wine.inf to disable mime-associations. Nobody wants to double-click a text file, wonder why nothing is happening, then watch 15 Wine notepad windows pop up. Ask me how I know.
+sudo sed -i 's/winemenubuilder.exe -a -r/winemenubuilder.exe -r/' /opt/wine-9.17/share/wine/wine.inf #See: https://askubuntu.com/a/400430
+
+#download winetricks
+sudo cp winetricks /opt/wine-9.17/bin/winetricks
+sudo chmod +x /opt/wine-9.17/bin/winetricks
+
+#Extract Mono to universal location (to be installed automatically in all wine prefixes)
+#according to https://wiki.winehq.org/Mono#Versions, use Mono 9.3.0 for Wine 9.17
+#wine mono pacakge is called -x86 but contains both x86 and x86_64 binaries
+sudo mkdir -p /opt/wine-9.17/share/wine/mono
+wget https://kd9yqk.com/wine-mono-9.3.0-x86.tar.xz
+sudo tar -xvf "wine-mono-9.3.0-x86.tar.xz" -C "/opt/wine-9.17/share/wine/mono"
+rm wine-mono-9.3.0-x86.tar.xz
+
+#Extract Gecko to universal location (to be installed automatically in all wine prefixes)
+#according to https://wiki.winehq.org/Gecko, use Gecko 2.47.4 for Wine 8.6
+sudo mkdir -p /opt/wine-9.17/share/wine/gecko
+wget https://kd9yqk.com/wine-gecko-2.47.4-x86.tar.xz
+sudo tar -xvf "wine-gecko-2.47.4-x86.tar.xz" -C "/opt/wine-9.17/share/wine/gecko"
+rm wine-gecko-2.47.4-x86.tar.xz
+
+status "Creating terminal commands:"
+echo "  - winecfg"
+sudo ln -s /opt/wine-9.17/bin/winecfg /usr/local/bin/winecfg
+echo "  - wineserver"
+sudo ln -s /opt/wine-9.17/bin/wineserver /usr/local/bin/wineserver
+echo "  - wineboot"
+sudo ln -s /opt/wine-9.17/bin/wineboot /usr/local/bin/wineboot
+
+echo "  - wine"
+echo "#!/bin/bash
+if [ -d /opt/wine-9.17/mesa ];then
+  export LD_LIBRARY_PATH=/opt/wine-9.17/mesa/lib/arm-linux-gnueabihf/
+  export LIBGL_DRIVERS_PATH=/opt/wine-9.17/mesa/lib/arm-linux-gnueabihf/dri/
+  export VK_ICD_FILENAMES=/opt/wine-9.17/mesa/share/vulkan/icd.d/broadcom_icd.armv7l.json
+fi
+/opt/wine-9.17/bin/wine"' "$@"' | sudo tee /usr/local/bin/wine >/dev/null
+
+echo "  - winetricks"
+echo "#!/bin/bash
+BOX86_NOBANNER=1 /opt/wine-9.17/bin/winetricks"' "$@"' | sudo tee /usr/local/bin/winetricks >/dev/null
+
+#make them all executable
+sudo chmod +x /usr/local/bin/winecfg /usr/local/bin/wineserver /usr/local/bin/wineboot /usr/local/bin/wine /usr/local/bin/winetricks 
+
+#get mesa and icons from wine-stuff repo
+unzip wine-stuff.zip
+sudo cp "wine-stuff/icons" /opt/wine-9.17
+sudo cp "wine-stuff/Windows_10.msstyles" /opt/wine-9.17
+rm -R wine-stuff/
+
+sudo chown -R root:root /opt/wine-9.17
+
+#remove old local menu launchers
+rm -f ~/.local/share/applications/wine-config.desktop ~/.local/share/applications/wine-tricks.desktop ~/.local/share/applications/wine-explorer.desktop ~/.local/share/applications/wine-uninstaller.desktop ~/.local/share/applications/wine-taskmgr.desktop ~/.local/share/applications/wine-killer.desktop ~/.local/share/applications/wine-regenerate.desktop
+
+#Remove wine auto-generated desktop files that handle mimetypes. Nobody in their right mind would want this.
+#See: https://askubuntu.com/a/400430
+rm -f ~/.local/share/mime/packages/x-wine*
+rm -f ~/.local/share/applications/wine-extension*
+rm -f ~/.local/share/icons/hicolor/*/*/application-x-wine-extension*
+rm -f ~/.local/share/mime/application/x-wine-extension*
+
+exit 0
