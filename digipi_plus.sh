@@ -431,10 +431,6 @@ for choice in "${choices[@]}"; do
                 echo "NOT FOUND"
                 echo "Installing VARA"
                 sleep 1
-                echo "Preparing to install pi-apps"
-                sleep 1
-                cd ~
-                wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bash
                 echo ''
                 echo "Switch to 64bit kernel"
                 echo "A reboot will be required when install is complete!"
@@ -448,15 +444,6 @@ for choice in "${choices[@]}"; do
                 fi
                 echo "" | sudo tee --append $boot_config >/dev/null
                 echo "arm_64bit=1" | sudo tee --append $boot_config >/dev/null
-                
-                echo "Copying custom pi-apps wine install script."
-                sleep 1
-                cd ~/pi-apps/apps
-                cd 'Wine (x86)'
-                mv install-32 install-32.bak -v
-                cp ~/digipi_plus/pi-apps/wine.install-32 install-32 -v
-                cd ~/pi-apps
-                #./manage install 'Wine (x86)'
                 
                 echo '#!/bin/sh' > vara_install.sh
                 echo 'sleep 30' >> vara_install.sh
@@ -485,11 +472,9 @@ for choice in "${choices[@]}"; do
                 rm vara_wine.zip -v
                 cd ~/digipi_plus
                 echo "Creating alias for varahf"
-                sed '/^exit.*/i alias varahf="wine ~/.wine/drive_c/VARA/VARA.exe"' /etc/rc.local > temp/rc.local.1
-                alias varahf="wine ~/.wine/drive_c/VARA/VARA.exe"
+                echo 'alias varahf="cd /home/pi/.wine/drive_c/VARA/ && wine VARA.exe"' >> ~/.bashrc
                 echo "Creating alias for varafm"
-                sed '/^exit.*/i alias varafm="wine ~/.wine/drive_c/VARAFM/VARAFM.exe"' temp/rc.local.1 > temp/rc.local.2
-                alias varafm="wine ~/.wine/drive_c/VARAFM/VARAFM.exe"
+                echo 'alias varafm="cd /home/pi/.wine/drive_c/VARAFM/ && wine VARAFM.exe"' >> ~/.bashrc
                 rm temp/rc.local.1
                 sudo mv temp/rc.local.2 /etc/rc.local
                 sudo chmod +x /etc/rc.local
