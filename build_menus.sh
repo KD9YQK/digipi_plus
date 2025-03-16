@@ -95,7 +95,7 @@ if [ -f saves/plus.vara ]; then
     sudo cp temp/*.php www/
     sudo rm temp/*.php
     echo "VARA Added to Homepage Menu"
-    sudo sed -i '/DigiPi Plus/a \        "VaraHF"               f.exec "env WINEPREFIX=/hime/pi/.wine WINEDEBUG=-all wine /home/pi/.wine/drive_c/VARA/VARA.exe &"' /home/pi/.emwmrc
-    sudo sed -i '/DigiPi Plus/a \        "VaraFM"               f.exec "env WINEPREFIX=/hime/pi/.wine WINEDEBUG=-all wine /home/pi/.wine/drive_c/VARAFM/VARAFM.exe &"' /home/pi/.emwmrc
+    sudo sed -i '/DigiPi Plus/a \        "VaraHF"               f.exec "env WINEPREFIX=/home/pi/.wine WINEDEBUG=-all wine /home/pi/.wine/drive_c/VARA/VARA.exe &"' /home/pi/.emwmrc
+    sudo sed -i '/DigiPi Plus/a \        "VaraFM"               f.exec "env WINEPREFIX=/home/pi/.wine WINEDEBUG=-all wine /home/pi/.wine/drive_c/VARAFM/VARAFM.exe &"' /home/pi/.emwmrc
     echo "VARA Added to Desktop Menu"
 fi
