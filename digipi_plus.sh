@@ -447,9 +447,9 @@ for choice in "${choices[@]}"; do
                 bash vara/install.sh
                 cd ~/digipi_plus
                 echo "Creating alias for varahf"
-                echo 'alias varahf="cd /home/pi/.wine/drive_c/VARA/ && wine VARA.exe"' >> ~/.bashrc
+                echo 'alias varahf="env WINEPREFIX=/hime/pi/.wine WINEDEBUG=-all wine /home/pi/.wine/drive_c/VARA/VARA.exe"' >> ~/.bashrc
                 echo "Creating alias for varafm"
-                echo 'alias varafm="cd /home/pi/.wine/drive_c/VARAFM/ && wine VARAFM.exe"' >> ~/.bashrc
+                echo 'alias varafm="env WINEPREFIX=/hime/pi/.wine WINEDEBUG=-all wine /home/pi/.wine/drive_c/VARAFM/VARAFM.exe"' >> ~/.bashrc
                 
                 sudo cp services/varahf.service /etc/systemd/system/ -v
                 sudo cp services/varafm.service /etc/systemd/system/ -v
