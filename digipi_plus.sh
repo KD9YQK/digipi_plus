@@ -444,37 +444,13 @@ for choice in "${choices[@]}"; do
                 fi
                 echo "" | sudo tee --append $boot_config >/dev/null
                 echo "arm_64bit=1" | sudo tee --append $boot_config >/dev/null
-                
-                echo '#!/bin/sh' > vara_install.sh
-                echo 'sleep 30' >> vara_install.sh
-                echo 'echo "#############################"' >> vara_install.sh
-                echo 'echo "#   Vara Install Starting   #"' >> vara_install.sh
-                echo 'echo "#############################"' >> vara_install.sh
-                echo 'cd /home/pi/digipi/vara_install/' >> vara_install.sh
-                echo 'su -c "bash install.sh" pi' >> vara_install.sh
-                echo 'echo "#############################"' >> vara_install.sh
-                echo 'echo "#   Vara Install Complete   #"' >> vara_install.sh
-                echo 'echo "#############################"' >> vara_install.sh
-                mv vara_install.sh /etc/local/runonce.d/vara_install.sh
-                chmod u+x /etc/local/runonce.d/vara_install.sh
-                
-                cd ~
-                echo "Downloading premade wine env to save time."
-                sleep 1
-                wget https://kd9yqk.com/downloads/vara_wine.zip
-                echo "Extracting wine env..."
-                unzip -q vara_wine.zip
-                echo "Deleting downloaded zip"
-                sleep 1
-                rm vara_wine.zip -v
+                bash vara/install.sh
                 cd ~/digipi_plus
                 echo "Creating alias for varahf"
                 echo 'alias varahf="cd /home/pi/.wine/drive_c/VARA/ && wine VARA.exe"' >> ~/.bashrc
                 echo "Creating alias for varafm"
                 echo 'alias varafm="cd /home/pi/.wine/drive_c/VARAFM/ && wine VARAFM.exe"' >> ~/.bashrc
-                rm temp/rc.local.1
-                sudo mv temp/rc.local.2 /etc/rc.local
-                sudo chmod +x /etc/rc.local
+                
                 sudo cp services/varahf.service /etc/systemd/system/ -v
                 sudo cp services/varafm.service /etc/systemd/system/ -v
                 ln -sf /home/pi/digipi_plus/launchers/varahf.sh /home/pi -v
