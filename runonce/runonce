@@ -1,0 +1,17 @@
+#!/bin/sh
+# Place any script you want run at the next reboot (once only) in the directory /etc/local/runonce.d and chown and chmod +x it appropriately. 
+# Once it's been run, you'll find it moved to the ran subdirectory and the date and time appended to its name. 
+# There will also be an entry in your syslog.
+
+cd /etc/local/runonce.d/
+for file in *
+do
+    if [ ! -f "$file" ]
+    then
+        continue
+    fi
+    sudo remount
+    "./$file"
+    mv "$file" "/etc/local/runonce.d/ran/$file.$(date +%Y%m%dT%H%M%S)"
+    logger -t runonce -p local3.info "$file"
+done

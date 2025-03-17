@@ -1,5 +1,17 @@
 # Resizing Digipi SD Card
-## Step by Step Instructions
+## Step by Step Instructions (New Method 02/25/2025)
+This new method can be done and doesn't require any reboots.
+
+```
+sudo remount 
+echo "- +" | sudo sfdisk -N2 --force /dev/mmcblk0
+sudo resize2fs /dev/mmcblk0p2
+sudo partprobe
+df -h
+```
+Thats it!  Verify on screen that mmcblk0p2 has increased in size.
+
+## Step by Step Instructions (old method)
 From the command line or a terminal window enter the following
 
 ```

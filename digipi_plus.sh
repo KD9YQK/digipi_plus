@@ -5,6 +5,8 @@ echo "DigiPi Plus Installer"
 echo "Created by Bob - KD9YQK"
 echo ""
 sleep 2
+do_reboot=false
+sudo remount
 sudo apt update
 echo ""
 echo -n "Checking for DigiPi Plus Base..."
@@ -23,7 +25,23 @@ if [ ! -f saves/plus.base ]; then
     echo "Copying Files"
     cp home/emwmrc_plus ~/.emwmrc -v
     touch saves/plus.base
+    echo 'Installing runonce by KD9YQK'
+    cd ~/digipi_plus/runonce
+    bash install.sh
+    cd ~/digipi_plus
     sudo apt install dialog
+    if dialog --stdout --title "Expand Filesystem" --backtitle "Digipi Plus" --yesno "Would you like to expand the filesystem to use all available space on the SD-Card?" 7 60; then
+        sudo remount 
+        echo "- +" | sudo sfdisk -N2 --no-reread --force /dev/mmcblk0 # one liner magic to resize partition table
+        sudo partprobe # reloads the new table
+        sudo resize2fs /dev/mmcblk0p2 # expands disk to use new table
+        sudo partprobe # reloads the new table
+    fi
+    if dialog --stdout --title "Xterm Colors" --backtitle "Digipi Plus" --yesno "Would you like to swap Xterm colors for better visability?" 7 60; then
+        echo 'xterm*Background: black' >> ~/.Xresources
+        echo 'xterm*Foreground: white' >> ~/.Xresources
+        xrdb -merge ~/.Xresources
+    fi
     echo "DigiPi Plus Base Installed"
 else
     echo "OK"
@@ -132,6 +150,12 @@ else
     installed+="FL Utils, "
 fi
 
+#if [ ! -f saves/plus.vara ]; then
+#    options+=(16 "VARA - VaraHF and VaraVHF" off)
+#else
+#    installed+="VARA, "
+#fi
+
 #build dialogue box with menu options
 cmd=(dialog --backtitle "DigiPi Plus" --checklist "${installed}" 22 50 16)
 choices=($("${cmd[@]}" "${options[@]}" 2>&1 1>/dev/tty))
@@ -157,6 +181,19 @@ for choice in "${choices[@]}"; do
                 echo "OK"
             fi
             ;;
+    esac
+done
+
+if [ ! -f saves/plus.node ]; then
+    echo "Skipping AX25 Node Upgrade"
+else
+    echo "Starting AX25 Node Upgrade"
+    sleep 1
+    bash node_upgrade.sh
+fi
+
+for choice in "${choices[@]}"; do
+    case $choice in
         2)
             echo -n "Checking for UHF Upgrade..."
             sleep 1
@@ -337,27 +374,11 @@ for choice in "${choices[@]}"; do
                 echo "NOT FOUND"
                 echo "Installing Chirp-Next"
                 sleep 1
-                cd ~/digipi_plus/chirp
+                cd ~/digipi_plus/temp
                 sudo apt install python3-wxgtk4.0 pipx -y
-                echo ""
-                echo "Umounting and creating a new 20M RAMDISK for /tmp"
-                echo ""
-                sudo umount -l /tmp
-                sudo mount -t tmpfs -o size=20M tmpfs /tmp
-                pipx install --system-site-packages ./chirp-20240626-py3-none-any.whl
-                echo ""
-                echo "Returning the RAMDISK for /tmp back to 10M"
-                echo ""
-                sudo umount -l /tmp
-                sudo mount -t tmpfs -o size=10M tmpfs /tmp
-                echo ""
-                echo "There is a bug in Chirp that prevents it from starting. Installing a patched file which fixes the error."
-                echo "This will be removed in a future update once the owners of Chirp patch on their end."
-                sleep 1
-                rm ~/.local/pipx/venvs/chirp/lib/python3.11/site-packages/chirp/wxui/main.py -v
-                cp main.py ~/.local/pipx/venvs/chirp/lib/python3.11/site-packages/chirp/wxui -v
-                echo ""
-                
+                wget https://archive.chirpmyradio.com/chirp_next/next-20250221/chirp-20250221-py3-none-any.whl
+                pipx install --system-site-packages ./chirp-20250221-py3-none-any.whl
+                pipx ensurepath
                 cd ~/digipi_plus
                 touch saves/plus.chirp
                 echo "Chirp-Next Installed"
@@ -403,19 +424,57 @@ for choice in "${choices[@]}"; do
                 echo "OK"
             fi
             ;;
+        16)
+            echo -n "Checking for VARA..."
+            sleep 1
+            if [ ! -f saves/plus.vara ]; then
+                echo "NOT FOUND"
+                echo "Installing VARA"
+                sleep 1
+                echo ''
+                echo "Switch to 64bit kernel"
+                echo "A reboot will be required when install is complete!"
+                sleep 1
+                if [ -f /boot/firmware/config.txt ]; then
+                  boot_config="/boot/firmware/config.txt"
+                elif [ -f /boot/config.txt ]; then
+                  boot_config="/boot/config.txt"
+                else
+                  error 'User error: The /boot/config.txt and /boot/firmware/config.txt files are missing! You must be on an unsupported system.'
+                fi
+                echo "" | sudo tee --append $boot_config >/dev/null
+                echo "arm_64bit=1" | sudo tee --append $boot_config >/dev/null
+                bash vara/install.sh
+                cd ~/digipi_plus
+                echo "Creating alias for varahf"
+                echo 'alias varahf="env WINEPREFIX=/home/pi/.wine WINEDEBUG=-all wine /home/pi/.wine/drive_c/VARA/VARA.exe"' >> ~/.bashrc
+                echo "Creating alias for varafm"
+                echo 'alias varafm="env WINEPREFIX=/home/pi/.wine WINEDEBUG=-all wine /home/pi/.wine/drive_c/VARAFM/VARAFM.exe"' >> ~/.bashrc
+                
+                sudo cp services/varahf.service /etc/systemd/system/ -v
+                sudo cp services/varafm.service /etc/systemd/system/ -v
+                ln -sf /home/pi/digipi_plus/launchers/varahf.sh /home/pi -v
+                ln -sf /home/pi/digipi_plus/launchers/varafm.sh /home/pi -v
+                #sudo systemctl daemon-reload
+                touch saves/plus.vara
+                do_reboot=true
+                echo "VARA Pre-Install Complete.  Please reboot to continue!!!"
+                sleep 3
+            else
+                echo "OK"
+            fi
+            ;;
     esac
 done
-
-if [ ! -f saves/plus.node ]; then
-    echo "Skipping AX25 Node Upgrade"
-else
-    echo "Starting AX25 Node Upgrade"
-    sleep 1
-    bash node_upgrade.sh
-fi
 
 chmod +x launchers/*.sh
 bash build_services.sh
 sudo systemctl daemon-reload
 bash build_menus.sh
 echo "DigiPi Plus Install Complete. Please refresh your Homepage with Ctrl+Shift+R to view changes. Enjoy!"
+sleep 2
+#if [ "$do_reboot" = true ] ; then
+#    if dialog --stdout --title "Reboot Required" --backtitle "Digipi Plus" --yesno "Digipi requires a reboot.  Would you like to do it now?" 7 60; then
+#        sudo shutdown now -r &
+#    fi
+#fi

@@ -3,6 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <LINK href="/styles/plus.css" rel="stylesheet" type="text/css">
+<LINK href="/styles/switch.css" rel="stylesheet" type="text/css">
 <style>
   .body {
     font-family: "Lato", sans-serif;

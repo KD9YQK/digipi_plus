@@ -45,6 +45,17 @@
      <a href="/webchat.php" target="webchat" title="APRS Messaging"><strong>Webchat</strong></a>
   </td>
 </tr>
+<tr>
+   <td>
+     <a href="/alsa.php" target="audio" title="Audio Settings"><strong>Audio</strong></a>
+   </td>
+   <td>
+     <a href="/sysinfo.php" target="sysinfo" title="System Information"><strong>SysInfo</strong></a>
+   </td>
+   <td>
+     <a href="/gps.php" target="gps" title="GPS Status"><strong>GPS</strong></a>
+   </td>
+</tr>
 
 <?php
   if (!file_exists("/var/cache/digipi/localized.txt")) {

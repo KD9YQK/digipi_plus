@@ -89,3 +89,13 @@ if [ -f saves/plus.mmbr ]; then
     sudo rm temp/*.php
     echo "MMBR Added to Homepage Menu"
 fi
+
+if [ -f saves/plus.vara ]; then
+    python3 vara_helper.py
+    sudo cp temp/*.php www/
+    sudo rm temp/*.php
+    echo "VARA Added to Homepage Menu"
+    sudo sed -i '/DigiPi Plus/a \        "VaraHF"               f.exec "env WINEPREFIX=/home/pi/.wine WINEDEBUG=-all wine /home/pi/.wine/drive_c/VARA/VARA.exe &"' /home/pi/.emwmrc
+    sudo sed -i '/DigiPi Plus/a \        "VaraFM"               f.exec "env WINEPREFIX=/home/pi/.wine WINEDEBUG=-all wine /home/pi/.wine/drive_c/VARAFM/VARAFM.exe &"' /home/pi/.emwmrc
+    echo "VARA Added to Desktop Menu"
+fi
