@@ -150,11 +150,13 @@ else
     installed+="FL Utils, "
 fi
 
-#if [ ! -f saves/plus.vara ]; then
-#    options+=(16 "VARA - VaraHF and VaraVHF" off)
-#else
-#    installed+="VARA, "
-#fi
+if (($(Max_RAM) > 1000000)); then
+    if [ ! -f saves/plus.vara ]; then
+        options+=(16 "VARA - VaraHF and VaraVHF" off)
+    else
+        installed+="VARA, "
+    fi
+fi
 
 #build dialogue box with menu options
 cmd=(dialog --backtitle "DigiPi Plus" --checklist "${installed}" 22 50 16)
