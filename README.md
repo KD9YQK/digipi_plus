@@ -35,7 +35,7 @@ You will need at least a 16gb SD Card that has been expanded to use the entire d
     - FLMsg
     - FLWrap
 16. [Chirp-Next](https://chirpmyradio.com/projects/chirp/wiki/Home) - CHIRP is a free, open-source tool for programming your radio. It supports a large number of manufacturers and models, as well as provides a way to interface with multiple data sources and formats.
-17. [VaraHF and VaraFM](https://www.varac-hamradio.com/) - Vara weak signal modems via Wine environment. NOT YET IMPLIMENTED!!!
+17. [VaraHF and VaraFM](https://www.varac-hamradio.com/) - Vara weak signal modems via Wine environment. Raspberry Pi 4 Models Only!
 
 ## Install
 **DON'T install until AFTER initial setup of DigiPi!!! This only works for DigiPi version 1.9-2**
@@ -52,6 +52,8 @@ bash digipi_plus.sh
 RTL-SDR will cause an error to occur on **Raspberry Pi 4** that looks like `rtlsdr_read_reg failed with -7` and `rtlsdr_write_reg failed with -7` when running Direwolf, or with OpenWebRX showing the device as inactive. There is an error in the firmware regarding the USB ports and communicating with the RTL-SDR. To fix, the firmware will need to be upgraded. For directions on how to fix, click [here.](kernel6.6_fix.md)
 
 ## Changelog
+- 03/19/2025 - v1.41 Release
+  1. Added Vara HF and Vara FM modems
 - 03/17/2025 - v1.4 Release
   1. Updated to work with DigiPi 1.9.3
 - 01/01/2025 - v1.31 Release
