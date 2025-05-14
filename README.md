@@ -38,7 +38,7 @@ You will need at least a 16gb SD Card that has been expanded to use the entire d
 17. [VaraHF and VaraFM](https://www.varac-hamradio.com/) - Vara weak signal modems via Wine environment. Raspberry Pi 4 Models Only!
 
 ## Install
-**DON'T install until AFTER initial setup of DigiPi!!! This only works for DigiPi version 1.9-2**
+**DON'T install until AFTER initial setup of DigiPi!!! This only works for DigiPi version 1.9-3**
 ```
 sudo remount
 cd ~
