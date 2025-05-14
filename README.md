@@ -55,7 +55,7 @@ RTL-SDR will cause an error to occur on **Raspberry Pi 4** that looks like `rtls
 - 03/19/2025 - v1.41 Release
   1. Added Vara HF and Vara FM modems
 - 03/17/2025 - v1.4 Release
-  1. Updated to work with DigiPi 1.9.3
+  1. Updated to work with DigiPi 1.9-3
 - 01/01/2025 - v1.31 Release
   1. Added FLAmp, FLMsg, and FLWrap
   2. Added MMBR
