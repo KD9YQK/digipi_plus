@@ -38,7 +38,7 @@ You will need at least a 16gb SD Card that has been expanded to use the entire d
 17. [VaraHF and VaraFM](https://www.varac-hamradio.com/) - Vara weak signal modems via Wine environment. Raspberry Pi 4 Models Only!
 
 ## Install
-**DON'T install until AFTER initial setup of DigiPi!!! This only works for DigiPi version 1.9-2**
+**DON'T install until AFTER initial setup of DigiPi!!! This only works for DigiPi version 1.9-3**
 ```
 sudo remount
 cd ~
@@ -55,7 +55,7 @@ RTL-SDR will cause an error to occur on **Raspberry Pi 4** that looks like `rtls
 - 03/19/2025 - v1.41 Release
   1. Added Vara HF and Vara FM modems
 - 03/17/2025 - v1.4 Release
-  1. Updated to work with DigiPi 1.9.3
+  1. Updated to work with DigiPi 1.9-3
 - 01/01/2025 - v1.31 Release
   1. Added FLAmp, FLMsg, and FLWrap
   2. Added MMBR
