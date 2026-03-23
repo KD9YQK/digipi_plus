@@ -45,14 +45,15 @@ def print_menu(config: dict) -> None:
     for game in config["games"]:
         key = str(game.get("key", "")).strip()
         name = str(game.get("name", "Unnamed Game")).strip()
-        desc = str(game.get("description", "")).strip()
+#        desc = str(game.get("description", "")).strip()
 
         print(f"{key}. {name}")
-        if desc:
-            print(f"   {desc}")
-        print()
+#        if desc:
+#            print(f"   {desc}")
+#        print()
 
     if config.get("exit_option", True):
+        print()
         print("Q. Quit\r\n")
 
 
