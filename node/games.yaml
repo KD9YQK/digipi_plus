@@ -6,7 +6,10 @@ games:
   - key: 1
     name: "Hitchhikers Guide to the Galaxy"
     command: "/home/pi/zork/hitch.sh"
-    description: "Hitchhikers Guide to the Galaxy"
+    description: "ZORK I: The Great Underground Empire
+                  Copyright (c) 1981, 1982, 1983 Infocom, Inc. All rights reserved.
+                  ZORK is a registered trademark of Infocom, Inc.
+                  Revision 88 / Serial number 840726"
 
   - key: 2
     name: "Zork"
