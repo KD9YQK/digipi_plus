@@ -15,30 +15,30 @@ games:
     name: "ZORK II: The Wizard of Frobozz"
     command: "/home/pi/digipi_plus/node/zork2.sh"
 
-- key: 4
+  - key: 4
     name: "ZORK III"
     command: "/home/pi/digipi_plus/node/zork3.sh"
 
-- key: 5
+  - key: 5
     name: "ZORK Zero"
     command: "/home/pi/digipi_plus/node/zork0.sh"
 
-- key: 6
+  - key: 6
     name: "Beyond Zork"
     command: "/home/pi/digipi_plus/node/bzork.sh"
 
-- key: 7
+  - key: 7
     name: "Enchanter"
     command: "/home/pi/digipi_plus/node/enchanter.sh"
 
-- key: 8
+  - key: 8
     name: "Cutthroats"
     command: "/home/pi/digipi_plus/node/cutthroats.sh"
 
-- key: 9
+  - key: 9
     name: "Go Fish"
     command: "/home/pi/digipi_plus/node/gofish.sh"
 
-- key: 10
+  - key: 10
     name: "Hunt the Wumpus"
     command: "/home/pi/digipi_plus/node/wumpus.sh"
