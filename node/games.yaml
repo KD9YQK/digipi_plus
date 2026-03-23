@@ -25,7 +25,7 @@ games:
 
   - key: 6
     name: "Beyond Zork"
-    command: "/home/pi/digipi_plus/node/bzork.sh"
+    command: "/home/pi/digipi_plus/node/zorkb.sh"
 
   - key: 7
     name: "Enchanter"
