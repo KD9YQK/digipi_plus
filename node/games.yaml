@@ -1,0 +1,19 @@
+title: "BBS Game Launcher"
+prompt: "Select a game:"
+exit_option: true
+
+games:
+  - key: 1
+    name: "Hitchhikers Guide to the Galaxy"
+    command: "/home/pi/zork/hitch.sh"
+    description: "Hitchhikers Guide to the Galaxy"
+
+  - key: 2
+    name: "Zork"
+    command: "/home/pi/zork/zork.sh"
+    description: "Zork"
+
+  - key: 3
+    name: "Zork 2"
+    command: "/home/pi/digipi_plus/node/zork2.sh"
+    description: "Zork 2"
