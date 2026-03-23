@@ -8,7 +8,7 @@ from pathlib import Path
 import yaml
 
 
-CONFIG_PATH = Path("/home/pi/bbs/games.yaml")
+CONFIG_PATH = Path("/home/pi/digipi_plus/node/games.yaml")
 
 
 def load_config(path: Path) -> dict:
